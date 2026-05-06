@@ -1,4 +1,5 @@
 import json
+import os
 import re
 import time
 import hashlib
@@ -13,15 +14,21 @@ import requests
 from shared.data_layer import SharedDataLayer
 from shared.types import Paper, ResearchProfile, UserLevel
 
+OPENALEX_BASE = "https://api.openalex.org"
+SEMANTIC_SCHOLAR_BASE = "https://api.semanticscholar.org/graph/v1"
+USER_AGENT = "ResearchTrail/1.0 (mailto:student@example.com)"
+
 
 class LiteratureRetrievalSkill:
     def __init__(self, data_layer: SharedDataLayer):
         self.data = data_layer
+        self._last_s2_request_ts = 0.0
 
     def run(
         self,
         profile: ResearchProfile,
         override_queries: Optional[list[str]] = None,
+        query_plan: Optional[dict] = None,
         demo: bool = False,
     ) -> list[Paper]:
         self.data.set_research_profile(profile)
@@ -30,22 +37,61 @@ class LiteratureRetrievalSkill:
             papers = self._generate_demo_papers(profile.topic, profile.max_papers)
             self.data.add_papers(papers)
             quality = self._assess_corpus_quality(papers)
+            quality["demo_mode"] = True
             self.data.set_corpus_quality(quality)
+            self.data.set_metadata("query_plan", query_plan or {"main_queries": [profile.topic]})
+            self.data.set_metadata("demo_mode", True)
             return papers
 
-        queries = override_queries or self._generate_query_plan(profile.topic, profile.user_level)
+        queries, broad_queries_from_plan, exclude_terms = self._normalize_query_plan(
+            profile,
+            override_queries=override_queries,
+            query_plan=query_plan,
+        )
+        self.data.set_metadata("query_plan", {
+            "main_queries": queries,
+            "prerequisite_queries": broad_queries_from_plan,
+            "exclude_terms": exclude_terms,
+            "expected_communities": (query_plan or {}).get("expected_communities", []),
+        })
+
+        is_beginner = profile.user_level == UserLevel.BEGINNER
+        broad_queries = []
+        specific_queries = []
+        if is_beginner:
+            broad_terms = self._get_broad_context_terms(profile.topic)
+            halfway = min(4, len(queries) // 2 + 1)
+            specific_queries = queries[:halfway]
+            broad_queries = queries[halfway:] + broad_queries_from_plan + broad_terms
+            broad_queries = broad_queries[:5]
+        else:
+            specific_queries = queries
 
         all_papers: dict[str, Paper] = {}
+        broad_paper_keys: set[str] = set()
 
-        for query in queries:
+        for query in specific_queries:
             papers_arxiv = self._search_arxiv(query, profile.max_papers // len(queries))
             for p in papers_arxiv:
                 all_papers[p.paper_id] = p
 
-            papers_s2 = self._search_semantic_scholar(query, min(profile.max_papers // len(queries), 20))
-            for p in papers_s2:
-                if p.paper_id not in all_papers:
-                    all_papers[p.paper_id] = p
+            papers_oa = self._search_openalex(query, min(profile.max_papers // len(queries), 20))
+            for p in papers_oa:
+                key = p.paper_id or hashlib.md5(p.title.encode()).hexdigest()[:12]
+                if key not in all_papers:
+                    all_papers[key] = p
+                elif p.citation_count > all_papers[key].citation_count:
+                    all_papers[key] = p
+
+            time.sleep(0.3)
+
+        for query in broad_queries:
+            papers_oa = self._search_openalex(query, 10)
+            for p in papers_oa:
+                key = p.paper_id or hashlib.md5(p.title.encode()).hexdigest()[:12]
+                if key not in all_papers:
+                    all_papers[key] = p
+                    broad_paper_keys.add(key)
 
             time.sleep(0.3)
 
@@ -54,14 +100,52 @@ class LiteratureRetrievalSkill:
         if profile.time_range != "all":
             papers = self._filter_by_time(papers, profile.time_range)
 
+        before_dedup = len(papers)
         papers = self._deduplicate(papers)
+        dedup_removed = before_dedup - len(papers)
+        papers = self._filter_relevance(papers, profile.topic, broad_paper_keys)
+        papers = self._filter_topic_specific_relevance(papers, profile.topic)
+        papers = self._filter_exclude_terms(papers, exclude_terms)
+        papers = self._ensure_curated_landmarks(papers, profile.topic)
         papers = self._enrich_citations(papers, profile.max_papers)
 
         self.data.add_papers(papers)
         quality = self._assess_corpus_quality(papers)
+        quality["deduplication_removed"] = dedup_removed
         self.data.set_corpus_quality(quality)
 
         return papers
+
+    def _normalize_query_plan(
+        self,
+        profile: ResearchProfile,
+        override_queries: Optional[list[str]] = None,
+        query_plan: Optional[dict] = None,
+    ) -> tuple[list[str], list[str], list[str]]:
+        if override_queries:
+            return override_queries, [], []
+
+        if query_plan:
+            main_queries = self._clean_query_list(query_plan.get("main_queries", []))
+            prereq_queries = self._clean_query_list(query_plan.get("prerequisite_queries", []))
+            exclude_terms = self._clean_query_list(query_plan.get("exclude_terms", []))
+            if main_queries:
+                return main_queries[:8], prereq_queries[:5], exclude_terms[:12]
+
+        return self._generate_query_plan(profile.topic, profile.user_level), [], []
+
+    @staticmethod
+    def _clean_query_list(items: object) -> list[str]:
+        if not isinstance(items, list):
+            return []
+        cleaned = []
+        for item in items:
+            if not isinstance(item, str):
+                continue
+            item = re.sub(r"\s+", " ", item).strip()
+            if item and item not in cleaned:
+                cleaned.append(item)
+        return cleaned
 
     def _generate_query_plan(self, topic: str, level: UserLevel) -> list[str]:
         queries = [topic.strip()]
@@ -69,6 +153,8 @@ class LiteratureRetrievalSkill:
         topic_words = re.findall(r"[A-Za-z0-9\-]+", topic)
         if len(topic) > 3:
             queries.append(f'"{topic.strip()}"')
+
+        queries.extend(self._get_landmark_queries(topic))
 
         expansion_terms: dict[UserLevel, list[str]] = {
             UserLevel.BEGINNER: ["survey", "tutorial", "overview", "foundations"],
@@ -79,12 +165,92 @@ class LiteratureRetrievalSkill:
         for suffix in expansion_terms.get(level, []):
             queries.append(f"{topic} {suffix}")
 
+        if level == UserLevel.BEGINNER:
+            broad_terms = self._get_broad_context_terms(topic)
+            queries.extend(broad_terms[:4])
+
         if len(topic_words) >= 4:
             mid = len(topic_words) // 2
             queries.append(" ".join(topic_words[:mid]))
             queries.append(" ".join(topic_words[mid:]))
 
-        return queries[:4]
+        return queries[:12]
+
+    def _get_landmark_queries(self, topic: str) -> list[str]:
+        topic_lower = topic.lower()
+        if ("vision" in topic_lower or "image" in topic_lower or "vit" in topic_lower) and "transformer" in topic_lower:
+            return [
+                '"An Image is Worth 16x16 Words"',
+                "DeiT data-efficient image transformers",
+                "Swin Transformer hierarchical vision transformer",
+                "DINO self-supervised vision transformers",
+                "Masked Autoencoders scalable vision learners",
+                "BEiT masked image modeling transformer",
+            ]
+        if "counterfactual" in topic_lower and ("regret" in topic_lower or "cfr" in topic_lower):
+            return [
+                "Deep Counterfactual Regret Minimization",
+                "Monte Carlo counterfactual regret minimization",
+                "counterfactual regret minimization imperfect information games",
+                "counterfactual regret minimization extensive-form games",
+                "solving imperfect-information games counterfactual regret minimization",
+                "CFR poker regret minimization",
+            ]
+        return []
+
+    def _get_broad_context_terms(self, topic: str) -> list[str]:
+        topic_lower = topic.lower()
+        broad_queries: list[str] = []
+
+        context_map = {
+            "transformer": [
+                "attention mechanism neural network",
+                "self-attention survey",
+            ],
+            "vision": [
+                "computer vision deep learning survey",
+                "image recognition convolutional neural network",
+            ],
+            "graph": [
+                "graph neural network survey",
+                "network science fundamentals",
+            ],
+            "reinforcement": [
+                "reinforcement learning fundamentals",
+                "markov decision process",
+            ],
+            "cfr": [
+                "counterfactual regret minimization",
+                "game theory extensive-form",
+            ],
+            "game": [
+                "game theory introduction",
+                "imperfect information games",
+            ],
+            "learning": [],
+            "neural": [
+                "neural network fundamentals",
+                "deep learning introduction",
+            ],
+            "anomaly": [
+                "anomaly detection survey",
+                "outlier detection methods",
+            ],
+            "language": [
+                "natural language processing transformer",
+                "large language model survey",
+            ],
+            "image": [
+                "image classification deep learning",
+                "object detection survey",
+            ],
+        }
+
+        for key, queries in context_map.items():
+            if key in topic_lower:
+                broad_queries.extend(queries)
+
+        return broad_queries
 
     def _search_arxiv(self, query: str, max_results: int) -> list[Paper]:
         papers = []
@@ -149,49 +315,210 @@ class LiteratureRetrievalSkill:
             print(f"[arXiv] Query '{query}' failed: {e}")
         return papers
 
-    def _search_semantic_scholar(self, query: str, max_results: int, retries: int = 1) -> list[Paper]:
+    def _search_openalex(self, query: str, max_results: int) -> list[Paper]:
         papers = []
-        max_results = min(max_results, 20)
-        url = "https://api.semanticscholar.org/graph/v1/paper/search"
+        max_results = min(max_results, 25)
         params = {
-            "query": query,
-            "limit": max_results,
-            "fields": "title,authors,year,abstract,externalIds,citationCount,venue",
+            "search": query,
+            "per_page": max_results,
+            "sort": "cited_by_count:desc",
+            "mailto": "student@example.com",
         }
+        try:
+            resp = requests.get(
+                f"{OPENALEX_BASE}/works",
+                params=params,
+                headers={"User-Agent": USER_AGENT},
+                timeout=15,
+            )
+            if resp.status_code == 429:
+                time.sleep(3)
+                resp = requests.get(
+                    f"{OPENALEX_BASE}/works",
+                    params=params,
+                    headers={"User-Agent": USER_AGENT},
+                    timeout=15,
+                )
+            resp.raise_for_status()
+            data = resp.json()
+            for item in data.get("results", []):
+                oa_id = item.get("id", "")
+                paper_id = oa_id.split("/")[-1] if oa_id else ""
+                title = item.get("title", "")
+                doi = item.get("doi", "")
+                if doi and doi.startswith("https://doi.org/"):
+                    doi = doi[16:]
 
-        for attempt in range(retries + 1):
-            try:
-                resp = requests.get(url, params=params, timeout=10)
-                if resp.status_code == 429:
-                    if attempt < retries:
-                        time.sleep(2)
-                        continue
-                    break
-                resp.raise_for_status()
-                data = resp.json()
-                for item in data.get("data", []):
-                    ext_ids = item.get("externalIds", {}) or {}
-                    paper_id = ext_ids.get("DOI") or ext_ids.get("ArXiv") or item.get("paperId", "")
-                    authors = [a.get("name", "") for a in (item.get("authors") or [])]
-                    papers.append(Paper(
-                        paper_id=paper_id,
-                        title=item.get("title", ""),
-                        authors=authors,
-                        year=item.get("year") or 0,
-                        abstract=item.get("abstract") or "",
-                        url=f"https://api.semanticscholar.org/{item.get('paperId', '')}",
-                        citation_count=item.get("citationCount", 0),
-                        source="semantic_scholar",
-                        venue=item.get("venue", ""),
-                    ))
-                break
-            except Exception as e:
-                if "429" in str(e) and attempt < retries:
-                    time.sleep(2)
-                    continue
-                if attempt == 0:
-                    print(f"[Semantic Scholar] Query '{query[:50]}' failed: {e}")
+                authors = []
+                for a in (item.get("authorships") or []):
+                    author_info = a.get("author", {})
+                    name = author_info.get("display_name", "")
+                    if name:
+                        authors.append(name)
+
+                pub_date = item.get("publication_date", "")
+                year = int(pub_date[:4]) if pub_date and len(pub_date) >= 4 else 0
+
+                abstract = self._reconstruct_abstract(item.get("abstract_inverted_index"))
+                cited_by = item.get("cited_by_count", 0)
+
+                refs = [r.split("/")[-1] for r in (item.get("referenced_works") or [])]
+
+                url = item.get("primary_location", {})
+                if isinstance(url, dict):
+                    url = url.get("landing_page_url", f"https://doi.org/{doi}" if doi else oa_id)
+                else:
+                    url = oa_id
+
+                venue = ""
+                primary_loc = item.get("primary_location", {})
+                if isinstance(primary_loc, dict):
+                    source = primary_loc.get("source", {})
+                    if isinstance(source, dict):
+                        venue = source.get("display_name", "")
+
+                papers.append(Paper(
+                    paper_id=paper_id,
+                    title=title,
+                    authors=authors,
+                    year=year,
+                    abstract=abstract,
+                    url=url,
+                    citation_count=cited_by,
+                    citation_source="openalex" if cited_by else "",
+                    references=refs,
+                    source="openalex",
+                    venue=venue,
+                ))
+        except Exception as e:
+            print(f"[OpenAlex] Query '{query[:50]}' failed: {e}")
         return papers
+
+    def _reconstruct_abstract(self, inverted_index: dict | None) -> str:
+        if not inverted_index:
+            return ""
+        word_positions: list[tuple[int, str]] = []
+        for word, positions in inverted_index.items():
+            for pos in positions:
+                word_positions.append((pos, word))
+        word_positions.sort()
+        return " ".join(w for _, w in word_positions)
+
+    def _filter_relevance(self, papers: list[Paper], topic: str, broad_keys: set[str] | None = None) -> list[Paper]:
+        if broad_keys is None:
+            broad_keys = set()
+        STOP_WORDS = {
+            "want", "learn", "study", "enter", "field", "would", "like", "understand",
+            "explore", "research", "build", "create", "generate", "help", "know",
+            "with", "from", "that", "this", "have", "been", "were", "they", "their",
+            "about", "into", "over", "after", "before", "between", "under", "could",
+            "would", "should", "might", "will", "shall", "these", "those", "which",
+            "what", "where", "when", "there", "here", "also", "very", "just", "more",
+            "some", "each", "every", "other", "such", "only", "then", "than", "them",
+            "well", "many", "much", "most", "being", "make", "made", "making",
+            "beginner", "novice", "newcomer", "student", "reading", "path", "plan",
+        }
+        keywords = [w for w in re.findall(r"[A-Za-z]{4,}", topic.lower()) if w not in STOP_WORDS]
+        if len(keywords) < 2:
+            return papers
+
+        required = keywords[:3] if len(keywords) >= 3 else keywords
+
+        min_matches = 2
+        profile = self.data.get_research_profile()
+        if profile and profile.user_level == UserLevel.BEGINNER:
+            min_matches = 1
+
+        filtered = []
+        for p in papers:
+            key = p.paper_id or hashlib.md5(p.title.encode()).hexdigest()[:12]
+            if key in broad_keys:
+                filtered.append(p)
+                continue
+            text = (p.title + " " + p.abstract).lower()
+            matches = sum(1 for kw in required if kw in text)
+            if matches >= min(min_matches, len(required)):
+                filtered.append(p)
+        return filtered if len(filtered) >= 10 else papers
+
+    def _filter_exclude_terms(self, papers: list[Paper], exclude_terms: list[str]) -> list[Paper]:
+        terms = [t.lower().strip() for t in exclude_terms if len(t.strip()) >= 3]
+        if not terms:
+            return papers
+        filtered = []
+        for p in papers:
+            text = f"{p.title} {p.abstract}".lower()
+            if any(term in text for term in terms):
+                continue
+            filtered.append(p)
+        return filtered if len(filtered) >= 10 else papers
+
+    def _filter_topic_specific_relevance(self, papers: list[Paper], topic: str) -> list[Paper]:
+        topic_lower = topic.lower()
+        if ("vision" in topic_lower or "image" in topic_lower or "vit" in topic_lower) and "transformer" in topic_lower:
+            return self._filter_vision_transformer_relevance(papers)
+
+        if not ("counterfactual" in topic_lower and ("regret" in topic_lower or "cfr" in topic_lower)):
+            return papers
+
+        required_context = [
+            "counterfactual regret minimization",
+            "counterfactual regret",
+            " cfr",
+            "cfr ",
+            "imperfect-information",
+            "imperfect information",
+            "extensive-form",
+            "extensive form",
+            "nash equilibrium",
+            "poker",
+            "game tree",
+            "zero-sum game",
+            "extensive games",
+        ]
+        filtered = []
+        for p in papers:
+            text = f" {p.title} {p.abstract} ".lower()
+            if any(term in text for term in required_context):
+                filtered.append(p)
+        return filtered
+
+    def _filter_vision_transformer_relevance(self, papers: list[Paper]) -> list[Paper]:
+        allowed_prereq_titles = {
+            "attention is all you need",
+            "deep residual learning for image recognition",
+            "imagenet classification with deep convolutional neural networks",
+            "faster r-cnn towards real-time object detection with region proposal networks",
+            "attention mechanisms in computer vision a survey",
+        }
+        vision_terms = [
+            "vision", "visual", "image", "computer vision", "classification",
+            "detection", "segmentation", "dense prediction", "object",
+        ]
+        transformer_terms = [
+            "vision transformer", "image transformer", "visual transformer",
+            "transformers for image", "transformer backbone",
+            "pyramid vision transformer", "masked autoencoder", "masked autoencoders",
+            "shifted window", "window-based",
+        ]
+        acronym_terms = ["vit", "deit", "swin", "pvt", "dino", "dinov2", "mae", "beit"]
+        filtered = []
+        for p in papers:
+            normalized_title = self._normalize_title(p.title)
+            text = f" {p.title} {p.abstract} ".lower()
+            if normalized_title in allowed_prereq_titles:
+                filtered.append(p)
+                continue
+            has_vision = any(term in text for term in vision_terms)
+            has_transformer = any(term in text for term in transformer_terms)
+            if not has_transformer:
+                has_transformer = any(
+                    re.search(rf"(?<![a-z0-9]){re.escape(term)}(?![a-z0-9])", text)
+                    for term in acronym_terms
+                )
+            if has_vision and has_transformer:
+                filtered.append(p)
+        return filtered
 
     def _filter_by_time(self, papers: list[Paper], time_range: str) -> list[Paper]:
         import datetime
@@ -224,38 +551,264 @@ class LiteratureRetrievalSkill:
         return unique
 
     def _enrich_citations(self, papers: list[Paper], max_total: int) -> list[Paper]:
-        paper_ids = [p.paper_id for p in papers if p.paper_id]
-        if not paper_ids:
-            return papers
+        openalex_ids = [p.paper_id for p in papers if p.source == "openalex" and p.paper_id]
+        if openalex_ids:
+            try:
+                params = {
+                    "filter": f"openalex_id:{'|'.join(openalex_ids[:50])}",
+                    "per_page": 50,
+                    "mailto": "student@example.com",
+                    "select": "id,referenced_works,cited_by_count",
+                }
+                resp = requests.get(
+                    f"{OPENALEX_BASE}/works",
+                    params=params,
+                    headers={"User-Agent": USER_AGENT},
+                    timeout=20,
+                )
+                resp.raise_for_status()
+                data = resp.json()
 
-        s2_ids = [p.paper_id for p in papers if p.source == "semantic_scholar" and len(p.paper_id) > 10]
-        if not s2_ids:
-            return papers
+                id_to_paper = {p.paper_id: p for p in papers}
+                for item in data.get("results", []):
+                    oa_id = item.get("id", "").split("/")[-1]
+                    paper = id_to_paper.get(oa_id)
+                    if not paper:
+                        continue
+                    refs = item.get("referenced_works", [])
+                    paper.references = [r.split("/")[-1] for r in refs]
+                    if item.get("cited_by_count"):
+                        paper.citation_count = max(paper.citation_count, item["cited_by_count"])
+                        paper.citation_source = paper.citation_source or "openalex"
+            except Exception as e:
+                print(f"[OpenAlex] Citation enrichment failed: {e}")
 
-        try:
-            url = "https://api.semanticscholar.org/graph/v1/paper/batch"
-            payload = {"ids": s2_ids[:500]}
-            params = {"fields": "references,citations"}
-            resp = requests.post(url, json=payload, params=params, timeout=60)
-            resp.raise_for_status()
-            data = resp.json()
-
-            id_to_paper = {p.paper_id: p for p in papers}
-            for item in data:
-                pid = item.get("doi") or item.get("arxivId") or ""
-                paper = id_to_paper.get(pid)
-                if not paper:
-                    continue
-                paper.references = [
-                    (r.get("paperId") or "") for r in (item.get("references") or [])
-                ]
-                paper.citations = [
-                    (c.get("paperId") or "") for c in (item.get("citations") or [])
-                ]
-        except Exception as e:
-            print(f"[Semantic Scholar] Citation enrichment failed: {e}")
+        self._enrich_citations_semantic_scholar(papers, max_total)
+        self._enrich_missing_citations_by_title(papers, max_total)
 
         return papers
+
+    def _enrich_citations_semantic_scholar(self, papers: list[Paper], max_total: int) -> None:
+        api_key = os.environ.get("S2_API_KEY")
+        if not api_key:
+            return
+        headers = {"x-api-key": api_key, "User-Agent": USER_AGENT}
+        for paper in self._semantic_scholar_candidates(papers, max_total):
+            result = self._lookup_semantic_scholar_paper(paper, headers)
+            if not result:
+                continue
+            citation_count = result.get("citationCount")
+            if isinstance(citation_count, int) and citation_count >= paper.citation_count:
+                paper.citation_count = citation_count
+                paper.citation_source = "semantic_scholar"
+            refs = result.get("references") or []
+            if refs and not paper.references:
+                paper.references = [
+                    ref.get("paperId", "")
+                    for ref in refs
+                    if isinstance(ref, dict) and ref.get("paperId")
+                ]
+            if result.get("url") and not paper.url:
+                paper.url = result["url"]
+
+    def _semantic_scholar_candidates(self, papers: list[Paper], max_total: int) -> list[Paper]:
+        important_terms = [
+            "deep counterfactual regret",
+            "counterfactual regret",
+            "monte carlo sampling for regret minimization",
+            "regret minimization in games",
+            "vision transformer",
+            "swin transformer",
+            "masked autoencoders",
+            "data-efficient image transformers",
+            "self-supervised vision transformers",
+            "beit",
+        ]
+        scored = []
+        for paper in papers:
+            text = f"{paper.title} {paper.abstract}".lower()
+            priority = 0
+            if any(term in text for term in important_terms):
+                priority += 10
+            if paper.source == "arxiv":
+                priority += 4
+            if paper.citation_count == 0:
+                priority += 2
+            if self._extract_arxiv_id(paper):
+                priority += 3
+            scored.append((priority, -paper.citation_count, paper))
+        scored.sort(key=lambda item: item[:2], reverse=True)
+        # S2 keys are limited to 1 request/second, so keep enrichment focused.
+        return [paper for _, _, paper in scored[: min(max_total, 12)]]
+
+    def _lookup_semantic_scholar_paper(self, paper: Paper, headers: dict[str, str]) -> Optional[dict]:
+        fields = "paperId,title,year,url,citationCount,references.paperId,externalIds"
+        arxiv_id = self._extract_arxiv_id(paper)
+        lookup_ids = [f"ARXIV:{arxiv_id}"] if arxiv_id else []
+        for lookup_id in lookup_ids:
+            self._wait_for_semantic_scholar_slot()
+            try:
+                resp = requests.get(
+                    f"{SEMANTIC_SCHOLAR_BASE}/paper/{urllib.parse.quote(lookup_id, safe=':')}",
+                    params={"fields": fields},
+                    headers=headers,
+                    timeout=20,
+                )
+                if resp.status_code == 404:
+                    continue
+                if resp.status_code == 429:
+                    time.sleep(2.0)
+                    continue
+                resp.raise_for_status()
+                data = resp.json()
+                if self._semantic_scholar_title_matches(paper.title, data.get("title", "")):
+                    return data
+            except Exception as e:
+                print(f"[SemanticScholar] Lookup failed for '{paper.title[:50]}': {e}")
+        return self._semantic_scholar_search_by_title(paper, headers, fields)
+
+    def _semantic_scholar_search_by_title(self, paper: Paper, headers: dict[str, str], fields: str) -> Optional[dict]:
+        self._wait_for_semantic_scholar_slot()
+        try:
+            resp = requests.get(
+                f"{SEMANTIC_SCHOLAR_BASE}/paper/search",
+                params={"query": paper.title, "limit": 3, "fields": fields},
+                headers=headers,
+                timeout=20,
+            )
+            if resp.status_code == 429:
+                time.sleep(2.0)
+                return None
+            resp.raise_for_status()
+            for candidate in resp.json().get("data", []):
+                if self._semantic_scholar_title_matches(paper.title, candidate.get("title", "")):
+                    return candidate
+        except Exception as e:
+            print(f"[SemanticScholar] Title search failed for '{paper.title[:50]}': {e}")
+        return None
+
+    def _wait_for_semantic_scholar_slot(self) -> None:
+        elapsed = time.monotonic() - self._last_s2_request_ts
+        if elapsed < 1.05:
+            time.sleep(1.05 - elapsed)
+        self._last_s2_request_ts = time.monotonic()
+
+    def _extract_arxiv_id(self, paper: Paper) -> str:
+        for value in [paper.paper_id, paper.url]:
+            if not value:
+                continue
+            match = re.search(r"(\d{4}\.\d{4,5})(?:v\d+)?", value)
+            if match:
+                return match.group(1)
+        return ""
+
+    def _semantic_scholar_title_matches(self, wanted: str, candidate: str) -> bool:
+        wanted_key = self._normalize_title(wanted)
+        candidate_key = self._normalize_title(candidate)
+        if not wanted_key or not candidate_key:
+            return False
+        return wanted_key == candidate_key or wanted_key in candidate_key or candidate_key in wanted_key
+
+    def _ensure_curated_landmarks(self, papers: list[Paper], topic: str) -> list[Paper]:
+        topic_lower = topic.lower()
+        if not (("vision" in topic_lower or "image" in topic_lower or "vit" in topic_lower) and "transformer" in topic_lower):
+            return papers
+
+        existing_titles = {self._normalize_title(p.title) for p in papers}
+        landmarks = self._vision_transformer_landmarks(source="curated_landmark")
+        for i, pdata in enumerate(landmarks):
+            title_key = self._normalize_title(pdata["title"])
+            if title_key in existing_titles:
+                self._repair_curated_metadata(papers, title_key, pdata)
+                continue
+            existing_titles.add(title_key)
+            papers.append(Paper(
+                paper_id=f"curated_vit_{i}",
+                title=pdata["title"],
+                authors=pdata["authors"],
+                year=pdata["year"],
+                abstract=pdata["abstract"],
+                url=pdata["url"],
+                citation_count=pdata["citation_count"],
+                citation_source="curated",
+                source=pdata["source"],
+                venue=pdata.get("venue", ""),
+            ))
+        self._link_curated_references(papers)
+        return papers
+
+    def _repair_curated_metadata(self, papers: list[Paper], title_key: str, pdata: dict) -> None:
+        for paper in papers:
+            if self._normalize_title(paper.title) != title_key:
+                continue
+            if pdata.get("citation_count", 0) > paper.citation_count:
+                paper.citation_count = pdata["citation_count"]
+                paper.citation_source = "curated"
+            if pdata.get("year") and (paper.year == 0 or paper.year > 2026 or paper.title == pdata["title"]):
+                paper.year = pdata["year"]
+            if pdata.get("url") and (not paper.url or "doi.org/10.65215" in paper.url):
+                paper.url = pdata["url"]
+            if pdata.get("authors") and not paper.authors:
+                paper.authors = pdata["authors"]
+            if pdata.get("abstract") and not paper.abstract:
+                paper.abstract = pdata["abstract"]
+            if pdata.get("source") == "curated_prerequisite":
+                paper.source = "curated_prerequisite"
+            return
+
+    def _enrich_missing_citations_by_title(self, papers: list[Paper], max_total: int) -> None:
+        candidates = [
+            p for p in papers
+            if p.source != "openalex" and p.title and p.citation_count == 0
+        ][: min(max_total, 5)]
+
+        for paper in candidates:
+            try:
+                params = {
+                    "search": paper.title,
+                    "per_page": 3,
+                    "mailto": "student@example.com",
+                    "select": "id,title,referenced_works,cited_by_count",
+                }
+                resp = requests.get(
+                    f"{OPENALEX_BASE}/works",
+                    params=params,
+                    headers={"User-Agent": USER_AGENT},
+                    timeout=15,
+                )
+                resp.raise_for_status()
+                results = resp.json().get("results", [])
+                match = self._best_title_match(paper.title, results)
+                if not match:
+                    continue
+                cited_by = match.get("cited_by_count", 0) or 0
+                paper.citation_count = max(paper.citation_count, cited_by)
+                if cited_by and paper.citation_count == cited_by:
+                    paper.citation_source = "openalex"
+                refs = match.get("referenced_works", []) or []
+                if refs and not paper.references:
+                    paper.references = [r.split("/")[-1] for r in refs]
+            except Exception as e:
+                print(f"[OpenAlex] Title citation lookup failed for '{paper.title[:50]}': {e}")
+            time.sleep(0.1)
+
+    def _best_title_match(self, title: str, results: list[dict]) -> Optional[dict]:
+        wanted = self._normalize_title(title)
+        if not wanted:
+            return None
+        for item in results:
+            candidate = self._normalize_title(item.get("title", ""))
+            if candidate == wanted:
+                return item
+        for item in results:
+            candidate = self._normalize_title(item.get("title", ""))
+            if wanted in candidate or candidate in wanted:
+                return item
+        return None
+
+    @staticmethod
+    def _normalize_title(title: str) -> str:
+        return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
 
     def _assess_corpus_quality(self, papers: list[Paper]) -> dict:
         n = len(papers)
@@ -279,13 +832,21 @@ class LiteratureRetrievalSkill:
         if not profile:
             return []
         new_query = f"{profile.topic} {query_suffix}"
-        papers = self._search_arxiv(new_query, max_papers) + self._search_semantic_scholar(new_query, max_papers)
+        papers = self._search_arxiv(new_query, max_papers) + self._search_openalex(new_query, max_papers)
         papers = self._deduplicate(papers)
+        papers = self._filter_relevance(papers, profile.topic)
+        papers = self._filter_topic_specific_relevance(papers, profile.topic)
+        query_plan = self.data.get_metadata("query_plan") or {}
+        papers = self._filter_exclude_terms(papers, query_plan.get("exclude_terms", []))
+        papers = self._enrich_citations(papers, max_papers)
         self.data.add_papers(papers)
+        all_papers = self.data.get_all_papers()
+        quality = self._assess_corpus_quality(all_papers)
+        self.data.set_corpus_quality(quality)
         return papers
 
     def _generate_demo_papers(self, topic: str, count: int = 50) -> list[Paper]:
-        random.seed(hash(topic) % (2**31))
+        random.seed(self._stable_seed(topic))
 
         seed_count = max(20, min(count, 60))
         papers: list[Paper] = []
@@ -341,19 +902,243 @@ class LiteratureRetrievalSkill:
                 authors=authors,
                 year=year,
                 abstract=abstract,
-                url=f"https://arxiv.org/abs/demo.{i}",
+                url="",
                 citation_count=cit_count,
                 source="demo",
                 venue="",
             ))
 
+        self._inject_prerequisites(papers, topic, used_titles)
+        self._link_curated_references(papers)
         self._link_demo_citations(papers, topic)
         return papers
+
+    def _inject_prerequisites(self, papers: list[Paper], topic: str, used_titles: set[str]) -> None:
+        topic_lower = topic.lower()
+        prereq_papers: list[dict] = []
+
+        if "transformer" in topic_lower or "attention" in topic_lower:
+            prereq_papers.append({
+                "title": "Attention Is All You Need",
+                "authors": ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit", "Llion Jones", "Aidan N. Gomez", "Lukasz Kaiser", "Illia Polosukhin"],
+                "year": 2017,
+                "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable, and requires significantly less time to train.",
+                "citation_count": 145000,
+                "source": "prereq_demo",
+            })
+        if "transformer" in topic_lower or "bert" in topic_lower or "language" in topic_lower:
+            prereq_papers.append({
+                "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+                "authors": ["Jacob Devlin", "Ming-Wei Chang", "Kenton Lee", "Kristina Toutanova"],
+                "year": 2019,
+                "abstract": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers, obtaining state-of-the-art results on eleven NLP tasks.",
+                "citation_count": 110000,
+                "source": "prereq_demo",
+            })
+        if "vision" in topic_lower or "image" in topic_lower or "cnn" in topic_lower or "convolution" in topic_lower:
+            prereq_papers.append({
+                "title": "Deep Residual Learning for Image Recognition",
+                "authors": ["Kaiming He", "Xiangyu Zhang", "Shaoqing Ren", "Jian Sun"],
+                "year": 2016,
+                "abstract": "Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, achieving state-of-the-art results on ImageNet and COCO.",
+                "citation_count": 210000,
+                "source": "prereq_demo",
+            })
+            prereq_papers.append({
+                "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+                "authors": ["Alex Krizhevsky", "Ilya Sutskever", "Geoffrey E. Hinton"],
+                "year": 2012,
+                "abstract": "We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation, achieving top-1 error rate of 37.5%, significantly better than the previous state-of-the-art.",
+                "citation_count": 180000,
+                "source": "prereq_demo",
+            })
+        if "graph" in topic_lower or "gnn" in topic_lower:
+            prereq_papers.append({
+                "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+                "authors": ["Thomas N. Kipf", "Max Welling"],
+                "year": 2017,
+                "abstract": "We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient variant of convolutional neural networks which operate directly on graphs. We motivate the choice of architecture via a localized first-order approximation of spectral graph convolutions.",
+                "citation_count": 45000,
+                "source": "prereq_demo",
+            })
+        if "reinforcement" in topic_lower and ("game" in topic_lower or "deep" in topic_lower):
+            prereq_papers.append({
+                "title": "Playing Atari with Deep Reinforcement Learning",
+                "authors": ["Volodymyr Mnih", "Koray Kavukcuoglu", "David Silver", "Alex Graves", "Ioannis Antonoglou", "Daan Wierstra", "Martin Riedmiller"],
+                "year": 2013,
+                "abstract": "We present the first deep learning model to successfully learn control policies directly from high-dimensional sensory input using reinforcement learning. The model is a convolutional neural network, trained with a variant of Q-learning, whose input is raw pixels and whose output is a value function estimating future rewards.",
+                "citation_count": 32000,
+                "source": "prereq_demo",
+            })
+        if "cfr" in topic_lower or ("game" in topic_lower and "imperfect" in topic_lower):
+            prereq_papers.append({
+                "title": "Regret Minimization in Games with Incomplete Information",
+                "authors": ["Martin Zinkevich", "Michael Johanson", "Michael Bowling", "Carmelo Piccione"],
+                "year": 2007,
+                "abstract": "We examine regret minimization in the context of extensive-form games. We prove that counterfactual regret minimization (CFR) eliminates positive regret and converges to a correlated equilibrium. We apply CFR to poker, showing it can compute near-optimal strategies for games too large for previous approaches.",
+                "citation_count": 2500,
+                "source": "prereq_demo",
+                "url": "https://proceedings.neurips.cc/paper_files/paper/2007/hash/08d98638c6fcd194a4b1e6992063e944-Abstract.html",
+            })
+
+        offset = len(papers)
+        for i, pdata in enumerate(prereq_papers):
+            if pdata["title"] in used_titles:
+                continue
+            used_titles.add(pdata["title"])
+            papers.append(Paper(
+                paper_id=f"prereq_demo_{i}",
+                title=pdata["title"],
+                authors=pdata["authors"],
+                year=pdata["year"],
+                abstract=pdata["abstract"],
+                url=pdata.get("url", ""),
+                citation_count=pdata["citation_count"],
+                source=pdata["source"],
+                venue="",
+            ))
+
+        self._inject_landmark_papers(papers, topic, used_titles)
+
+    def _inject_landmark_papers(self, papers: list[Paper], topic: str, used_titles: set[str]) -> None:
+        topic_lower = topic.lower()
+        if not (("vision" in topic_lower or "image" in topic_lower or "vit" in topic_lower) and "transformer" in topic_lower):
+            return
+
+        landmarks = self._vision_transformer_landmarks(source="landmark_demo")
+
+        for i, pdata in enumerate(landmarks):
+            if pdata["title"] in used_titles:
+                continue
+            used_titles.add(pdata["title"])
+            papers.append(Paper(
+                paper_id=f"landmark_vit_{i}",
+                title=pdata["title"],
+                authors=pdata["authors"],
+                year=pdata["year"],
+                abstract=pdata["abstract"],
+                url=pdata["url"],
+                citation_count=pdata["citation_count"],
+                source=pdata["source"],
+                venue=pdata.get("venue", ""),
+            ))
+
+    def _vision_transformer_landmarks(self, source: str) -> list[dict]:
+        return [
+            {
+                "title": "Attention Is All You Need",
+                "authors": ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit", "Llion Jones", "Aidan N. Gomez", "Lukasz Kaiser", "Illia Polosukhin"],
+                "year": 2017,
+                "abstract": "This paper introduces the Transformer architecture based solely on attention mechanisms. It provides the self-attention foundation needed to understand how Vision Transformer models process image patches as token sequences.",
+                "citation_count": 145000,
+                "url": "https://arxiv.org/abs/1706.03762",
+                "source": "curated_prerequisite" if source == "curated_landmark" else source,
+            },
+            {
+                "title": "Deep Residual Learning for Image Recognition",
+                "authors": ["Kaiming He", "Xiangyu Zhang", "Shaoqing Ren", "Jian Sun"],
+                "year": 2016,
+                "abstract": "ResNet established deep residual CNN backbones for image recognition. It is a useful prerequisite because many Vision Transformer papers compare against, hybridize with, or replace convolutional visual backbones.",
+                "citation_count": 210000,
+                "url": "https://arxiv.org/abs/1512.03385",
+                "source": "curated_prerequisite" if source == "curated_landmark" else source,
+            },
+            {
+                "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+                "authors": ["Alex Krizhevsky", "Ilya Sutskever", "Geoffrey E. Hinton"],
+                "year": 2012,
+                "abstract": "AlexNet marks the modern deep learning breakthrough for ImageNet classification. It gives beginners the benchmark and CNN context that Vision Transformer papers use to position their contributions.",
+                "citation_count": 180000,
+                "url": "https://proceedings.neurips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+                "source": "curated_prerequisite" if source == "curated_landmark" else source,
+            },
+            {
+                "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+                "authors": ["Alexey Dosovitskiy", "Lucas Beyer", "Alexander Kolesnikov", "Dirk Weissenborn", "Xiaohua Zhai", "Thomas Unterthiner", "Mostafa Dehghani", "Matthias Minderer", "Georg Heigold", "Sylvain Gelly", "Jakob Uszkoreit", "Neil Houlsby"],
+                "year": 2020,
+                "abstract": "This paper introduces the Vision Transformer, showing that a standard Transformer applied directly to image patches can achieve strong image recognition performance at scale. It establishes the core patch-token formulation that many later vision transformer variants build upon.",
+                "citation_count": 38000,
+                "url": "https://arxiv.org/abs/2010.11929",
+                "source": source,
+            },
+            {
+                "title": "Training data-efficient image transformers and distillation through attention",
+                "authors": ["Hugo Touvron", "Matthieu Cord", "Matthijs Douze", "Francisco Massa", "Alexandre Sablayrolles", "Herve Jegou"],
+                "year": 2021,
+                "abstract": "DeiT studies how to train Vision Transformers efficiently on ImageNet without massive external datasets. It introduces a distillation strategy that made ViT-style architectures more practical for standard vision benchmarks.",
+                "citation_count": 12000,
+                "url": "https://arxiv.org/abs/2012.12877",
+                "source": source,
+            },
+            {
+                "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+                "authors": ["Ze Liu", "Yutong Lin", "Yue Cao", "Han Hu", "Yixuan Wei", "Zheng Zhang", "Stephen Lin", "Baining Guo"],
+                "year": 2021,
+                "abstract": "Swin Transformer introduces shifted-window attention and a hierarchical representation, adapting vision transformers into general-purpose visual backbones for image classification, detection, and segmentation.",
+                "citation_count": 26000,
+                "url": "https://arxiv.org/abs/2103.14030",
+                "source": source,
+            },
+            {
+                "title": "Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions",
+                "authors": ["Wenhai Wang", "Enze Xie", "Xiang Li", "Deng-Ping Fan", "Kaitao Song", "Ding Liang", "Tong Lu", "Ping Luo", "Ling Shao"],
+                "year": 2021,
+                "abstract": "Pyramid Vision Transformer builds a progressive pyramid structure for transformer-based vision backbones, connecting ViT-style models to dense prediction tasks that require multi-scale features.",
+                "citation_count": 6500,
+                "url": "https://arxiv.org/abs/2102.12122",
+                "source": source,
+            },
+            {
+                "title": "Emerging Properties in Self-Supervised Vision Transformers",
+                "authors": ["Mathilde Caron", "Hugo Touvron", "Ishan Misra", "Herve Jegou", "Julien Mairal", "Piotr Bojanowski", "Armand Joulin"],
+                "year": 2021,
+                "abstract": "DINO shows that self-supervised training with vision transformers can produce strong visual representations and attention maps with emergent semantic structure, making it a key self-supervised ViT milestone.",
+                "citation_count": 11000,
+                "url": "https://arxiv.org/abs/2104.14294",
+                "source": source,
+            },
+            {
+                "title": "BEiT: BERT Pre-Training of Image Transformers",
+                "authors": ["Hangbo Bao", "Li Dong", "Songhao Piao", "Furu Wei"],
+                "year": 2021,
+                "abstract": "BEiT adapts masked language modeling ideas to image transformers through masked image modeling, forming an important bridge between BERT-style pretraining and ViT representation learning.",
+                "citation_count": 7000,
+                "url": "https://arxiv.org/abs/2106.08254",
+                "source": source,
+            },
+            {
+                "title": "Masked Autoencoders Are Scalable Vision Learners",
+                "authors": ["Kaiming He", "Xinlei Chen", "Saining Xie", "Yanghao Li", "Piotr Dollar", "Ross Girshick"],
+                "year": 2022,
+                "abstract": "MAE introduces a simple masked autoencoding pretraining strategy for scalable vision transformer learning, becoming a major self-supervised pretraining direction for ViT backbones.",
+                "citation_count": 16000,
+                "url": "https://arxiv.org/abs/2111.06377",
+                "source": source,
+            },
+            {
+                "title": "Learning Transferable Visual Models From Natural Language Supervision",
+                "authors": ["Alec Radford", "Jong Wook Kim", "Chris Hallacy", "Aditya Ramesh", "Gabriel Goh", "Sandhini Agarwal", "Girish Sastry", "Amanda Askell", "Pamela Mishkin", "Jack Clark", "Gretchen Krueger", "Ilya Sutskever"],
+                "year": 2021,
+                "abstract": "CLIP connects visual representation learning with natural language supervision at scale. In a ViT reading path, it represents the vision-language branch that often uses ViT backbones.",
+                "citation_count": 35000,
+                "url": "https://arxiv.org/abs/2103.00020",
+                "source": source,
+            },
+            {
+                "title": "DINOv2: Learning Robust Visual Features without Supervision",
+                "authors": ["Maxime Oquab", "Timothee Darcet", "Theo Moutakanni", "Huy Vo", "Marc Szafraniec", "Vasil Khalidov", "Pierre Fernandez", "Daniel Haziza", "Francisco Massa", "Alaaeldin El-Nouby", "Mahmoud Assran", "Nicolas Ballas", "Wojciech Galuba", "Russell Howes", "Po-Yao Huang", "Shang-Wen Li", "Ishan Misra", "Michael Rabbat", "Vasu Sharma", "Gabriel Synnaeve", "Hu Xu", "Herve Jegou", "Julien Mairal", "Patrick Labatut", "Armand Joulin", "Piotr Bojanowski"],
+                "year": 2023,
+                "abstract": "DINOv2 studies large-scale self-supervised visual feature learning and shows that carefully trained ViT-based models can provide robust general-purpose visual representations without supervision.",
+                "citation_count": 3500,
+                "url": "https://arxiv.org/abs/2304.07193",
+                "source": source,
+            },
+        ]
 
     def _generate_paper_content(self, topic: str, category: str, idx: int) -> tuple[str, str]:
         topic_words = re.findall(r"[A-Za-z0-9]+", topic.lower())
         key = topic_words[0] if topic_words else "method"
-        random.seed(hash(topic + category + str(idx)) % (2**31))
+        random.seed(self._stable_seed(topic + category + str(idx)))
 
         templates = {
             "foundation": [
@@ -410,6 +1195,44 @@ class LiteratureRetrievalSkill:
         title, abstract = cat_templates[idx % len(cat_templates)]
         return title, abstract
 
+    @staticmethod
+    def _stable_seed(text: str) -> int:
+        return int(hashlib.md5(text.encode("utf-8")).hexdigest()[:8], 16)
+
+    def _link_curated_references(self, papers: list[Paper]) -> None:
+        by_title = {p.title: p for p in papers}
+
+        def add_refs(title: str, ref_titles: list[str]) -> None:
+            paper = by_title.get(title)
+            if not paper:
+                return
+            for ref_title in ref_titles:
+                ref = by_title.get(ref_title)
+                if ref and ref.paper_id not in paper.references:
+                    paper.references.append(ref.paper_id)
+
+        attention = "Attention Is All You Need"
+        resnet = "Deep Residual Learning for Image Recognition"
+        alexnet = "ImageNet Classification with Deep Convolutional Neural Networks"
+        vit = "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
+        deit = "Training data-efficient image transformers and distillation through attention"
+        swin = "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"
+        pvt = "Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions"
+        dino = "Emerging Properties in Self-Supervised Vision Transformers"
+        beit = "BEiT: BERT Pre-Training of Image Transformers"
+        mae = "Masked Autoencoders Are Scalable Vision Learners"
+        clip = "Learning Transferable Visual Models From Natural Language Supervision"
+        bert = "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+
+        add_refs(vit, [attention, resnet, alexnet])
+        add_refs(deit, [vit, attention])
+        add_refs(swin, [vit, resnet])
+        add_refs(pvt, [vit, resnet])
+        add_refs(dino, [vit, deit])
+        add_refs(beit, [vit, bert])
+        add_refs(mae, [vit, beit])
+        add_refs(clip, [vit, resnet])
+
     def _link_demo_citations(self, papers: list[Paper], topic: str) -> None:
         sorted_papers = sorted(papers, key=lambda p: p.year)
 
@@ -432,3 +1255,11 @@ class LiteratureRetrievalSkill:
                 if p.year >= 2010 and top_foundation.paper_id not in p.references and p != top_foundation:
                     if random.random() < 0.6:
                         p.references.append(top_foundation.paper_id)
+
+        prereq_papers = [p for p in papers if p.source in {"prereq_demo", "landmark_demo"}]
+        if prereq_papers:
+            for prereq in prereq_papers:
+                for p in papers:
+                    if p.year > prereq.year and p.source != "prereq_demo" and prereq.paper_id not in p.references:
+                        if random.random() < 0.5:
+                            p.references.append(prereq.paper_id)

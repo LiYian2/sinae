@@ -1,103 +1,125 @@
 # ResearchTrail
 
-A Citation-Network Agent for Personalized Literature Entry and Reading Path Planning.
+**ResearchTrail: A Citation-Network Agent for Personalized Research Reading Paths**
 
-## Overview
+ResearchTrail helps users enter a new research field by retrieving relevant papers, constructing a citation/similarity network, identifying foundational, bridging, and frontier papers, and generating a personalized reading path with explanations and visualizations.
 
-ResearchTrail is an AI Agent system for social network analysis. Given a high-level research goal (e.g., "I want to enter the field of Deep CFR"), the Agent automatically:
+The system is **markdown-described, code-backed, LLM-assisted, and graph-centered**:
 
-1. **Generates a search query plan** from natural language
-2. **Retrieves candidate papers** from arXiv and Semantic Scholar
-3. **Builds a citation/similarity graph**
-4. **Analyzes the graph** with PageRank, betweenness centrality, and community detection
-5. **Generates a personalized reading path** organized by stages (Foundations → Core → Frontier)
-6. **Produces reports and visualizations**
-7. **Supports follow-up queries** (bridge papers, 7-day plans, author recommendations, etc.)
+- `SKILL.md` files define StudyClawHub-compatible Skill interfaces.
+- Python backends perform deterministic retrieval, graph construction, scoring, reporting, and evaluation.
+- LLM calls are optional and used only for semantic planning, query expansion, community labeling, and evidence-grounded explanations.
+- NetworkX and scikit-learn provide verifiable SNA computation.
 
 ## Architecture
 
-```
-User Input → Agent Planner → Skills Pipeline → Output
-
-Skills:
-  1. Literature Retrieval Skill    (skill_retrieval/)
-  2. Research Graph Analysis Skill (skill_graph/)
-  3. Reading Path & Report Skill   (skill_reading_path/)
-
-Shared Layer: shared/data_layer.py  (all Skills communicate via this)
+```text
+User Goal
+  -> Hybrid Agent Planner
+  -> Literature Retrieval Skill
+  -> Research Graph Analysis Skill
+  -> Reading Path and Report Skill
+  -> Evaluation and Visualizations
 ```
 
-## Installation
+## Skills
+
+| Skill | Folder | Responsibility |
+|---|---|---|
+| Literature Retrieval | `skill_retrieval/` | Query planning, arXiv/OpenAlex retrieval, deduplication, metadata enrichment, corpus quality |
+| Research Graph Analysis | `skill_graph/` | Citation/similarity graph, PageRank, betweenness, Louvain, role scoring, community labeling |
+| Reading Path and Report | `skill_reading_path/` | Personalized stages, evidence packets, grounded explanations, report, visualizations |
+
+Each Skill folder contains a StudyClawHub-compatible `SKILL.md`.
+
+## Environment
+
+Use the course conda environment:
 
 ```bash
-uv sync
+conda activate network
 ```
+
+Optional LLM mode uses SiliconFlow:
+
+```bash
+export SILICON_FLOW_API="your_api_key"
+```
+
+Default model:
+
+```text
+Pro/zai-org/GLM-4.7
+```
+
+If the API key is missing or the LLM call fails, ResearchTrail falls back to deterministic rule-based behavior.
 
 ## Usage
 
-```bash
-# Single query
-uv run researchtrail "I want to enter the field of Deep CFR for imperfect-information games"
-
-# Interactive mode
-uv run researchtrail -i
-
-# Save output
-uv run researchtrail -o output.md "Build a reading path for graph anomaly detection"
-```
-
-### Interactive commands
-- `/help` — Show available commands
-- `/visualize` — Render network visualization
-- `/report` — Generate full briefing report
-- `/bridge` — Find bridge papers
-- `/7day` — Generate a 7-day reading plan
-- `/authors` — Show top authors
-- `/foundation` — Show foundational papers
-- `/gaps` — Show research gaps
-
-## Project Structure
-
-```
-project/
-├── agent/                  # Agent orchestrator
-│   ├── __init__.py
-│   ├── planner.py          # Rule-based intent router & workflow engine
-│   └── main.py             # CLI entry point
-├── shared/                 # Shared data layer
-│   ├── __init__.py
-│   ├── data_layer.py       # Central data store for inter-Skill communication
-│   └── types.py            # Common type definitions
-├── skill_retrieval/        # Skill 1: Literature Retrieval
-│   ├── __init__.py
-│   └── retrieval.py        # arXiv + Semantic Scholar API integration
-├── skill_graph/            # Skill 2: Graph Analysis
-│   ├── __init__.py
-│   ├── graph_builder.py    # Citation + semantic similarity graph construction
-│   └── analysis.py          # PageRank, betweenness, community detection
-├── skill_reading_path/     # Skill 3: Reading Path & Report
-│   ├── __init__.py
-│   ├── path_generator.py   # Stage-based reading path generation
-│   ├── report.py           # Markdown report generation
-│   └── visualization.py    # Network visualization (matplotlib)
-├── tests/                  # Test suite
-│   ├── __init__.py
-│   ├── test_shared.py
-│   ├── test_graph.py
-│   ├── test_reading_path.py
-│   └── test_agent.py
-├── pyproject.toml
-└── README.md
-```
-
-## Running Tests
+Stable demo without external APIs:
 
 ```bash
-uv run pytest tests/ -v
+python main.py "I am a beginner in deep learning and want to deeply understand Vision Transformer" \
+  --demo \
+  --llm off \
+  --max-papers 80 \
+  --output-dir outputs/vit_rule
 ```
 
-## Requirements
+LLM-assisted mode:
 
-- Python >= 3.12
-- networkx, matplotlib, numpy, scikit-learn, requests, arxiv, tqdm
-- Internet connection for API calls (arXiv, Semantic Scholar)
+```bash
+python main.py "I am a beginner in deep learning and want to deeply understand Vision Transformer" \
+  --llm auto \
+  --llm-provider siliconflow \
+  --llm-model Pro/zai-org/GLM-4.7 \
+  --max-papers 120 \
+  --output-dir outputs/vit_llm
+```
+
+Interactive mode:
+
+```bash
+python main.py --interactive --demo --llm off
+```
+
+## Outputs
+
+Each run writes:
+
+- `research_report.md`
+- `research_graph.png`
+- `scores_distribution.png`
+- `state.json`
+
+The state file includes papers, graph scores, corpus quality, graph metrics, query plan, community labels, and reading path metrics.
+
+## Evaluation
+
+Run the built-in evaluation harness:
+
+```bash
+python -m evaluation.runner \
+  --topic "Vision Transformer" \
+  --demo \
+  --max-papers 80 \
+  --output-dir outputs/evaluation/vit
+```
+
+It produces:
+
+- `evaluation_results.json`
+- `evaluation_summary.md`
+
+Current evaluation hooks compare:
+
+- rule-only vs LLM-assisted Agent behavior
+- citation-only vs similarity-only vs hybrid graph
+- retrieval, graph, and reading path metrics
+
+## Tests
+
+```bash
+conda activate network
+python -m pytest tests -q
+```

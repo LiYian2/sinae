@@ -22,6 +22,7 @@ class ReportGenerator:
             lines.append(f"**Preferred Length:** {profile.preferred_length} papers\n")
 
         lines.append("---\n")
+        self._append_summary_sections(lines)
 
         for stage in path.stages:
             lines.append(f"## {stage['stage']}")
@@ -31,7 +32,14 @@ class ReportGenerator:
                 p = self.data.get_paper(paper["paper_id"])
                 if p:
                     lines.append(f"**Authors:** {', '.join(p.authors[:3])}{' et al.' if len(p.authors) > 3 else ''}")
-                    lines.append(f"**Year:** {p.year} | **Citations:** {p.citation_count}")
+                    citation_label = self._citation_label(p)
+                    lines.append(f"**Year:** {p.year} | **{citation_label}:** {p.citation_count}")
+                    if p.source == "demo":
+                        lines.append("**Source:** Synthetic demo record")
+                    elif p.url:
+                        lines.append(f"**URL:** {p.url}")
+                    if p.abstract:
+                        lines.append(f"**Abstract:** {self._shorten_text(p.abstract, 700)}")
                 lines.append(f"**Why read:** {paper['reason']}")
                 lines.append("")
 
@@ -64,6 +72,48 @@ class ReportGenerator:
 
         return "\n".join(lines)
 
+    def _append_summary_sections(self, lines: list[str]) -> None:
+        quality = self.data.get_corpus_quality()
+        graph_metrics = self.data.get_metadata("graph_metrics") or {}
+        path_metrics = self.data.get_metadata("reading_path_metrics") or {}
+        community_labels = self.data.get_metadata("community_labels") or {}
+
+        if quality:
+            lines.append("## Corpus Summary\n")
+            if quality.get("demo_mode") or self.data.get_metadata("demo_mode"):
+                lines.append("> **Demo mode:** this corpus contains synthetic demonstration records. Use live mode without `--demo` for real papers and external URLs.\n")
+            lines.append(f"- Papers: {quality.get('total_papers', 0)}")
+            lines.append(f"- Abstract coverage: {quality.get('has_abstract_ratio', 0):.1%}")
+            lines.append(f"- Citation/reference coverage: {quality.get('has_citation_ratio', 0):.1%}")
+            lines.append("- Citation counts prefer Semantic Scholar `citationCount` when `S2_API_KEY` is available, then fall back to OpenAlex `cited_by_count` or curated landmark metadata.")
+            lines.append(f"- Year range: {quality.get('year_range', 'N/A')}")
+            lines.append(f"- Deduplicated records: {quality.get('deduplication_removed', 0)}")
+            lines.append("")
+
+        if graph_metrics:
+            lines.append("## Field Map Metrics\n")
+            lines.append(f"- Nodes: {graph_metrics.get('node_count', 0)}")
+            lines.append(f"- Edges: {graph_metrics.get('edge_count', 0)}")
+            lines.append(f"- Citation edges: {graph_metrics.get('citation_edges', 0)}")
+            lines.append(f"- Similarity edges: {graph_metrics.get('similarity_edges', 0)}")
+            lines.append(f"- Communities: {graph_metrics.get('community_count', 0)}")
+            lines.append(f"- Modularity: {graph_metrics.get('modularity', 0)}")
+            lines.append(f"- Largest component ratio: {graph_metrics.get('largest_component_ratio', 0):.1%}")
+            lines.append("")
+
+        if community_labels:
+            lines.append("## Detected Research Communities\n")
+            for cid, label in sorted(community_labels.items(), key=lambda x: int(x[0])):
+                lines.append(f"- **Community {cid}: {label.get('label', 'Unlabeled')}** — {label.get('description', '')}")
+            lines.append("")
+
+        if path_metrics:
+            lines.append("## Reading Path Metrics\n")
+            lines.append(f"- Stages: {path_metrics.get('stage_count', 0)}")
+            lines.append(f"- Unique papers: {path_metrics.get('unique_paper_count', 0)}")
+            lines.append(f"- Explanation coverage: {path_metrics.get('explanation_availability_ratio', 0):.1%}")
+            lines.append("")
+
     def _get_community_summary(self, scores: dict[str, NodeScores]) -> dict:
         comms: dict[int, int] = {}
         for sc in scores.values():
@@ -84,7 +134,7 @@ class ReportGenerator:
             f"# Paper Role Analysis: {paper.title}\n",
             f"**Authors:** {', '.join(paper.authors)}",
             f"**Year:** {paper.year}",
-            f"**Citations:** {paper.citation_count}\n",
+            f"**{self._citation_label(paper)}:** {paper.citation_count}\n",
         ]
 
         if scores:
@@ -108,6 +158,27 @@ class ReportGenerator:
             return "Frontier — At the cutting edge of recent research"
         else:
             return "Core — Central methodological contribution"
+
+    @staticmethod
+    def _shorten_text(text: str, max_chars: int) -> str:
+        import re
+
+        text = re.sub(r"\s+", " ", text or "").strip()
+        if len(text) <= max_chars:
+            return text
+        return text[: max_chars - 3].rstrip() + "..."
+
+    @staticmethod
+    def _citation_label(paper: Paper) -> str:
+        if paper.source == "demo":
+            return "Synthetic citations"
+        if paper.citation_source == "semantic_scholar":
+            return "Citations (Semantic Scholar)"
+        if paper.citation_source == "openalex":
+            return "Citations (OpenAlex)"
+        if paper.citation_source == "curated":
+            return "Citations (curated metadata)"
+        return "Citations"
 
     def generate_bridge_report(self) -> str:
         scores = self.data.get_all_scores()

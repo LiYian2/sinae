@@ -1,4 +1,8 @@
 import os
+import tempfile
+
+os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "researchtrail-matplotlib"))
+
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt

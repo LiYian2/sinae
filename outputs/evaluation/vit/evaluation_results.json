@@ -1,0 +1,323 @@
+{
+  "rule_only_agent": {
+    "retrieval": {
+      "total_papers": 62,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.9838709677419355,
+      "year_range": "2001-2025",
+      "median_year": 2018,
+      "citation_edges_total": 335
+    },
+    "graph": {
+      "node_count": 62,
+      "edge_count": 688,
+      "citation_edges": 335,
+      "similarity_edges": 419,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 22.1935,
+      "community_count": 5,
+      "modularity": 0.2794
+    },
+    "reading_path": {
+      "stage_count": 6,
+      "unique_paper_count": 18,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 3,
+        "core": 1,
+        "development": 6,
+        "bridge": 2,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": "rule",
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Vision / Transformer / Neural / Architectures",
+        "description": "Community 0 groups papers around vision, transformer, neural, architectures."
+      },
+      "1": {
+        "label": "Vision / Transformer / Algorithmic / Framework",
+        "description": "Community 1 groups papers around vision, transformer, algorithmic, framework."
+      },
+      "2": {
+        "label": "Vision / Transformer / Representations / Investigate",
+        "description": "Community 2 groups papers around vision, transformer, representations, investigate."
+      },
+      "3": {
+        "label": "Neural / Vision / Transformer / End-To-End",
+        "description": "Community 3 groups papers around neural, vision, transformer, end-to-end."
+      },
+      "4": {
+        "label": "Vision / Transformer / Survey / Image",
+        "description": "Community 4 groups papers around vision, transformer, survey, image."
+      }
+    }
+  },
+  "llm_assisted_agent": {
+    "retrieval": {
+      "total_papers": 62,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.9838709677419355,
+      "year_range": "2001-2025",
+      "median_year": 2018,
+      "citation_edges_total": 335
+    },
+    "graph": {
+      "node_count": 62,
+      "edge_count": 688,
+      "citation_edges": 335,
+      "similarity_edges": 419,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 22.1935,
+      "community_count": 5,
+      "modularity": 0.2794
+    },
+    "reading_path": {
+      "stage_count": 6,
+      "unique_paper_count": 18,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 3,
+        "core": 1,
+        "development": 6,
+        "bridge": 2,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": "rule",
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Vision / Transformer / Neural / Architectures",
+        "description": "Community 0 groups papers around vision, transformer, neural, architectures."
+      },
+      "1": {
+        "label": "Vision / Transformer / Algorithmic / Framework",
+        "description": "Community 1 groups papers around vision, transformer, algorithmic, framework."
+      },
+      "2": {
+        "label": "Vision / Transformer / Representations / Investigate",
+        "description": "Community 2 groups papers around vision, transformer, representations, investigate."
+      },
+      "3": {
+        "label": "Neural / Vision / Transformer / End-To-End",
+        "description": "Community 3 groups papers around neural, vision, transformer, end-to-end."
+      },
+      "4": {
+        "label": "Vision / Transformer / Survey / Image",
+        "description": "Community 4 groups papers around vision, transformer, survey, image."
+      }
+    }
+  },
+  "citation_graph": {
+    "retrieval": {
+      "total_papers": 62,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.9838709677419355,
+      "year_range": "2001-2025",
+      "median_year": 2018,
+      "citation_edges_total": 335
+    },
+    "graph": {
+      "node_count": 62,
+      "edge_count": 335,
+      "citation_edges": 335,
+      "similarity_edges": 0,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 10.8065,
+      "community_count": 5,
+      "modularity": 0.2234
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 16,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 3,
+        "core": 1,
+        "development": 6,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Vision / Transformer / Neural / Representations",
+        "description": "Community 0 groups papers around vision, transformer, neural, representations."
+      },
+      "1": {
+        "label": "Transformer / Vision / Representations / Neural",
+        "description": "Community 1 groups papers around transformer, vision, representations, neural."
+      },
+      "2": {
+        "label": "Vision / Transformer / Theoretical / Framework",
+        "description": "Community 2 groups papers around vision, transformer, theoretical, framework."
+      },
+      "3": {
+        "label": "Vision / Transformer / Neural / End-To-End",
+        "description": "Community 3 groups papers around vision, transformer, neural, end-to-end."
+      },
+      "4": {
+        "label": "Vision / Transformer / Neural / Framework",
+        "description": "Community 4 groups papers around vision, transformer, neural, framework."
+      }
+    }
+  },
+  "similarity_graph": {
+    "retrieval": {
+      "total_papers": 62,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.9838709677419355,
+      "year_range": "2001-2025",
+      "median_year": 2018,
+      "citation_edges_total": 335
+    },
+    "graph": {
+      "node_count": 62,
+      "edge_count": 419,
+      "citation_edges": 0,
+      "similarity_edges": 419,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 13.5161,
+      "community_count": 8,
+      "modularity": 0.6144
+    },
+    "reading_path": {
+      "stage_count": 6,
+      "unique_paper_count": 20,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 3,
+        "core": 3,
+        "development": 6,
+        "bridge": 2,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Neural / Vision / Transformer / End-To-End",
+        "description": "Community 0 groups papers around neural, vision, transformer, end-to-end."
+      },
+      "1": {
+        "label": "Transformer / Vision / Theoretical / Guarantees",
+        "description": "Community 1 groups papers around transformer, vision, theoretical, guarantees."
+      },
+      "2": {
+        "label": "Vision / Transformer / Survey / Recent",
+        "description": "Community 2 groups papers around vision, transformer, survey, recent."
+      },
+      "3": {
+        "label": "Vision / Transformer / Neural / Architectures",
+        "description": "Community 3 groups papers around vision, transformer, neural, architectures."
+      },
+      "4": {
+        "label": "Transformer / Vision / Framework / Unified",
+        "description": "Community 4 groups papers around transformer, vision, framework, unified."
+      },
+      "5": {
+        "label": "Fundamental / Concepts / Vision / Transformer",
+        "description": "Community 5 groups papers around fundamental, concepts, vision, transformer."
+      },
+      "6": {
+        "label": "Representations / Vision / Transformer / Investigate",
+        "description": "Community 6 groups papers around representations, vision, transformer, investigate."
+      },
+      "7": {
+        "label": "Vision / Transformers / Transformer / Image",
+        "description": "Community 7 groups papers around vision, transformers, transformer, image."
+      }
+    }
+  },
+  "hybrid_graph": {
+    "retrieval": {
+      "total_papers": 62,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.9838709677419355,
+      "year_range": "2001-2025",
+      "median_year": 2018,
+      "citation_edges_total": 335
+    },
+    "graph": {
+      "node_count": 62,
+      "edge_count": 688,
+      "citation_edges": 335,
+      "similarity_edges": 419,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 22.1935,
+      "community_count": 5,
+      "modularity": 0.2794
+    },
+    "reading_path": {
+      "stage_count": 6,
+      "unique_paper_count": 18,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 3,
+        "core": 1,
+        "development": 6,
+        "bridge": 2,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Vision / Transformer / Neural / Architectures",
+        "description": "Community 0 groups papers around vision, transformer, neural, architectures."
+      },
+      "1": {
+        "label": "Vision / Transformer / Algorithmic / Framework",
+        "description": "Community 1 groups papers around vision, transformer, algorithmic, framework."
+      },
+      "2": {
+        "label": "Vision / Transformer / Representations / Investigate",
+        "description": "Community 2 groups papers around vision, transformer, representations, investigate."
+      },
+      "3": {
+        "label": "Neural / Vision / Transformer / End-To-End",
+        "description": "Community 3 groups papers around neural, vision, transformer, end-to-end."
+      },
+      "4": {
+        "label": "Vision / Transformer / Survey / Image",
+        "description": "Community 4 groups papers around vision, transformer, survey, image."
+      }
+    }
+  }
+}

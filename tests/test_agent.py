@@ -56,3 +56,16 @@ class TestAgentPlanner:
         agent = AgentPlanner()
         topic = agent._clean_topic("Build me a reading path for graph anomaly detection")
         assert "graph anomaly detection" in topic.lower()
+
+    def test_clean_topic_deeply_understand(self):
+        agent = AgentPlanner()
+        topic = agent._clean_topic("I am a beginner and want to deeply understand Vision Transformer")
+        assert topic == "Vision Transformer"
+
+    def test_cfr_adaptive_expansion_is_domain_specific(self):
+        agent = AgentPlanner()
+        queries = agent._adaptive_expansion_queries("Counterfactual regret minimization")
+        joined = " ".join(queries).lower()
+        assert "extensive-form" in joined
+        assert "poker" in joined
+        assert "related work" not in joined

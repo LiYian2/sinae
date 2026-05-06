@@ -1,0 +1,383 @@
+{
+  "rule_only_agent": {
+    "retrieval": {
+      "total_papers": 43,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.6976744186046512,
+      "year_range": "2007-2025",
+      "median_year": 2019,
+      "citation_edges_total": 873
+    },
+    "graph": {
+      "node_count": 43,
+      "edge_count": 394,
+      "citation_edges": 14,
+      "similarity_edges": 390,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 18.3256,
+      "community_count": 4,
+      "modularity": 0.2029
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 11,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 5,
+        "frontier": 2
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": "rule",
+    "query_plan": {
+      "main_queries": [
+        "Counterfactual regret minimization",
+        "\"Counterfactual regret minimization\"",
+        "Deep Counterfactual Regret Minimization",
+        "Monte Carlo counterfactual regret minimization",
+        "counterfactual regret minimization imperfect information games",
+        "counterfactual regret minimization extensive-form games",
+        "solving imperfect-information games counterfactual regret minimization",
+        "CFR poker regret minimization",
+        "Counterfactual regret minimization method",
+        "Counterfactual regret minimization algorithm"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Games / Regret / Game / Minimization",
+        "description": "Community 0 groups papers around games, regret, game, minimization."
+      },
+      "1": {
+        "label": "Regret / Games / Counterfactual / Minimization",
+        "description": "Community 1 groups papers around regret, games, counterfactual, minimization."
+      },
+      "2": {
+        "label": "Regret / Games / Minimization / Convergence",
+        "description": "Community 2 groups papers around regret, games, minimization, convergence."
+      },
+      "3": {
+        "label": "Regret / Games / Information / Minimization",
+        "description": "Community 3 groups papers around regret, games, information, minimization."
+      }
+    }
+  },
+  "llm_assisted_agent": {
+    "retrieval": {
+      "total_papers": 46,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.6956521739130435,
+      "year_range": "2007-2025",
+      "median_year": 2020,
+      "citation_edges_total": 908
+    },
+    "graph": {
+      "node_count": 46,
+      "edge_count": 441,
+      "citation_edges": 14,
+      "similarity_edges": 436,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 19.1739,
+      "community_count": 5,
+      "modularity": 0.2079
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 11,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 5,
+        "frontier": 2
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": "llm",
+    "query_plan": {
+      "main_queries": [
+        "Counterfactual regret minimization",
+        "Counterfactual regret minimization extensive form games",
+        "CFR+ algorithm",
+        "Deep counterfactual regret minimization"
+      ],
+      "prerequisite_queries": [
+        "Regret matching game theory",
+        "Nash equilibrium extensive form games"
+      ],
+      "exclude_terms": [
+        "Causal inference",
+        "Structural causal models",
+        "Causal effect"
+      ],
+      "expected_communities": [
+        "Algorithmic Game Theory",
+        "Multi-Agent Systems",
+        "Computer Poker Research",
+        "Reinforcement Learning"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Deep Counterfactual Regret Minimization",
+        "description": "This community focuses on integrating deep neural networks with counterfactual regret minimization to solve imperfect-information games."
+      },
+      "1": {
+        "label": "Poker Agents and Imperfect Recall",
+        "description": "Research in this area applies regret minimization techniques to build champion-level poker agents and addresses challenges like imperfect recall in extensive-form games."
+      },
+      "2": {
+        "label": "Theoretical Regret Minimization Algorithms",
+        "description": "This community investigates theoretical improvements and algorithmic variants such as optimistic and discounted regret minimization for extensive-form games."
+      },
+      "3": {
+        "label": "Monte Carlo Sampling and Game Solving",
+        "description": "These papers explore Monte Carlo sampling methods and hardware acceleration for solving specific extensive games like heads-up limit Texas Hold'em."
+      },
+      "4": {
+        "label": "Incomplete Information and Search",
+        "description": "This community focuses on regret minimization strategies for games with incomplete information and unknown environments, often utilizing search methods."
+      }
+    }
+  },
+  "citation_graph": {
+    "retrieval": {
+      "total_papers": 15,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8666666666666667,
+      "year_range": "2007-2024",
+      "median_year": 2019,
+      "citation_edges_total": 325,
+      "deduplication_removed": 0
+    },
+    "graph": {
+      "node_count": 15,
+      "edge_count": 3,
+      "citation_edges": 3,
+      "similarity_edges": 0,
+      "connected_components": 13,
+      "largest_component_ratio": 0.2,
+      "average_degree": 0.4,
+      "community_count": 13,
+      "modularity": 0.0
+    },
+    "reading_path": {
+      "stage_count": 2,
+      "unique_paper_count": 9,
+      "role_counts": {
+        "foundation": 3,
+        "development": 6
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Counterfactual regret minimization",
+        "\"Counterfactual regret minimization\"",
+        "Deep Counterfactual Regret Minimization",
+        "Monte Carlo counterfactual regret minimization",
+        "counterfactual regret minimization imperfect information games",
+        "counterfactual regret minimization extensive-form games",
+        "solving imperfect-information games counterfactual regret minimization",
+        "CFR poker regret minimization",
+        "Counterfactual regret minimization method",
+        "Counterfactual regret minimization algorithm"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Attacker / Allocation / Worst-Case / Regret",
+        "description": "Community 0 groups papers around attacker, allocation, worst-case, regret."
+      },
+      "1": {
+        "label": "Neural / Regret / Counterfactual / Minimization",
+        "description": "Community 1 groups papers around neural, regret, counterfactual, minimization."
+      },
+      "2": {
+        "label": "Regret / Framework / Sqrt / Bandit",
+        "description": "Community 2 groups papers around regret, framework, sqrt, bandit."
+      },
+      "3": {
+        "label": "Game / Abstraction / Large / Games",
+        "description": "Community 3 groups papers around game, abstraction, large, games."
+      },
+      "4": {
+        "label": "Implementation / Counterfactual / Regret / Minimization",
+        "description": "Community 4 groups papers around implementation, counterfactual, regret, minimization."
+      },
+      "5": {
+        "label": "Regret / Ecfr / Exponential / Counterfactual",
+        "description": "Community 5 groups papers around regret, ecfr, exponential, counterfactual."
+      },
+      "6": {
+        "label": "Regret / Games / Minimization / Information",
+        "description": "Community 6 groups papers around regret, games, minimization, information."
+      },
+      "7": {
+        "label": "Regret / Solving / Imperfect-Information / Games",
+        "description": "Community 7 groups papers around regret, solving, imperfect-information, games."
+      },
+      "8": {
+        "label": "Form / Games / Extensive / Sync",
+        "description": "Community 8 groups papers around form, games, extensive, sync."
+      },
+      "9": {
+        "label": "Double / Oracle / Games / Extensive-Form",
+        "description": "Community 9 groups papers around double, oracle, games, extensive-form."
+      },
+      "10": {
+        "label": "Approximation / Regret / Rcfr / Function",
+        "description": "Community 10 groups papers around approximation, regret, rcfr, function."
+      },
+      "11": {
+        "label": "Games / Regret / Minimization / Poker",
+        "description": "Community 11 groups papers around games, regret, minimization, poker."
+      },
+      "12": {
+        "label": "Mahjong / Game / Counterfactual / Regret",
+        "description": "Community 12 groups papers around mahjong, game, counterfactual, regret."
+      }
+    }
+  },
+  "similarity_graph": {
+    "retrieval": {
+      "total_papers": 15,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8666666666666667,
+      "year_range": "2007-2024",
+      "median_year": 2019,
+      "citation_edges_total": 325,
+      "deduplication_removed": 0
+    },
+    "graph": {
+      "node_count": 15,
+      "edge_count": 53,
+      "citation_edges": 0,
+      "similarity_edges": 53,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 7.0667,
+      "community_count": 3,
+      "modularity": 0.0877
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 11,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 5,
+        "bridge": 1,
+        "frontier": 1
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Counterfactual regret minimization",
+        "\"Counterfactual regret minimization\"",
+        "Deep Counterfactual Regret Minimization",
+        "Monte Carlo counterfactual regret minimization",
+        "counterfactual regret minimization imperfect information games",
+        "counterfactual regret minimization extensive-form games",
+        "solving imperfect-information games counterfactual regret minimization",
+        "CFR poker regret minimization",
+        "Counterfactual regret minimization method",
+        "Counterfactual regret minimization algorithm"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Regret / Games / Minimization / Double",
+        "description": "Community 0 groups papers around regret, games, minimization, double."
+      },
+      "1": {
+        "label": "Regret / Minimization / Games / Counterfactual",
+        "description": "Community 1 groups papers around regret, minimization, games, counterfactual."
+      },
+      "2": {
+        "label": "Regret / Games / Game / Minimization",
+        "description": "Community 2 groups papers around regret, games, game, minimization."
+      }
+    }
+  },
+  "hybrid_graph": {
+    "retrieval": {
+      "total_papers": 15,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8666666666666667,
+      "year_range": "2007-2024",
+      "median_year": 2019,
+      "citation_edges_total": 325,
+      "deduplication_removed": 0
+    },
+    "graph": {
+      "node_count": 15,
+      "edge_count": 53,
+      "citation_edges": 3,
+      "similarity_edges": 53,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 7.0667,
+      "community_count": 3,
+      "modularity": 0.0877
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 11,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 5,
+        "bridge": 1,
+        "frontier": 1
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Counterfactual regret minimization",
+        "\"Counterfactual regret minimization\"",
+        "Deep Counterfactual Regret Minimization",
+        "Monte Carlo counterfactual regret minimization",
+        "counterfactual regret minimization imperfect information games",
+        "counterfactual regret minimization extensive-form games",
+        "solving imperfect-information games counterfactual regret minimization",
+        "CFR poker regret minimization",
+        "Counterfactual regret minimization method",
+        "Counterfactual regret minimization algorithm"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Regret / Games / Minimization / Double",
+        "description": "Community 0 groups papers around regret, games, minimization, double."
+      },
+      "1": {
+        "label": "Regret / Minimization / Games / Counterfactual",
+        "description": "Community 1 groups papers around regret, minimization, games, counterfactual."
+      },
+      "2": {
+        "label": "Regret / Games / Game / Minimization",
+        "description": "Community 2 groups papers around regret, games, game, minimization."
+      }
+    }
+  }
+}

@@ -28,6 +28,8 @@ class GraphAnalysisSkill:
         betweenness = nx.betweenness_centrality(G, weight="weight", normalized=True) if G.number_of_edges() > 0 else {n: 0.0 for n in G.nodes()}
 
         communities = self._detect_communities(G)
+        degree_values = dict(G.degree())
+        max_degree = max(degree_values.values()) if degree_values else 1
 
         for node in G.nodes():
             pr = pagerank.get(node, 0.0)
@@ -36,8 +38,8 @@ class GraphAnalysisSkill:
             year = year_map.get(node, self._current_year)
 
             foundation_score = self._compute_foundation_score(pr, year)
-            bridge_score = self._compute_bridge_score(bc, G, node)
-            frontier_score = self._compute_frontier_score(pr, year, comm, G, node)
+            bridge_score = self._compute_bridge_score(bc, G, node, communities, max_degree)
+            frontier_score = self._compute_frontier_score(pr, year, comm, communities)
 
             scores[node] = NodeScores(
                 pagerank=round(pr, 4),
@@ -49,6 +51,7 @@ class GraphAnalysisSkill:
             )
 
         self.data.set_node_scores(scores)
+        self._update_graph_analysis_metrics(G, communities)
         return scores
 
     def _build_networkx_graph(self, graph_data: GraphData) -> nx.Graph:
@@ -87,15 +90,20 @@ class GraphAnalysisSkill:
         age_factor = max(0.0, min(1.0, (self._current_year - year) / 30.0))
         return AGE_WEIGHT * age_factor + PR_WEIGHT * pagerank
 
-    def _compute_bridge_score(self, betweenness: float, G: nx.Graph, node: str) -> float:
+    def _compute_bridge_score(
+        self,
+        betweenness: float,
+        G: nx.Graph,
+        node: str,
+        communities: dict[str, int],
+        max_degree: int,
+    ) -> float:
         BC_WEIGHT = 0.5
         DEG_WEIGHT = 0.25
         CROSS_WEIGHT = 0.25
 
         betweenness_factor = min(1.0, betweenness * 5)
-        degree_factor = min(1.0, G.degree(node) / max(1, max(dict(G.degree()).values())))
-
-        communities = self._detect_communities(G)
+        degree_factor = min(1.0, G.degree(node) / max(1, max_degree))
         own_comm = communities.get(node, -1)
         neighbors = list(G.neighbors(node))
         cross_edges = sum(1 for nb in neighbors if communities.get(nb, -2) != own_comm)
@@ -104,7 +112,7 @@ class GraphAnalysisSkill:
         return BC_WEIGHT * betweenness_factor + DEG_WEIGHT * degree_factor + CROSS_WEIGHT * cross_factor
 
     def _compute_frontier_score(
-        self, pagerank: float, year: int, community: int, G: nx.Graph, node: str
+        self, pagerank: float, year: int, community: int, communities: dict[str, int]
     ) -> float:
         RECENCY_WEIGHT = 0.5
         PR_WEIGHT = 0.3
@@ -112,7 +120,6 @@ class GraphAnalysisSkill:
 
         recency_factor = max(0.0, min(1.0, (year - 2015) / max(1, self._current_year - 2015)))
 
-        communities = self._detect_communities(G)
         comm_nodes = [n for n, c in communities.items() if c == community]
         comm_years = [
             self.data.get_paper(n).year for n in comm_nodes
@@ -122,6 +129,23 @@ class GraphAnalysisSkill:
         activity_factor = min(1.0, (avg_year - 2015) / max(1, self._current_year - 2015))
 
         return RECENCY_WEIGHT * recency_factor + PR_WEIGHT * pagerank + ACTIVITY_WEIGHT * activity_factor
+
+    def _update_graph_analysis_metrics(self, G: nx.Graph, communities: dict[str, int]) -> None:
+        metrics = self.data.get_metadata("graph_metrics") or {}
+        comm_sets = []
+        for cid in sorted(set(communities.values())):
+            comm_sets.append({node for node, node_cid in communities.items() if node_cid == cid})
+        modularity = 0.0
+        if G.number_of_edges() > 0 and len(comm_sets) > 1:
+            try:
+                modularity = nx_community.modularity(G, comm_sets, weight="weight")
+            except Exception:
+                modularity = 0.0
+        metrics.update({
+            "community_count": len(comm_sets),
+            "modularity": round(float(modularity), 4),
+        })
+        self.data.set_metadata("graph_metrics", metrics)
 
     def get_community_info(self) -> dict:
         scores = self.data.get_all_scores()

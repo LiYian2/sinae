@@ -27,6 +27,7 @@ class Paper:
     abstract: str = ""
     url: str = ""
     citation_count: int = 0
+    citation_source: str = ""
     references: list[str] = field(default_factory=list)
     citations: list[str] = field(default_factory=list)
     source: str = "unknown"
@@ -42,6 +43,7 @@ class Paper:
             "abstract": self.abstract,
             "url": self.url,
             "citation_count": self.citation_count,
+            "citation_source": self.citation_source,
             "references": self.references,
             "citations": self.citations,
             "source": self.source,
@@ -59,6 +61,7 @@ class Paper:
             abstract=data.get("abstract", ""),
             url=data.get("url", ""),
             citation_count=data.get("citation_count", 0),
+            citation_source=data.get("citation_source", ""),
             references=data.get("references", []),
             citations=data.get("citations", []),
             source=data.get("source", "unknown"),

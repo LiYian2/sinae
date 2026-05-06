@@ -29,10 +29,45 @@ def main():
         default=None,
         help="Save output to a file",
     )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default=".",
+        help="Directory for generated report, state, and figures",
+    )
+    parser.add_argument(
+        "--llm",
+        choices=["auto", "on", "off"],
+        default="auto",
+        help="Use LLM-assisted planning and explanations when available",
+    )
+    parser.add_argument(
+        "--llm-provider",
+        choices=["siliconflow", "none"],
+        default="siliconflow",
+        help="LLM provider",
+    )
+    parser.add_argument(
+        "--llm-model",
+        default="Pro/zai-org/GLM-4.7",
+        help="LLM model name",
+    )
+    parser.add_argument(
+        "--max-papers",
+        type=int,
+        default=None,
+        help="Override maximum retrieved papers",
+    )
 
     args = parser.parse_args()
 
-    agent = AgentPlanner()
+    agent = AgentPlanner(
+        llm_mode=args.llm,
+        llm_provider=args.llm_provider,
+        llm_model=args.llm_model,
+        output_dir=args.output_dir,
+        max_papers_override=args.max_papers,
+    )
     agent.demo = args.demo
 
     if args.interactive:

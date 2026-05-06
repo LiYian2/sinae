@@ -1,4 +1,5 @@
 import json
+import re
 from typing import Optional, Any
 from shared.types import Paper, GraphData, NodeScores, ReadingPath, ResearchProfile
 
@@ -23,7 +24,50 @@ class SharedDataLayer:
 
     def add_papers(self, papers: list[Paper]) -> None:
         for p in papers:
+            existing_id = self._find_same_title_id(p.title)
+            if existing_id and existing_id != p.paper_id:
+                existing = self._store["papers"][existing_id]
+                merged = self._merge_papers(existing, p)
+                if merged.paper_id != existing_id:
+                    del self._store["papers"][existing_id]
+                self._store["papers"][merged.paper_id] = merged
+                continue
             self._store["papers"][p.paper_id] = p
+
+    def _find_same_title_id(self, title: str) -> Optional[str]:
+        title_key = self._normalize_title(title)
+        if not title_key:
+            return None
+        for pid, paper in self._store["papers"].items():
+            if self._normalize_title(paper.title) == title_key:
+                return pid
+        return None
+
+    @staticmethod
+    def _normalize_title(title: str) -> str:
+        return re.sub(r"[^a-z0-9]+", " ", (title or "").lower()).strip()
+
+    @staticmethod
+    def _merge_papers(a: Paper, b: Paper) -> Paper:
+        keep = a if a.citation_count >= b.citation_count else b
+        other = b if keep is a else a
+        if not keep.abstract and other.abstract:
+            keep.abstract = other.abstract
+        if not keep.url and other.url:
+            keep.url = other.url
+        if not keep.authors and other.authors:
+            keep.authors = other.authors
+        if not keep.year and other.year:
+            keep.year = other.year
+        if not keep.venue and other.venue:
+            keep.venue = other.venue
+        if not keep.citation_source and other.citation_source:
+            keep.citation_source = other.citation_source
+        refs = list(dict.fromkeys((keep.references or []) + (other.references or [])))
+        keep.references = refs
+        citations = list(dict.fromkeys((keep.citations or []) + (other.citations or [])))
+        keep.citations = citations
+        return keep
 
     def get_paper(self, paper_id: str) -> Optional[Paper]:
         return self._store["papers"].get(paper_id)
@@ -67,6 +111,9 @@ class SharedDataLayer:
     def get_metadata(self, key: str) -> Optional[Any]:
         return self._store["metadata"].get(key)
 
+    def get_all_metadata(self) -> dict[str, Any]:
+        return dict(self._store["metadata"])
+
     def to_dict(self) -> dict:
         return {
             "research_profile": (
@@ -81,6 +128,18 @@ class SharedDataLayer:
             "node_scores": {
                 pid: s.to_dict() for pid, s in self._store["node_scores"].items()
             },
+            "graph_data": (
+                self._store["graph_data"].to_dict()
+                if self._store["graph_data"]
+                else None
+            ),
+            "reading_path": (
+                self._store["reading_path"].to_dict()
+                if self._store["reading_path"]
+                else None
+            ),
+            "corpus_quality": self._store["corpus_quality"],
+            "metadata": self._store["metadata"],
         }
 
     def save(self, filepath: str) -> None:

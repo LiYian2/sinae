@@ -1,0 +1,420 @@
+{
+  "rule_only_agent": {
+    "retrieval": {
+      "total_papers": 84,
+      "has_abstract_ratio": 0.9880952380952381,
+      "has_citation_ratio": 0.7738095238095238,
+      "year_range": "2012-2026",
+      "median_year": 2022,
+      "citation_edges_total": 4894
+    },
+    "graph": {
+      "node_count": 84,
+      "edge_count": 829,
+      "citation_edges": 119,
+      "similarity_edges": 785,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 19.7381,
+      "community_count": 5,
+      "modularity": 0.2554
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 14,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 1,
+        "core": 2,
+        "development": 5,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": "rule",
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer",
+        "\"Vision Transformer\"",
+        "\"An Image is Worth 16x16 Words\"",
+        "DeiT data-efficient image transformers",
+        "Swin Transformer hierarchical vision transformer",
+        "DINO self-supervised vision transformers",
+        "Masked Autoencoders scalable vision learners",
+        "BEiT masked image modeling transformer",
+        "Vision Transformer survey",
+        "Vision Transformer tutorial",
+        "Vision Transformer overview",
+        "Vision Transformer foundations"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Transformer / Vision / Tasks / Image",
+        "description": "Community 0 groups papers around transformer, vision, tasks, image."
+      },
+      "1": {
+        "label": "Code / Vision / Transformer / Image",
+        "description": "Community 1 groups papers around code, vision, transformer, image."
+      },
+      "2": {
+        "label": "Vision / Transformer / Transformers / Image",
+        "description": "Community 2 groups papers around vision, transformer, transformers, image."
+      },
+      "3": {
+        "label": "Vision / Transformers / Image / Transformer",
+        "description": "Community 3 groups papers around vision, transformers, image, transformer."
+      },
+      "4": {
+        "label": "Segmentation / Transformer / Vision / Self-Supervised",
+        "description": "Community 4 groups papers around segmentation, transformer, vision, self-supervised."
+      }
+    }
+  },
+  "llm_assisted_agent": {
+    "retrieval": {
+      "total_papers": 84,
+      "has_abstract_ratio": 0.9880952380952381,
+      "has_citation_ratio": 0.7738095238095238,
+      "year_range": "2012-2026",
+      "median_year": 2022,
+      "citation_edges_total": 4894
+    },
+    "graph": {
+      "node_count": 84,
+      "edge_count": 829,
+      "citation_edges": 119,
+      "similarity_edges": 785,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 19.7381,
+      "community_count": 5,
+      "modularity": 0.2554
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 14,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 1,
+        "core": 2,
+        "development": 5,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": "llm",
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer",
+        "\"Vision Transformer\"",
+        "\"An Image is Worth 16x16 Words\"",
+        "DeiT data-efficient image transformers",
+        "Swin Transformer hierarchical vision transformer",
+        "DINO self-supervised vision transformers",
+        "Masked Autoencoders scalable vision learners",
+        "BEiT masked image modeling transformer",
+        "Vision Transformer survey",
+        "Vision Transformer tutorial",
+        "Vision Transformer overview",
+        "Vision Transformer foundations"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Transformer / Vision / Tasks / Image",
+        "description": "Community 0 groups papers around transformer, vision, tasks, image."
+      },
+      "1": {
+        "label": "Code / Vision / Transformer / Image",
+        "description": "Community 1 groups papers around code, vision, transformer, image."
+      },
+      "2": {
+        "label": "Vision / Transformer / Transformers / Image",
+        "description": "Community 2 groups papers around vision, transformer, transformers, image."
+      },
+      "3": {
+        "label": "Vision / Transformers / Image / Transformer",
+        "description": "Community 3 groups papers around vision, transformers, image, transformer."
+      },
+      "4": {
+        "label": "Segmentation / Transformer / Vision / Self-Supervised",
+        "description": "Community 4 groups papers around segmentation, transformer, vision, self-supervised."
+      }
+    }
+  },
+  "citation_graph": {
+    "retrieval": {
+      "total_papers": 29,
+      "has_abstract_ratio": 0.9655172413793104,
+      "has_citation_ratio": 0.8620689655172413,
+      "year_range": "2012-2024",
+      "median_year": 2022,
+      "citation_edges_total": 2246,
+      "deduplication_removed": 1
+    },
+    "graph": {
+      "node_count": 29,
+      "edge_count": 36,
+      "citation_edges": 36,
+      "similarity_edges": 0,
+      "connected_components": 12,
+      "largest_component_ratio": 0.6206896551724138,
+      "average_degree": 2.4828,
+      "community_count": 15,
+      "modularity": 0.2465
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 13,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 1,
+        "core": 2,
+        "development": 4,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer",
+        "\"Vision Transformer\"",
+        "\"An Image is Worth 16x16 Words\"",
+        "DeiT data-efficient image transformers",
+        "Swin Transformer hierarchical vision transformer",
+        "DINO self-supervised vision transformers",
+        "Masked Autoencoders scalable vision learners",
+        "BEiT masked image modeling transformer",
+        "Vision Transformer survey",
+        "Vision Transformer tutorial",
+        "Vision Transformer overview",
+        "Vision Transformer foundations"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Vision / Attention / Vicinity / Transformers",
+        "description": "Community 0 groups papers around vision, attention, vicinity, transformers."
+      },
+      "1": {
+        "label": "Token / Transformers / Vision / Slow-Fast",
+        "description": "Community 1 groups papers around token, transformers, vision, slow-fast."
+      },
+      "2": {
+        "label": "Vitae / Vision / Transformer / Intrinsic",
+        "description": "Community 2 groups papers around vitae, vision, transformer, intrinsic."
+      },
+      "3": {
+        "label": "Vision / Transformer / Tasks / Segmentation",
+        "description": "Community 3 groups papers around vision, transformer, tasks, segmentation."
+      },
+      "4": {
+        "label": "Self-Attention / Guided / Vision / Great",
+        "description": "Community 4 groups papers around self-attention, guided, vision, great."
+      },
+      "5": {
+        "label": "Image / Features / Compression / Classification",
+        "description": "Community 5 groups papers around image, features, compression, classification."
+      },
+      "6": {
+        "label": "Registration / Medical / Image / Proposed",
+        "description": "Community 6 groups papers around registration, medical, image, proposed."
+      },
+      "7": {
+        "label": "Deit-Lt / Distillation / Datasets / Classes",
+        "description": "Community 7 groups papers around deit-lt, distillation, datasets, classes."
+      },
+      "8": {
+        "label": "Yolov / Object / Accuracy / Detectors",
+        "description": "Community 8 groups papers around yolov, object, accuracy, detectors."
+      },
+      "9": {
+        "label": "Code / Sgugger / Flax / Patrickvonplaten",
+        "description": "Community 9 groups papers around code, sgugger, flax, patrickvonplaten."
+      },
+      "10": {
+        "label": "Image / Multimodal / Vision / Attention",
+        "description": "Community 10 groups papers around image, multimodal, vision, attention."
+      },
+      "11": {
+        "label": "Image / Language / Pretraining / Vision",
+        "description": "Community 11 groups papers around image, language, pretraining, vision."
+      },
+      "12": {
+        "label": "Vision / Image / Transformer / Backbones",
+        "description": "Community 12 groups papers around vision, image, transformer, backbones."
+      },
+      "13": {
+        "label": "Imagenet / Classification / Convolutional / Neural",
+        "description": "Community 13 groups papers around imagenet, classification, convolutional, neural."
+      },
+      "14": {
+        "label": "Attention / Vision / Introduces / Transformer",
+        "description": "Community 14 groups papers around attention, vision, introduces, transformer."
+      }
+    }
+  },
+  "similarity_graph": {
+    "retrieval": {
+      "total_papers": 29,
+      "has_abstract_ratio": 0.9655172413793104,
+      "has_citation_ratio": 0.8620689655172413,
+      "year_range": "2012-2024",
+      "median_year": 2022,
+      "citation_edges_total": 2246,
+      "deduplication_removed": 1
+    },
+    "graph": {
+      "node_count": 29,
+      "edge_count": 152,
+      "citation_edges": 0,
+      "similarity_edges": 152,
+      "connected_components": 2,
+      "largest_component_ratio": 0.9655172413793104,
+      "average_degree": 10.4828,
+      "community_count": 5,
+      "modularity": 0.1692
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 15,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 1,
+        "core": 3,
+        "development": 5,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer",
+        "\"Vision Transformer\"",
+        "\"An Image is Worth 16x16 Words\"",
+        "DeiT data-efficient image transformers",
+        "Swin Transformer hierarchical vision transformer",
+        "DINO self-supervised vision transformers",
+        "Masked Autoencoders scalable vision learners",
+        "BEiT masked image modeling transformer",
+        "Vision Transformer survey",
+        "Vision Transformer tutorial",
+        "Vision Transformer overview",
+        "Vision Transformer foundations"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Vision / Transformer / Attention / Tasks",
+        "description": "Community 0 groups papers around vision, transformer, attention, tasks."
+      },
+      "1": {
+        "label": "Image / Code / Sgugger / Vision",
+        "description": "Community 1 groups papers around image, code, sgugger, vision."
+      },
+      "2": {
+        "label": "Swin / Unetr / Transformers / Semantic",
+        "description": "Community 2 groups papers around swin, unetr, transformers, semantic."
+      },
+      "3": {
+        "label": "Image / Transformers / Vision / Registration",
+        "description": "Community 3 groups papers around image, transformers, vision, registration."
+      },
+      "4": {
+        "label": "Vision / Backbones / Transformer / Image",
+        "description": "Community 4 groups papers around vision, backbones, transformer, image."
+      }
+    }
+  },
+  "hybrid_graph": {
+    "retrieval": {
+      "total_papers": 29,
+      "has_abstract_ratio": 0.9655172413793104,
+      "has_citation_ratio": 0.8620689655172413,
+      "year_range": "2012-2024",
+      "median_year": 2022,
+      "citation_edges_total": 2246,
+      "deduplication_removed": 1
+    },
+    "graph": {
+      "node_count": 29,
+      "edge_count": 164,
+      "citation_edges": 36,
+      "similarity_edges": 152,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 11.3103,
+      "community_count": 5,
+      "modularity": 0.2623
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 14,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 1,
+        "core": 2,
+        "development": 5,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "planner_mode": null,
+    "query_plan": {
+      "main_queries": [
+        "Vision Transformer",
+        "\"Vision Transformer\"",
+        "\"An Image is Worth 16x16 Words\"",
+        "DeiT data-efficient image transformers",
+        "Swin Transformer hierarchical vision transformer",
+        "DINO self-supervised vision transformers",
+        "Masked Autoencoders scalable vision learners",
+        "BEiT masked image modeling transformer",
+        "Vision Transformer survey",
+        "Vision Transformer tutorial",
+        "Vision Transformer overview",
+        "Vision Transformer foundations"
+      ],
+      "prerequisite_queries": [],
+      "exclude_terms": [],
+      "expected_communities": []
+    },
+    "community_labels": {
+      "0": {
+        "label": "Transformer / Yolov / Vision / Accuracy",
+        "description": "Community 0 groups papers around transformer, yolov, vision, accuracy."
+      },
+      "1": {
+        "label": "Vision / Image / Transformer / Transformers",
+        "description": "Community 1 groups papers around vision, image, transformer, transformers."
+      },
+      "2": {
+        "label": "Code / Sgugger / Image / Flax",
+        "description": "Community 2 groups papers around code, sgugger, image, flax."
+      },
+      "3": {
+        "label": "Attention / Vision / Introduces / Transformer",
+        "description": "Community 3 groups papers around attention, vision, introduces, transformer."
+      },
+      "4": {
+        "label": "Transformer / Vision / Image / Tasks",
+        "description": "Community 4 groups papers around transformer, vision, image, tasks."
+      }
+    }
+  }
+}
