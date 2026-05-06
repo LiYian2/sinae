@@ -1,0 +1,964 @@
+{
+  "research_profile": {
+    "topic": "Protein Structure Prediction / Scientific ML",
+    "seed_papers": [],
+    "time_range": "all",
+    "max_papers": 45,
+    "user_level": "intermediate",
+    "preferred_length": 12,
+    "goal": "benchmark_research_trail"
+  },
+  "paper_count": 8,
+  "papers": {
+    "1605.03004v1": {
+      "paper_id": "1605.03004v1",
+      "title": "MUST-CNN: A Multilayer Shift-and-Stitch Deep Convolutional Architecture for Sequence-based Protein Structure Prediction",
+      "authors": [
+        "Zeming Lin",
+        "Jack Lanchantin",
+        "Yanjun Qi"
+      ],
+      "year": 2016,
+      "abstract": "Predicting protein properties such as solvent accessibility and secondary structure from its primary amino acid sequence is an important task in bioinformatics. Recently, a few deep learning models have surpassed the traditional window based multilayer perceptron. Taking inspiration from the image classification domain we propose a deep convolutional neural network architecture, MUST-CNN, to predict protein properties. This architecture uses a novel multilayer shift-and-stitch (MUST) technique to generate fully dense per-position predictions on protein sequences. Our model is significantly simpler than the state-of-the-art, yet achieves better results. By combining MUST and the efficient convolution operation, we can consider far more parameters while retaining very fast prediction speeds. We beat the state-of-the-art performance on two large protein property prediction datasets.",
+      "url": "https://arxiv.org/abs/1605.03004v1",
+      "citation_count": 43,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "f25e0cf86e97e4169f63cb856e93a1753b6aa358",
+        "d6f2f611da110b5b5061731be3fc4c7f45d8ee23",
+        "0431b1ba9c4e61619404682cb929588b7efc44be",
+        "6fc6803df5f9ae505cae5b2f178ade4062c768d0",
+        "cc01245cf80a4e59ca77ab60cb90734cc2c77261",
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327",
+        "7851a36cfecbd9cd5ce2bdd650b3ee3ab21ace38",
+        "cea967b59209c6be22829699f05b8b1ac4dc092d",
+        "f264e8b33c0d49a692a6ce2c4bcb28588aeb7d97",
+        "fa72afa9b2cbc8f0d7b05d52548906610ffbb9c5",
+        "1f6ba0782862ec12a5ec6d7fb608523d55b0c6ba",
+        "1a9658c0b7bea22075c0ea3c229b8c70c1790153",
+        "ff17bbd406f25fcb72ad7bcc139b3299aa345548",
+        "1109b663453e78a59e4f66446d71720ac58cec25",
+        "7a61687dd639ab58fe63c146c3352fc0d226574c",
+        "2e2089ae76fe914706e6fa90081a79c8fe01611e",
+        "c47830cb840a3c4f61e77b3911c15d9d8b9c82a9",
+        "67107f78a84bdb2411053cb54e94fa226eea6d8e",
+        "bc1022b031dc6c7019696492e8116598097a8c12",
+        "8426011e9ef1adc2d832acd14490a252b0679608",
+        "6404260c51a4bf3a91c1b53dea1868ac63cd2ee0",
+        "5d21006fa32ff69f6b0a646f26ce0db84f2f4d33",
+        "57458bc1cffe5caa45a885af986d70f723f406b4",
+        "042a5c25b5dc77cc5e1053261c38e7fbe67ffd5a",
+        "b8131893d6b2f1cb8f0c60b559c146d1da05d77d",
+        "02613d6e3ecf67ed9ae8ce67a35a92f3986bc4cf",
+        "34f25a8704614163c4095b3ee2fc969b60de4698",
+        "3449b65008b27f6e60a73d80c1fd990f0481126b",
+        "162d958ff885f1462aeda91cd72582323fd6a1f4"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2207.07410v1": {
+      "paper_id": "2207.07410v1",
+      "title": "AlphaFold predicts the most complex protein knot and composite protein knots",
+      "authors": [
+        "Maarten A. Brems",
+        "Robert Runkel",
+        "Todd O. Yeates",
+        "Peter Virnau"
+      ],
+      "year": 2022,
+      "abstract": "The computer artificial intelligence system AlphaFold has recently predicted previously unknown three-dimensional structures of thousands of proteins. Focusing on the subset with high-confidence scores, we algorithmically analyze these predictions for cases where the protein backbone exhibits rare topological complexity, i.e. knotting. Amongst others, we discovered a $7_1$-knot, the most topologically complex knot ever found in a protein, as well several 6-crossing composite knots comprised of two methyltransferase or carbonic anhydrase domains, each containing a simple trefoil knot. These deeply embedded composite knots occur evidently by gene duplication and interconnection of knotted dimers. Finally, we report two new five-crossing knots including the first $5_1$-knot. Our list of analyzed structures forms the basis for future experimental studies to confirm these novel knotted topologies and to explore their complex folding mechanisms.",
+      "url": "https://arxiv.org/abs/2207.07410v1",
+      "citation_count": 42,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "94035a667eae691f3971299b40f350d75b0840e5",
+        "dc32a984b651256a8ec282be52310e6bd33d9815",
+        "fbfc91615651f9b547fe2a8d2f9fa6e35a898996",
+        "ae4964b175ecfbbbbf23db174f7334a256880e72",
+        "19fc02fe5e1acfc89f44d944eda7436632b377ab",
+        "d0fa479e313e8910f3200c9f7f95edb2ec8be293",
+        "8b2cad0e27d0776f5eadd50ee15c24a416e4120d",
+        "8854f81043f0fcd8a5d44cd602808205ee24400c",
+        "e9d7771634e80c23156d7e24c21db05cb92ec1d3",
+        "309161a6c08c48c8da407fcd46025a986b3d2e08",
+        "95d04e9f34fc1d81f45e581b65938ac1b7ad4d21",
+        "c3dd9bccab962c6621d804883d4253c36dd92f99",
+        "6331b787c7167efd5afdc073f4b847a0fce78942",
+        "3dee43c39dbfbfb1c2c548ade9949cba5b0438eb",
+        "f7b3306e89ce401ba00a0531159beeca06368291",
+        "41e54780ce1e0487c4872d7ecaddea7647d22654",
+        "03cbbe39cd3e7019736e453912e8de4ba86471f9",
+        "d68c8c93dc559eeb5e4631aea42e9b2120f0ff59",
+        "c045366b0a5a844a7742283a6af5dfa896c1031b",
+        "8a6832d530b319578eb7a88e3ce06463f7679363",
+        "1d0cce62645dcb38082172f19bfd2b8b55cf0075",
+        "5ba76b94cc9a7880b6687bae40906b86941a89d4",
+        "38540ec2e78978c39c6a9ca54ea7232d0d9e7503",
+        "7fe9131fbd3c1cece48acecf1c827bd3bdb84903",
+        "344d4b39110468eb56135b063120662bb482c5bb",
+        "4cfe44e5fcdad8c2257c48902528b1fed564a79d",
+        "e76d9c54288b509d4fc03d6458faf96565a7f30b",
+        "61b966a3dc3617aae117b23e8c0a2067520fb3e6",
+        "fd4cb2df1d38410fd6f9c00aba9fe3315d6b909f",
+        "b99a448bf1097dcb0cd2592a0c5c5fbb06b7c73a",
+        "119c0c1062b8aad451ada881682d0cf3fd4090ea",
+        "5d962ff7f58d35219a479a8d7f456436c50f9de4",
+        "8a7a829bd8278736d681866e5c4ec07d5009fbdf",
+        "153facc0a4ab235e4272cf5f012cc52a307b5f64",
+        "39586c5b47c93bab7a018ebe4987e1472d0fbc1c",
+        "9106ba165e58e29df8ad8905922d76eaaa6160cf",
+        "6753c1b57123f1e8abaf75459ee489bdbc0f8330",
+        "778f21ebec86722b1b98638d790c7272ab9b0eea",
+        "13d301d335b495a814614cef88753ffd0d82bea8",
+        "801ad837371c3721d183f1762f9cb17545b54cf1",
+        "e8f5ff9f02e938cd792b2423924d04d799bf2311",
+        "86b8934101d14ae1e464ad86eb84f9eeeb24e9d5",
+        "a9540be379f836740c19238594d500b73fd18cf4"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": "Protein Science. 2022; 31( 8):e4380"
+    },
+    "1208.2680v2": {
+      "paper_id": "1208.2680v2",
+      "title": "Atomic-accuracy prediction of protein loop structures through an RNA-inspired ansatz",
+      "authors": [
+        "Rhiju Das"
+      ],
+      "year": 2012,
+      "abstract": "Consistently predicting biopolymer structure at atomic resolution from sequence alone remains a difficult problem, even for small sub-segments of large proteins. Such loop prediction challenges, which arise frequently in comparative modeling and protein design, can become intractable as loop lengths exceed 10 residues and if surrounding side-chain conformations are erased. This article introduces a modeling strategy based on a 'stepwise ansatz', recently developed for RNA modeling, which posits that any realistic all-atom molecular conformation can be built up by residue-by-residue stepwise enumeration. When harnessed to a dynamic-programming-like recursion in the Rosetta framework, the resulting stepwise assembly (SWA) protocol enables enumerative sampling of a 12 residue loop at a significant but achievable cost of thousands of CPU-hours. In a previously established benchmark, SWA recovers crystallographic conformations with sub-Angstrom accuracy for 19 of 20 loops, compared to 14 of 20 by KIC modeling with a comparable expenditure of computational power. Furthermore, SWA gives high accuracy results on an additional set of 15 loops highlighted in the biological literature for their irregularity or unusual length. Successes include cis-Pro touch turns, loops that pass through tunnels of other side-chains, and loops of lengths up to 24 residues. Remaining problem cases are traced to inaccuracies in the Rosetta all-atom energy function. In five additional blind tests, SWA achieves sub-Angstrom accuracy models, including the first such success in a protein/RNA binding interface, the YbxF/kink-turn interaction in the fourth RNA-puzzle competition. These results establish all-atom enumeration as a systematic approach to protein structure that can leverage high performance computing and physically realistic energy functions to more consistently achieve atomic resolution.",
+      "url": "https://arxiv.org/abs/1208.2680v2",
+      "citation_count": 21,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "1334c4124e9bc67a54d6667053c355e452813671",
+        "2d1b93eb68852fe4c7c218a56065d72199fd1b86",
+        "c077882cc1d770025a15a7098d4b5d8eb90996cd",
+        "953e284f6345a6d1dc105c90d089297895cd20b9",
+        "7df9fcd693336844a78c9955bcf216efe294d849",
+        "16894b02a772545a983ca42b06e21a4f18afd88e",
+        "078761f2cafcbb0bdfc693b01143310a566a1583",
+        "20e3f8d588cd3d4a9de21e5a37b1afbb249b88be",
+        "5f7fe1430ab08e4749a7d6839e47b12d5cc74980",
+        "246e21357e16454ac72a576c36cef6661e5deac1",
+        "5e92c2fa618f7606ee71a9c72bee53d1b6fa8b5d",
+        "e66ccf18e098b5b1b7ad8fe89d7f577c27120984",
+        "08595737719c0d78e84e2fdb563c34bf3884650f",
+        "47873a51f8f218c214ffa049ac23e37a2fb21d61",
+        "4bb3c15edb84c6f4a8471a94f0dec36ebc27ccc7",
+        "e25dc0561f3e3993479ea8957e2c6d4f1ee990c5",
+        "58fc311866335b5c811eb445792c6bbb2997f122",
+        "aa859856aed2893dd5de7eb929331a25d46766d9",
+        "7c4f6acfc0e74b1106b04553c35bb14ac0654ec0",
+        "1c5b960e1256190d74bb18c495583b831bf275e1",
+        "76e67f5dd32d7f2a6e64587e65e5f1ac78ffa4b4",
+        "2b3c6aaf24daf8c84d2102733d57d4a04bc65a20",
+        "ff1973f2e08f4a5345706c609124e562e99e1c72",
+        "4aa694aba510ad9ee0cebb83d771c6bb3635e3a5",
+        "54d1776c32b5a8e5e9cc7a6fcbe9b44ad84be19e",
+        "ea361f0abd73d245e0865a33640bb2fbf0fc5d8c",
+        "8ea0aeed1927e632b9a7335961d7e5eecae8896e",
+        "ab8bbc51421fd64bd3cf363be5c95f387d988f2e",
+        "a401c24baeff71a957acbc33894ef8c2680bd775",
+        "606a8cc2dedddc50cc753bbe30c2b7be393a4c66",
+        "5d773b92c2725212e264debcf73aa11934634a29",
+        "7a32b88d64ff5f01aa82fa28b282d0cc0180e80c",
+        "f4e176d8682a625b65abfc226cfd58fb623a822d",
+        "9ba16a991847d5d4a39bc4fe1c86e05bedd9b57b",
+        "61eba9dc0e3944e7f8cf42c756cfb5cb4343ae1d",
+        "0c3baccb35b3b19a381e8b1d1e6d6d80c879019b",
+        "9675c3dccac96abf2196816c0bec802930eeb87d",
+        "803d790bc6888c2814733c764e67c4f749705b22",
+        "691252770b4ab68430e60be2d89bd52ec95f5ad6",
+        "b11fe469c4912eaf7d941f6e2ec5b91cbd4d67b1",
+        "da45156703860aec3b6ccadfc0c8999d375e980b",
+        "f57c5c62e18a50497c261f65bfcc0ae9231e7d65",
+        "c47db40f89c477016f8b3a8a454ef3c7fe7cf375",
+        "c3e29b75e72a81f051ab4f803d292fb81dc256fc",
+        "09416e31bc77003d8bc40a4d3274097933997972",
+        "c75511db3806eaacf7db93e5d603039036554ebe",
+        "53fca517a4e673531e561e827d5c257777705e0d",
+        "e5e7f473a1cb6341ee1ffaa35bc134af48128c87",
+        "2dae61c8feee23db53bead64679a988a26f985da",
+        "b76181e9d647a346a18ed43725d4ee8548ff688b",
+        "170294f11a89cada505e09da4a0c5b36047625a7",
+        "8635a40d58f11c7c2e576dca25d1c24fd05d9868",
+        "06857ea2b52bb68f6c2111fd5c98afd606fa8a4d",
+        "a8ef427ecf4d45577189dd062804b31f0cc2b766",
+        "d58862bbc4cac4184075ac82d40aa01d6a92e2fe",
+        "ca7e840470c2327f4c27071f1caa5ff218d27f43",
+        "438579366d956145afae08bbc15a6c787e18c27c",
+        "ce557091070ef633a4bdff8dc94dcb42c485928b",
+        "b61a3869e8d15483fbde3ac7a82013d8e3950b42",
+        "aa66eb46278792b7e5d8e8b465480bcf40a8a724"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2410.08355v3": {
+      "paper_id": "2410.08355v3",
+      "title": "Metalic: Meta-Learning In-Context with Protein Language Models",
+      "authors": [
+        "Jacob Beck",
+        "Shikha Surana",
+        "Manus McAuliffe",
+        "Oliver Bent",
+        "Thomas D. Barrett",
+        "Juan Jose Garau Luis",
+        "Paul Duckworth"
+      ],
+      "year": 2024,
+      "abstract": "Predicting the biophysical and functional properties of proteins is essential for in silico protein design. Machine learning has emerged as a promising technique for such prediction tasks. However, the relative scarcity of in vitro annotations means that these models often have little, or no, specific data on the desired fitness prediction task. As a result of limited data, protein language models (PLMs) are typically trained on general protein sequence modeling tasks, and then fine-tuned, or applied zero-shot, to protein fitness prediction. When no task data is available, the models make strong assumptions about the correlation between the protein sequence likelihood and fitness scores. In contrast, we propose meta-learning over a distribution of standard fitness prediction tasks, and demonstrate positive transfer to unseen fitness prediction tasks. Our method, called Metalic (Meta-Learning In-Context), uses in-context learning and fine-tuning, when data is available, to adapt to new tasks. Crucially, fine-tuning enables considerable generalization, even though it is not accounted for during meta-training. Our fine-tuned models achieve strong results with 18 times fewer parameters than state-of-the-art models. Moreover, our method sets a new state-of-the-art in low-data settings on ProteinGym, an established fitness-prediction benchmark. Due to data scarcity, we believe meta-learning will play a pivotal role in advancing protein engineering.",
+      "url": "https://arxiv.org/abs/2410.08355v3",
+      "citation_count": 4,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "bba92d334b94ba362905f6ef996ebc9a72036bb9",
+        "cd8e1f4a32e1070741a0348254dc8fc0348cff07",
+        "646053255a924d51e0b6c8727d8e165dde0fc1f1",
+        "d7a64f08f559b5199b72e5525a92c66f534d749f",
+        "b7737ab9c95eb357faa1d5636acadda0fcdcb401",
+        "286c3587f2616839286748461cbc90261ea49caf",
+        "c9e7fba4202e0b69002637e7d36ac33e1d5e85d1",
+        "5af8c7c650e9ec50d91a16be287ce54b16075fe7",
+        "21e0c487a5327c72edc72f170ae22e48bd05e040",
+        "f9c95ea9bcd529309c1d743f0926b5137f8ed60f",
+        "b1ec347c64d06fa17cd25e6e8b4ed4c908f0fb0b",
+        "1f98835ec96224caa01fbbc0c4a273de1ad576ba",
+        "832aa77be74d7d3a8b33b9abc0f48b8b7babac12",
+        "86979bfea2427ecfc45de63bef4f1ee040cde2db",
+        "a7d58bd29778ef0d15b9e9e3eb2f37a8cf1ea70c",
+        "0cfce36622a017a86c2248ebe5dfdd0f8d643df7",
+        "d300a122fd79997c06c8a5f3b719d61e338e5ffb",
+        "deee48c5e0ac0407a1e002905caaf2b174bdb0e6",
+        "688f9db8876fbca45d85e3c313294ab217d7f916",
+        "332c44793b70776b9b966128c52e694222b1ab73",
+        "020bb2ba5f3923858cd6882ba5c5a44ea8041ab6",
+        "c5f7074a264356c9a022a8dff24df79d1db8c3d3",
+        "a03be7e9055632cbccdf9cee6171089c1e167557",
+        "366244acdd930e488ae224ab6e2a92dc24aa7e06",
+        "18a93dc1558bf9d7534d0b416633cebaf75c1145",
+        "c5875654fecca84e61a7287b8fbf30d4caccada6",
+        "2f240424ca0761d0549252dacfbbeece14bb3cb6",
+        "04f739a0c29b75877243731aeead512bf0ed1dff",
+        "90dc22818bd2d97d8deaff168b0137b75a962767",
+        "7e9c1e0d247b20a0683f4797d9ea248c3b53d424",
+        "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+        "3904315e2eca50d0086e4b7273f7fd707c652230",
+        "238517ecdc0466ec6a25b79319c3a6b473a897c8",
+        "895e234691fb6234dbfb20e011653d3413431f27"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": "The Thirteenth International Conference on Learning Representations (ICLR 2025)"
+    },
+    "2303.16452v1": {
+      "paper_id": "2303.16452v1",
+      "title": "ProtFIM: Fill-in-Middle Protein Sequence Design via Protein Language Models",
+      "authors": [
+        "Youhan Lee",
+        "Hasun Yu"
+      ],
+      "year": 2023,
+      "abstract": "Protein language models (pLMs), pre-trained via causal language modeling on protein sequences, have been a promising tool for protein sequence design. In real-world protein engineering, there are many cases where the amino acids in the middle of a protein sequence are optimized while maintaining other residues. Unfortunately, because of the left-to-right nature of pLMs, existing pLMs modify suffix residues by prompting prefix residues, which are insufficient for the infilling task that considers the whole surrounding context. To find the more effective pLMs for protein engineering, we design a new benchmark, Secondary structureE InFilling rEcoveRy, SEIFER, which approximates infilling sequence design scenarios. With the evaluation of existing models on the benchmark, we reveal the weakness of existing language models and show that language models trained via fill-in-middle transformation, called ProtFIM, are more appropriate for protein engineering. Also, we prove that ProtFIM generates protein sequences with decent protein representations through exhaustive experiments and visualizations.",
+      "url": "https://arxiv.org/abs/2303.16452v1",
+      "citation_count": 3,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "f9c95ea9bcd529309c1d743f0926b5137f8ed60f",
+        "ec4c8d99eb1c028c43af6d8bbf727392d351cb59",
+        "dcb31b98ec58f3fff9f94f148e2952595f017fd9",
+        "ff4ac20c19a7bfd36267aab90256bbb58150d261",
+        "26133033149afb4b45e5d0a4bd1dc712a236810e",
+        "98926d43356e87c22c82efc132dcaaac1ff40ebe",
+        "6c790c1a4233f5201b052b149a3c6c76261aee68",
+        "1dc9e3d2128ca9c11cd401a884d72183beb6a846",
+        "c783e1fb3ce8514f981925ee590c00884660ee4e",
+        "48d436d6be896cd04d56c419d426d0a06f632e96",
+        "5c84ffe8bb0da3e359cc71a9a08d5379ff5eac12",
+        "dc32a984b651256a8ec282be52310e6bd33d9815",
+        "c07651110d3b98b63607557b57808d15d99013dd",
+        "89bc95b30f147fd24dac91f43be1f2c3541f02ea",
+        "637214aae431350a4468d8d4ccee26c166770f68",
+        "04f496f922410653523ddec50880dce165fa721f",
+        "043e5e0cf3129284683260976c10d98c7f121f35",
+        "e8942b44732730d54fd27e13868eb26b83dd51fa",
+        "5e7047851d05b2ecef5de451dda5404acda726de",
+        "90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "94551d326be51a57434659093904524c39b877cd",
+        "a130b15a588162cacb5a6be38afe22423fe73da4",
+        "28bfd9fbf987e0002b69c677c05b48255162721d",
+        "c5f7074a264356c9a022a8dff24df79d1db8c3d3",
+        "43f2ad297941db230c089ba353efc3f281ab678c",
+        "59ad2820ca5fbd3f970efe671df8018713a4b39b",
+        "4d85a0f837fa8f676b00ca6e384bbd25654eca28",
+        "a9d651c61c2b5f80f05b6fea30cb970a1f7821d9",
+        "e0c6abdbdecf04ffac65c440da77fb9d66bb474c",
+        "18a93dc1558bf9d7534d0b416633cebaf75c1145",
+        "a9ec03dbe702f6909acd1f1f14a3395d0141043b",
+        "730fba26faa7f91dc6742a0c3521eb439670a825",
+        "2b4696bf4bc923a139e8508086f854ca52b690d0",
+        "d07284a6811f1b2745d91bdb06b040b57f226882",
+        "204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+        "2b08a8e202e71cb4a9c10332dbff55f7448ebff2",
+        "a4afa9a8f5bd7d090777ed49e7e682aa3f6474b6",
+        "3ebaff35dbc6188d17b4a82e696414206b6a2311",
+        "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
+        "795dc87b4727b303d3672539e4578d41dfd3aeb3",
+        "238517ecdc0466ec6a25b79319c3a6b473a897c8",
+        "4a054e3e1e48ad3fb9e24bc27039ada10d3c9e7f",
+        "90485e0ce54c1ad12a2d01362a007ab107d71063",
+        "f9d945fae06002d8a175e88800884925843247b9",
+        "4bbe81f746506b4549d80bd7de2771bba33f9357",
+        "46dcbef3c5505ddbca829de4120d84b35238ceb3",
+        "225ba9111ed4b4e0f5bbe12c69e7235e353ff3ff",
+        "06c9338ff571e6543c97ec39260f6a279ab79fa0",
+        "9405cc0d6169988371b2755e573cc28650d14dfe",
+        "2d3100bb45de2255100df7da79a1a93b79b41578"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "1206.3509v1": {
+      "paper_id": "1206.3509v1",
+      "title": "A Novel Approach for Protein Structure Prediction",
+      "authors": [
+        "Saurabh Sarkar",
+        "Prateek Malhotra",
+        "Virender Guman"
+      ],
+      "year": 2012,
+      "abstract": "The idea of this project is to study the protein structure and sequence relationship using the hidden markov model and artificial neural network. In this context we have assumed two hidden markov models. In first model we have taken protein secondary structures as hidden and protein sequences as observed. In second model we have taken protein sequences as hidden and protein structures as observed. The efficiencies for both the hidden markov models have been calculated. The results show that the efficiencies of first model is greater that the second one .These efficiencies are cross validated using artificial neural network. This signifies the importance of protein secondary structures as the main hidden controlling factors due to which we observe a particular amino acid sequence. This also signifies that protein secondary structure is more conserved in comparison to amino acid sequence.",
+      "url": "https://arxiv.org/abs/1206.3509v1",
+      "citation_count": 3,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "7231ab292fbabba2970cc822465673e82914a759",
+        "16582bd3b0b0e2bd30657c0b7943abe09836b500",
+        "0d1b0df4a260bdc8755ecadb5dd1d577d39a453f",
+        "2a753eddc1533077e5bcfaf05b79f5fe245c51d8",
+        "d59da076c4f420ae7147db86db68c7ce3475800f",
+        "91c7d4e70bfab64fdfd4f39f3c5a990ebe9a38bb"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2202.03632v1": {
+      "paper_id": "2202.03632v1",
+      "title": "ECRECer: Enzyme Commission Number Recommendation and Benchmarking based on Multiagent Dual-core Learning",
+      "authors": [
+        "Zhenkun Shi",
+        "Qianqian Yuan",
+        "Ruoyu Wang",
+        "Hoaran Li",
+        "Xiaoping Liao",
+        "Hongwu Ma"
+      ],
+      "year": 2022,
+      "abstract": "Enzyme Commission (EC) numbers, which associate a protein sequence with the biochemical reactions it catalyzes, are essential for the accurate understanding of enzyme functions and cellular metabolism. Many ab-initio computational approaches were proposed to predict EC numbers for given input sequences directly. However, the prediction performance (accuracy, recall, precision), usability, and efficiency of existing methods still have much room to be improved. Here, we report ECRECer, a cloud platform for accurately predicting EC numbers based on novel deep learning techniques. To build ECRECer, we evaluate different protein representation methods and adopt a protein language model for protein sequence embedding. After embedding, we propose a multi-agent hierarchy deep learning-based framework to learn the proposed tasks in a multi-task manner. Specifically, we used an extreme multi-label classifier to perform the EC prediction and employed a greedy strategy to integrate and fine-tune the final model. Comparative analyses against four representative methods demonstrate that ECRECer delivers the highest performance, which improves accuracy and F1 score by 70% and 20% over the state-of-the-the-art, respectively. With ECRECer, we can annotate numerous enzymes in the Swiss-Prot database with incomplete EC numbers to their full fourth level. Take UniPort protein \"A0A0U5GJ41\" as an example (1.14.-.-), ECRECer annotated it with \"1.14.11.38\", which supported by further protein structure analysis based on AlphaFold2. Finally, we established a webserver (https://ecrecer.biodesign.ac.cn) and provided an offline bundle to improve usability.",
+      "url": "https://arxiv.org/abs/2202.03632v1",
+      "citation_count": 0,
+      "citation_source": "",
+      "references": [],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": "Research. 2023:6;0153"
+    },
+    "2002.03383v1": {
+      "paper_id": "2002.03383v1",
+      "title": "Prediction of native contacts in proteins from an out--of--equilibrium coevolutionary process",
+      "authors": [
+        "D. Oriani",
+        "M. Cagiada",
+        "G. Tiana"
+      ],
+      "year": 2020,
+      "abstract": "The analysis of coevolution of residues in homologous proteins is a powerful tool to predict their native conformation. The standard framework in which coevolutionary analysis is usually worked out is that of equilibrium Potts models, assuming that proteins have evolved for enough time to reach thermodynamic equilibrium in sequence space. Here we propose a model to describe correlations in sequences based on an explicit description of the evolutionary kinetics of proteins. We show that this procedure improves the correct prediction of native contacts with respect to equilibrium--based models.",
+      "url": "https://arxiv.org/abs/2002.03383v1",
+      "citation_count": 0,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "ae6b615dda204da1b8083df0a41b5ddab1103e66",
+        "7ee6bf0d36fb54af5ea72d35383055a9c3c555d8",
+        "41a0bbb6a7b7a05c6c5665a1b1ca89eb1a3349d7",
+        "4d33f411d056168ca35f53b9b1f50130866b685a",
+        "8eda8ea288a28bdbfd9e7995fa186fa02e77e8e4",
+        "7f650168208ee20d8a6b127b94f4901c101fddea",
+        "24611b0570ce669185e794721cd4c2965b56818f",
+        "e7cdfbbe3189262f8b063556ad6fe3ff1d319038",
+        "3052921f4baf6445df9bfed70fdff1182c6a3213",
+        "fe898938e50e86208492373a370ac63c020e6ff8",
+        "0fc863d736238274c3dd978f113ef80253d38ea0",
+        "399ba1fca36b0fd64e1412d0d62ba7788dddd7a1",
+        "4915fafb3db12702eb8139b9acc40a8dd0bc9591",
+        "89c9a39296a06c1891e8e52fe222eb4fc9d6c514",
+        "257697c50105f0681495c625e15b75e3b95d193c",
+        "165f712897fb57f83b1c9e0d680b0f8360ebc1ab",
+        "b26df1d3e2595d441be17f4adc5843cacaf9d791"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    }
+  },
+  "node_scores": {
+    "1605.03004v1": {
+      "pagerank": 0.1834,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.2434,
+      "bridge_score": 0.2292,
+      "frontier_score": 0.1687
+    },
+    "2207.07410v1": {
+      "pagerank": 0.021,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.0659,
+      "bridge_score": 0.0,
+      "frontier_score": 0.4517
+    },
+    "1208.2680v2": {
+      "pagerank": 0.0675,
+      "betweenness": 0.0,
+      "community": 2,
+      "foundation_score": 0.2272,
+      "bridge_score": 0.2083,
+      "frontier_score": 0.0748
+    },
+    "2410.08355v3": {
+      "pagerank": 0.1494,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.1163,
+      "bridge_score": 0.2083,
+      "frontier_score": 0.5221
+    },
+    "2303.16452v1": {
+      "pagerank": 0.2016,
+      "betweenness": 0.1429,
+      "community": 0,
+      "foundation_score": 0.1609,
+      "bridge_score": 0.6655,
+      "frontier_score": 0.4923
+    },
+    "1206.3509v1": {
+      "pagerank": 0.1305,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.265,
+      "bridge_score": 0.2083,
+      "frontier_score": 0.1073
+    },
+    "2202.03632v1": {
+      "pagerank": 0.2038,
+      "betweenness": 0.2857,
+      "community": 2,
+      "foundation_score": 0.1756,
+      "bridge_score": 0.9167,
+      "frontier_score": 0.4339
+    },
+    "2002.03383v1": {
+      "pagerank": 0.0428,
+      "betweenness": 0.0,
+      "community": 2,
+      "foundation_score": 0.1057,
+      "bridge_score": 0.0417,
+      "frontier_score": 0.2947
+    }
+  },
+  "graph_data": {
+    "nodes": [
+      "1605.03004v1",
+      "2207.07410v1",
+      "1208.2680v2",
+      "2410.08355v3",
+      "2303.16452v1",
+      "1206.3509v1",
+      "2202.03632v1",
+      "2002.03383v1"
+    ],
+    "edges": [
+      {
+        "source": "1605.03004v1",
+        "target": "2410.08355v3",
+        "type": "similarity",
+        "weight": 0.16660926522383773,
+        "distance": 6.002067163890981
+      },
+      {
+        "source": "1605.03004v1",
+        "target": "2303.16452v1",
+        "type": "similarity",
+        "weight": 0.11232384931958286,
+        "distance": 8.902828794219904
+      },
+      {
+        "source": "1605.03004v1",
+        "target": "1206.3509v1",
+        "type": "similarity",
+        "weight": 0.16901003875706624,
+        "distance": 5.916808299401626
+      },
+      {
+        "source": "1605.03004v1",
+        "target": "2202.03632v1",
+        "type": "similarity",
+        "weight": 0.14192579911608688,
+        "distance": 7.045935314283905
+      },
+      {
+        "source": "1208.2680v2",
+        "target": "2303.16452v1",
+        "type": "similarity",
+        "weight": 0.08749621888624719,
+        "distance": 11.429065309668848
+      },
+      {
+        "source": "1208.2680v2",
+        "target": "2202.03632v1",
+        "type": "similarity",
+        "weight": 0.07977479631047443,
+        "distance": 12.535287412181082
+      },
+      {
+        "source": "2410.08355v3",
+        "target": "2303.16452v1",
+        "type": "similarity",
+        "weight": 0.18287140105603752,
+        "distance": 5.4683236100628365
+      },
+      {
+        "source": "2410.08355v3",
+        "target": "2202.03632v1",
+        "type": "similarity",
+        "weight": 0.1222280290072554,
+        "distance": 8.18142948161784
+      },
+      {
+        "source": "2303.16452v1",
+        "target": "1206.3509v1",
+        "type": "similarity",
+        "weight": 0.15592699455729642,
+        "distance": 6.413257709732507
+      },
+      {
+        "source": "2303.16452v1",
+        "target": "2202.03632v1",
+        "type": "similarity",
+        "weight": 0.09986936578606193,
+        "distance": 10.013080509013937
+      },
+      {
+        "source": "1206.3509v1",
+        "target": "2202.03632v1",
+        "type": "similarity",
+        "weight": 0.07954350702040015,
+        "distance": 12.571736367413806
+      },
+      {
+        "source": "2202.03632v1",
+        "target": "2002.03383v1",
+        "type": "similarity",
+        "weight": 0.07544469858940395,
+        "distance": 13.254741800246888
+      }
+    ]
+  },
+  "reading_path": {
+    "reading_path": [
+      {
+        "stage": "Foundations",
+        "papers": [
+          {
+            "title": "A Novel Approach for Protein Structure Prediction",
+            "reason": "This paper establishes a foundational understanding of the protein sequence-structure relationship using Hidden Markov Models, demonstrating that secondary structures are conserved controlling factors.",
+            "read_order": 1
+          },
+          {
+            "title": "MUST-CNN: A Multilayer Shift-and-Stitch Deep Convolutional Architecture for Sequence-based Protein Structure Prediction",
+            "reason": "This work introduces the MUST-CNN architecture, representing a foundational shift from traditional window-based methods to deep convolutional neural networks for predicting protein properties.",
+            "read_order": 2
+          },
+          {
+            "title": "Atomic-accuracy prediction of protein loop structures through an RNA-inspired ansatz",
+            "reason": "This paper provides a foundational method for atomic-accuracy loop prediction using a stepwise assembly protocol, addressing the difficulty of modeling small sub-segments of large proteins.",
+            "read_order": 3
+          }
+        ]
+      },
+      {
+        "stage": "Core Algorithms",
+        "papers": [
+          {
+            "title": "ECRECer: Enzyme Commission Number Recommendation and Benchmarking based on Multiagent Dual-core Learning",
+            "reason": "This core algorithm paper presents ECRECer, a multi-agent deep learning framework that utilizes protein language models to accurately predict Enzyme Commission numbers.",
+            "read_order": 4
+          },
+          {
+            "title": "ProtFIM: Fill-in-Middle Protein Sequence Design via Protein Language Models",
+            "reason": "This core algorithm introduces ProtFIM and the SEIFER benchmark to address the limitations of causal protein language models in fill-in-middle sequence design tasks.",
+            "read_order": 5
+          }
+        ]
+      },
+      {
+        "stage": "Key Developments",
+        "papers": [
+          {
+            "title": "AlphaFold predicts the most complex protein knot and composite protein knots",
+            "reason": "This key development analyzes AlphaFold predictions to identify complex protein knots, including the most topologically complex knot found in a protein to date.",
+            "read_order": 6
+          },
+          {
+            "title": "Metalic: Meta-Learning In-Context with Protein Language Models",
+            "reason": "This key development proposes Metalic, a meta-learning approach that improves protein fitness prediction by leveraging in-context learning with protein language models.",
+            "read_order": 7
+          },
+          {
+            "title": "Prediction of native contacts in proteins from an out--of--equilibrium coevolutionary process",
+            "reason": "This key development advances contact prediction by proposing a non-equilibrium coevolutionary model that improves upon standard equilibrium Potts models.",
+            "read_order": 8
+          }
+        ]
+      }
+    ],
+    "report_markdown": "# ResearchTrail Reading Path\n\n**Topic:** Protein Structure Prediction / Scientific ML\n\n**Level:** intermediate\n\n**Generated:** 2026-05-06 21:55:11\n\n---\n\n## Foundations\n\n### 1. A Novel Approach for Protein Structure Prediction (2012)\n*This paper establishes a foundational understanding of the protein sequence-structure relationship using Hidden Markov Models, demonstrating that secondary structures are conserved controlling factors.*\nCitations: 3\n\n### 2. MUST-CNN: A Multilayer Shift-and-Stitch Deep Convolutional Architecture for Sequence-based Protein Structure Prediction (2016)\n*This work introduces the MUST-CNN architecture, representing a foundational shift from traditional window-based methods to deep convolutional neural networks for predicting protein properties.*\nCitations: 43\n\n### 3. Atomic-accuracy prediction of protein loop structures through an RNA-inspired ansatz (2012)\n*This paper provides a foundational method for atomic-accuracy loop prediction using a stepwise assembly protocol, addressing the difficulty of modeling small sub-segments of large proteins.*\nCitations: 21\n\n## Core Algorithms\n\n### 4. ECRECer: Enzyme Commission Number Recommendation and Benchmarking based on Multiagent Dual-core Learning (2022)\n*This core algorithm paper presents ECRECer, a multi-agent deep learning framework that utilizes protein language models to accurately predict Enzyme Commission numbers.*\n\n### 5. ProtFIM: Fill-in-Middle Protein Sequence Design via Protein Language Models (2023)\n*This core algorithm introduces ProtFIM and the SEIFER benchmark to address the limitations of causal protein language models in fill-in-middle sequence design tasks.*\nCitations: 3\n\n## Key Developments\n\n### 6. AlphaFold predicts the most complex protein knot and composite protein knots (2022)\n*This key development analyzes AlphaFold predictions to identify complex protein knots, including the most topologically complex knot found in a protein to date.*\nCitations: 42\n\n### 7. Metalic: Meta-Learning In-Context with Protein Language Models (2024)\n*This key development proposes Metalic, a meta-learning approach that improves protein fitness prediction by leveraging in-context learning with protein language models.*\nCitations: 4\n\n### 8. Prediction of native contacts in proteins from an out--of--equilibrium coevolutionary process (2020)\n*This key development advances contact prediction by proposing a non-equilibrium coevolutionary model that improves upon standard equilibrium Potts models.*\n\n---\n\n*Total: 8 papers in 3 stages.*\n",
+    "followup_suggestions": [
+      "Show bridge papers between key communities",
+      "Generate a 7-day reading plan",
+      "Show only papers after 2020",
+      "Which authors should I follow?",
+      "Replace theoretical papers with more applied papers",
+      "Explain why these papers are foundational",
+      "Show me the citation network visualization"
+    ]
+  },
+  "corpus_quality": {
+    "total_papers": 8,
+    "has_abstract_ratio": 1.0,
+    "has_citation_ratio": 0.875,
+    "year_range": "2012-2024",
+    "median_year": 2022,
+    "citation_edges_total": 239,
+    "benchmark_relevance_filtered": 3
+  },
+  "metadata": {
+    "benchmark_prompt": "Trace the research path of protein structure prediction from co-evolutionary methods to AlphaFold2 and modern protein generative models.",
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Protein Structure Prediction / Scientific ML",
+        "\"Protein structure prediction using multiple deep neural networks\"",
+        "\"Improved protein structure prediction using potentials from deep learning\"",
+        "\"Highly accurate protein structure prediction with AlphaFold\"",
+        "\"Accurate prediction of protein structures and interactions using a three-track neural network\"",
+        "\"Language models of protein sequences\"",
+        "protein structure prediction deep learning",
+        "coevolutionary contact prediction"
+      ],
+      "prerequisite_queries": [
+        "protein design",
+        "scientific machine learning",
+        "inter-residue distance",
+        "multiple sequence alignment",
+        "attention mechanism"
+      ],
+      "exclude_terms": [
+        "nutrition",
+        "dietary",
+        "food science",
+        "laundry",
+        "textile"
+      ],
+      "expected_communities": [
+        "protein structure",
+        "coevolution",
+        "alphafold",
+        "rosettafold",
+        "protein language model",
+        "protein design",
+        "diffusion",
+        "Computational Biology",
+        "Bioinformatics",
+        "Structural Biology",
+        "Deep Learning",
+        "Generative AI"
+      ]
+    },
+    "verified_landmark_recovery": [],
+    "graph_mode": "hybrid",
+    "graph_metrics": {
+      "node_count": 8,
+      "edge_count": 12,
+      "citation_edges": 0,
+      "similarity_edges": 12,
+      "connected_components": 2,
+      "largest_component_ratio": 0.875,
+      "average_degree": 3.0,
+      "community_count": 3,
+      "modularity": 0.0476
+    },
+    "community_label_fallback_reason": "HTTPSConnectionPool(host='api.siliconflow.cn', port=443): Read timed out. (read timeout=45)",
+    "community_labels": {
+      "0": {
+        "label": "Protein / Sequence / Prediction / Have",
+        "description": "Community 0 groups papers around protein, sequence, prediction, have."
+      },
+      "1": {
+        "label": "Knot / Protein / Knots / Complex",
+        "description": "Community 1 groups papers around knot, protein, knots, complex."
+      },
+      "2": {
+        "label": "Protein / Ecrecer / Prediction / Which",
+        "description": "Community 2 groups papers around protein, ecrecer, prediction, which."
+      }
+    },
+    "community_label_evidence": [
+      {
+        "community_id": 0,
+        "size": 4,
+        "avg_year": 2018.8,
+        "top_titles": [
+          "ProtFIM: Fill-in-Middle Protein Sequence Design via Protein Language Models",
+          "MUST-CNN: A Multilayer Shift-and-Stitch Deep Convolutional Architecture for Sequence-based Protein Structure Prediction",
+          "Metalic: Meta-Learning In-Context with Protein Language Models",
+          "A Novel Approach for Protein Structure Prediction"
+        ],
+        "keywords": [
+          "protein",
+          "sequence",
+          "prediction",
+          "have",
+          "language",
+          "hidden",
+          "structure",
+          "secondary"
+        ]
+      },
+      {
+        "community_id": 1,
+        "size": 1,
+        "avg_year": 2022.0,
+        "top_titles": [
+          "AlphaFold predicts the most complex protein knot and composite protein knots"
+        ],
+        "keywords": [
+          "knot",
+          "protein",
+          "knots",
+          "complex",
+          "composite",
+          "alphafold",
+          "most",
+          "structures"
+        ]
+      },
+      {
+        "community_id": 2,
+        "size": 3,
+        "avg_year": 2018.0,
+        "top_titles": [
+          "ECRECer: Enzyme Commission Number Recommendation and Benchmarking based on Multiagent Dual-core Learning",
+          "Atomic-accuracy prediction of protein loop structures through an RNA-inspired ansatz",
+          "Prediction of native contacts in proteins from an out--of--equilibrium coevolutionary process"
+        ],
+        "keywords": [
+          "protein",
+          "ecrecer",
+          "prediction",
+          "which",
+          "proteins",
+          "accuracy",
+          "loop",
+          "sequence"
+        ]
+      }
+    ],
+    "evidence_packets": [
+      {
+        "paper_id": "1206.3509v1",
+        "title": "A Novel Approach for Protein Structure Prediction",
+        "abstract": "The idea of this project is to study the protein structure and sequence relationship using the hidden markov model and artificial neural network. In this context we have assumed two hidden markov models. In first model we have taken protein secondary structures as hidden and protein sequences as observed. In second model we have taken protein sequences as hidden and protein structures as observed. The efficiencies for both the hidden markov models have been calculated. The results show that the efficiencies of first model is greater that the second one .These efficiencies are cross validated using artificial neural network. This signifies the importance of protein secondary structures as the main hidden controlling factors due to which we observe a particular amino acid sequence. This also signifies that protein secondary structure is more conserved in comparison to amino acid sequence.",
+        "url": "https://arxiv.org/abs/1206.3509v1",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2012,
+        "citation_count": 3,
+        "source": "arxiv",
+        "pagerank": 0.1305,
+        "betweenness": 0.0,
+        "foundation_score": 0.265,
+        "bridge_score": 0.2083,
+        "frontier_score": 0.1073,
+        "community_id": 0,
+        "community_label": "Protein / Sequence / Prediction / Have",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (3 citations), making it a foundation for later work.",
+        "llm_reason": "This paper establishes a foundational understanding of the protein sequence-structure relationship using Hidden Markov Models, demonstrating that secondary structures are conserved controlling factors."
+      },
+      {
+        "paper_id": "1605.03004v1",
+        "title": "MUST-CNN: A Multilayer Shift-and-Stitch Deep Convolutional Architecture for Sequence-based Protein Structure Prediction",
+        "abstract": "Predicting protein properties such as solvent accessibility and secondary structure from its primary amino acid sequence is an important task in bioinformatics. Recently, a few deep learning models have surpassed the traditional window based multilayer perceptron. Taking inspiration from the image classification domain we propose a deep convolutional neural network architecture, MUST-CNN, to predict protein properties. This architecture uses a novel multilayer shift-and-stitch (MUST) technique to generate fully dense per-position predictions on protein sequences. Our model is significantly simpler than the state-of-the-art, yet achieves better results. By combining MUST and the efficient convolution operation, we can consider far more parameters while retaining very fast prediction speeds. We beat the state-of-the-art performance on two large protein property prediction datasets.",
+        "url": "https://arxiv.org/abs/1605.03004v1",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2016,
+        "citation_count": 43,
+        "source": "arxiv",
+        "pagerank": 0.1834,
+        "betweenness": 0.0,
+        "foundation_score": 0.2434,
+        "bridge_score": 0.2292,
+        "frontier_score": 0.1687,
+        "community_id": 0,
+        "community_label": "Protein / Sequence / Prediction / Have",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (43 citations), making it a foundation for later work.",
+        "llm_reason": "This work introduces the MUST-CNN architecture, representing a foundational shift from traditional window-based methods to deep convolutional neural networks for predicting protein properties."
+      },
+      {
+        "paper_id": "1208.2680v2",
+        "title": "Atomic-accuracy prediction of protein loop structures through an RNA-inspired ansatz",
+        "abstract": "Consistently predicting biopolymer structure at atomic resolution from sequence alone remains a difficult problem, even for small sub-segments of large proteins. Such loop prediction challenges, which arise frequently in comparative modeling and protein design, can become intractable as loop lengths exceed 10 residues and if surrounding side-chain conformations are erased. This article introduces a modeling strategy based on a 'stepwise ansatz', recently developed for RNA modeling, which posits that any realistic all-atom molecular conformation can be built up by residue-by-residue stepwise enumeration. When harnessed to a dynamic-programming-like recursion in the Rosetta framework, the resulting stepwise assembly (SWA) protocol enables enumerative sampling of a 12 residue loop at a significant but achievable cost of thousands of CPU-hours. In a previously established benchmark, SWA r...",
+        "url": "https://arxiv.org/abs/1208.2680v2",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2012,
+        "citation_count": 21,
+        "source": "arxiv",
+        "pagerank": 0.0675,
+        "betweenness": 0.0,
+        "foundation_score": 0.2272,
+        "bridge_score": 0.2083,
+        "frontier_score": 0.0748,
+        "community_id": 2,
+        "community_label": "Protein / Ecrecer / Prediction / Which",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (21 citations), making it a foundation for later work.",
+        "llm_reason": "This paper provides a foundational method for atomic-accuracy loop prediction using a stepwise assembly protocol, addressing the difficulty of modeling small sub-segments of large proteins."
+      },
+      {
+        "paper_id": "2202.03632v1",
+        "title": "ECRECer: Enzyme Commission Number Recommendation and Benchmarking based on Multiagent Dual-core Learning",
+        "abstract": "Enzyme Commission (EC) numbers, which associate a protein sequence with the biochemical reactions it catalyzes, are essential for the accurate understanding of enzyme functions and cellular metabolism. Many ab-initio computational approaches were proposed to predict EC numbers for given input sequences directly. However, the prediction performance (accuracy, recall, precision), usability, and efficiency of existing methods still have much room to be improved. Here, we report ECRECer, a cloud platform for accurately predicting EC numbers based on novel deep learning techniques. To build ECRECer, we evaluate different protein representation methods and adopt a protein language model for protein sequence embedding. After embedding, we propose a multi-agent hierarchy deep learning-based framework to learn the proposed tasks in a multi-task manner. Specifically, we used an extreme multi-la...",
+        "url": "https://arxiv.org/abs/2202.03632v1",
+        "stage": "Core Algorithms",
+        "role": "core",
+        "year": 2022,
+        "citation_count": 0,
+        "source": "arxiv",
+        "pagerank": 0.2038,
+        "betweenness": 0.2857,
+        "foundation_score": 0.1756,
+        "bridge_score": 0.9167,
+        "frontier_score": 0.4339,
+        "community_id": 2,
+        "community_label": "Protein / Ecrecer / Prediction / Which",
+        "template_reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.204) and anchors later developments in the path.",
+        "llm_reason": "This core algorithm paper presents ECRECer, a multi-agent deep learning framework that utilizes protein language models to accurately predict Enzyme Commission numbers."
+      },
+      {
+        "paper_id": "2303.16452v1",
+        "title": "ProtFIM: Fill-in-Middle Protein Sequence Design via Protein Language Models",
+        "abstract": "Protein language models (pLMs), pre-trained via causal language modeling on protein sequences, have been a promising tool for protein sequence design. In real-world protein engineering, there are many cases where the amino acids in the middle of a protein sequence are optimized while maintaining other residues. Unfortunately, because of the left-to-right nature of pLMs, existing pLMs modify suffix residues by prompting prefix residues, which are insufficient for the infilling task that considers the whole surrounding context. To find the more effective pLMs for protein engineering, we design a new benchmark, Secondary structureE InFilling rEcoveRy, SEIFER, which approximates infilling sequence design scenarios. With the evaluation of existing models on the benchmark, we reveal the weakness of existing language models and show that language models trained via fill-in-middle transformat...",
+        "url": "https://arxiv.org/abs/2303.16452v1",
+        "stage": "Core Algorithms",
+        "role": "core",
+        "year": 2023,
+        "citation_count": 3,
+        "source": "arxiv",
+        "pagerank": 0.2016,
+        "betweenness": 0.1429,
+        "foundation_score": 0.1609,
+        "bridge_score": 0.6655,
+        "frontier_score": 0.4923,
+        "community_id": 0,
+        "community_label": "Protein / Sequence / Prediction / Have",
+        "template_reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.202) and anchors later developments in the path.",
+        "llm_reason": "This core algorithm introduces ProtFIM and the SEIFER benchmark to address the limitations of causal protein language models in fill-in-middle sequence design tasks."
+      },
+      {
+        "paper_id": "2207.07410v1",
+        "title": "AlphaFold predicts the most complex protein knot and composite protein knots",
+        "abstract": "The computer artificial intelligence system AlphaFold has recently predicted previously unknown three-dimensional structures of thousands of proteins. Focusing on the subset with high-confidence scores, we algorithmically analyze these predictions for cases where the protein backbone exhibits rare topological complexity, i.e. knotting. Amongst others, we discovered a $7_1$-knot, the most topologically complex knot ever found in a protein, as well several 6-crossing composite knots comprised of two methyltransferase or carbonic anhydrase domains, each containing a simple trefoil knot. These deeply embedded composite knots occur evidently by gene duplication and interconnection of knotted dimers. Finally, we report two new five-crossing knots including the first $5_1$-knot. Our list of analyzed structures forms the basis for future experimental studies to confirm these novel knotted top...",
+        "url": "https://arxiv.org/abs/2207.07410v1",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2022,
+        "citation_count": 42,
+        "source": "arxiv",
+        "pagerank": 0.021,
+        "betweenness": 0.0,
+        "foundation_score": 0.0659,
+        "bridge_score": 0.0,
+        "frontier_score": 0.4517,
+        "community_id": 1,
+        "community_label": "Knot / Protein / Knots / Complex",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (alphafold predicts the most complex protein knot and composite protein knots research) with strong impact (42 citations) and bridge score 0.000.",
+        "llm_reason": "This key development analyzes AlphaFold predictions to identify complex protein knots, including the most topologically complex knot found in a protein to date."
+      },
+      {
+        "paper_id": "2410.08355v3",
+        "title": "Metalic: Meta-Learning In-Context with Protein Language Models",
+        "abstract": "Predicting the biophysical and functional properties of proteins is essential for in silico protein design. Machine learning has emerged as a promising technique for such prediction tasks. However, the relative scarcity of in vitro annotations means that these models often have little, or no, specific data on the desired fitness prediction task. As a result of limited data, protein language models (PLMs) are typically trained on general protein sequence modeling tasks, and then fine-tuned, or applied zero-shot, to protein fitness prediction. When no task data is available, the models make strong assumptions about the correlation between the protein sequence likelihood and fitness scores. In contrast, we propose meta-learning over a distribution of standard fitness prediction tasks, and demonstrate positive transfer to unseen fitness prediction tasks. Our method, called Metalic (Meta-L...",
+        "url": "https://arxiv.org/abs/2410.08355v3",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2024,
+        "citation_count": 4,
+        "source": "arxiv",
+        "pagerank": 0.1494,
+        "betweenness": 0.0,
+        "foundation_score": 0.1163,
+        "bridge_score": 0.2083,
+        "frontier_score": 0.5221,
+        "community_id": 0,
+        "community_label": "Protein / Sequence / Prediction / Have",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (vision-language learning) with strong impact (4 citations) and bridge score 0.208.",
+        "llm_reason": "This key development proposes Metalic, a meta-learning approach that improves protein fitness prediction by leveraging in-context learning with protein language models."
+      },
+      {
+        "paper_id": "2002.03383v1",
+        "title": "Prediction of native contacts in proteins from an out--of--equilibrium coevolutionary process",
+        "abstract": "The analysis of coevolution of residues in homologous proteins is a powerful tool to predict their native conformation. The standard framework in which coevolutionary analysis is usually worked out is that of equilibrium Potts models, assuming that proteins have evolved for enough time to reach thermodynamic equilibrium in sequence space. Here we propose a model to describe correlations in sequences based on an explicit description of the evolutionary kinetics of proteins. We show that this procedure improves the correct prediction of native contacts with respect to equilibrium--based models.",
+        "url": "https://arxiv.org/abs/2002.03383v1",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2020,
+        "citation_count": 0,
+        "source": "arxiv",
+        "pagerank": 0.0428,
+        "betweenness": 0.0,
+        "foundation_score": 0.1057,
+        "bridge_score": 0.0417,
+        "frontier_score": 0.2947,
+        "community_id": 2,
+        "community_label": "Protein / Ecrecer / Prediction / Which",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (prediction of native contacts in proteins from an out--of--equilibrium coevolutionary process research) with strong impact (0 citations) and bridge score 0.042.",
+        "llm_reason": "This key development advances contact prediction by proposing a non-equilibrium coevolutionary model that improves upon standard equilibrium Potts models."
+      }
+    ],
+    "reading_path_metrics": {
+      "stage_count": 3,
+      "unique_paper_count": 8,
+      "role_counts": {
+        "foundation": 3,
+        "core": 2,
+        "development": 3
+      },
+      "explanation_availability_ratio": 1.0
+    }
+  }
+}

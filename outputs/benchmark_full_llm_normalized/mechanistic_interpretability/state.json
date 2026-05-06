@@ -1,0 +1,1130 @@
+{
+  "research_profile": {
+    "topic": "Mechanistic Interpretability of Transformers",
+    "seed_papers": [],
+    "time_range": "all",
+    "max_papers": 45,
+    "user_level": "intermediate",
+    "preferred_length": 12,
+    "goal": "benchmark_research_trail"
+  },
+  "paper_count": 11,
+  "papers": {
+    "2209.10652v1": {
+      "paper_id": "2209.10652v1",
+      "title": "Toy Models of Superposition",
+      "authors": [
+        "Nelson Elhage",
+        "Tristan Hume",
+        "Catherine Olsson",
+        "Nicholas Schiefer",
+        "Tom Henighan",
+        "Shauna Kravec",
+        "Zac Hatfield-Dodds",
+        "Robert Lasenby",
+        "Dawn Drain",
+        "Carol Chen",
+        "Roger Grosse",
+        "Sam McCandlish",
+        "Jared Kaplan",
+        "Dario Amodei",
+        "Martin Wattenberg",
+        "Christopher Olah"
+      ],
+      "year": 2022,
+      "abstract": "Neural networks often pack many unrelated concepts into a single neuron - a puzzling phenomenon known as 'polysemanticity' which makes interpretability much more challenging. This paper provides a toy model where polysemanticity can be fully understood, arising as a result of models storing additional sparse features in \"superposition.\" We demonstrate the existence of a phase change, a surprising connection to the geometry of uniform polytopes, and evidence of a link to adversarial examples. We also discuss potential implications for mechanistic interpretability.",
+      "url": "https://arxiv.org/abs/2209.10652v1",
+      "citation_count": 737,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "092c88f430124dca071846dde56f3f90f91cb90c",
+        "ebab687cd1be7d25392c11f89fce6a63bef7219d",
+        "eb7ee0bc355652654990bcf9f92f124688fde493",
+        "02fd44cf2e1728a58f37263af75271611895af79"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2410.12101v2": {
+      "paper_id": "2410.12101v2",
+      "title": "The Persian Rug: solving toy models of superposition using large-scale symmetries",
+      "authors": [
+        "Aditya Cowsik",
+        "Kfir Dolev",
+        "Alex Infanger"
+      ],
+      "year": 2024,
+      "abstract": "We present a complete mechanistic description of the algorithm learned by a minimal non-linear sparse data autoencoder in the limit of large input dimension. The model, originally presented in arXiv:2209.10652, compresses sparse data vectors through a linear layer and decompresses using another linear layer followed by a ReLU activation. We notice that when the data is permutation symmetric (no input feature is privileged) large models reliably learn an algorithm that is sensitive to individual weights only through their large-scale statistics. For these models, the loss function becomes analytically tractable. Using this understanding, we give the explicit scalings of the loss at high sparsity, and show that the model is near-optimal among recently proposed architectures. In particular, changing or adding to the activation function any elementwise or filtering operation can at best improve the model's performance by a constant factor. Finally, we forward-engineer a model with the requisite symmetries and show that its loss precisely matches that of the trained models. Unlike the trained model weights, the low randomness in the artificial weights results in miraculous fractal structures resembling a Persian rug, to which the algorithm is oblivious. Our work contributes to neural network interpretability by introducing techniques for understanding the structure of autoencoders. Code to reproduce our results can be found at https://github.com/KfirD/PersianRug .",
+      "url": "https://arxiv.org/abs/2410.12101v2",
+      "citation_count": 1,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "890efc891e9b59e8cb5e8c244428f6b81ec0a4da",
+        "0d24c5680efe9769e6d7ea579db0499ec819a8c7",
+        "bbf218fd97d3c18801eb6eb09345bb38e7bcc871",
+        "b8f280d8bf685f8da7c83068e73f000528072d6b",
+        "4371b54eb5808b4eedb08ffae11c7e12386b64fd",
+        "edb548fe7574d99454b352ffdb61bca93c3072ba",
+        "996445d847f06e99b0bd259345408a0cf1bce87e",
+        "a0cfd36e6c7abf070f492ae52a35af895a1c5592",
+        "84651a9c11e6cc4f1532a81e93a193c9cbc44859",
+        "b468687ccdfa6b8c82b104ddcac4b3ba4598c2a2",
+        "3d4dc879166e902ede476a079684b9f5b5143e13",
+        "ad6547ae941130b2436e357cf868ff716c587159",
+        "bd19dd1ccd9412171c6932d1556eeb47131b30ce",
+        "b94043a133e3d07ed0b1cfc036829e619ea0ba22",
+        "f2a3a74e92498e15218fc0ee05a63007ea9a7094",
+        "12c11e1e71ee18e4b69f21e32b1a1fbd38bc65e5",
+        "b5e853572b2f3134acafa76d5ae80b9f28c7dca8",
+        "c1180048929ed490ab25e0e612f8f7c3d7196450",
+        "0b6e98a6a8cf8283fd76fe1100b23f11f4cfa711",
+        "2526ce074df9eb6422ee8d4cd814b8325c7aab85",
+        "e7321ab0f3be0b29aaf5f073fd7de7da5fed2f92"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2209.11895v1": {
+      "paper_id": "2209.11895v1",
+      "title": "In-context Learning and Induction Heads",
+      "authors": [
+        "Catherine Olsson",
+        "Nelson Elhage",
+        "Neel Nanda",
+        "Nicholas Joseph",
+        "Nova DasSarma",
+        "Tom Henighan",
+        "Ben Mann",
+        "Amanda Askell",
+        "Yuntao Bai",
+        "Anna Chen",
+        "Tom Conerly",
+        "Dawn Drain",
+        "Deep Ganguli",
+        "Zac Hatfield-Dodds",
+        "Danny Hernandez",
+        "Scott Johnston",
+        "Andy Jones",
+        "Jackson Kernion",
+        "Liane Lovitt",
+        "Kamal Ndousse",
+        "Dario Amodei",
+        "Tom Brown",
+        "Jack Clark",
+        "Jared Kaplan",
+        "Sam McCandlish",
+        "Chris Olah"
+      ],
+      "year": 2022,
+      "abstract": "\"Induction heads\" are attention heads that implement a simple algorithm to complete token sequences like [A][B] ... [A] -> [B]. In this work, we present preliminary and indirect evidence for a hypothesis that induction heads might constitute the mechanism for the majority of all \"in-context learning\" in large transformer models (i.e. decreasing loss at increasing token indices). We find that induction heads develop at precisely the same point as a sudden sharp increase in in-context learning ability, visible as a bump in the training loss. We present six complementary lines of evidence, arguing that induction heads may be the mechanistic source of general in-context learning in transformer models of any size. For small attention-only models, we present strong, causal evidence; for larger models with MLPs, we present correlational evidence.",
+      "url": "https://arxiv.org/abs/2209.11895v1",
+      "citation_count": 826,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "f4df78183261538e718066331898ee5cad7cad05",
+        "10b9ca173c665e3f2c322c2d5ce9b9d433fe4629",
+        "a1d1983a7b19845141e6505bd32dc395e5a136ba",
+        "dfb37e6216e792bf6bd5a30c0fc7ad55df1cb71e",
+        "85e7d63f75c0916bd350a229e040c5fbb1472e7a",
+        "ea415809bf87ef4b99966c6c50de6cb996a02a97",
+        "07a64686ce8e43ac475a8d820a8a9f1d87989583",
+        "f86f1748d1b6d22870f4347fd5d65314ba800583",
+        "0d2336389dff3031910bd21dd1c44d1b4cd51725",
+        "9405cc0d6169988371b2755e573cc28650d14dfe"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2404.07129v1": {
+      "paper_id": "2404.07129v1",
+      "title": "What needs to go right for an induction head? A mechanistic study of in-context learning circuits and their formation",
+      "authors": [
+        "Aaditya K. Singh",
+        "Ted Moskovitz",
+        "Felix Hill",
+        "Stephanie C. Y. Chan",
+        "Andrew M. Saxe"
+      ],
+      "year": 2024,
+      "abstract": "In-context learning is a powerful emergent ability in transformer models. Prior work in mechanistic interpretability has identified a circuit element that may be critical for in-context learning -- the induction head (IH), which performs a match-and-copy operation. During training of large transformers on natural language data, IHs emerge around the same time as a notable phase change in the loss. Despite the robust evidence for IHs and this interesting coincidence with the phase change, relatively little is known about the diversity and emergence dynamics of IHs. Why is there more than one IH, and how are they dependent on each other? Why do IHs appear all of a sudden, and what are the subcircuits that enable them to emerge? We answer these questions by studying IH emergence dynamics in a controlled setting by training on synthetic data. In doing so, we develop and share a novel optogenetics-inspired causal framework for modifying activations throughout training. Using this framework, we delineate the diverse and additive nature of IHs. By clamping subsets of activations throughout training, we then identify three underlying subcircuits that interact to drive IH formation, yielding the phase change. Furthermore, these subcircuits shed light on data-dependent properties of formation, such as phase change timing, already showing the promise of this more in-depth understanding of subcircuits that need to \"go right\" for an induction head.",
+      "url": "https://arxiv.org/abs/2404.07129v1",
+      "citation_count": 75,
+      "citation_source": "semantic_scholar",
+      "references": [],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2504.19475v3": {
+      "paper_id": "2504.19475v3",
+      "title": "Prisma: An Open Source Toolkit for Mechanistic Interpretability in Vision and Video",
+      "authors": [
+        "Sonia Joseph",
+        "Praneet Suresh",
+        "Lorenz Hufe",
+        "Edward Stevinson",
+        "Robert Graham",
+        "Yash Vadi",
+        "Danilo Bzdok",
+        "Sebastian Lapuschkin",
+        "Lee Sharkey",
+        "Blake Aaron Richards"
+      ],
+      "year": 2025,
+      "abstract": "Robust tooling and publicly available pre-trained models have helped drive recent advances in mechanistic interpretability for language models. However, similar progress in vision mechanistic interpretability has been hindered by the lack of accessible frameworks and pre-trained weights. We present Prisma (Access the codebase here: https://github.com/Prisma-Multimodal/ViT-Prisma), an open-source framework designed to accelerate vision mechanistic interpretability research, providing a unified toolkit for accessing 75+ vision and video transformers; support for sparse autoencoder (SAE), transcoder, and crosscoder training; a suite of 80+ pre-trained SAE weights; activation caching, circuit analysis tools, and visualization tools; and educational resources. Our analysis reveals surprising findings, including that effective vision SAEs can exhibit substantially lower sparsity patterns than language SAEs, and that in some instances, SAE reconstructions can decrease model loss. Prisma enables new research directions for understanding vision model internals while lowering barriers to entry in this emerging field.",
+      "url": "https://arxiv.org/abs/2504.19475v3",
+      "citation_count": 15,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "11fe7b9236477c5ed162b0746d2083067c13f706",
+        "3b748d1f2b314f8bb2ab4123946bd58c607738f3",
+        "1a80429448d7379ca1157a33a36bd5130257e3e9",
+        "a7f5d373dbbb5dffe53538e0e87264f26373887a",
+        "3c6da6f1601aee99b8e5b8dcf2d21c42d9252b04",
+        "1b240f7cfc5f5f5f2bf8d99dc622a3c405837a73",
+        "0d24c5680efe9769e6d7ea579db0499ec819a8c7",
+        "bbf218fd97d3c18801eb6eb09345bb38e7bcc871",
+        "b8f280d8bf685f8da7c83068e73f000528072d6b",
+        "a05148b077418259989511ed8031ce05689a16aa",
+        "872d78c04c8fb115d492eea98199407991670533",
+        "f717c3581620b198fc22b5f5bd946286f4ab1e0b",
+        "7c57530318ae6c6e49c835f23e75affd9cf0827d",
+        "48da5f9e5e8953f3c0d5855e2cd033541fc898c1",
+        "eefbd8b384a58f464827b19e30a6920ba976def9",
+        "5a9cb1b3dc4655218b3deeaf4a2417a9a8cd0891",
+        "1bba254ecfc356a3e383db7af48794ece8bea3f0",
+        "f680d47a51a0e470fcb228bf0110c026535ead1b",
+        "e345911a57560f96b45059773ff62c840790d06d",
+        "6edd112383ad494f5f2eba72b6f4ffae122ce61f",
+        "9d125f45b1d2dea01f05281470bc08e12b6c7cba",
+        "274ee7fc9179e2b770c9f1fa5653219728894ab5",
+        "c2fbc8ad4e2403c795529c2606e4686f5a571215",
+        "7cf64265882f7129b127ce0e27ff7bca9173aa58",
+        "03db529f0bfae6d0b64b0feef565196327fe8d50",
+        "ad4a0938c48e61b7827869e4ac3baffd0aefab35",
+        "b6382a7351c0c595f91472ac71d3b2d87b3c4844",
+        "6f870f7f02a8c59c3e23f407f3ef00dd1dcf8fc4",
+        "268d347e8a55b5eb82fb5e7d2f800e33c75ab18a",
+        "dbcf6aa0cab4c39f64a3541a2786630748e6bdf3",
+        "e91dca6e99f2d392953524986f2125be2008d9fc",
+        "74c19438c78a136677a7cb9004c53684a4ae56ff",
+        "64821a55866a750034ca1795b1b9941b8b2db304",
+        "d2c733e34d48784a37d717fe43d9e93277a8c53e"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2305.03452v1": {
+      "paper_id": "2305.03452v1",
+      "title": "A technical note on bilinear layers for interpretability",
+      "authors": [
+        "Lee Sharkey"
+      ],
+      "year": 2023,
+      "abstract": "The ability of neural networks to represent more features than neurons makes interpreting them challenging. This phenomenon, known as superposition, has spurred efforts to find architectures that are more interpretable than standard multilayer perceptrons (MLPs) with elementwise activation functions. In this note, I examine bilinear layers, which are a type of MLP layer that are mathematically much easier to analyze while simultaneously performing better than standard MLPs. Although they are nonlinear functions of their input, I demonstrate that bilinear layers can be expressed using only linear operations and third order tensors. We can integrate this expression for bilinear layers into a mathematical framework for transformer circuits, which was previously limited to attention-only transformers. These results suggest that bilinear layers are easier to analyze mathematically than current architectures and thus may lend themselves to deeper safety insights by allowing us to talk more formally about circuits in neural networks. Additionally, bilinear layers may offer an alternative path for mechanistic interpretability through understanding the mechanisms of feature construction instead of enumerating a (potentially exponentially) large number of features in large models.",
+      "url": "https://arxiv.org/abs/2305.03452v1",
+      "citation_count": 10,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "12910786da7a34c9ee26798fd81b0ed7b0e38789",
+        "6edd112383ad494f5f2eba72b6f4ffae122ce61f",
+        "c90a99eeb57019732a6cc996bb9eaf13faedf00f",
+        "9d125f45b1d2dea01f05281470bc08e12b6c7cba",
+        "4a54d58a4b20e4f3af25cea3c188a12082a95e02",
+        "a0cfd36e6c7abf070f492ae52a35af895a1c5592",
+        "bdbf780dfd6b3eb0c9e980887feae5f23af15bc4",
+        "204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+        "88caa4a0253a8b0076176745ebc072864eab66e1",
+        "de5e7320729f5d3cbb6709eb6329ec41ace8c95d",
+        "99c970348b8f70ce23d6641e201904ea49266b6e",
+        "a538b05ebb01a40323997629e171c91aa28b8e2f",
+        "bd7d93193aad6c4b71cc8942e808753019e87706",
+        "577d19a115f9ef6f002483fcf88adbb3b5479556",
+        "9405cc0d6169988371b2755e573cc28650d14dfe",
+        "c8c4ab59ac29973a00df4e5c8df3773a3c59995a"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2402.01790v1": {
+      "paper_id": "2402.01790v1",
+      "title": "An introduction to graphical tensor notation for mechanistic interpretability",
+      "authors": [
+        "Jordan K. Taylor"
+      ],
+      "year": 2024,
+      "abstract": "Graphical tensor notation is a simple way of denoting linear operations on tensors, originating from physics. Modern deep learning consists almost entirely of operations on or between tensors, so easily understanding tensor operations is quite important for understanding these systems. This is especially true when attempting to reverse-engineer the algorithms learned by a neural network in order to understand its behavior: a field known as mechanistic interpretability. It's often easy to get confused about which operations are happening between tensors and lose sight of the overall structure, but graphical tensor notation makes it easier to parse things at a glance and see interesting equivalences. The first half of this document introduces the notation and applies it to some decompositions (SVD, CP, Tucker, and tensor network decompositions), while the second half applies it to some existing some foundational approaches for mechanistically understanding language models, loosely following ``A Mathematical Framework for Transformer Circuits'', then constructing an example ``induction head'' circuit in graphical tensor notation.",
+      "url": "https://arxiv.org/abs/2402.01790v1",
+      "citation_count": 7,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "eefbd8b384a58f464827b19e30a6920ba976def9",
+        "fa57e7061f9bcb8529ccc06efcc5356847d1bf7a",
+        "c90a99eeb57019732a6cc996bb9eaf13faedf00f",
+        "996445d847f06e99b0bd259345408a0cf1bce87e",
+        "0eac1a7702165054ddba1cc7040cf9bb40ff9649",
+        "4a54d58a4b20e4f3af25cea3c188a12082a95e02",
+        "6387b9660f91ad8145f4d0cc9e6fa3d8aa467a75",
+        "11fd785de2ccc5dabf2000177e320204c58deb33",
+        "04eeb5188204681ffe2b291a191ec2715463e05a",
+        "6ff0ab1e9064dba97bb8e5ae0b0f1110b5565e06",
+        "967d90db86b7e89125189753f970186cc4f59dbd",
+        "b53cb499a37b7cd213db4f8d593d14c3761f4883",
+        "49617779ea15e33eed9ab4ac2f4c2fd71f51d451",
+        "0f0556cbd5e9dc6cf7304d76687531a2f20a4a72",
+        "2dbc99dc7a2237c8db1bec839fbd7818cf218ab9",
+        "7c0df9310b3450fcb802c1ad7b4d1bea1b69380d",
+        "a2f72fb46f39fe4b769a3add7f092eafefc67077",
+        "ec75cc9cd6f7342839a9b3b8760ce5ebf1b06e1c",
+        "a1af413e74d0de094bec54553512a6d45faca55f",
+        "f0a473202af221e7765bd634391236367b062e2b",
+        "757cb62e3d1c0643c9f83bf57d45e427bd76e235",
+        "6661789de63b3cebe2eafdd7e9e7a316ad1f0b8f",
+        "8112c4305b88d85199267e9e03d3a0aca4432059",
+        "5265853dd172f6afe0ff1e820a0cc7bd0e58c765",
+        "43673244fff9be1882ac25217f8ec9f7f71000b2",
+        "c5b28cae82b14417f1250e58bb241367248e827d",
+        "df8ca6958177c22c6bb82ba0b13fb0b0710b2a34"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2402.03855v2": {
+      "paper_id": "2402.03855v2",
+      "title": "Challenges in Mechanistically Interpreting Model Representations",
+      "authors": [
+        "Satvik Golechha",
+        "James Dao"
+      ],
+      "year": 2024,
+      "abstract": "Mechanistic interpretability (MI) aims to understand AI models by reverse-engineering the exact algorithms neural networks learn. Most works in MI so far have studied behaviors and capabilities that are trivial and token-aligned. However, most capabilities important for safety and trust are not that trivial, which advocates for the study of hidden representations inside these networks as the unit of analysis. We formalize representations for features and behaviors, highlight their importance and evaluation, and perform an exploratory study of dishonesty representations in `Mistral-7B-Instruct-v0.1'. We justify that studying representations is an important and under-studied field, and highlight several challenges that arise while attempting to do so through currently established methods in MI, showing their insufficiency and advocating work on new frameworks for the same.",
+      "url": "https://arxiv.org/abs/2402.03855v2",
+      "citation_count": 4,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "24ae90b670d83d092bb966dc1d145e69a18d99d8",
+        "eb44ce1f7e1f4deac10f6e7009e2073f1eb0b3e4",
+        "b13947c7598aa91992cf04048afa19c7cfe69795",
+        "012dda8aef89ffa57128b15dc3cad2c02eedfa80",
+        "3c5014f70a356021b6dc3bbdd046da6cca912253",
+        "db633c6b1c286c0386f0078d8a2e6224e03a6227",
+        "d59523889679aee15992c4bf6e52b134186d07d3",
+        "58fdf550600fc3873729d466601c5d08a51ba8a0",
+        "edb548fe7574d99454b352ffdb61bca93c3072ba",
+        "03bf28df6e282a7e36e1686edeb9c624e6ffb13b",
+        "104b0bb1da562d53cbda87aec79ef6a2827d191a",
+        "77f02ff24909896856fec410968aef7999c29440",
+        "405f8f5f1c6df1b3343c812832479aad5180b65f",
+        "aec826ff336ca442697d5f908ab1668f1ea18987",
+        "eefbd8b384a58f464827b19e30a6920ba976def9",
+        "5a9cb1b3dc4655218b3deeaf4a2417a9a8cd0891",
+        "cb1b5d949a1d711b1bd3a2924e045ad3f893252c",
+        "ecd0b23e4828fca585a05eff56563852d35858d9",
+        "f680d47a51a0e470fcb228bf0110c026535ead1b",
+        "89c3bd70ad33c4f8832f00ab98872b77861ee0ec",
+        "c90a99eeb57019732a6cc996bb9eaf13faedf00f",
+        "2c709ef6186bd607494a3344c903552ea500e449",
+        "c1ff08b59f00c44f34dfdde55cd53370733a2c19",
+        "f79474d0d268c997a83e6a745927addbbf443806",
+        "b5ba72aaaef1ae5dccb313c64a5cfb5de3e2b442",
+        "fd85cc9094bb93a791f9bb0c86a6b36bb38f648b",
+        "daa14c7afecc7ace97493cdb3cbf9a61b23de92c",
+        "986b8097a356ecc725466292832d8d6e5702fae0",
+        "a0cfd36e6c7abf070f492ae52a35af895a1c5592",
+        "dc6ac3437f0a6e64e4404b1b9d188394f8a3bf71",
+        "c4fd9c86b2b41df51a6fe212406dda81b1997fd4",
+        "57db9833549247241decf442fcc30f6eb414981b"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2510.00468v3": {
+      "paper_id": "2510.00468v3",
+      "title": "Feature Identification via the Empirical NTK",
+      "authors": [
+        "Jennifer Lin"
+      ],
+      "year": 2025,
+      "abstract": "We provide evidence that eigenanalysis of the empirical neural tangent kernel (eNTK) can surface the features used by trained neural networks. Across three standard toy models for mechanistic interpretability, Toy Models of Superposition (TMS), a 1-layer MLP trained on modular addition and a 1-layer Transformer trained on modular addition, we find that top eigenspaces of the eNTK align with ground-truth features. In TMS, the eNTK recovers the ground-truth features in both the sparse (high superposition) and dense regimes. In modular arithmetic, the eNTK can be used to recover Fourier feature families. Moreover, we provide evidence that a layerwise eNTK localizes features to specific layers and that the evolution of the eNTK spectrum can be used to diagnose the grokking phase transition. These results suggest that eNTK analysis may provide a practical handle for feature discovery and for detecting phase changes in small models.",
+      "url": "https://arxiv.org/abs/2510.00468v3",
+      "citation_count": 2,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "7d2600be45007227e227688e5ddaca7680b5f368",
+        "8a94d7fb8b580621979396042aef89dbd6ec37fb",
+        "c1bc03a045ea830894fe3b1799928c9f8c14923c",
+        "0ee4b3249380d73a27acd2244bb01a97c229d9bc",
+        "04a96b66705858c988edfcb73191c1da7d54abfb",
+        "f680d47a51a0e470fcb228bf0110c026535ead1b",
+        "30f468c83afea5c3c94daa5ac285cdaa8019a573",
+        "d5295f7ddcf281f3d30a7579d5ce482036a8e27c",
+        "e657ff6fffbef7258b801acec7b6069584134fba",
+        "aced5832915a7bda10083e4caf374240f14eda66",
+        "c90a99eeb57019732a6cc996bb9eaf13faedf00f",
+        "9d125f45b1d2dea01f05281470bc08e12b6c7cba",
+        "4e2905f3c9ec6c3625a415954e8232836a4ecb4f",
+        "a1d1983a7b19845141e6505bd32dc395e5a136ba",
+        "fe5378625a41c823a9726c73f3934b6c4ab9e95a",
+        "75458574beb2db3fa64e556a09a04c1d59a02783",
+        "f3d52d22a04e96f63e710091a50ce4d244338854",
+        "fe0dab07fd5196ad3547f14590014d61bf87c1ac",
+        "a0cfd36e6c7abf070f492ae52a35af895a1c5592",
+        "7a84a692327534fd227fa1e07fcb3816b633c591",
+        "08ad8fad21f6ec4cda4d56be1ca5e146b7c913a1",
+        "5e23a28063b395bdaf784dc548a046885cb90cf2"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2511.14465v2": {
+      "paper_id": "2511.14465v2",
+      "title": "nnterp: A Standardized Interface for Mechanistic Interpretability of Transformers",
+      "authors": [
+        "Cl\u00e9ment Dumas"
+      ],
+      "year": 2025,
+      "abstract": "Mechanistic interpretability research requires reliable tools for analyzing transformer internals across diverse architectures. Current approaches face a fundamental tradeoff: custom implementations like TransformerLens ensure consistent interfaces but require coding a manual adaptation for each architecture, introducing numerical mismatch with the original models, while direct HuggingFace access through NNsight preserves exact behavior but lacks standardization across models. To bridge this gap, we develop nnterp, a lightweight wrapper around NNsight that provides a unified interface for transformer analysis while preserving original HuggingFace implementations. Through automatic module renaming and comprehensive validation testing, nnterp enables researchers to write intervention code once and deploy it across 50+ model variants spanning 16 architecture families. The library includes built-in implementations of common interpretability methods (logit lens, patchscope, activation steering) and provides direct access to attention probabilities for models that support it. By packaging validation tests with the library, researchers can verify compatibility with custom models locally. nnterp bridges the gap between correctness and usability in mechanistic interpretability tooling.",
+      "url": "https://arxiv.org/abs/2511.14465v2",
+      "citation_count": 1,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "d5946d10348f2c716d29e47692477a3febf9d5a2",
+        "f5df0667365764a970fc6abfa0a68b7d1d0ae413",
+        "eefbd8b384a58f464827b19e30a6920ba976def9",
+        "a0cfd36e6c7abf070f492ae52a35af895a1c5592",
+        "23b6a2c856a8f610b37e9534970fc49327df902e"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2511.09432v1": {
+      "paper_id": "2511.09432v1",
+      "title": "Group Equivariance Meets Mechanistic Interpretability: Equivariant Sparse Autoencoders",
+      "authors": [
+        "Ege Erdogan",
+        "Ana Lucic"
+      ],
+      "year": 2025,
+      "abstract": "Sparse autoencoders (SAEs) have proven useful in disentangling the opaque activations of neural networks, primarily large language models, into sets of interpretable features. However, adapting them to domains beyond language, such as scientific data with group symmetries, introduces challenges that can hinder their effectiveness. We show that incorporating such group symmetries into the SAEs yields features more useful in downstream tasks. More specifically, we train autoencoders on synthetic images and find that a single matrix can explain how their activations transform as the images are rotated. Building on this, we develop adaptively equivariant SAEs that can adapt to the base model's level of equivariance. These adaptive SAEs discover features that lead to superior probing performance compared to regular SAEs, demonstrating the value of incorporating symmetries in mechanistic interpretability tools.",
+      "url": "https://arxiv.org/abs/2511.09432v1",
+      "citation_count": 0,
+      "citation_source": "semantic_scholar",
+      "references": [],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    }
+  },
+  "node_scores": {
+    "2209.10652v1": {
+      "pagerank": 0.0953,
+      "betweenness": 0.0444,
+      "community": 2,
+      "foundation_score": 0.1105,
+      "bridge_score": 0.4,
+      "frontier_score": 0.5013
+    },
+    "2410.12101v2": {
+      "pagerank": 0.1774,
+      "betweenness": 0.2222,
+      "community": 1,
+      "foundation_score": 0.1331,
+      "bridge_score": 0.9167,
+      "frontier_score": 0.6396
+    },
+    "2209.11895v1": {
+      "pagerank": 0.0772,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.0997,
+      "bridge_score": 0.25,
+      "frontier_score": 0.4868
+    },
+    "2404.07129v1": {
+      "pagerank": 0.1138,
+      "betweenness": 0.0444,
+      "community": 0,
+      "foundation_score": 0.0949,
+      "bridge_score": 0.4861,
+      "frontier_score": 0.5887
+    },
+    "2504.19475v3": {
+      "pagerank": 0.1128,
+      "betweenness": 0.1778,
+      "community": 1,
+      "foundation_score": 0.081,
+      "bridge_score": 0.6833,
+      "frontier_score": 0.6657
+    },
+    "2305.03452v1": {
+      "pagerank": 0.1023,
+      "betweenness": 0.0444,
+      "community": 2,
+      "foundation_score": 0.1014,
+      "bridge_score": 0.2847,
+      "frontier_score": 0.5489
+    },
+    "2402.01790v1": {
+      "pagerank": 0.0597,
+      "betweenness": 0.0,
+      "community": 2,
+      "foundation_score": 0.0625,
+      "bridge_score": 0.25,
+      "frontier_score": 0.5816
+    },
+    "2402.03855v2": {
+      "pagerank": 0.0148,
+      "betweenness": 0.0,
+      "community": 3,
+      "foundation_score": 0.0355,
+      "bridge_score": 0.0,
+      "frontier_score": 0.5772
+    },
+    "2510.00468v3": {
+      "pagerank": 0.1107,
+      "betweenness": 0.0,
+      "community": 2,
+      "foundation_score": 0.0797,
+      "bridge_score": 0.3333,
+      "frontier_score": 0.6423
+    },
+    "2511.14465v2": {
+      "pagerank": 0.0446,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.0401,
+      "bridge_score": 0.0556,
+      "frontier_score": 0.6452
+    },
+    "2511.09432v1": {
+      "pagerank": 0.0914,
+      "betweenness": 0.0444,
+      "community": 1,
+      "foundation_score": 0.0682,
+      "bridge_score": 0.4,
+      "frontier_score": 0.6592
+    }
+  },
+  "graph_data": {
+    "nodes": [
+      "2209.10652v1",
+      "2410.12101v2",
+      "2209.11895v1",
+      "2404.07129v1",
+      "2504.19475v3",
+      "2305.03452v1",
+      "2402.01790v1",
+      "2402.03855v2",
+      "2510.00468v3",
+      "2511.14465v2",
+      "2511.09432v1"
+    ],
+    "edges": [
+      {
+        "source": "2209.10652v1",
+        "target": "2410.12101v2",
+        "type": "similarity",
+        "weight": 0.050118802806299226,
+        "distance": 19.95259152268326
+      },
+      {
+        "source": "2209.10652v1",
+        "target": "2404.07129v1",
+        "type": "similarity",
+        "weight": 0.0786576734345951,
+        "distance": 12.713317802763559
+      },
+      {
+        "source": "2209.10652v1",
+        "target": "2305.03452v1",
+        "type": "similarity",
+        "weight": 0.0901219694085549,
+        "distance": 11.096073538591293
+      },
+      {
+        "source": "2209.10652v1",
+        "target": "2510.00468v3",
+        "type": "similarity",
+        "weight": 0.10712516266812429,
+        "distance": 9.33487497328726
+      },
+      {
+        "source": "2209.10652v1",
+        "target": "2511.09432v1",
+        "type": "similarity",
+        "weight": 0.06243449596043348,
+        "distance": 16.016786627599725
+      },
+      {
+        "source": "2410.12101v2",
+        "target": "2209.11895v1",
+        "type": "similarity",
+        "weight": 0.09753142351965013,
+        "distance": 10.253105757228337
+      },
+      {
+        "source": "2410.12101v2",
+        "target": "2404.07129v1",
+        "type": "similarity",
+        "weight": 0.06967604425629854,
+        "distance": 14.352135094259495
+      },
+      {
+        "source": "2410.12101v2",
+        "target": "2504.19475v3",
+        "type": "similarity",
+        "weight": 0.1476636044787226,
+        "distance": 6.772149464522206
+      },
+      {
+        "source": "2410.12101v2",
+        "target": "2305.03452v1",
+        "type": "similarity",
+        "weight": 0.10447247532883154,
+        "distance": 9.571899171073124
+      },
+      {
+        "source": "2410.12101v2",
+        "target": "2402.01790v1",
+        "type": "similarity",
+        "weight": 0.060654024758250505,
+        "distance": 16.486952085796652
+      },
+      {
+        "source": "2410.12101v2",
+        "target": "2510.00468v3",
+        "type": "similarity",
+        "weight": 0.07776560283856668,
+        "distance": 12.859155764225171
+      },
+      {
+        "source": "2410.12101v2",
+        "target": "2511.14465v2",
+        "type": "similarity",
+        "weight": 0.05102369345070565,
+        "distance": 19.598738005238822
+      },
+      {
+        "source": "2410.12101v2",
+        "target": "2511.09432v1",
+        "type": "similarity",
+        "weight": 0.09293276050939511,
+        "distance": 10.760468047206068
+      },
+      {
+        "source": "2209.11895v1",
+        "target": "2404.07129v1",
+        "type": "similarity",
+        "weight": 0.15458445175146596,
+        "distance": 6.4689558921990145
+      },
+      {
+        "source": "2209.11895v1",
+        "target": "2510.00468v3",
+        "type": "similarity",
+        "weight": 0.05205281469447321,
+        "distance": 19.211256987149564
+      },
+      {
+        "source": "2404.07129v1",
+        "target": "2504.19475v3",
+        "type": "similarity",
+        "weight": 0.0518648835417654,
+        "distance": 19.280868512791066
+      },
+      {
+        "source": "2404.07129v1",
+        "target": "2402.01790v1",
+        "type": "similarity",
+        "weight": 0.05322201547439264,
+        "distance": 18.789217038974073
+      },
+      {
+        "source": "2404.07129v1",
+        "target": "2511.09432v1",
+        "type": "similarity",
+        "weight": 0.05603597967199145,
+        "distance": 17.845677114124438
+      },
+      {
+        "source": "2504.19475v3",
+        "target": "2510.00468v3",
+        "type": "similarity",
+        "weight": 0.05348893701416938,
+        "distance": 18.695454720573284
+      },
+      {
+        "source": "2504.19475v3",
+        "target": "2511.14465v2",
+        "type": "similarity",
+        "weight": 0.09204902735807571,
+        "distance": 10.863775845343218
+      },
+      {
+        "source": "2504.19475v3",
+        "target": "2511.09432v1",
+        "type": "similarity",
+        "weight": 0.1058545499225743,
+        "distance": 9.446925056423506
+      },
+      {
+        "source": "2305.03452v1",
+        "target": "2402.01790v1",
+        "type": "similarity",
+        "weight": 0.10296977007834386,
+        "distance": 9.711588160672367
+      },
+      {
+        "source": "2305.03452v1",
+        "target": "2510.00468v3",
+        "type": "similarity",
+        "weight": 0.11551554775672562,
+        "distance": 8.656843337712324
+      },
+      {
+        "source": "2510.00468v3",
+        "target": "2511.09432v1",
+        "type": "similarity",
+        "weight": 0.05256926788419949,
+        "distance": 19.022520956594214
+      }
+    ]
+  },
+  "reading_path": {
+    "reading_path": [
+      {
+        "stage": "Foundations",
+        "papers": [
+          {
+            "title": "The Persian Rug: solving toy models of superposition using large-scale symmetries",
+            "reason": "This paper provides a complete mechanistic description of a minimal non-linear sparse data autoencoder, establishing the theoretical limits and loss scalings for models with permutation symmetric data.",
+            "read_order": 1
+          },
+          {
+            "title": "Toy Models of Superposition",
+            "reason": "This paper introduces the fundamental concept of 'superposition' and 'polysemanticity' using toy models, providing the theoretical basis for understanding how neural networks store sparse features.",
+            "read_order": 2
+          },
+          {
+            "title": "A technical note on bilinear layers for interpretability",
+            "reason": "This note examines bilinear layers as an architecture that is mathematically easier to analyze than standard MLPs while performing better, offering a framework for integrating these layers into transformer circuit analysis.",
+            "read_order": 3
+          }
+        ]
+      },
+      {
+        "stage": "Core Algorithms",
+        "papers": [
+          {
+            "title": "What needs to go right for an induction head? A mechanistic study of in-context learning circuits and their formation",
+            "reason": "This study investigates the emergence dynamics and subcircuits of induction heads, answering critical questions about their diversity and formation during training on synthetic data.",
+            "read_order": 4
+          },
+          {
+            "title": "Prisma: An Open Source Toolkit for Mechanistic Interpretability in Vision and Video",
+            "reason": "This paper presents Prisma, an open-source toolkit providing unified access to vision transformers, SAE training, and circuit analysis tools to accelerate mechanistic interpretability research in vision.",
+            "read_order": 5
+          }
+        ]
+      },
+      {
+        "stage": "Key Developments",
+        "papers": [
+          {
+            "title": "In-context Learning and Induction Heads",
+            "reason": "This work presents evidence that induction heads, which implement a match-and-copy algorithm, are the mechanistic source of in-context learning in large transformer models.",
+            "read_order": 6
+          },
+          {
+            "title": "Group Equivariance Meets Mechanistic Interpretability: Equivariant Sparse Autoencoders",
+            "reason": "This paper develops adaptively equivariant sparse autoencoders that incorporate group symmetries, yielding features that improve probing performance on synthetic images compared to regular SAEs.",
+            "read_order": 7
+          }
+        ]
+      },
+      {
+        "stage": "Recent Frontier",
+        "papers": [
+          {
+            "title": "nnterp: A Standardized Interface for Mechanistic Interpretability of Transformers",
+            "reason": "This paper introduces nnterp, a standardized interface wrapper around NNsight that allows researchers to write intervention code once and deploy it across 50+ model variants while preserving original HuggingFace implementations.",
+            "read_order": 8
+          }
+        ]
+      }
+    ],
+    "report_markdown": "# ResearchTrail Reading Path\n\n**Topic:** Mechanistic Interpretability of Transformers\n\n**Level:** intermediate\n\n**Generated:** 2026-05-06 21:17:16\n\n---\n\n## Foundations\n\n### 1. The Persian Rug: solving toy models of superposition using large-scale symmetries (2024)\n*This paper provides a complete mechanistic description of a minimal non-linear sparse data autoencoder, establishing the theoretical limits and loss scalings for models with permutation symmetric data.*\nCitations: 1\n\n### 2. Toy Models of Superposition (2022)\n*This paper introduces the fundamental concept of 'superposition' and 'polysemanticity' using toy models, providing the theoretical basis for understanding how neural networks store sparse features.*\nCitations: 737\n\n### 3. A technical note on bilinear layers for interpretability (2023)\n*This note examines bilinear layers as an architecture that is mathematically easier to analyze than standard MLPs while performing better, offering a framework for integrating these layers into transformer circuit analysis.*\nCitations: 10\n\n## Core Algorithms\n\n### 4. What needs to go right for an induction head? A mechanistic study of in-context learning circuits and their formation (2024)\n*This study investigates the emergence dynamics and subcircuits of induction heads, answering critical questions about their diversity and formation during training on synthetic data.*\nCitations: 75\n\n### 5. Prisma: An Open Source Toolkit for Mechanistic Interpretability in Vision and Video (2025)\n*This paper presents Prisma, an open-source toolkit providing unified access to vision transformers, SAE training, and circuit analysis tools to accelerate mechanistic interpretability research in vision.*\nCitations: 15\n\n## Key Developments\n\n### 6. In-context Learning and Induction Heads (2022)\n*This work presents evidence that induction heads, which implement a match-and-copy algorithm, are the mechanistic source of in-context learning in large transformer models.*\nCitations: 826\n\n### 7. Group Equivariance Meets Mechanistic Interpretability: Equivariant Sparse Autoencoders (2025)\n*This paper develops adaptively equivariant sparse autoencoders that incorporate group symmetries, yielding features that improve probing performance on synthetic images compared to regular SAEs.*\n\n## Recent Frontier\n\n### 8. nnterp: A Standardized Interface for Mechanistic Interpretability of Transformers (2025)\n*This paper introduces nnterp, a standardized interface wrapper around NNsight that allows researchers to write intervention code once and deploy it across 50+ model variants while preserving original HuggingFace implementations.*\nCitations: 1\n\n---\n\n*Total: 8 papers in 4 stages.*\n",
+    "followup_suggestions": [
+      "Show bridge papers between key communities",
+      "Generate a 7-day reading plan",
+      "Show only papers after 2020",
+      "Which authors should I follow?",
+      "Replace theoretical papers with more applied papers",
+      "Explain why these papers are foundational",
+      "Show me the citation network visualization"
+    ]
+  },
+  "corpus_quality": {
+    "total_papers": 11,
+    "has_abstract_ratio": 1.0,
+    "has_citation_ratio": 0.8181818181818182,
+    "year_range": "2022-2025",
+    "median_year": 2024,
+    "citation_edges_total": 171,
+    "benchmark_relevance_filtered": 2
+  },
+  "metadata": {
+    "benchmark_prompt": "Build a research trail for mechanistic interpretability of transformers, especially from circuits and induction heads to sparse autoencoders.",
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Mechanistic Interpretability of Transformers",
+        "\"A Mathematical Framework for Transformer Circuits\"",
+        "\"In-context Learning and Induction Heads\"",
+        "\"Toy Models of Superposition\"",
+        "\"Towards Monosemanticity\"",
+        "\"Scaling Monosemanticity\"",
+        "mechanistic interpretability transformers",
+        "transformer circuits analysis"
+      ],
+      "prerequisite_queries": [
+        "monosemanticity",
+        "circuits",
+        "sae",
+        "induction heads",
+        "residual stream"
+      ],
+      "exclude_terms": [
+        "post-hoc interpretability",
+        "saliency maps",
+        "grad-cam",
+        "lime",
+        "shap",
+        "attribution methods"
+      ],
+      "expected_communities": [
+        "mechanistic interpretability",
+        "circuits",
+        "induction heads",
+        "superposition",
+        "sparse autoencoder",
+        "monosemanticity",
+        "AI Safety",
+        "Deep Learning Theory",
+        "Explainable AI",
+        "Natural Language Processing"
+      ]
+    },
+    "verified_landmark_recovery": [
+      {
+        "target": "In-context Learning and Induction Heads",
+        "matched": "In-context Learning and Induction Heads",
+        "source": "arxiv"
+      }
+    ],
+    "graph_mode": "hybrid",
+    "graph_metrics": {
+      "node_count": 11,
+      "edge_count": 24,
+      "citation_edges": 0,
+      "similarity_edges": 24,
+      "connected_components": 2,
+      "largest_component_ratio": 0.9090909090909091,
+      "average_degree": 4.3636,
+      "community_count": 4,
+      "modularity": 0.1709
+    },
+    "community_labels": {
+      "0": {
+        "label": "Induction Heads and In-Context Learning",
+        "description": "This community investigates the mechanistic formation and function of induction heads within in-context learning circuits."
+      },
+      "1": {
+        "label": "Mechanistic Interpretability Tools and Vision",
+        "description": "Research in this area focuses on developing toolkits for mechanistic interpretability, applying these methods to vision and video, and exploring sparse autoencoders and symmetries."
+      },
+      "2": {
+        "label": "Theoretical Foundations and Feature Identification",
+        "description": "This community explores theoretical frameworks for interpretability, including toy models of superposition, feature identification via the empirical NTK, and bilinear layers."
+      },
+      "3": {
+        "label": "Challenges in Model Interpretation",
+        "description": "This work addresses the inherent difficulties and challenges associated with mechanistically interpreting model representations and behaviors."
+      }
+    },
+    "community_label_evidence": [
+      {
+        "community_id": 0,
+        "size": 2,
+        "avg_year": 2023.0,
+        "top_titles": [
+          "What needs to go right for an induction head? A mechanistic study of in-context learning circuits and their formation",
+          "In-context Learning and Induction Heads"
+        ],
+        "keywords": [
+          "induction",
+          "in-context",
+          "heads",
+          "evidence",
+          "training",
+          "present",
+          "phase",
+          "change"
+        ]
+      },
+      {
+        "community_id": 1,
+        "size": 4,
+        "avg_year": 2024.8,
+        "top_titles": [
+          "The Persian Rug: solving toy models of superposition using large-scale symmetries",
+          "Prisma: An Open Source Toolkit for Mechanistic Interpretability in Vision and Video",
+          "Group Equivariance Meets Mechanistic Interpretability: Equivariant Sparse Autoencoders",
+          "nnterp: A Standardized Interface for Mechanistic Interpretability of Transformers"
+        ],
+        "keywords": [
+          "interpretability",
+          "mechanistic",
+          "saes",
+          "vision",
+          "symmetries",
+          "sparse",
+          "weights",
+          "data"
+        ]
+      },
+      {
+        "community_id": 2,
+        "size": 4,
+        "avg_year": 2023.5,
+        "top_titles": [
+          "Feature Identification via the Empirical NTK",
+          "A technical note on bilinear layers for interpretability",
+          "Toy Models of Superposition",
+          "An introduction to graphical tensor notation for mechanistic interpretability"
+        ],
+        "keywords": [
+          "interpretability",
+          "features",
+          "layers",
+          "entk",
+          "neural",
+          "bilinear",
+          "tensor",
+          "superposition"
+        ]
+      },
+      {
+        "community_id": 3,
+        "size": 1,
+        "avg_year": 2024.0,
+        "top_titles": [
+          "Challenges in Mechanistically Interpreting Model Representations"
+        ],
+        "keywords": [
+          "representations",
+          "challenges",
+          "most",
+          "behaviors",
+          "capabilities",
+          "trivial",
+          "important",
+          "highlight"
+        ]
+      }
+    ],
+    "evidence_packets": [
+      {
+        "paper_id": "2410.12101v2",
+        "title": "The Persian Rug: solving toy models of superposition using large-scale symmetries",
+        "abstract": "We present a complete mechanistic description of the algorithm learned by a minimal non-linear sparse data autoencoder in the limit of large input dimension. The model, originally presented in arXiv:2209.10652, compresses sparse data vectors through a linear layer and decompresses using another linear layer followed by a ReLU activation. We notice that when the data is permutation symmetric (no input feature is privileged) large models reliably learn an algorithm that is sensitive to individual weights only through their large-scale statistics. For these models, the loss function becomes analytically tractable. Using this understanding, we give the explicit scalings of the loss at high sparsity, and show that the model is near-optimal among recently proposed architectures. In particular, changing or adding to the activation function any elementwise or filtering operation can at best i...",
+        "url": "https://arxiv.org/abs/2410.12101v2",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2024,
+        "citation_count": 1,
+        "source": "arxiv",
+        "pagerank": 0.1774,
+        "betweenness": 0.2222,
+        "foundation_score": 0.1331,
+        "bridge_score": 0.9167,
+        "frontier_score": 0.6396,
+        "community_id": 1,
+        "community_label": "Mechanistic Interpretability Tools and Vision",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (1 citations), making it a foundation for later work.",
+        "llm_reason": "This paper provides a complete mechanistic description of a minimal non-linear sparse data autoencoder, establishing the theoretical limits and loss scalings for models with permutation symmetric data."
+      },
+      {
+        "paper_id": "2209.10652v1",
+        "title": "Toy Models of Superposition",
+        "abstract": "Neural networks often pack many unrelated concepts into a single neuron - a puzzling phenomenon known as 'polysemanticity' which makes interpretability much more challenging. This paper provides a toy model where polysemanticity can be fully understood, arising as a result of models storing additional sparse features in \"superposition.\" We demonstrate the existence of a phase change, a surprising connection to the geometry of uniform polytopes, and evidence of a link to adversarial examples. We also discuss potential implications for mechanistic interpretability.",
+        "url": "https://arxiv.org/abs/2209.10652v1",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2022,
+        "citation_count": 737,
+        "source": "arxiv",
+        "pagerank": 0.0953,
+        "betweenness": 0.0444,
+        "foundation_score": 0.1105,
+        "bridge_score": 0.4,
+        "frontier_score": 0.5013,
+        "community_id": 2,
+        "community_label": "Theoretical Foundations and Feature Identification",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (737 citations), making it a foundation for later work.",
+        "llm_reason": "This paper introduces the fundamental concept of 'superposition' and 'polysemanticity' using toy models, providing the theoretical basis for understanding how neural networks store sparse features."
+      },
+      {
+        "paper_id": "2305.03452v1",
+        "title": "A technical note on bilinear layers for interpretability",
+        "abstract": "The ability of neural networks to represent more features than neurons makes interpreting them challenging. This phenomenon, known as superposition, has spurred efforts to find architectures that are more interpretable than standard multilayer perceptrons (MLPs) with elementwise activation functions. In this note, I examine bilinear layers, which are a type of MLP layer that are mathematically much easier to analyze while simultaneously performing better than standard MLPs. Although they are nonlinear functions of their input, I demonstrate that bilinear layers can be expressed using only linear operations and third order tensors. We can integrate this expression for bilinear layers into a mathematical framework for transformer circuits, which was previously limited to attention-only transformers. These results suggest that bilinear layers are easier to analyze mathematically than cur...",
+        "url": "https://arxiv.org/abs/2305.03452v1",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2023,
+        "citation_count": 10,
+        "source": "arxiv",
+        "pagerank": 0.1023,
+        "betweenness": 0.0444,
+        "foundation_score": 0.1014,
+        "bridge_score": 0.2847,
+        "frontier_score": 0.5489,
+        "community_id": 2,
+        "community_label": "Theoretical Foundations and Feature Identification",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (10 citations), making it a foundation for later work.",
+        "llm_reason": "This note examines bilinear layers as an architecture that is mathematically easier to analyze than standard MLPs while performing better, offering a framework for integrating these layers into transformer circuit analysis."
+      },
+      {
+        "paper_id": "2404.07129v1",
+        "title": "What needs to go right for an induction head? A mechanistic study of in-context learning circuits and their formation",
+        "abstract": "In-context learning is a powerful emergent ability in transformer models. Prior work in mechanistic interpretability has identified a circuit element that may be critical for in-context learning -- the induction head (IH), which performs a match-and-copy operation. During training of large transformers on natural language data, IHs emerge around the same time as a notable phase change in the loss. Despite the robust evidence for IHs and this interesting coincidence with the phase change, relatively little is known about the diversity and emergence dynamics of IHs. Why is there more than one IH, and how are they dependent on each other? Why do IHs appear all of a sudden, and what are the subcircuits that enable them to emerge? We answer these questions by studying IH emergence dynamics in a controlled setting by training on synthetic data. In doing so, we develop and share a novel opto...",
+        "url": "https://arxiv.org/abs/2404.07129v1",
+        "stage": "Core Algorithms",
+        "role": "core",
+        "year": 2024,
+        "citation_count": 75,
+        "source": "arxiv",
+        "pagerank": 0.1138,
+        "betweenness": 0.0444,
+        "foundation_score": 0.0949,
+        "bridge_score": 0.4861,
+        "frontier_score": 0.5887,
+        "community_id": 0,
+        "community_label": "Induction Heads and In-Context Learning",
+        "template_reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.114) and anchors later developments in the path.",
+        "llm_reason": "This study investigates the emergence dynamics and subcircuits of induction heads, answering critical questions about their diversity and formation during training on synthetic data."
+      },
+      {
+        "paper_id": "2504.19475v3",
+        "title": "Prisma: An Open Source Toolkit for Mechanistic Interpretability in Vision and Video",
+        "abstract": "Robust tooling and publicly available pre-trained models have helped drive recent advances in mechanistic interpretability for language models. However, similar progress in vision mechanistic interpretability has been hindered by the lack of accessible frameworks and pre-trained weights. We present Prisma (Access the codebase here: https://github.com/Prisma-Multimodal/ViT-Prisma), an open-source framework designed to accelerate vision mechanistic interpretability research, providing a unified toolkit for accessing 75+ vision and video transformers; support for sparse autoencoder (SAE), transcoder, and crosscoder training; a suite of 80+ pre-trained SAE weights; activation caching, circuit analysis tools, and visualization tools; and educational resources. Our analysis reveals surprising findings, including that effective vision SAEs can exhibit substantially lower sparsity patterns th...",
+        "url": "https://arxiv.org/abs/2504.19475v3",
+        "stage": "Core Algorithms",
+        "role": "core",
+        "year": 2025,
+        "citation_count": 15,
+        "source": "arxiv",
+        "pagerank": 0.1128,
+        "betweenness": 0.1778,
+        "foundation_score": 0.081,
+        "bridge_score": 0.6833,
+        "frontier_score": 0.6657,
+        "community_id": 1,
+        "community_label": "Mechanistic Interpretability Tools and Vision",
+        "template_reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.113) and anchors later developments in the path.",
+        "llm_reason": "This paper presents Prisma, an open-source toolkit providing unified access to vision transformers, SAE training, and circuit analysis tools to accelerate mechanistic interpretability research in vision."
+      },
+      {
+        "paper_id": "2209.11895v1",
+        "title": "In-context Learning and Induction Heads",
+        "abstract": "\"Induction heads\" are attention heads that implement a simple algorithm to complete token sequences like [A][B] ... [A] -> [B]. In this work, we present preliminary and indirect evidence for a hypothesis that induction heads might constitute the mechanism for the majority of all \"in-context learning\" in large transformer models (i.e. decreasing loss at increasing token indices). We find that induction heads develop at precisely the same point as a sudden sharp increase in in-context learning ability, visible as a bump in the training loss. We present six complementary lines of evidence, arguing that induction heads may be the mechanistic source of general in-context learning in transformer models of any size. For small attention-only models, we present strong, causal evidence; for larger models with MLPs, we present correlational evidence.",
+        "url": "https://arxiv.org/abs/2209.11895v1",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2022,
+        "citation_count": 826,
+        "source": "arxiv",
+        "pagerank": 0.0772,
+        "betweenness": 0.0,
+        "foundation_score": 0.0997,
+        "bridge_score": 0.25,
+        "frontier_score": 0.4868,
+        "community_id": 0,
+        "community_label": "Induction Heads and In-Context Learning",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (attention mechanisms) with strong impact (826 citations) and bridge score 0.250.",
+        "llm_reason": "This work presents evidence that induction heads, which implement a match-and-copy algorithm, are the mechanistic source of in-context learning in large transformer models."
+      },
+      {
+        "paper_id": "2511.09432v1",
+        "title": "Group Equivariance Meets Mechanistic Interpretability: Equivariant Sparse Autoencoders",
+        "abstract": "Sparse autoencoders (SAEs) have proven useful in disentangling the opaque activations of neural networks, primarily large language models, into sets of interpretable features. However, adapting them to domains beyond language, such as scientific data with group symmetries, introduces challenges that can hinder their effectiveness. We show that incorporating such group symmetries into the SAEs yields features more useful in downstream tasks. More specifically, we train autoencoders on synthetic images and find that a single matrix can explain how their activations transform as the images are rotated. Building on this, we develop adaptively equivariant SAEs that can adapt to the base model's level of equivariance. These adaptive SAEs discover features that lead to superior probing performance compared to regular SAEs, demonstrating the value of incorporating symmetries in mechanistic in...",
+        "url": "https://arxiv.org/abs/2511.09432v1",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2025,
+        "citation_count": 0,
+        "source": "arxiv",
+        "pagerank": 0.0914,
+        "betweenness": 0.0444,
+        "foundation_score": 0.0682,
+        "bridge_score": 0.4,
+        "frontier_score": 0.6592,
+        "community_id": 1,
+        "community_label": "Mechanistic Interpretability Tools and Vision",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (vision-language learning) with strong impact (0 citations) and bridge score 0.400.",
+        "llm_reason": "This paper develops adaptively equivariant sparse autoencoders that incorporate group symmetries, yielding features that improve probing performance on synthetic images compared to regular SAEs."
+      },
+      {
+        "paper_id": "2511.14465v2",
+        "title": "nnterp: A Standardized Interface for Mechanistic Interpretability of Transformers",
+        "abstract": "Mechanistic interpretability research requires reliable tools for analyzing transformer internals across diverse architectures. Current approaches face a fundamental tradeoff: custom implementations like TransformerLens ensure consistent interfaces but require coding a manual adaptation for each architecture, introducing numerical mismatch with the original models, while direct HuggingFace access through NNsight preserves exact behavior but lacks standardization across models. To bridge this gap, we develop nnterp, a lightweight wrapper around NNsight that provides a unified interface for transformer analysis while preserving original HuggingFace implementations. Through automatic module renaming and comprehensive validation testing, nnterp enables researchers to write intervention code once and deploy it across 50+ model variants spanning 16 architecture families. The library include...",
+        "url": "https://arxiv.org/abs/2511.14465v2",
+        "stage": "Recent Frontier",
+        "role": "frontier",
+        "year": 2025,
+        "citation_count": 1,
+        "source": "arxiv",
+        "pagerank": 0.0446,
+        "betweenness": 0.0,
+        "foundation_score": 0.0401,
+        "bridge_score": 0.0556,
+        "frontier_score": 0.6452,
+        "community_id": 1,
+        "community_label": "Mechanistic Interpretability Tools and Vision",
+        "template_reason": "Read this near the end to see recent directions from 2025; its frontier score (0.645) indicates current research momentum.",
+        "llm_reason": "This paper introduces nnterp, a standardized interface wrapper around NNsight that allows researchers to write intervention code once and deploy it across 50+ model variants while preserving original HuggingFace implementations."
+      }
+    ],
+    "reading_path_metrics": {
+      "stage_count": 4,
+      "unique_paper_count": 8,
+      "role_counts": {
+        "foundation": 3,
+        "core": 2,
+        "development": 2,
+        "frontier": 1
+      },
+      "explanation_availability_ratio": 1.0
+    }
+  }
+}

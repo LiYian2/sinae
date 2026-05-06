@@ -51,6 +51,15 @@ class SharedDataLayer:
     def _merge_papers(a: Paper, b: Paper) -> Paper:
         keep = a if a.citation_count >= b.citation_count else b
         other = b if keep is a else a
+        citation_best = keep
+        if other.source == "arxiv" and keep.source != "arxiv":
+            keep.abstract = other.abstract or keep.abstract
+            keep.url = other.url or keep.url
+            keep.authors = other.authors or keep.authors
+            keep.year = other.year or keep.year
+            keep.venue = other.venue or keep.venue
+            keep.source = other.source
+            keep.paper_id = other.paper_id or keep.paper_id
         if not keep.abstract and other.abstract:
             keep.abstract = other.abstract
         if not keep.url and other.url:
@@ -61,8 +70,8 @@ class SharedDataLayer:
             keep.year = other.year
         if not keep.venue and other.venue:
             keep.venue = other.venue
-        if not keep.citation_source and other.citation_source:
-            keep.citation_source = other.citation_source
+        keep.citation_count = max(a.citation_count, b.citation_count)
+        keep.citation_source = citation_best.citation_source or other.citation_source or keep.citation_source
         refs = list(dict.fromkeys((keep.references or []) + (other.references or [])))
         keep.references = refs
         citations = list(dict.fromkeys((keep.citations or []) + (other.citations or [])))

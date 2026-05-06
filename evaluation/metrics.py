@@ -2,6 +2,7 @@ import re
 from typing import Any
 
 from shared.data_layer import SharedDataLayer
+from evaluation.benchmark_registry import get_benchmark
 
 
 def collect_metrics(data: SharedDataLayer) -> dict:
@@ -88,6 +89,9 @@ def markdown_table(results: dict[str, dict]) -> str:
 
 
 def _landmark_specs(topic: str) -> list[dict[str, str]]:
+    benchmark = get_benchmark(topic)
+    if benchmark:
+        return benchmark.get("expected_landmarks", [])
     t = topic.lower()
     if "counterfactual" in t and ("regret" in t or "cfr" in t):
         return [
@@ -132,6 +136,26 @@ def _topic_precision(topic: str, papers: list) -> float:
 def _is_topic_relevant(topic: str, title: str, abstract: str) -> bool:
     t = topic.lower()
     text = f" {title} {abstract} ".lower()
+    benchmark = get_benchmark(topic)
+    if benchmark:
+        acronyms = {
+            "rag", "dpr", "retro", "gcn", "gat", "moco", "byol", "dino", "dinov2", "mae", "beit",
+            "mamba", "ppo", "dpo", "rlaif", "nerf", "maddpg", "qmix", "mappo", "fedavg", "fedprox",
+        }
+        terms = [
+            str(term).lower()
+            for term in benchmark.get("topic_terms", [])
+            if " " in str(term) or "-" in str(term) or str(term).lower() in acronyms
+        ]
+        hits = sum(1 for term in terms if _term_match(text, term))
+        if hits:
+            return True
+        landmark_titles = [
+            str(item.get("title", "")).lower()
+            for item in benchmark.get("expected_landmarks", [])
+            if item.get("title")
+        ]
+        return any(_normalize_title(title) in _normalize_title(text) for title in landmark_titles)
     if "counterfactual" in t and ("regret" in t or "cfr" in t):
         required = [
             "counterfactual regret",

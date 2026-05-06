@@ -1,0 +1,383 @@
+{
+  "diffusion_models": {
+    "retrieval": {
+      "total_papers": 31,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8709677419354839,
+      "year_range": "1973-2026",
+      "median_year": 2023,
+      "citation_edges_total": 1969,
+      "benchmark_relevance_filtered": 0
+    },
+    "graph": {
+      "node_count": 31,
+      "edge_count": 105,
+      "citation_edges": 5,
+      "similarity_edges": 102,
+      "connected_components": 4,
+      "largest_component_ratio": 0.9032258064516129,
+      "average_degree": 6.7742,
+      "community_count": 6,
+      "modularity": 0.3515
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 13,
+      "role_counts": {
+        "foundation": 3,
+        "core": 3,
+        "development": 5,
+        "frontier": 2
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.8,
+      "landmark_hits": [
+        "Denoising Diffusion Probabilistic Models",
+        "Score-Based Generative Modeling through Stochastic Differential Equations",
+        "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "Rectified Flow"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 1.0,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 23,
+        "openalex": 8
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Diffusion Models / Score-Based Generative Models",
+        "\"Denoising Diffusion Probabilistic Models\"",
+        "\"Score-Based Generative Modeling through Stochastic Differential Equations\"",
+        "\"High-Resolution Image Synthesis with Latent Diffusion Models\"",
+        "\"Flow Matching for Generative Modeling\"",
+        "\"Rectified Flow\"",
+        "denoising diffusion",
+        "diffusion model"
+      ],
+      "prerequisite_queries": [
+        "flow matching",
+        "rectified flow",
+        "ddpm",
+        "generative model",
+        "diffusion"
+      ],
+      "exclude_terms": [],
+      "expected_communities": [
+        "diffusion",
+        "score",
+        "denoising",
+        "sde",
+        "latent diffusion",
+        "flow matching",
+        "rectified flow"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Data / Diffusion / Samples / Methylation",
+        "description": "Community 0 groups papers around data, diffusion, samples, methylation."
+      },
+      "1": {
+        "label": "Diffusion / Generative / Data / Denoising",
+        "description": "Community 1 groups papers around diffusion, generative, data, denoising."
+      },
+      "2": {
+        "label": "Functions / Potential / Water / Tips",
+        "description": "Community 2 groups papers around functions, potential, water, tips."
+      },
+      "3": {
+        "label": "Acceptance / Technology / Eight / Theory",
+        "description": "Community 3 groups papers around acceptance, technology, eight, theory."
+      },
+      "4": {
+        "label": "Ties / Strength / Weak / Groups",
+        "description": "Community 4 groups papers around ties, strength, weak, groups."
+      },
+      "5": {
+        "label": "Diffusion / Image / Denoising / Generation",
+        "description": "Community 5 groups papers around diffusion, image, denoising, generation."
+      }
+    },
+    "benchmark": {
+      "id": "diffusion_models",
+      "topic": "Diffusion Models / Score-Based Generative Models",
+      "prompt": "I want to understand the research trail of diffusion models, from DDPM to score-based generative modeling and latent diffusion. Build me a reading path and identify the bridge papers.",
+      "expected_landmarks": [
+        {
+          "title": "Denoising Diffusion Probabilistic Models",
+          "role": "foundation"
+        },
+        {
+          "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
+          "role": "development"
+        },
+        {
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "role": "development"
+        },
+        {
+          "title": "Flow Matching for Generative Modeling",
+          "role": "frontier"
+        },
+        {
+          "title": "Rectified Flow",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "rag": {
+    "retrieval": {
+      "total_papers": 21,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8095238095238095,
+      "year_range": "2020-2026",
+      "median_year": 2024,
+      "citation_edges_total": 515,
+      "benchmark_relevance_filtered": 0
+    },
+    "graph": {
+      "node_count": 21,
+      "edge_count": 109,
+      "citation_edges": 0,
+      "similarity_edges": 109,
+      "connected_components": 2,
+      "largest_component_ratio": 0.9523809523809523,
+      "average_degree": 10.381,
+      "community_count": 4,
+      "modularity": 0.1213
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 9,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 2,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.6,
+      "landmark_hits": [
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "Fusion-in-Decoder",
+        "Self-RAG"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 1.0,
+      "ordering_quality": 0.6666666666666666,
+      "community_coverage": 0.75,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 16,
+        "openalex": 5
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Retrieval-Augmented Generation",
+        "\"Dense Passage Retrieval for Open-Domain Question Answering\"",
+        "\"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\"",
+        "\"Fusion-in-Decoder\"",
+        "\"RETRO\"",
+        "\"Self-RAG\"",
+        "retrieval-augmented",
+        "retrieval augmented"
+      ],
+      "prerequisite_queries": [
+        "self-rag",
+        "retro",
+        "atlas",
+        "agentic rag",
+        "rag"
+      ],
+      "exclude_terms": [],
+      "expected_communities": [
+        "retrieval",
+        "rag",
+        "dense passage",
+        "dpr",
+        "fusion-in-decoder",
+        "retro",
+        "atlas",
+        "self-rag"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+        "description": "This community focuses on enhancing language models through retrieval-augmented generation and self-reflection to improve reasoning in knowledge-intensive domains like medicine and energy."
+      },
+      "1": {
+        "label": "Optimization and Security of Retrieval-Augmented Systems",
+        "description": "Research in this area investigates the optimization of retrieval-augmented generation architectures, focusing on context quality, inference performance, and security vulnerabilities like membership inference attacks."
+      },
+      "2": {
+        "label": "Adaptive Retrieval-Augmented Generation",
+        "description": "This community explores methods for adapting retrieval-augmented large language models based on the complexity of input questions to optimize performance."
+      },
+      "3": {
+        "label": "Surveys and System Engineering for Retrieval-Augmented Generation",
+        "description": "This community centers on comprehensive surveys, system architecture reviews, and practical applications of retrieval-augmented generation to address challenges like hallucinations and optimize real-world deployments."
+      }
+    },
+    "benchmark": {
+      "id": "rag",
+      "topic": "Retrieval-Augmented Generation",
+      "prompt": "I want to enter retrieval-augmented generation. Explain the key milestones from dense retrieval to modern agentic RAG, and separate foundational papers from application-oriented papers.",
+      "expected_landmarks": [
+        {
+          "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+          "role": "foundation"
+        },
+        {
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "role": "foundation"
+        },
+        {
+          "title": "Fusion-in-Decoder",
+          "role": "development"
+        },
+        {
+          "title": "RETRO",
+          "role": "development"
+        },
+        {
+          "title": "Self-RAG",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "mechanistic_interpretability": {
+    "retrieval": {
+      "total_papers": 11,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8181818181818182,
+      "year_range": "2022-2025",
+      "median_year": 2024,
+      "citation_edges_total": 171,
+      "benchmark_relevance_filtered": 2
+    },
+    "graph": {
+      "node_count": 11,
+      "edge_count": 24,
+      "citation_edges": 0,
+      "similarity_edges": 24,
+      "connected_components": 2,
+      "largest_component_ratio": 0.9090909090909091,
+      "average_degree": 4.3636,
+      "community_count": 4,
+      "modularity": 0.1709
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 8,
+      "role_counts": {
+        "foundation": 3,
+        "core": 2,
+        "development": 2,
+        "frontier": 1
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.4,
+      "landmark_hits": [
+        "In-context Learning and Induction Heads",
+        "Toy Models of Superposition"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 1.0,
+      "ordering_quality": 0.0,
+      "community_coverage": 0.75,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 11
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Mechanistic Interpretability of Transformers",
+        "\"A Mathematical Framework for Transformer Circuits\"",
+        "\"In-context Learning and Induction Heads\"",
+        "\"Toy Models of Superposition\"",
+        "\"Towards Monosemanticity\"",
+        "\"Scaling Monosemanticity\"",
+        "mechanistic interpretability",
+        "transformer circuits"
+      ],
+      "prerequisite_queries": [
+        "monosemanticity",
+        "circuits",
+        "sae",
+        "induction heads"
+      ],
+      "exclude_terms": [],
+      "expected_communities": [
+        "mechanistic interpretability",
+        "circuits",
+        "induction heads",
+        "superposition",
+        "sparse autoencoder",
+        "monosemanticity"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Induction Heads and In-Context Learning",
+        "description": "This community investigates the mechanistic formation and function of induction heads within in-context learning circuits."
+      },
+      "1": {
+        "label": "Mechanistic Interpretability Tools and Methods",
+        "description": "Research in this area develops toolkits and methods like sparse autoencoders and equivariant models for mechanistic interpretability, with applications in vision and transformers."
+      },
+      "2": {
+        "label": "Theoretical Foundations and Toy Models",
+        "description": "This community explores theoretical frameworks and toy models of superposition, utilizing tools like the empirical NTK and tensor notation to identify features and interpret neural layers."
+      },
+      "3": {
+        "label": "Challenges in Interpretability",
+        "description": "This work highlights the challenges and difficulties associated with mechanistically interpreting model representations and behaviors."
+      }
+    },
+    "benchmark": {
+      "id": "mechanistic_interpretability",
+      "topic": "Mechanistic Interpretability of Transformers",
+      "prompt": "Build a research trail for mechanistic interpretability of transformers, especially from circuits and induction heads to sparse autoencoders.",
+      "expected_landmarks": [
+        {
+          "title": "A Mathematical Framework for Transformer Circuits",
+          "role": "foundation"
+        },
+        {
+          "title": "In-context Learning and Induction Heads",
+          "role": "foundation"
+        },
+        {
+          "title": "Toy Models of Superposition",
+          "role": "development"
+        },
+        {
+          "title": "Towards Monosemanticity",
+          "role": "development"
+        },
+        {
+          "title": "Scaling Monosemanticity",
+          "role": "frontier"
+        }
+      ]
+    }
+  }
+}

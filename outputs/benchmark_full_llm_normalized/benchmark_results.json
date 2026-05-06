@@ -1,0 +1,1613 @@
+{
+  "diffusion_models": {
+    "retrieval": {
+      "total_papers": 21,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8571428571428571,
+      "year_range": "2020-2025",
+      "median_year": 2023,
+      "citation_edges_total": 1405,
+      "benchmark_relevance_filtered": 0
+    },
+    "graph": {
+      "node_count": 21,
+      "edge_count": 77,
+      "citation_edges": 5,
+      "similarity_edges": 74,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 7.3333,
+      "community_count": 3,
+      "modularity": 0.2953
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 10,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 3,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.8,
+      "landmark_hits": [
+        "Denoising Diffusion Probabilistic Models",
+        "Score-Based Generative Modeling through Stochastic Differential Equations",
+        "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "Rectified Flow"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 0.7142857142857143,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 16,
+        "openalex": 5
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Diffusion Models / Score-Based Generative Models",
+        "\"Denoising Diffusion Probabilistic Models\"",
+        "\"Score-Based Generative Modeling through Stochastic Differential Equations\"",
+        "\"High-Resolution Image Synthesis with Latent Diffusion Models\"",
+        "\"Flow Matching for Generative Modeling\"",
+        "\"Rectified Flow\"",
+        "denoising diffusion probabilistic models",
+        "score-based generative modeling stochastic differential equations"
+      ],
+      "prerequisite_queries": [
+        "flow matching",
+        "rectified flow",
+        "ddpm",
+        "generative model",
+        "reverse process"
+      ],
+      "exclude_terms": [
+        "magnetic resonance diffusion",
+        "diffusion tensor imaging",
+        "heat diffusion",
+        "epidemic diffusion",
+        "molecular diffusion"
+      ],
+      "expected_communities": [
+        "diffusion",
+        "score",
+        "denoising",
+        "sde",
+        "latent diffusion",
+        "flow matching",
+        "rectified flow",
+        "Generative AI",
+        "Computer Vision",
+        "Probabilistic Machine Learning",
+        "Deep Learning"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Data / Diffusion / Samples / Methylation",
+        "description": "Community 0 groups papers around data, diffusion, samples, methylation."
+      },
+      "1": {
+        "label": "Generative / Data / Modeling / Flow",
+        "description": "Community 1 groups papers around generative, data, modeling, flow."
+      },
+      "2": {
+        "label": "Diffusion / Image / Denoising / Training",
+        "description": "Community 2 groups papers around diffusion, image, denoising, training."
+      }
+    },
+    "benchmark": {
+      "id": "diffusion_models",
+      "topic": "Diffusion Models / Score-Based Generative Models",
+      "prompt": "I want to understand the research trail of diffusion models, from DDPM to score-based generative modeling and latent diffusion. Build me a reading path and identify the bridge papers.",
+      "expected_landmarks": [
+        {
+          "title": "Denoising Diffusion Probabilistic Models",
+          "role": "foundation"
+        },
+        {
+          "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
+          "role": "development"
+        },
+        {
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "role": "development"
+        },
+        {
+          "title": "Flow Matching for Generative Modeling",
+          "role": "frontier"
+        },
+        {
+          "title": "Rectified Flow",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "rag": {
+    "retrieval": {
+      "total_papers": 20,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8,
+      "year_range": "2020-2026",
+      "median_year": 2024,
+      "citation_edges_total": 506,
+      "benchmark_relevance_filtered": 0
+    },
+    "graph": {
+      "node_count": 20,
+      "edge_count": 100,
+      "citation_edges": 0,
+      "similarity_edges": 100,
+      "connected_components": 2,
+      "largest_component_ratio": 0.95,
+      "average_degree": 10.0,
+      "community_count": 4,
+      "modularity": 0.1258
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 9,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 2,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.6,
+      "landmark_hits": [
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "Fusion-in-Decoder",
+        "Self-RAG"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 0.95,
+      "ordering_quality": 0.6666666666666666,
+      "community_coverage": 0.75,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 15,
+        "openalex": 5
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Retrieval-Augmented Generation",
+        "\"Dense Passage Retrieval for Open-Domain Question Answering\"",
+        "\"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\"",
+        "\"Fusion-in-Decoder\"",
+        "\"RETRO\"",
+        "\"Self-RAG\"",
+        "\"Improving Language Models by Retrieving from Trillions of Tokens\"",
+        "\"Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection\""
+      ],
+      "prerequisite_queries": [
+        "self-rag",
+        "retro",
+        "atlas",
+        "agentic rag",
+        "rag"
+      ],
+      "exclude_terms": [
+        "red amber green",
+        "music",
+        "image retrieval",
+        "content based retrieval"
+      ],
+      "expected_communities": [
+        "retrieval",
+        "rag",
+        "dense passage",
+        "dpr",
+        "fusion-in-decoder",
+        "retro",
+        "atlas",
+        "self-rag",
+        "Natural Language Processing",
+        "Question Answering",
+        "Information Retrieval",
+        "Large Language Models"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Retrieval-Augmented Generation Mechanisms",
+        "description": "This community focuses on enhancing retrieval-augmented generation through specific mechanisms such as self-reflection, encoder adaptation, and evolving retrieval strategies for tasks like code generation and medical reasoning."
+      },
+      "1": {
+        "label": "Retrieval-Augmented Generation Performance and Security",
+        "description": "Research in this area examines the performance, context quality, and security vulnerabilities like membership inference within retrieval-augmented generation for knowledge-intensive NLP and image generation tasks."
+      },
+      "2": {
+        "label": "Adaptive Retrieval-Augmented Generation",
+        "description": "This community investigates Adaptive-RAG, a method that learns to adapt retrieval-augmented large language models specifically based on the complexity of the input questions."
+      },
+      "3": {
+        "label": "Retrieval-Augmented Generation Surveys and System Architecture",
+        "description": "This group features surveys and comprehensive reviews on the architecture, trust frameworks, and engineering of retrieval-augmented generation systems, including applications for automated literature review and industrial chatbots."
+      }
+    },
+    "benchmark": {
+      "id": "rag",
+      "topic": "Retrieval-Augmented Generation",
+      "prompt": "I want to enter retrieval-augmented generation. Explain the key milestones from dense retrieval to modern agentic RAG, and separate foundational papers from application-oriented papers.",
+      "expected_landmarks": [
+        {
+          "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+          "role": "foundation"
+        },
+        {
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "role": "foundation"
+        },
+        {
+          "title": "Fusion-in-Decoder",
+          "role": "development"
+        },
+        {
+          "title": "RETRO",
+          "role": "development"
+        },
+        {
+          "title": "Self-RAG",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "mechanistic_interpretability": {
+    "retrieval": {
+      "total_papers": 11,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8181818181818182,
+      "year_range": "2022-2025",
+      "median_year": 2024,
+      "citation_edges_total": 171,
+      "benchmark_relevance_filtered": 2
+    },
+    "graph": {
+      "node_count": 11,
+      "edge_count": 24,
+      "citation_edges": 0,
+      "similarity_edges": 24,
+      "connected_components": 2,
+      "largest_component_ratio": 0.9090909090909091,
+      "average_degree": 4.3636,
+      "community_count": 4,
+      "modularity": 0.1709
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 8,
+      "role_counts": {
+        "foundation": 3,
+        "core": 2,
+        "development": 2,
+        "frontier": 1
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.4,
+      "landmark_hits": [
+        "In-context Learning and Induction Heads",
+        "Toy Models of Superposition"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 1.0,
+      "ordering_quality": 0.0,
+      "community_coverage": 0.75,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 11
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Mechanistic Interpretability of Transformers",
+        "\"A Mathematical Framework for Transformer Circuits\"",
+        "\"In-context Learning and Induction Heads\"",
+        "\"Toy Models of Superposition\"",
+        "\"Towards Monosemanticity\"",
+        "\"Scaling Monosemanticity\"",
+        "mechanistic interpretability transformers",
+        "transformer circuits analysis"
+      ],
+      "prerequisite_queries": [
+        "monosemanticity",
+        "circuits",
+        "sae",
+        "induction heads",
+        "residual stream"
+      ],
+      "exclude_terms": [
+        "post-hoc interpretability",
+        "saliency maps",
+        "grad-cam",
+        "lime",
+        "shap",
+        "attribution methods"
+      ],
+      "expected_communities": [
+        "mechanistic interpretability",
+        "circuits",
+        "induction heads",
+        "superposition",
+        "sparse autoencoder",
+        "monosemanticity",
+        "AI Safety",
+        "Deep Learning Theory",
+        "Explainable AI",
+        "Natural Language Processing"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Induction Heads and In-Context Learning",
+        "description": "This community investigates the mechanistic formation and function of induction heads within in-context learning circuits."
+      },
+      "1": {
+        "label": "Mechanistic Interpretability Tools and Vision",
+        "description": "Research in this area focuses on developing toolkits for mechanistic interpretability, applying these methods to vision and video, and exploring sparse autoencoders and symmetries."
+      },
+      "2": {
+        "label": "Theoretical Foundations and Feature Identification",
+        "description": "This community explores theoretical frameworks for interpretability, including toy models of superposition, feature identification via the empirical NTK, and bilinear layers."
+      },
+      "3": {
+        "label": "Challenges in Model Interpretation",
+        "description": "This work addresses the inherent difficulties and challenges associated with mechanistically interpreting model representations and behaviors."
+      }
+    },
+    "benchmark": {
+      "id": "mechanistic_interpretability",
+      "topic": "Mechanistic Interpretability of Transformers",
+      "prompt": "Build a research trail for mechanistic interpretability of transformers, especially from circuits and induction heads to sparse autoencoders.",
+      "expected_landmarks": [
+        {
+          "title": "A Mathematical Framework for Transformer Circuits",
+          "role": "foundation"
+        },
+        {
+          "title": "In-context Learning and Induction Heads",
+          "role": "foundation"
+        },
+        {
+          "title": "Toy Models of Superposition",
+          "role": "development"
+        },
+        {
+          "title": "Towards Monosemanticity",
+          "role": "development"
+        },
+        {
+          "title": "Scaling Monosemanticity",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "gnn": {
+    "retrieval": {
+      "total_papers": 33,
+      "has_abstract_ratio": 0.9696969696969697,
+      "has_citation_ratio": 0.9393939393939394,
+      "year_range": "1998-2025",
+      "median_year": 2019,
+      "citation_edges_total": 2289,
+      "benchmark_relevance_filtered": 26
+    },
+    "graph": {
+      "node_count": 33,
+      "edge_count": 219,
+      "citation_edges": 37,
+      "similarity_edges": 203,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 13.2727,
+      "community_count": 5,
+      "modularity": 0.278
+    },
+    "reading_path": {
+      "stage_count": 6,
+      "unique_paper_count": 13,
+      "role_counts": {
+        "prerequisite": 1,
+        "foundation": 2,
+        "core": 2,
+        "development": 5,
+        "bridge": 1,
+        "frontier": 2
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.3333333333333333,
+      "landmark_hits": [
+        "Neural Message Passing for Quantum Chemistry",
+        "Graphormer"
+      ],
+      "landmark_total": 6,
+      "topic_precision": 0.8787878787878788,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 11,
+        "openalex": 22
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Graph Neural Networks / Geometric Deep Learning",
+        "\"Semi-Supervised Classification with Graph Convolutional Networks\"",
+        "\"Inductive Representation Learning on Large Graphs\"",
+        "\"Graph Attention Networks\"",
+        "\"Neural Message Passing for Quantum Chemistry\"",
+        "\"How Powerful are Graph Neural Networks\"",
+        "graph neural networks survey",
+        "graph convolutional networks"
+      ],
+      "prerequisite_queries": [
+        "weisfeiler",
+        "graph transformer",
+        "geometric deep learning",
+        "gcn",
+        "gat"
+      ],
+      "exclude_terms": [
+        "graph theory",
+        "visualization",
+        "chart",
+        "plotting",
+        "knowledge graph embedding"
+      ],
+      "expected_communities": [
+        "graph neural network",
+        "gcn",
+        "graphsage",
+        "gat",
+        "message passing",
+        "weisfeiler",
+        "graph transformer",
+        "Geometric Deep Learning",
+        "Representation Learning",
+        "Molecular Machine Learning"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Graph Neural Network Applications and Optimization",
+        "description": "This community investigates the application of graph neural networks to combinatorial optimization, quantum chemistry, and collaborative filtering, while also analyzing theoretical issues like over-smoothing."
+      },
+      "1": {
+        "label": "Domain-Specific Graph Convolutional Networks",
+        "description": "Research in this group applies graph convolutional networks to distinct domains including text classification, skeleton-based action recognition, and molecular science, alongside methodological reviews."
+      },
+      "2": {
+        "label": "Spatio-Temporal Traffic and Time Series Forecasting",
+        "description": "This community focuses on utilizing graph neural networks and transformers for forecasting tasks involving spatio-temporal dependencies, particularly in traffic and multivariate time series data."
+      },
+      "3": {
+        "label": "Foundational Graph Neural Network Methods",
+        "description": "This cluster contains seminal papers that defined core graph neural network architectures such as Graph Convolutional Networks, GraphSAGE, and Graph Attention Networks for node and graph classification."
+      },
+      "4": {
+        "label": "Graph Neural Network Surveys and Relational Modeling",
+        "description": "This community includes comprehensive surveys of graph neural networks and explores the modeling of relational and heterogeneous data, as well as applications in emotion recognition and graph kernels."
+      }
+    },
+    "benchmark": {
+      "id": "gnn",
+      "topic": "Graph Neural Networks / Geometric Deep Learning",
+      "prompt": "I want to learn graph neural networks from the original GCN line to modern graph transformers. Build a reading path and explain the main conceptual shifts.",
+      "expected_landmarks": [
+        {
+          "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+          "role": "foundation"
+        },
+        {
+          "title": "Inductive Representation Learning on Large Graphs",
+          "role": "foundation"
+        },
+        {
+          "title": "Graph Attention Networks",
+          "role": "development"
+        },
+        {
+          "title": "Neural Message Passing for Quantum Chemistry",
+          "role": "development"
+        },
+        {
+          "title": "How Powerful are Graph Neural Networks",
+          "role": "development"
+        },
+        {
+          "title": "Graphormer",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "causal_ml": {
+    "retrieval": {
+      "total_papers": 18,
+      "has_abstract_ratio": 0.9444444444444444,
+      "has_citation_ratio": 0.9444444444444444,
+      "year_range": "1983-2026",
+      "median_year": 2019,
+      "citation_edges_total": 1731,
+      "benchmark_relevance_filtered": 2
+    },
+    "graph": {
+      "node_count": 18,
+      "edge_count": 39,
+      "citation_edges": 10,
+      "similarity_edges": 35,
+      "connected_components": 3,
+      "largest_component_ratio": 0.8888888888888888,
+      "average_degree": 4.3333,
+      "community_count": 7,
+      "modularity": 0.1291
+    },
+    "reading_path": {
+      "stage_count": 3,
+      "unique_paper_count": 10,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 6
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.4,
+      "landmark_hits": [
+        "Causal Inference in Statistics",
+        "The Central Role of the Propensity Score"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 1.0,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.7142857142857143,
+      "path_stage_coverage": 0.75,
+      "source_mix": {
+        "openalex": 9,
+        "arxiv": 9
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Causal Inference in Machine Learning",
+        "\"Causal Inference in Statistics\"",
+        "\"The Central Role of the Propensity Score\"",
+        "\"Causal Inference for Statistics, Social, and Biomedical Sciences\"",
+        "\"Causal Effect Inference with Deep Latent-Variable Models\"",
+        "\"Invariant Risk Minimization\"",
+        "\"Causal Inference in Statistics: An Overview\"",
+        "\"The Central Role of the Propensity Score in Observational Studies for Causal Effects\""
+      ],
+      "prerequisite_queries": [
+        "causal discovery",
+        "invariant risk",
+        "treatment effect",
+        "potential outcomes",
+        "backdoor criterion"
+      ],
+      "exclude_terms": [
+        "Granger causality",
+        "causal loop diagrams",
+        "causal set theory",
+        "fuzzy cognitive maps"
+      ],
+      "expected_communities": [
+        "causal inference",
+        "potential outcomes",
+        "propensity score",
+        "causal graph",
+        "counterfactual",
+        "causal discovery",
+        "causal representation learning",
+        "deep causal inference",
+        "structural causal models"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Causal / Data / Inference / Propensity",
+        "description": "Community 0 groups papers around causal, data, inference, propensity."
+      },
+      "1": {
+        "label": "Causal / Time / Series / Data",
+        "description": "Community 1 groups papers around causal, time, series, data."
+      },
+      "2": {
+        "label": "Causal / Inference / Statistics / Primer",
+        "description": "Community 2 groups papers around causal, inference, statistics, primer."
+      },
+      "3": {
+        "label": "Causal / Observational / Confounders / Inference",
+        "description": "Community 3 groups papers around causal, observational, confounders, inference."
+      },
+      "4": {
+        "label": "Machine / Causal / Environments / Causality",
+        "description": "Community 4 groups papers around machine, causal, environments, causality."
+      },
+      "5": {
+        "label": "Control / Causal / Data / Units",
+        "description": "Community 5 groups papers around control, causal, data, units."
+      },
+      "6": {
+        "label": "Conditional / Independence / Test / Data",
+        "description": "Community 6 groups papers around conditional, independence, test, data."
+      }
+    },
+    "benchmark": {
+      "id": "causal_ml",
+      "topic": "Causal Inference in Machine Learning",
+      "prompt": "I want to understand causal inference for machine learning. Start from potential outcomes and causal graphs, then connect to modern representation learning and causal discovery.",
+      "expected_landmarks": [
+        {
+          "title": "Causal Inference in Statistics",
+          "role": "foundation"
+        },
+        {
+          "title": "The Central Role of the Propensity Score",
+          "role": "foundation"
+        },
+        {
+          "title": "Causal Inference for Statistics, Social, and Biomedical Sciences",
+          "role": "foundation"
+        },
+        {
+          "title": "Causal Effect Inference with Deep Latent-Variable Models",
+          "role": "development"
+        },
+        {
+          "title": "Invariant Risk Minimization",
+          "role": "development"
+        }
+      ]
+    }
+  },
+  "ssl_vision": {
+    "retrieval": {
+      "total_papers": 24,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.9583333333333334,
+      "year_range": "2018-2026",
+      "median_year": 2022,
+      "citation_edges_total": 1439,
+      "benchmark_relevance_filtered": 0
+    },
+    "graph": {
+      "node_count": 24,
+      "edge_count": 152,
+      "citation_edges": 1,
+      "similarity_edges": 152,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 12.6667,
+      "community_count": 4,
+      "modularity": 0.1438
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 10,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 4,
+        "frontier": 2
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 1.0,
+      "landmark_hits": [
+        "A Simple Framework for Contrastive Learning of Visual Representations",
+        "Momentum Contrast for Unsupervised Visual Representation Learning",
+        "Bootstrap Your Own Latent",
+        "Emerging Properties in Self-Supervised Vision Transformers",
+        "Masked Autoencoders Are Scalable Vision Learners",
+        "DINOv2"
+      ],
+      "landmark_total": 6,
+      "topic_precision": 0.9583333333333334,
+      "ordering_quality": 0.8181818181818182,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 19,
+        "openalex": 5
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Self-Supervised Learning in Vision",
+        "\"A Simple Framework for Contrastive Learning of Visual Representations\"",
+        "\"Momentum Contrast for Unsupervised Visual Representation Learning\"",
+        "\"Bootstrap Your Own Latent\"",
+        "\"Emerging Properties in Self-Supervised Vision Transformers\"",
+        "\"Masked Autoencoders Are Scalable Vision Learners\"",
+        "self-supervised learning visual representations",
+        "contrastive learning computer vision"
+      ],
+      "prerequisite_queries": [
+        "dino",
+        "masked autoencoder",
+        "masked image modeling",
+        "ibot",
+        "pre-training"
+      ],
+      "exclude_terms": [
+        "natural language processing",
+        "text classification",
+        "speech recognition",
+        "audio",
+        "semi-supervised learning",
+        "reinforcement learning"
+      ],
+      "expected_communities": [
+        "self-supervised",
+        "contrastive",
+        "simclr",
+        "moco",
+        "byol",
+        "dino",
+        "masked autoencoder",
+        "ibot",
+        "Contrastive Learning",
+        "Non-Contrastive Learning",
+        "Masked Image Modeling",
+        "Vision Transformers",
+        "Representation Learning"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Masked Autoencoders for Vision",
+        "description": "This community focuses on self-supervised learning in computer vision, specifically utilizing masked autoencoders and vision transformers to learn scalable representations."
+      },
+      "1": {
+        "label": "Bootstrap Your Own Latent (BYOL)",
+        "description": "Research in this area centers on the Bootstrap Your Own Latent (BYOL) method and its variants for self-supervised representation learning across various domains including action recognition and malware detection."
+      },
+      "2": {
+        "label": "Contrastive Learning for Visual Representations",
+        "description": "This community investigates contrastive learning frameworks like Momentum Contrast and SimCLR for unsupervised visual representation learning and their applications in tasks such as sentence embeddings and disease detection."
+      },
+      "3": {
+        "label": "Image Feature Analysis and Applications",
+        "description": "This group explores self-supervised learning for specific image applications such as medical registration, roof classification, and perceptual metrics, alongside surveys on attention mechanisms in computer vision."
+      }
+    },
+    "benchmark": {
+      "id": "ssl_vision",
+      "topic": "Self-Supervised Learning in Vision",
+      "prompt": "Trace the development of self-supervised learning in computer vision, comparing contrastive learning, non-contrastive learning, and masked image modeling.",
+      "expected_landmarks": [
+        {
+          "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+          "role": "foundation"
+        },
+        {
+          "title": "Momentum Contrast for Unsupervised Visual Representation Learning",
+          "role": "foundation"
+        },
+        {
+          "title": "Bootstrap Your Own Latent",
+          "role": "development"
+        },
+        {
+          "title": "Emerging Properties in Self-Supervised Vision Transformers",
+          "role": "development"
+        },
+        {
+          "title": "Masked Autoencoders Are Scalable Vision Learners",
+          "role": "development"
+        },
+        {
+          "title": "DINOv2",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "efficient_transformers": {
+    "retrieval": {
+      "total_papers": 14,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.9285714285714286,
+      "year_range": "2020-2026",
+      "median_year": 2022,
+      "citation_edges_total": 752,
+      "benchmark_relevance_filtered": 3
+    },
+    "graph": {
+      "node_count": 14,
+      "edge_count": 70,
+      "citation_edges": 0,
+      "similarity_edges": 70,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 10.0,
+      "community_count": 3,
+      "modularity": 0.0871
+    },
+    "reading_path": {
+      "stage_count": 5,
+      "unique_paper_count": 11,
+      "role_counts": {
+        "foundation": 3,
+        "core": 2,
+        "development": 4,
+        "bridge": 1,
+        "frontier": 1
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 1.0,
+      "landmark_hits": [
+        "Longformer",
+        "Reformer",
+        "Rethinking Attention with Performers",
+        "FlashAttention",
+        "Efficiently Modeling Long Sequences with Structured State Spaces",
+        "Mamba"
+      ],
+      "landmark_total": 6,
+      "topic_precision": 0.8571428571428571,
+      "ordering_quality": 0.45454545454545453,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 10,
+        "openalex": 4
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Efficient Transformers / Long-Context Modeling",
+        "\"Longformer\"",
+        "\"Reformer\"",
+        "\"Rethinking Attention with Performers\"",
+        "\"FlashAttention\"",
+        "\"Efficiently Modeling Long Sequences with Structured State Spaces\"",
+        "efficient transformer architectures",
+        "long context language modeling"
+      ],
+      "prerequisite_queries": [
+        "flashattention",
+        "state space",
+        "structured state spaces",
+        "mamba",
+        "long context"
+      ],
+      "exclude_terms": [
+        "saliency maps",
+        "visual attention",
+        "human attention",
+        "energy efficiency",
+        "carbon emissions",
+        "model compression",
+        "pruning"
+      ],
+      "expected_communities": [
+        "efficient transformer",
+        "long context",
+        "sparse attention",
+        "linear attention",
+        "performer",
+        "flashattention",
+        "state space",
+        "mamba",
+        "Natural Language Processing",
+        "Deep Learning",
+        "Sequence Modeling",
+        "Generative AI"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Long-Sequence Transformers",
+        "description": "This community focuses on developing efficient transformer architectures, such as Longformer and Informer, to model long sequences in documents, clinical data, and time-series forecasting."
+      },
+      "1": {
+        "label": "Vision and State Space Models",
+        "description": "Research in this area applies efficient sequence modeling techniques, including Mamba and state space models, to computer vision tasks like object detection and visual representation learning."
+      },
+      "2": {
+        "label": "Efficient Attention Mechanisms",
+        "description": "This community investigates optimizations for the attention mechanism in transformers, emphasizing memory efficiency and training speed through methods like FlashAttention and architectural search."
+      }
+    },
+    "benchmark": {
+      "id": "efficient_transformers",
+      "topic": "Efficient Transformers / Long-Context Modeling",
+      "prompt": "I want a research trail on efficient sequence modeling, from sparse and linear attention to state space models like S4 and Mamba. Identify bridge papers and competing paradigms.",
+      "expected_landmarks": [
+        {
+          "title": "Longformer",
+          "role": "foundation"
+        },
+        {
+          "title": "Reformer",
+          "role": "foundation"
+        },
+        {
+          "title": "Rethinking Attention with Performers",
+          "role": "development"
+        },
+        {
+          "title": "FlashAttention",
+          "role": "development"
+        },
+        {
+          "title": "Efficiently Modeling Long Sequences with Structured State Spaces",
+          "role": "development"
+        },
+        {
+          "title": "Mamba",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "rlhf": {
+    "retrieval": {
+      "total_papers": 16,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.875,
+      "year_range": "2017-2026",
+      "median_year": 2024,
+      "citation_edges_total": 782,
+      "benchmark_relevance_filtered": 1
+    },
+    "graph": {
+      "node_count": 16,
+      "edge_count": 72,
+      "citation_edges": 0,
+      "similarity_edges": 72,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 9.0,
+      "community_count": 3,
+      "modularity": 0.1021
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 11,
+      "role_counts": {
+        "foundation": 3,
+        "core": 3,
+        "development": 3,
+        "frontier": 2
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.5,
+      "landmark_hits": [
+        "Deep Reinforcement Learning from Human Preferences",
+        "Proximal Policy Optimization Algorithms",
+        "Direct Preference Optimization"
+      ],
+      "landmark_total": 6,
+      "topic_precision": 0.9375,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "openalex": 1,
+        "arxiv": 15
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "RLHF and Preference Optimization",
+        "\"Deep Reinforcement Learning from Human Preferences\"",
+        "\"Proximal Policy Optimization Algorithms\"",
+        "\"Learning to Summarize with Human Feedback\"",
+        "\"Training language models to follow instructions with human feedback\"",
+        "\"Direct Preference Optimization\"",
+        "human feedback",
+        "preference optimization"
+      ],
+      "prerequisite_queries": [
+        "dpo",
+        "rlaif",
+        "constitutional ai",
+        "instruction following"
+      ],
+      "exclude_terms": [],
+      "expected_communities": [
+        "rlhf",
+        "human feedback",
+        "preference",
+        "reward model",
+        "ppo",
+        "dpo",
+        "rlaif",
+        "constitutional ai"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Direct Preference Optimization Variants",
+        "description": "This community focuses on recent advancements in Direct Preference Optimization (DPO) for Large Language Model alignment, exploring methods such as token-level guidance, self-guided optimization, and safety improvements."
+      },
+      "1": {
+        "label": "Reinforcement Learning from Human Feedback (RLHF)",
+        "description": "This community investigates the theoretical and practical aspects of Reinforcement Learning from Human Feedback, including iterative preference learning, policy optimization algorithms like PPO, and online versus offline settings."
+      },
+      "2": {
+        "label": "Language Model Alignment and Instruction Tuning",
+        "description": "This community covers the alignment of language models using human feedback for tasks such as summarization and instruction following, featuring the foundational Direct Preference Optimization paper alongside key RLHF studies."
+      }
+    },
+    "benchmark": {
+      "id": "rlhf",
+      "topic": "RLHF and Preference Optimization",
+      "prompt": "Build a research trail for RLHF and preference optimization, from reward modeling and PPO to DPO and RLAIF.",
+      "expected_landmarks": [
+        {
+          "title": "Deep Reinforcement Learning from Human Preferences",
+          "role": "foundation"
+        },
+        {
+          "title": "Proximal Policy Optimization Algorithms",
+          "role": "foundation"
+        },
+        {
+          "title": "Learning to Summarize with Human Feedback",
+          "role": "development"
+        },
+        {
+          "title": "Training language models to follow instructions with human feedback",
+          "role": "development"
+        },
+        {
+          "title": "Direct Preference Optimization",
+          "role": "frontier"
+        },
+        {
+          "title": "Constitutional AI",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "nerf_3dgs": {
+    "retrieval": {
+      "total_papers": 26,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.8076923076923077,
+      "year_range": "2020-2024",
+      "median_year": 2023,
+      "citation_edges_total": 1283,
+      "benchmark_relevance_filtered": 2
+    },
+    "graph": {
+      "node_count": 26,
+      "edge_count": 215,
+      "citation_edges": 4,
+      "similarity_edges": 214,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 16.5385,
+      "community_count": 3,
+      "modularity": 0.2196
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 9,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 3,
+        "frontier": 2
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.8,
+      "landmark_hits": [
+        "NeRF: Representing Scenes as Neural Radiance Fields",
+        "Mip-NeRF",
+        "Instant Neural Graphics Primitives",
+        "3D Gaussian Splatting"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 1.0,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "openalex": 6,
+        "arxiv": 20
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Neural Radiance Fields and 3D Gaussian Splatting",
+        "\"NeRF: Representing Scenes as Neural Radiance Fields\"",
+        "\"Mip-NeRF\"",
+        "\"Instant Neural Graphics Primitives\"",
+        "\"Plenoxels\"",
+        "\"3D Gaussian Splatting\"",
+        "\"Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields\"",
+        "\"Instant Neural Graphics Primitives with a Multiresolution Hash Encoding\""
+      ],
+      "prerequisite_queries": [
+        "gaussian splatting",
+        "novel view synthesis",
+        "3d gaussian splatting",
+        "view synthesis",
+        "radiance field"
+      ],
+      "exclude_terms": [
+        "Gaussian process",
+        "Gaussian mixture model",
+        "texture splatting",
+        "Gaussian blur",
+        "non-rigid"
+      ],
+      "expected_communities": [
+        "nerf",
+        "neural radiance",
+        "mip-nerf",
+        "instant-ngp",
+        "plenoxels",
+        "3d gaussian splatting",
+        "Computer Vision",
+        "Computer Graphics",
+        "Neural Rendering",
+        "View Synthesis",
+        "Differentiable Rendering"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Foundational Neural Radiance Fields",
+        "description": "This community focuses on the core Neural Radiance Fields (NeRF) method for view synthesis and scene representation, including foundational papers and multi-modal extensions like VIRUS-NeRF."
+      },
+      "1": {
+        "label": "Advanced NeRF Variants and Anti-Aliasing",
+        "description": "Research in this group improves upon the original NeRF model, emphasizing multiscale representations, anti-aliasing, and unbounded scene rendering through works such as Mip-NeRF and Zip-NeRF."
+      },
+      "2": {
+        "label": "Gaussian Splatting and Explicit Representations",
+        "description": "This community investigates efficient radiance field rendering using explicit representations and Gaussian primitives, highlighted by developments in 3D Gaussian Splatting and Plenoxels."
+      }
+    },
+    "benchmark": {
+      "id": "nerf_3dgs",
+      "topic": "Neural Radiance Fields and 3D Gaussian Splatting",
+      "prompt": "Trace the research development from NeRF to 3D Gaussian Splatting. Explain what bottlenecks each generation of methods tried to solve.",
+      "expected_landmarks": [
+        {
+          "title": "NeRF: Representing Scenes as Neural Radiance Fields",
+          "role": "foundation"
+        },
+        {
+          "title": "Mip-NeRF",
+          "role": "development"
+        },
+        {
+          "title": "Instant Neural Graphics Primitives",
+          "role": "development"
+        },
+        {
+          "title": "Plenoxels",
+          "role": "development"
+        },
+        {
+          "title": "3D Gaussian Splatting",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "marl": {
+    "retrieval": {
+      "total_papers": 26,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.7692307692307693,
+      "year_range": "2017-2026",
+      "median_year": 2021,
+      "citation_edges_total": 817,
+      "benchmark_relevance_filtered": 4
+    },
+    "graph": {
+      "node_count": 26,
+      "edge_count": 142,
+      "citation_edges": 10,
+      "similarity_edges": 140,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 10.9231,
+      "community_count": 4,
+      "modularity": 0.2799
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 12,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 5,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.8,
+      "landmark_hits": [
+        "Value-Decomposition Networks",
+        "QMIX",
+        "The StarCraft Multi-Agent Challenge",
+        "The Surprising Effectiveness of PPO in Cooperative Multi-Agent Games"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 0.9615384615384616,
+      "ordering_quality": 0.6,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 16,
+        "openalex": 10
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Multi-Agent Reinforcement Learning",
+        "\"Value-Decomposition Networks\"",
+        "\"Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments\"",
+        "\"QMIX\"",
+        "\"The StarCraft Multi-Agent Challenge\"",
+        "\"The Surprising Effectiveness of PPO in Cooperative Multi-Agent Games\"",
+        "\"Value-Decomposition Networks For Cooperative Multi-Agent Learning\"",
+        "\"QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning\""
+      ],
+      "prerequisite_queries": [
+        "mappo",
+        "population based",
+        "starcraft multi-agent",
+        "decentralized execution",
+        "value factorization"
+      ],
+      "exclude_terms": [
+        "single-agent",
+        "supervised learning",
+        "inverse reinforcement learning"
+      ],
+      "expected_communities": [
+        "multi-agent reinforcement learning",
+        "marl",
+        "value decomposition",
+        "maddpg",
+        "qmix",
+        "mappo",
+        "population based",
+        "Deep Reinforcement Learning",
+        "Game Theory",
+        "Distributed AI",
+        "Cooperative AI"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Cooperative and Competitive Multi-Agent Reinforcement Learning",
+        "description": "This community investigates reinforcement learning algorithms like PPO and Actor-Critic applied to cooperative, competitive, and mixed environments such as StarCraft, addressing challenges in privacy, interference control, and multi-stage tasks."
+      },
+      "1": {
+        "label": "Value Decomposition Networks in Cooperative MARL",
+        "description": "Research in this area focuses on Value-Decomposition Networks (VDN) and their extensions, such as distributed VDN and PPS-QMIX, to solve cooperative multi-agent reinforcement learning problems by factorizing team rewards."
+      },
+      "2": {
+        "label": "QMIX and Monotonic Value Factorization",
+        "description": "This community centers on the QMIX algorithm and its variants, such as Weighted QMIX, which utilize monotonic value function factorization to enable centralised training and decentralised execution in deep multi-agent reinforcement learning."
+      },
+      "3": {
+        "label": "Counterfactual and Independent Policy Gradients",
+        "description": "This community explores policy gradient methods for multi-agent systems, specifically comparing counterfactual multi-agent policy gradients (COMA) with independent learning approaches like IPPO within the StarCraft Multi-Agent Challenge."
+      }
+    },
+    "benchmark": {
+      "id": "marl",
+      "topic": "Multi-Agent Reinforcement Learning",
+      "prompt": "I want to understand multi-agent reinforcement learning. Build a reading path from value decomposition and centralized training to population-based and game-theoretic methods.",
+      "expected_landmarks": [
+        {
+          "title": "Value-Decomposition Networks",
+          "role": "foundation"
+        },
+        {
+          "title": "Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments",
+          "role": "foundation"
+        },
+        {
+          "title": "QMIX",
+          "role": "development"
+        },
+        {
+          "title": "The StarCraft Multi-Agent Challenge",
+          "role": "development"
+        },
+        {
+          "title": "The Surprising Effectiveness of PPO in Cooperative Multi-Agent Games",
+          "role": "frontier"
+        }
+      ]
+    }
+  },
+  "federated_learning": {
+    "retrieval": {
+      "total_papers": 41,
+      "has_abstract_ratio": 0.9512195121951219,
+      "has_citation_ratio": 0.8048780487804879,
+      "year_range": "2016-2026",
+      "median_year": 2021,
+      "citation_edges_total": 2649,
+      "benchmark_relevance_filtered": 1
+    },
+    "graph": {
+      "node_count": 41,
+      "edge_count": 339,
+      "citation_edges": 20,
+      "similarity_edges": 326,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 16.5366,
+      "community_count": 4,
+      "modularity": 0.2714
+    },
+    "reading_path": {
+      "stage_count": 4,
+      "unique_paper_count": 13,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 6,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.8,
+      "landmark_hits": [
+        "Practical Secure Aggregation for Privacy-Preserving Machine Learning",
+        "Deep Learning with Differential Privacy",
+        "Personalized Federated Learning",
+        "FedProx"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 1.0,
+      "ordering_quality": 0.6666666666666666,
+      "community_coverage": 0.75,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 28,
+        "openalex": 13
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Federated Learning and Privacy-Preserving ML",
+        "\"Communication-Efficient Learning of Deep Networks from Decentralized Data\"",
+        "\"Practical Secure Aggregation for Privacy-Preserving Machine Learning\"",
+        "\"Deep Learning with Differential Privacy\"",
+        "\"Personalized Federated Learning\"",
+        "\"FedProx\"",
+        "federated learning",
+        "fedavg"
+      ],
+      "prerequisite_queries": [
+        "fedprox",
+        "decentralized data"
+      ],
+      "exclude_terms": [],
+      "expected_communities": [
+        "federated learning",
+        "fedavg",
+        "secure aggregation",
+        "differential privacy",
+        "personalized federated",
+        "fedprox"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Secure Federated Learning Protocols and Applications",
+        "description": "This community focuses on secure aggregation protocols, general federated learning frameworks, and their applications in domains like healthcare, as indicated by titles on secure aggregation and surveys on challenges."
+      },
+      "1": {
+        "label": "Privacy-Preserving and Differential Privacy in Federated Learning",
+        "description": "Research in this area addresses privacy preservation through differential privacy, analyzes inference attacks, and explores communication-efficient learning methods for deep networks."
+      },
+      "2": {
+        "label": "Personalized Federated Learning and Convergence Analysis",
+        "description": "This community investigates the convergence of algorithms like FedAvg on non-IID data and develops methods for personalized federated learning involving client selection and local training."
+      },
+      "3": {
+        "label": "Decentralized Federated Learning and IoT Applications",
+        "description": "The papers explore decentralized and server-free federated learning architectures, transfer learning, and privacy-preserving mechanisms specifically tailored for Internet-of-Things environments."
+      }
+    },
+    "benchmark": {
+      "id": "federated_learning",
+      "topic": "Federated Learning and Privacy-Preserving ML",
+      "prompt": "Build a research trail for federated learning, from FedAvg to privacy-preserving and personalized federated learning.",
+      "expected_landmarks": [
+        {
+          "title": "Communication-Efficient Learning of Deep Networks from Decentralized Data",
+          "role": "foundation"
+        },
+        {
+          "title": "Practical Secure Aggregation for Privacy-Preserving Machine Learning",
+          "role": "development"
+        },
+        {
+          "title": "Deep Learning with Differential Privacy",
+          "role": "development"
+        },
+        {
+          "title": "Personalized Federated Learning",
+          "role": "frontier"
+        },
+        {
+          "title": "FedProx",
+          "role": "development"
+        }
+      ]
+    }
+  },
+  "protein_structure": {
+    "retrieval": {
+      "total_papers": 8,
+      "has_abstract_ratio": 1.0,
+      "has_citation_ratio": 0.875,
+      "year_range": "2012-2024",
+      "median_year": 2022,
+      "citation_edges_total": 239,
+      "benchmark_relevance_filtered": 3
+    },
+    "graph": {
+      "node_count": 8,
+      "edge_count": 12,
+      "citation_edges": 0,
+      "similarity_edges": 12,
+      "connected_components": 2,
+      "largest_component_ratio": 0.875,
+      "average_degree": 3.0,
+      "community_count": 3,
+      "modularity": 0.0476
+    },
+    "reading_path": {
+      "stage_count": 3,
+      "unique_paper_count": 8,
+      "role_counts": {
+        "foundation": 3,
+        "core": 2,
+        "development": 3
+      },
+      "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 0.0,
+      "landmark_hits": [],
+      "landmark_total": 5,
+      "topic_precision": 0.75,
+      "ordering_quality": 0.0,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 0.75,
+      "source_mix": {
+        "arxiv": 8
+      }
+    },
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Protein Structure Prediction / Scientific ML",
+        "\"Protein structure prediction using multiple deep neural networks\"",
+        "\"Improved protein structure prediction using potentials from deep learning\"",
+        "\"Highly accurate protein structure prediction with AlphaFold\"",
+        "\"Accurate prediction of protein structures and interactions using a three-track neural network\"",
+        "\"Language models of protein sequences\"",
+        "protein structure prediction deep learning",
+        "coevolutionary contact prediction"
+      ],
+      "prerequisite_queries": [
+        "protein design",
+        "scientific machine learning",
+        "inter-residue distance",
+        "multiple sequence alignment",
+        "attention mechanism"
+      ],
+      "exclude_terms": [
+        "nutrition",
+        "dietary",
+        "food science",
+        "laundry",
+        "textile"
+      ],
+      "expected_communities": [
+        "protein structure",
+        "coevolution",
+        "alphafold",
+        "rosettafold",
+        "protein language model",
+        "protein design",
+        "diffusion",
+        "Computational Biology",
+        "Bioinformatics",
+        "Structural Biology",
+        "Deep Learning",
+        "Generative AI"
+      ]
+    },
+    "community_labels": {
+      "0": {
+        "label": "Protein / Sequence / Prediction / Have",
+        "description": "Community 0 groups papers around protein, sequence, prediction, have."
+      },
+      "1": {
+        "label": "Knot / Protein / Knots / Complex",
+        "description": "Community 1 groups papers around knot, protein, knots, complex."
+      },
+      "2": {
+        "label": "Protein / Ecrecer / Prediction / Which",
+        "description": "Community 2 groups papers around protein, ecrecer, prediction, which."
+      }
+    },
+    "benchmark": {
+      "id": "protein_structure",
+      "topic": "Protein Structure Prediction / Scientific ML",
+      "prompt": "Trace the research path of protein structure prediction from co-evolutionary methods to AlphaFold2 and modern protein generative models.",
+      "expected_landmarks": [
+        {
+          "title": "Protein structure prediction using multiple deep neural networks",
+          "role": "foundation"
+        },
+        {
+          "title": "Improved protein structure prediction using potentials from deep learning",
+          "role": "foundation"
+        },
+        {
+          "title": "Highly accurate protein structure prediction with AlphaFold",
+          "role": "development"
+        },
+        {
+          "title": "Accurate prediction of protein structures and interactions using a three-track neural network",
+          "role": "development"
+        },
+        {
+          "title": "Language models of protein sequences",
+          "role": "frontier"
+        }
+      ]
+    }
+  }
+}

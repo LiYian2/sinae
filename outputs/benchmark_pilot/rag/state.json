@@ -1,0 +1,2375 @@
+{
+  "research_profile": {
+    "topic": "Retrieval-Augmented Generation",
+    "seed_papers": [],
+    "time_range": "all",
+    "max_papers": 45,
+    "user_level": "intermediate",
+    "preferred_length": 12,
+    "goal": "benchmark_research_trail"
+  },
+  "paper_count": 21,
+  "papers": {
+    "2005.11401v4": {
+      "paper_id": "2005.11401v4",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": [
+        "Patrick Lewis",
+        "Ethan Perez",
+        "Aleksandra Piktus",
+        "Fabio Petroni",
+        "Vladimir Karpukhin",
+        "Naman Goyal",
+        "Heinrich K\u00fcttler",
+        "Mike Lewis",
+        "Wen-tau Yih",
+        "Tim Rockt\u00e4schel",
+        "Sebastian Riedel",
+        "Douwe Kiela"
+      ],
+      "year": 2020,
+      "abstract": "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.",
+      "url": "https://arxiv.org/abs/2005.11401v4",
+      "citation_count": 13412,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "34da205f20edba2428f7bba6f3ea0c553a1ae8ec",
+        "794fdb1248e7d07f1bf61fadb4267eb24e7dd973",
+        "016368185723d0ec99aafa4b5927300590d0647f",
+        "e960a8684e33906582b94a53932138d3d502671b",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "c44120f765fc43994c5cfb4e12e4f62999efeae6",
+        "97d69e7e8c04714bf58dcbe5ae7454db69b657a7",
+        "80376bdec5f534be78ba82821f540590ebce5559",
+        "832fff14d2ed50eb7969c4c4b976c35776548f56",
+        "027946f80f3cb276ea38bc2cf19903052f59cd0e",
+        "7be8c119dbe065c52125ee7716601751f3116844",
+        "395de0bd3837fdf4b4b5e5f04835bcc69c279481",
+        "6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+        "53c8b98eb9180ed9f46820627715c7ae2803cee7",
+        "968f821ffe6dc6e2e4b19bdf9eeabd598c70ca5a",
+        "85ea337f6c0ba48bd238287068548fa9f83a8429",
+        "834fb308ca1a0177d303691d6003e3b0fded021e",
+        "3a93ac2f2aa9d2c066af211766d69370f9bd94be",
+        "d0086b86103a620a86bc918746df0aa642e2a8a3",
+        "8f23c219233fb67eedb1e4333c8458edb1c5cd68",
+        "c7462e0ee928f095a7fc40b91f1e7557d283ae8e",
+        "17dbd7b72029181327732e4d11b52a08ed4630d0",
+        "bf442ab269074665a68e4dbbe19e4efc97862541",
+        "ebf59587f8f170ff4241c42263bbfb9da5bd2135",
+        "a81874b4a651a740fffbfc47ef96515e8c7f782f",
+        "d9f6ada77448664b71128bb19df15765336974a6",
+        "faadd7d081c8d67e8c2567e8a5579e46cd6b2280",
+        "85e07116316e686bf787114ba10ca60f4ea7c5b2",
+        "f6335a158a3f4fcfffe74f2df1d55d835bf95095",
+        "f53728f525d8b2eaa2ba21ff65ec98ece27f39d5",
+        "227458886343b86bd15adf58c769be326b4b058a",
+        "1677f55e519781303fd6f42e3892023150cf0717",
+        "fb0f20a356ba6160f4728c1f18594300ac4d1d00",
+        "e941e9a078a1fdbaba1d72af19a0b9800c6625d8",
+        "29de7c0fb3c09eaf55b20619bceaeafe72fd87a6",
+        "1b1e3f7218f1c0f0db56bf2bd9475521454693a1",
+        "d05e553f9bc3eb11d6a4a17766fb65d595fc7768",
+        "f7df82c5417b9ec7582def05b79ca080a07c4f3b",
+        "451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c",
+        "b1d24e8e08435b7c52335485a0d635abf9bc604c",
+        "8691706ad0cf5e83969658b2e6bfffdc379440c9",
+        "8e46f7fbb96549cd1b3b0bd226f06a611126b889",
+        "3c78c6df5eb1695b6a399e346dde880af27d1016",
+        "e7fd6848cb29ca221a7e17d823e06fb566f1f135",
+        "f4faa5a838afb1d6d15b77d2c122818e4b6d642b",
+        "204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+        "6b93cedfe768eb8b5ece92612aac9cc8e986d12a",
+        "f010affab57b5fcf1cd6be23df79d8ec98c7289c",
+        "3adff57fd09965224506a1bacc0579d9d3c8c11e",
+        "104715e1097b7ebee436058bfd9f45540f269845",
+        "2cbb8de53759e75411bc528518947a3094fbce3a",
+        "28e49f28ea5202990cce701332fc3099507d8404",
+        "8d574fde3e46ad766fac26094e3bb1cf55a08226",
+        "5256b6d0ffe5b0dbcd979e2a8404326732b5ed51",
+        "dd95f96e3322dcaee9b1e3f7871ecc3ebcd51bfe",
+        "699a2e3b653c69aff5cf7a9923793b974f8ca164",
+        "651e5bcc14f14605a879303e97572a27ea8c7956",
+        "7e5955481e9d197cc1cd1b64a90fbd245b88c886",
+        "4f10b9f47c5bb6b54dd4f5ca8d9fa2c0bbd7ec5e",
+        "d38e8631bba0720becdaf7b89f79d9f9dca45d82",
+        "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
+        "71ae756c75ac89e2d731c9c79649562b5768ff39",
+        "b29447ba499507a259ae9d8f685d60cc1597d7d3",
+        "47ced790a563344efae66588b5fb7fe6cca29ed3",
+        "df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+        "9405cc0d6169988371b2755e573cc28650d14dfe",
+        "cd18800a0fe0b668a1cc19f2ec95b5003d0a5035",
+        "219f6d4633ac3ab3650acc9bdc52b20c2e2eedd6"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2310.11511v1": {
+      "paper_id": "2310.11511v1",
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "authors": [
+        "Akari Asai",
+        "Zeqiu Wu",
+        "Yizhong Wang",
+        "Avirup Sil",
+        "Hannaneh Hajishirzi"
+      ],
+      "year": 2023,
+      "abstract": "Despite their remarkable capabilities, large language models (LLMs) often produce responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. Retrieval-Augmented Generation (RAG), an ad hoc approach that augments LMs with retrieval of relevant knowledge, decreases such issues. However, indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is necessary, or passages are relevant, diminishes LM versatility or can lead to unhelpful response generation. We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (Self-RAG) that enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand, and generates and reflects on retrieved passages and its own generations using special tokens, called reflection tokens. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements. Experiments show that Self-RAG (7B and 13B parameters) significantly outperforms state-of-the-art LLMs and retrieval-augmented models on a diverse set of tasks. Specifically, Self-RAG outperforms ChatGPT and retrieval-augmented Llama2-chat on Open-domain QA, reasoning and fact verification tasks, and it shows significant gains in improving factuality and citation accuracy for long-form generations relative to these models.",
+      "url": "https://arxiv.org/abs/2310.11511v1",
+      "citation_count": 1776,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "23af54b82c951317f1fc1841164d8a441a2d8120",
+        "700bd9681f1b9e9e2212e10415d27b11c7e6836b",
+        "3aee33831e0bdea1a1eaae21c7586e4f7c0396d6",
+        "4b0b56be0ae9479d2bd5c2f0943db1906343c10f",
+        "83b90f4a0ae4cc214eb3cc140ccfef9cd99fac05",
+        "e51d38bbabca719cd9c845d1e004c724e9cbdfa4",
+        "104b0bb1da562d53cbda87aec79ef6a2827d191a",
+        "fbd2c8089870814449f9254a711041bbae145a82",
+        "e2e52461194bc81351da7caa978ac42e9e9549cc",
+        "e7c97e953849f1a8e5d85ceb4cfcc0a5d54d2365",
+        "a7977870b58e716cd93f571a3b75a610167a75bd",
+        "bd5deadc58ee45b5e004378ba1d54a96bc947b4a",
+        "88884b8806262a4095036041e3567d450dba39f7",
+        "acf90b4d165690fe27c62c4af1a28d540c784000",
+        "e03dc5bd72bea7d1db03de380d4c43b7e610fbee",
+        "3fcc8cb68488cfdfe4c52b81f27a236352fe5582",
+        "c715914c388fa64dd8686cd8755e5adfebbf2388",
+        "3aaf6a2cbad5850ad81ab5c163599cb3d523436f",
+        "381ab7a640f5b46b62f7e08d1af4a8e0d3eadd55",
+        "163b4d6a79a5b19af88b8585456363340d9efd04",
+        "c5120b546f1bd99df5bd2e2bf44db5c7c46d1545",
+        "53d128ea815bcc0526856eb5a9c42cc977cb36a7",
+        "3d68522abfadfc8ee6b7ec9edaaf91f1b2f38e5e",
+        "465471bb5bf1a945549d6291c2d23367966b4957",
+        "c6ee979c2da4b55a8486abae4cd720422ab09b26",
+        "05d77715d49714506a920f26c5432b92078cd37c",
+        "8cf05ed2b7cd3b0f601c454914a678c24d393de3",
+        "916be31cbf847faa65cad0549e153f0c25b9f424",
+        "87c5b281fa43e6f27191b20a8dd694eda1126336",
+        "023edab4738690444e3924e224c2641017a0d794",
+        "fcd7bdf37cec0845f6960aa1ab87685b73fcfd2f",
+        "8666f9f379389a5dff31e72fb0f992a37763ba41",
+        "d766bffc357127e0dc86dd69561d5aeb520d6f4c",
+        "2f3efe44083af91cef562c1a3451eee2f8601d22",
+        "4f4a409f701f7552d45c46a5b0fea69dca6f8e84",
+        "9f2cf7b35224aad3a8d261e4456fe2d65a5f5d3e",
+        "17dd3555fd1ccf1141cf984347fa1b3fd6b009ca",
+        "ff0b2681d7b05e16c46dfb71d980cc2f605907cd",
+        "8484fdb56e4690927dc0191ede11c2d24bc5e2ef",
+        "3af229f3da1bd24378fd8d76c88fd393b4464058",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "832fff14d2ed50eb7969c4c4b976c35776548f56",
+        "521b4e26df0f1cf5763dece14cbb218df152dc59",
+        "00c957711b12468cb38424caccdf5291bb354033",
+        "7a15950dc71079285a4eaf195de5aadd87c41b40",
+        "75acc731bdd2b626edc74672a30da3bc51010ae8",
+        "30eff53e981695c7296d258b8dc44b4c7b482a0c",
+        "17dbd7b72029181327732e4d11b52a08ed4630d0",
+        "227458886343b86bd15adf58c769be326b4b058a",
+        "1536e8958697c5364f68b2e2448905dbbeb3a0ca",
+        "88bb0a28bb58d847183ec505dda89b63771bb495",
+        "b1d24e8e08435b7c52335485a0d635abf9bc604c",
+        "dce6f9d4017b1785979e7520fd0834ef8cf02f4b",
+        "f010affab57b5fcf1cd6be23df79d8ec98c7289c",
+        "277dd00ab02f122133bf56b485dfb7c730acdcde",
+        "83dd3fe72d741c05549ff22b845821e4112aa8a0",
+        "91fe695c23509a4760c836db1d6e82f3384dac5b"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2212.08153v2": {
+      "paper_id": "2212.08153v2",
+      "title": "FiDO: Fusion-in-Decoder optimized for stronger performance and faster inference",
+      "authors": [
+        "Michiel de Jong",
+        "Yury Zemlyanskiy",
+        "Joshua Ainslie",
+        "Nicholas FitzGerald",
+        "Sumit Sanghai",
+        "Fei Sha",
+        "William Cohen"
+      ],
+      "year": 2022,
+      "abstract": "Fusion-in-Decoder (FiD) is a powerful retrieval-augmented language model that sets the state-of-the-art on many knowledge-intensive NLP tasks. However, the architecture used for FiD was chosen by making minimal modifications to a standard T5 model, which our analysis shows to be highly suboptimal for a retrieval-augmented model. In particular, FiD allocates the bulk of FLOPs to the encoder, while the majority of inference time results from memory bandwidth constraints in the decoder. We propose two simple changes to the FiD architecture to alleviate memory bandwidth constraints, and speed up inference by 7x. This allows us to use a much larger decoder at modest cost. We denote FiD with the above modifications as FiDO, and show that it strongly improves performance over existing FiD models for a wide range of inference budgets. For example, FiDO-Large-XXL performs faster inference than FiD-Base and achieves better performance than FiD-Large.",
+      "url": "https://arxiv.org/abs/2212.08153v2",
+      "citation_count": 41,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "3989a8daf2ba09ff87afbacbef07b8c0ccbc90a2",
+        "379e42895f6d40ab9e9559609f505aba89145a5d",
+        "452cf9f8b756995363baa659976b30cb09893c89",
+        "1d26c947406173145a4665dd7ab255e03494ea28",
+        "fc74fe92fb9e34d3ae1237bf9a6e718c723f4f3e",
+        "b2542a738b75ee9b7ce1a13d8b78f9095d212412",
+        "4be7d1524edb0137599a5cc95f72844b85a52fe1",
+        "916be31cbf847faa65cad0549e153f0c25b9f424",
+        "87c5b281fa43e6f27191b20a8dd694eda1126336",
+        "1ed66e048bb025e75aa5ea660545285212e5341f",
+        "5f19ae1135a9500940978104ec15a5b8751bc7d2",
+        "0e802c0739771acf70e60d59c2df51cd7e8c50c0",
+        "3dfb1f50f2a34a699c339dabaa6f9b3a977973de",
+        "002c256d30d6be4b23d365a8de8ae0e67e4c9641",
+        "7083181d36fa22a35a511f3eb361fa4ab312de24",
+        "6a3e13d7926a4aaa0ddcd3acc7c08e8d24c330e5",
+        "1adadbfa95e43a70fcd17e6ce947a0652b86bfc3",
+        "ea8c46e193d5121e440daf96edfd15a47151c293",
+        "1728cb805a9573b59330890ba9723e73d6c3c974",
+        "90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "80376bdec5f534be78ba82821f540590ebce5559",
+        "832fff14d2ed50eb7969c4c4b976c35776548f56",
+        "dc52b09089704ebd6f471177474bc29741c50023",
+        "6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+        "17dbd7b72029181327732e4d11b52a08ed4630d0",
+        "a81874b4a651a740fffbfc47ef96515e8c7f782f",
+        "54a13bcc9613dcaa76fb25fbe96572f376cfcca9",
+        "204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+        "f010affab57b5fcf1cd6be23df79d8ec98c7289c",
+        "0c908739fbff75f03469d13d4a1a07de3414ee19",
+        "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
+        "07563644cae0d3d03b37724efe084b6510220103",
+        "b29447ba499507a259ae9d8f685d60cc1597d7d3",
+        "7b4f3d0e4e2486a8d5d3f8e00549cf9a117bf88f",
+        "56010a55d49ac1f42355538f494427fd22402be1",
+        "7b7416c90e8d3fc9ad5c9fb3923a638f69294ed7",
+        "f8b1b43f284f1246ca015cc002ac949bb67c5645"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2403.14197v1": {
+      "paper_id": "2403.14197v1",
+      "title": "Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering",
+      "authors": [
+        "Kosuke Akimoto",
+        "Kunihiro Takeoka",
+        "Masafumi Oyamada"
+      ],
+      "year": 2024,
+      "abstract": "Retrieval-augmented generation models augment knowledge encoded in a language model by providing additional relevant external knowledge (context) during generation. Although it has been shown that the quantity and quality of context impact the performance of retrieval-augmented generation models during inference, limited research explores how these characteristics affect model training. This paper explores how context quantity and quality during model training affect the performance of Fusion-in-Decoder (FiD), the state-of-the-art retrieval-augmented generation model, in extractive open-domain question answering tasks. Experimental results suggest that FiD models overfit to context quality during training and show suboptimal performance when evaluated on different context quality. Through the experimental results, we also reveal FiD models trained with different context quality have different cross-attention distribution patterns. Specifically, as context quality during training increases, FiD models tend to attend more uniformly to each passage in context. Finally, based on these observations, we propose a method to mitigate overfitting to specific context quality by introducing bias to the cross-attention distribution, which we demonstrate to be effective in improving the performance of FiD models on different context quality.",
+      "url": "https://arxiv.org/abs/2403.14197v1",
+      "citation_count": 5,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "1733eb7792f7a43dd21f51f4d1017a1bffd217b5",
+        "c6ee979c2da4b55a8486abae4cd720422ab09b26",
+        "ee8de585183763ff64cb3c81ecda2fc75fa81507",
+        "5aaaf17b9bc115e6a6ff7a2b0d11b3997647b969",
+        "5b70e69b65b29d231d37bea354b25c05daec07e2",
+        "fc74fe92fb9e34d3ae1237bf9a6e718c723f4f3e",
+        "916be31cbf847faa65cad0549e153f0c25b9f424",
+        "dc5518e1db565a8c52084f27353461df474403d8",
+        "536dd3e54ad83e64d27217485db230ea09b19f51",
+        "238deab37e201c57505a4a47bb854e462af79bd7",
+        "c56aced0f0c5cfebefadb530cb08d736c3ac5c05",
+        "a2a7033a5a859e3a6e6f0a83018326400b4c5faa",
+        "2b4bc49a3b23229a060609380752666b24b435fb",
+        "2c953a3c378b40dadf2e3fb486713c8608b8e282",
+        "3af229f3da1bd24378fd8d76c88fd393b4464058",
+        "ea8c46e193d5121e440daf96edfd15a47151c293",
+        "90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "01e85c1cebcb6111e1b255ab57c45d3bfcafe737",
+        "302face5b5a0944cab13665a2d4e07ef3aaf5240",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+        "17dbd7b72029181327732e4d11b52a08ed4630d0",
+        "a81874b4a651a740fffbfc47ef96515e8c7f782f",
+        "fd4675526ee569196ad1698935b8f5a529b1f9ba",
+        "97906df07855b029b7aae7c2a1c6c5e8df1d531c",
+        "1d97b7aaf42c798225283987a1cd7df09c5d9b31",
+        "ffb949d3493c3b2f3c9acf9c75cb03938933ddf0",
+        "204e3073870fae3d05bcbc2f6a8e263d9b72e776",
+        "f010affab57b5fcf1cd6be23df79d8ec98c7289c",
+        "104715e1097b7ebee436058bfd9f45540f269845"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2407.04528v4": {
+      "paper_id": "2407.04528v4",
+      "title": "GPT vs RETRO: Exploring the Intersection of Retrieval and Parameter-Efficient Fine-Tuning",
+      "authors": [
+        "Aleksander Ficek",
+        "Jiaqi Zeng",
+        "Oleksii Kuchaiev"
+      ],
+      "year": 2024,
+      "abstract": "Parameter-Efficient Fine-Tuning (PEFT) and Retrieval-Augmented Generation (RAG) have become popular methods for adapting large language models while minimizing compute requirements. In this paper, we apply PEFT methods (P-tuning, Adapters, and LoRA) to a modified Retrieval-Enhanced Transformer (RETRO) and a baseline GPT model across several sizes, ranging from 823 million to 48 billion parameters. We show that RETRO models outperform GPT models in zero-shot settings due to their unique pre-training process but GPT models have higher performance potential with PEFT. Additionally, our study indicates that 8B parameter models strike an optimal balance between cost and performance and P-tuning lags behind other PEFT techniques. We further provide a comparative analysis between applying PEFT to an Instruction-tuned RETRO model and base RETRO model. This work presents the first comprehensive comparison of various PEFT methods integrated with RAG, applied to both GPT and RETRO models, highlighting their relative performance.",
+      "url": "https://arxiv.org/abs/2407.04528v4",
+      "citation_count": 3,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "916b4926cda574dc3f9486bb9994b6f2788dd800",
+        "fdefb6a9b51c742d71740d25a76973116a2e0893",
+        "9111d6632e3ad648e65c57c52fd945641ccbdac2",
+        "63b331998b17fdb879073873cf06004a6df18b44",
+        "93b4dbb13e7a87f10d33e084ef3725b3df305d3e",
+        "fef0393e997ec51b184e39c712be63197d99fd46",
+        "46f9f7b8f88f72e12cbdb21e3311f995eb6e65c5",
+        "b512451d431df9e411bea4c99f7135d010275445",
+        "675c87c9fed17b6dc1d9734606e12c9d0c46c573",
+        "1733eb7792f7a43dd21f51f4d1017a1bffd217b5",
+        "32ac52069e562d4f900afee70bdca63f53461481",
+        "b63e97330154acece935ffa6901e3f36518e5703",
+        "a4867148c2f692efc6c22c3935a59be2d04ea3e9",
+        "916be31cbf847faa65cad0549e153f0c25b9f424",
+        "4c09ac7b09628aa2aad12aea8dd6c2aef6c83aa0",
+        "3c209e0703ffff26231b1145268c935df494631a",
+        "a8ca46b171467ceb2d7652fbfb67fe701ad86092",
+        "4e3935ef7da6bcbb202ec7f8b285c313cadcd044",
+        "aa28873534c24e4a8c5deb7bff723cd5fc69a6f0",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "832fff14d2ed50eb7969c4c4b976c35776548f56",
+        "17dbd7b72029181327732e4d11b52a08ed4630d0",
+        "29ddc1f43f28af7c846515e32cc167bc66886d0c",
+        "d91043f0d48b9b2c8ff7ee321abb8fd7efafff7a",
+        "f010affab57b5fcf1cd6be23df79d8ec98c7289c",
+        "0f653de80f3557a91e4a539ae23784fcbc35e4c8",
+        "47ced790a563344efae66588b5fb7fe6cca29ed3",
+        "60b05f32c32519a809f21642ef1eb3eaf3848008",
+        "eb82d3035849cd23578096462ba419b53198a556"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2110.01599v1": {
+      "paper_id": "2110.01599v1",
+      "title": "Encoder Adaptation of Dense Passage Retrieval for Open-Domain Question Answering",
+      "authors": [
+        "Minghan Li",
+        "Jimmy Lin"
+      ],
+      "year": 2021,
+      "abstract": "One key feature of dense passage retrievers (DPR) is the use of separate question and passage encoder in a bi-encoder design. Previous work on generalization of DPR mainly focus on testing both encoders in tandem on out-of-distribution (OOD) question-answering (QA) tasks, which is also known as domain adaptation. However, it is still unknown how DPR's individual question/passage encoder affects generalization. Specifically, in this paper, we want to know how an in-distribution (IND) question/passage encoder would generalize if paired with an OOD passage/question encoder from another domain. We refer to this challenge as \\textit{encoder adaptation}. To answer this question, we inspect different combinations of DPR's question and passage encoder learned from five benchmark QA datasets on both in-domain and out-of-domain questions. We find that the passage encoder has more influence on the lower bound of generalization while the question encoder seems to affect the upper bound in general. For example, applying an OOD passage encoder usually hurts the retrieval accuracy while an OOD question encoder sometimes even improves the accuracy.",
+      "url": "https://arxiv.org/abs/2110.01599v1",
+      "citation_count": 9,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "f7a6b57adebb5f6a10d16e120f0b0ef55aab7b2b",
+        "bbed713144699359a58f65e125743566d4598fad",
+        "1b09222cfe10f11c4cb0b18a9727d2baf6b991ac",
+        "29a3c6968888d8078d21ff5b7d9e6d78c470fdb0",
+        "15493bbb5387d60e7c77cee34528acd3acae7b65",
+        "807600ef43073cd9c59d4208ee710e90cf14efa8",
+        "7b577ba0e4230b2ac58d297b3d2cfc3d2f1aaace",
+        "5ac627f229fa8d54f5ad43f7f99e9b29d93ada29",
+        "d547e1781771deefcab1adb621e77f1d36d70061",
+        "c9b8593db099869fe7254aa1fa53f3c9073b0176",
+        "11342d45911ee8a7c9e3a94117ce774ad7036172",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "832fff14d2ed50eb7969c4c4b976c35776548f56",
+        "024841e69db9274e708731d9b3e97040a1bac773",
+        "30eff53e981695c7296d258b8dc44b4c7b482a0c",
+        "0cf535110808d33fdf4db3ffa1621dea16e29c0d",
+        "17dbd7b72029181327732e4d11b52a08ed4630d0",
+        "b29db655a18e7417e1188ba392a06b6314f0cb87",
+        "a81874b4a651a740fffbfc47ef96515e8c7f782f",
+        "636904d91d9dd1a641a595d9578ba7640f35aa74",
+        "49b64383fe36268410c430352637ed23b16820c5",
+        "4e0bb8c1c683b43357c5d5216f6b74ff2cb32434",
+        "2fe7dba5a58aee5156594b4d78634ecd6c7dcabd",
+        "f010affab57b5fcf1cd6be23df79d8ec98c7289c",
+        "104715e1097b7ebee436058bfd9f45540f269845",
+        "3a29aa4eff48624752c07059a44d3288a678c8ab",
+        "05dd7254b632376973f3a1b4d39485da17814df5",
+        "7e5955481e9d197cc1cd1b64a90fbd245b88c886",
+        "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
+        "b29447ba499507a259ae9d8f685d60cc1597d7d3",
+        "8916521f7d4c97befa30b06e17a7a39cda274552",
+        "47ced790a563344efae66588b5fb7fe6cca29ed3",
+        "99caef1072128737f3311b368c4cb6c6d82c1f45",
+        "dc3ee859157d163c7dd0ba497d8736a802fe59a0",
+        "df2b0e26d0599ce3e70df8a9da02e51594e0e992",
+        "4f8d648c52edf74e41b0996128aa536e13cc7e82"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "W4389984066": {
+      "paper_id": "W4389984066",
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "authors": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan",
+        "Yuxi Bi",
+        "Yi Dai",
+        "Jiawei Sun",
+        "Wang, Meng",
+        "Wang, Haofen"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development.",
+      "url": "http://arxiv.org/abs/2312.10997",
+      "citation_count": 631,
+      "citation_source": "openalex",
+      "references": [],
+      "citations": [],
+      "source": "openalex",
+      "keywords": [],
+      "venue": "arXiv (Cornell University)"
+    },
+    "W4388585881": {
+      "paper_id": "W4388585881",
+      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+      "authors": [
+        "Lei Huang",
+        "Weijiang Yu",
+        "Weitao Ma",
+        "Wei\u2010Hong Zhong",
+        "Zhangyin Feng",
+        "Haotian Wang",
+        "Qianglong Chen",
+        "Weihua Peng",
+        "Xiaocheng Feng",
+        "Bing Qin",
+        "Ting Liu"
+      ],
+      "year": 2023,
+      "abstract": "The emergence of large language models (LLMs) has marked a significant breakthrough in natural language processing (NLP), fueling a paradigm shift in information acquisition. Nevertheless, LLMs are prone to hallucination, generating plausible yet nonfactual content. This phenomenon raises significant concerns over the reliability of LLMs in real-world information retrieval (IR) systems and has attracted intensive research to detect and mitigate such hallucinations. Given the open-ended general-purpose attributes inherent to LLMs, LLM hallucinations present distinct challenges that diverge from prior task-specific models. This divergence highlights the urgency for a nuanced understanding and comprehensive overview of recent advances in LLM hallucinations. In this survey, we begin with an innovative taxonomy of hallucination in the era of LLM and then delve into the factors contributing to hallucinations. Subsequently, we present a thorough overview of hallucination detection methods and benchmarks. Our discussion then transfers to representative methodologies for mitigating LLM hallucinations. Additionally, we delve into the current limitations faced by retrieval-augmented LLMs in combating hallucinations, offering insights for developing more robust IR systems. Finally, we highlight the promising research directions on LLM hallucinations, including hallucination in large vision-language models and understanding of knowledge boundaries in LLM hallucinations.",
+      "url": "http://arxiv.org/abs/2311.05232",
+      "citation_count": 211,
+      "citation_source": "openalex",
+      "references": [],
+      "citations": [],
+      "source": "openalex",
+      "keywords": [],
+      "venue": "arXiv (Cornell University)"
+    },
+    "W4391376033": {
+      "paper_id": "W4391376033",
+      "title": "The Power of Noise: Redefining Retrieval for RAG Systems",
+      "authors": [
+        "Florin Cuconasu",
+        "Giovanni Trappolini",
+        "Federico Siciliano",
+        "Simone Filice",
+        "Cesare Campagnano",
+        "Yoelle Maarek",
+        "Nicola Tonellotto",
+        "Fabrizio Silvestri"
+      ],
+      "year": 2024,
+      "abstract": "Retrieval-Augmented Generation (RAG) has recently emerged as a method to extend beyond the pre-trained knowledge of Large Language Models by augmenting the original prompt with relevant passages or documents retrieved by an Information Retrieval (IR) system. RAG has become increasingly important for Generative AI solutions, especially in enterprise settings or in any domain in which knowledge is constantly refreshed and cannot be memorized in the LLM. We argue here that the retrieval component of RAG systems, be it dense or sparse, deserves increased attention from the research community, and accordingly, we conduct the first comprehensive and systematic examination of the retrieval strategy of RAG systems. We focus, in particular, on the type of passages IR systems within a RAG solution should retrieve. Our analysis considers multiple factors, such as the relevance of the passages included in the prompt context, their position, and their number. One counter-intuitive finding of this work is that the retriever's highest-scoring documents that are not directly relevant to the query (e.g., do not contain the answer) negatively impact the effectiveness of the LLM. Even more surprising, we discovered that adding random documents in the prompt improves the LLM accuracy by up to 35%. These results highlight the need to investigate the appropriate strategies when integrating retrieval with LLMs, thereby laying the groundwork for future research in this area.",
+      "url": "https://doi.org/10.1145/3626772.3657834",
+      "citation_count": 154,
+      "citation_source": "openalex",
+      "references": [
+        "W2760781482",
+        "W2912924812",
+        "W2963951265",
+        "W3021397474",
+        "W3027879771",
+        "W3155895380",
+        "W4252076394",
+        "W4284705591",
+        "W4285152678",
+        "W4367860381",
+        "W4388778348",
+        "W4388955808",
+        "W4389519607",
+        "W4391923572",
+        "W6605174579",
+        "W6607919353"
+      ],
+      "citations": [],
+      "source": "openalex",
+      "keywords": [],
+      "venue": ""
+    },
+    "W4401042753": {
+      "paper_id": "W4401042753",
+      "title": "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity",
+      "authors": [
+        "Soyeong Jeong",
+        "Jinheon Baek",
+        "Sukmin Cho",
+        "Sung Ju Hwang",
+        "Jong Moon Park"
+      ],
+      "year": 2024,
+      "abstract": "Soyeong Jeong, Jinheon Baek, Sukmin Cho, Sung Ju Hwang, Jong Park. Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers). 2024.",
+      "url": "https://doi.org/10.18653/v1/2024.naacl-long.389",
+      "citation_count": 141,
+      "citation_source": "openalex",
+      "references": [],
+      "citations": [],
+      "source": "openalex",
+      "keywords": [],
+      "venue": ""
+    },
+    "W4400128031": {
+      "paper_id": "W4400128031",
+      "title": "Improving medical reasoning through retrieval and self-reflection with retrieval-augmented large language models",
+      "authors": [
+        "Minbyul Jeong",
+        "Jiwoong Sohn",
+        "Mujeen Sung",
+        "Jaewoo Kang"
+      ],
+      "year": 2024,
+      "abstract": "SUMMARY: Recent proprietary large language models (LLMs), such as GPT-4, have achieved a milestone in tackling diverse challenges in the biomedical domain, ranging from multiple-choice questions to long-form generations. To address challenges that still cannot be handled with the encoded knowledge of LLMs, various retrieval-augmented generation (RAG) methods have been developed by searching documents from the knowledge corpus and appending them unconditionally or selectively to the input of LLMs for generation. However, when applying existing methods to different domain-specific problems, poor generalization becomes apparent, leading to fetching incorrect documents or making inaccurate judgments. In this paper, we introduce Self-BioRAG, a framework reliable for biomedical text that specializes in generating explanations, retrieving domain-specific documents, and self-reflecting generated responses. We utilize 84k filtered biomedical instruction sets to train Self-BioRAG that can assess its generated explanations with customized reflective tokens. Our work proves that domain-specific components, such as a retriever, domain-related document corpus, and instruction sets are necessary for adhering to domain-related instructions. Using three major medical question-answering benchmark datasets, experimental results of Self-BioRAG demonstrate significant performance gains by achieving a 7.2% absolute improvement on average over the state-of-the-art open-foundation model with a parameter size of 7B or less. Similarly, Self-BioRAG outperforms RAG by 8% Rouge-1 score in generating more proficient answers on two long-form question-answering benchmarks on average. Overall, we analyze that Self-BioRAG finds the clues in the question, retrieves relevant documents if needed, and understands how to answer with information from retrieved documents and encoded knowledge as a medical expert does. We release our data and code for training our framework components and model weights (7B and 13B) to enhance capabilities in biomedical and clinical domains. AVAILABILITY AND IMPLEMENTATION: Self-BioRAG is available at https://github.com/dmis-lab/self-biorag.",
+      "url": "https://doi.org/10.1093/bioinformatics/btae238",
+      "citation_count": 99,
+      "citation_source": "openalex",
+      "references": [
+        "W2990031975",
+        "W4388409299"
+      ],
+      "citations": [],
+      "source": "openalex",
+      "keywords": [],
+      "venue": "Bioinformatics"
+    },
+    "2402.12317v2": {
+      "paper_id": "2402.12317v2",
+      "title": "EVOR: Evolving Retrieval for Code Generation",
+      "authors": [
+        "Hongjin Su",
+        "Shuyang Jiang",
+        "Yuhang Lai",
+        "Haoyuan Wu",
+        "Boao Shi",
+        "Che Liu",
+        "Qian Liu",
+        "Tao Yu"
+      ],
+      "year": 2024,
+      "abstract": "Recently the retrieval-augmented generation (RAG) has been successfully applied in code generation. However, existing pipelines for retrieval-augmented code generation (RACG) employ static knowledge bases with a single source, limiting the adaptation capabilities of Large Language Models (LLMs) to domains they have insufficient knowledge of. In this work, we develop a novel pipeline, EVOR, that employs the synchronous evolution of both queries and diverse knowledge bases. On two realistic settings where the external knowledge is required to solve code generation tasks, we compile four new datasets associated with frequently updated libraries and long-tail programming languages, named EVOR-BENCH. Extensive experiments demonstrate that EVOR achieves two to four times of execution accuracy compared to other methods such as Reflexion (Shinn et al., 2024), DocPrompting (Zhou et al., 2023), etc. We demonstrate that EVOR is flexible and can be easily combined with them to achieve further improvement. Further analysis reveals that EVOR benefits from the synchronous evolution of queries and documents and the diverse information sources in the knowledge base. We hope that our studies will inspire more insights into the design of advanced RACG pipelines in future research. Our model, code, and data are available at https://arks-codegen.github.io.",
+      "url": "https://arxiv.org/abs/2402.12317v2",
+      "citation_count": 27,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "1c3c531fc0fbe79f97f367ed3648de8467caeeaa",
+        "746b96ee17e329f1085a047116c05e12eaa3925a",
+        "3a56bc074b8f3f985599627404b70e16fc5bce1b",
+        "305bbb460af5f27a279c85d7f57231fd1871f64f",
+        "94a5f96308729e31c1ffbc0f0618db87795092fe",
+        "23af54b82c951317f1fc1841164d8a441a2d8120",
+        "0d22f06a1f5ad9f62b2f35c126b514f927586c85",
+        "b9632d1acbcb78926fb2c449a267bdd2645161b3",
+        "dfea29ea51bcc6dece773d4054e6f7658cb33bf8",
+        "0b0debb710366cdff461938c80763eace1651af6",
+        "16be9876eebcda031c15efaf4cfe3ba49146b329",
+        "1733eb7792f7a43dd21f51f4d1017a1bffd217b5",
+        "f94c040b02bdd6cf1b85f374e3912630c66861c3",
+        "1cd56940219a968a04eb61b8bc53f4cd3f9822d4",
+        "a1675f47125aa409525c5f759b5e6bcc1c8831aa",
+        "2bb4fe9bc10dbf1ea70135e52452f9f63bb10671",
+        "3e4085e5869f1b7959707a1e1d7d273b6057eb4e",
+        "b45ec1cb2ba6b2d1ac24723fa836aee06a3db97a",
+        "9e3c493fb09dcd61bb05e8c5659f23327b7b6340",
+        "af5c7848417882012203ac21399977ebda695a2b",
+        "07b14c24833400b79978b0a5f084803337e30a15",
+        "1bed34f2c23b97fd18de359cf62cd92b3ba612c3",
+        "63c0dbe2426f9c92f469151d1773e5265ae6580e",
+        "8a4fc5f00cd4aca61e148e46a2125c3a406719f1",
+        "4fbe0cb0777b228e39243692bf29e2829060b8de",
+        "916be31cbf847faa65cad0549e153f0c25b9f424",
+        "876eb375cb7b365475040046df669c039ad54202",
+        "47e15941c8b157873c8264e4bf50318d1ba5cd18",
+        "38115e80d805fb0fb8f090dc88ced4b24be07878",
+        "5cbe278b65a81602a864184bbca37de91448a5f5",
+        "2f3efe44083af91cef562c1a3451eee2f8601d22",
+        "002c256d30d6be4b23d365a8de8ae0e67e4c9641",
+        "c56aced0f0c5cfebefadb530cb08d736c3ac5c05",
+        "a38e0f993e4805ba8a9beae4c275c91ffcec01df",
+        "acbdbf49f9bc3f151b93d9ca9a06009f4f6eb269",
+        "ea8c46e193d5121e440daf96edfd15a47151c293",
+        "90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "832fff14d2ed50eb7969c4c4b976c35776548f56",
+        "222f289cb96ac4dfef7849cd068af6af02233c52",
+        "e13b52a3ee01320165d4ba49f20708f9907ed563"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2502.00306v2": {
+      "paper_id": "2502.00306v2",
+      "title": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+      "authors": [
+        "Ali Naseh",
+        "Yuefeng Peng",
+        "Anshuman Suri",
+        "Harsh Chaudhari",
+        "Alina Oprea",
+        "Amir Houmansadr"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) enables Large Language Models (LLMs) to generate grounded responses by leveraging external knowledge databases without altering model parameters. Although the absence of weight tuning prevents leakage via model parameters, it introduces the risk of inference adversaries exploiting retrieved documents in the model's context. Existing methods for membership inference and data extraction often rely on jailbreaking or carefully crafted unnatural queries, which can be easily detected or thwarted with query rewriting techniques common in RAG systems. In this work, we present Interrogation Attack (IA), a membership inference technique targeting documents in the RAG datastore. By crafting natural-text queries that are answerable only with the target document's presence, our approach demonstrates successful inference with just 30 queries while remaining stealthy; straightforward detectors identify adversarial prompts from existing methods up to ~76x more frequently than those generated by our attack. We observe a 2x improvement in TPR@1%FPR over prior inference attacks across diverse RAG configurations, all while costing less than $0.02 per document inference.",
+      "url": "https://arxiv.org/abs/2502.00306v2",
+      "citation_count": 18,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "88aa6b1f37d1fd8e0a40499ce9bb87873f03aaa8",
+        "db5b9b624a4595ba9dfdb1d0e144c5167371a608",
+        "9832eb62e0b3d826d21445fc1fd2fcf6ced7d41a",
+        "bf32e47d4a2a087769471aeb0097c01a577912ad",
+        "348b3999a8545dd48307caeadbb54b791ed37a7d",
+        "b42d9aee2c49da6b958044387eecfa87564d7f08",
+        "abf568b30093727495855c4fba7c5f7debbdd786",
+        "40e8af970329135ec95057d73e239dab805ad128",
+        "c438dcb2b3d7e1a9cee8d9b1035b96c39b53941c",
+        "bc942c52f9da27dfff30e3fa68bc9726e9548888",
+        "34e40d61b093ea3620ef76abebb8053c8038be10",
+        "59665f0126b3442edcf93ae58285b610b5fe9991",
+        "ea89b058ce619ed16d4de633126b02a8179457c8",
+        "c74f7c2e906f1f12707735d40d810472406d5a84",
+        "c871377b208814713c18e25633866323a2982136",
+        "3e30a7ac4886b28eb50151f58e14a1d698cccd0e",
+        "84109e1235b725f4bb44a54bab8b493bd723fdd3",
+        "cb754310302086dfbbcd098263200e2a03f65874",
+        "b46594805f241fe787b3b03b80e9796653f17fb1",
+        "38c14931cf5dc7781b4f24af15e8938dfb898317",
+        "9716a2876d08fce9d8e5c5ba4d7b1a9af44806d6",
+        "e86009d9f9b1cdf083a48d087552bc4153784451",
+        "4a6a65968a8eb8c09ffb57a7774ddabb596565b1",
+        "3def68bd0f856886d34272840a7f81588f2bc082",
+        "54d7ae7cfee56b0e19fd42c45d365f760a41794d",
+        "5d96e9061337fcaedcfba2ee2ceb6daa85151568",
+        "807600ef43073cd9c59d4208ee710e90cf14efa8",
+        "df7d26339adf4eb0c07160947b9d2973c24911ba",
+        "b68b2e81ae2de647394ec05ee62ecf108bf2b50a",
+        "1db81c2e030f37bc14a01c6e43171a8079e7cccd",
+        "ae8c317961f2b72266ab343c78cbd1100f6173f6",
+        "b092b6b843e9421bf42bf96f57ed4658a3e0bdf7",
+        "fd9541fe4317904b9a0637b6505fb0bea0979491",
+        "514e7fb769950dbe96eb519c88ca17e04dc829f6",
+        "3dd9b9c85431534ef74a8a677b991ccc405c85cb",
+        "780b7c5e2440459bcc532b251e51c9223037acc2",
+        "6bf34b4a1937ca5ae692594eda880ff671b8ee57"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2411.18583v1": {
+      "paper_id": "2411.18583v1",
+      "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+      "authors": [
+        "Nurshat Fateh Ali",
+        "Md. Mahdi Mohtasim",
+        "Shakil Mosharrof",
+        "T. Gopi Krishna"
+      ],
+      "year": 2024,
+      "abstract": "This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). The ever-increasing number of research articles provides a huge challenge for manual literature review. It has resulted in an increased demand for automation. Developing a system capable of automatically generating the literature reviews from only the PDF files as input is the primary objective of this research work. The effectiveness of several Natural Language Processing (NLP) strategies, such as the frequency-based method (spaCy), the transformer model (Simple T5), and retrieval-augmented generation (RAG) with Large Language Model (GPT-3.5-turbo), is evaluated to meet the primary objective. The SciTLDR dataset is chosen for this research experiment and three distinct techniques are utilized to implement three different systems for auto-generating the literature reviews. The ROUGE scores are used for the evaluation of all three systems. Based on the evaluation, the Large Language Model GPT-3.5-turbo achieved the highest ROUGE-1 score, 0.364. The transformer model comes in second place and spaCy is at the last position. Finally, a graphical user interface is created for the best system based on the large language model.",
+      "url": "https://arxiv.org/abs/2411.18583v1",
+      "citation_count": 12,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "7dfbe4882188dbac938306be93bc58b34450b87f",
+        "ab0348169996a7091fa521a9d06a25ce0fbb19c7",
+        "dc57c0f030007fa840f38156579655dd43a2c35e",
+        "39a4db6e7b7063f4dcbf8f1564cbe011e58680f5",
+        "cefd3993db4d065b95ab8f105452fb728c02b60e",
+        "3502a542b2e98d9094e1880a30f652d4170b9534",
+        "3e6d7f495ab7a8bdd66e3eca60c60a8f65c080d0",
+        "1713ea56ede52233e2628000c763af221da73cc2",
+        "ececc1eb0606eb31074cadf9def86169818091e7",
+        "ffa97b055e8703c116bfc1da4a0f747a01387abc",
+        "aaa8dd8c23c09759bff612888eeb6f5bffa62ddf",
+        "a1b349a21a390b0eb882e65dfc4f1caf9e385c39"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2408.05933v1": {
+      "paper_id": "2408.05933v1",
+      "title": "Optimizing RAG Techniques for Automotive Industry PDF Chatbots: A Case Study with Locally Deployed Ollama Models",
+      "authors": [
+        "Fei Liu",
+        "Zejun Kang",
+        "Xing Han"
+      ],
+      "year": 2024,
+      "abstract": "With the growing demand for offline PDF chatbots in automotive industrial production environments, optimizing the deployment of large language models (LLMs) in local, low-performance settings has become increasingly important. This study focuses on enhancing Retrieval-Augmented Generation (RAG) techniques for processing complex automotive industry documents using locally deployed Ollama models. Based on the Langchain framework, we propose a multi-dimensional optimization approach for Ollama's local RAG implementation. Our method addresses key challenges in automotive document processing, including multi-column layouts and technical specifications. We introduce improvements in PDF processing, retrieval mechanisms, and context compression, tailored to the unique characteristics of automotive industry documents. Additionally, we design custom classes supporting embedding pipelines and an agent supporting self-RAG based on LangGraph best practices. To evaluate our approach, we constructed a proprietary dataset comprising typical automotive industry documents, including technical reports and corporate regulations. We compared our optimized RAG model and self-RAG agent against a naive RAG baseline across three datasets: our automotive industry dataset, QReCC, and CoQA. Results demonstrate significant improvements in context precision, context recall, answer relevancy, and faithfulness, with particularly notable performance on the automotive industry dataset. Our optimization scheme provides an effective solution for deploying local RAG systems in the automotive sector, addressing the specific needs of PDF chatbots in industrial production environments. This research has important implications for advancing information processing and intelligent production in the automotive industry.",
+      "url": "https://arxiv.org/abs/2408.05933v1",
+      "citation_count": 33,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "0da66fdf7e5095fc4c74b376fb404b37dad97380",
+        "cb2184a77d2d79e91fc03335344b50793bcd2018",
+        "dc1f4fedc7703289b6192994aa68505146d9a04c",
+        "5de0279248f2c688b0a6fb09be6d23bb6890e3b2",
+        "c7294ac75adfaa120a39d4461c2772e6f3c756e6",
+        "ea89b058ce619ed16d4de633126b02a8179457c8",
+        "b423d659c5b30c58508f0a7dd0013c63b11bdfb5",
+        "522c47365931e0ad722fbdac463ae415c97c65e4",
+        "7e3f1e4b89e3caa64f9d402d5beed60b3ba708f4",
+        "8cf9e586d951f9a83299fc2ad740d5819fa3c1ca",
+        "46f9f7b8f88f72e12cbdb21e3311f995eb6e65c5",
+        "5ee2d80a3b0e7b0a4c7d9418d7c3f2fee9b6011a",
+        "ddbd8fe782ac98e9c64dd98710687a962195dd9b",
+        "ac1788e9a168a6455beb6316f316950842297c11",
+        "4f03688df8997e1f4b5aeaf81f44242390ea5c27",
+        "043436c6bab2a5871002654f3ff2acfd5802ac6e",
+        "fe5a72e0a4aeb5ea5058d9e4531858be5548dfe0",
+        "38b0803b59e4973f09018ce942164b02be4b8bc9",
+        "916be31cbf847faa65cad0549e153f0c25b9f424",
+        "002c256d30d6be4b23d365a8de8ae0e67e4c9641",
+        "d499cd8a77e7fc4e12d1f5bd7875ce2e3f5465a4",
+        "0cc771ca7859b395728c428b2a707007c4d69416",
+        "cf88f22026a5658022bd9c78808b8c114c0fa276",
+        "0241acad417c89bc9c6d218c0f5bd0faf1a99c92",
+        "52bd59a7f2055d0e08f08a165e0209244f9bbd61",
+        "bdbf720119d5ae1e9da4b6f552c325253a678f43",
+        "fa97fdc77b6199ab86b8d5aef4e96a5bfbe5958b",
+        "32cb26814b320beb0c4a8fdea86a0065ad873ef3",
+        "2a77928cf59af0573781f8ead7dc36104078fd0d",
+        "cff038d98b043ba72d69d6b08eee1a25518d8ad1",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "6d391498d4161532b0ea158cc11280e1096dbe8f",
+        "51ad4ea38589fe5e6c13c466c433f0f1ae9c3b0b",
+        "8cca8600cb0f4998fe6fea960e9310754b6d27cd",
+        "f26021a669aa815d74c5e48bee8e7e5f4a167e7b",
+        "990a7b4eceedb6e053e6386269481bdfc42a1094",
+        "0ffb49a6867fd985924a94395460eed01985fdf0",
+        "2ff694e20f492a7acf7fd0646c5e1576f0b3c901",
+        "9146b928d5766e2f075db218b238ae2759326883"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2506.06962v3": {
+      "paper_id": "2506.06962v3",
+      "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+      "authors": [
+        "Jingyuan Qi",
+        "Zhiyang Xu",
+        "Qifan Wang",
+        "Lifu Huang"
+      ],
+      "year": 2025,
+      "abstract": "We introduce Autoregressive Retrieval Augmentation (AR-RAG), a novel paradigm that enhances image generation by autoregressively incorporating knearest neighbor retrievals at the patch level. Unlike prior methods that perform a single, static retrieval before generation and condition the entire generation on fixed reference images, AR-RAG performs context-aware retrievals at each generation step, using prior-generated patches as queries to retrieve and incorporate the most relevant patch-level visual references, enabling the model to respond to evolving generation needs while avoiding limitations (e.g., over-copying, stylistic bias, etc.) prevalent in existing methods. To realize AR-RAG, we propose two parallel frameworks: (1) Distribution-Augmentation in Decoding (DAiD), a training-free plug-and-use decoding strategy that directly merges the distribution of model-predicted patches with the distribution of retrieved patches, and (2) Feature-Augmentation in Decoding (FAiD), a parameter-efficient fine-tuning method that progressively smooths the features of retrieved patches via multi-scale convolution operations and leverages them to augment the image generation process. We validate the effectiveness of AR-RAG on widely adopted benchmarks, including Midjourney-30K, GenEval and DPG-Bench, demonstrating significant performance gains over state-of-the-art image generation models.",
+      "url": "https://arxiv.org/abs/2506.06962v3",
+      "citation_count": 3,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "4343c46373b428f0bdf4abc828b8da4f227ec203",
+        "bcb3e1a7af9d559f1df488e28b10f177203a5d28",
+        "3ef9dbd95a174d4c175fcd603f62b8cc197e8d7e",
+        "c0f9315d8175b76097eadff3a2686ef203e6ee6b",
+        "3281d5a46c9de4f7d80c28f58f3aea03e445bd0a",
+        "9dc337bd18bc0201839942931b12aff8ec1c93f5",
+        "96628272f31bdc09fc69484a600f884d801d8da7",
+        "b15e6e2b1d81bc110f8fc98c3caf2e25e2512539",
+        "76e8218f657c77c38da44daaed5bb54ab727a8fc",
+        "da0d382c7fa981ba185ca633868442b75cb76de6",
+        "41a66997ce0a366bba3becf7c3f37c9aebb13fbd",
+        "36e21ca0d05949b49ea8095d75b45f92ecaf2fd6",
+        "7260442ef9c0448f07ce3803efd49cebaffcebe9",
+        "1814ed343d273bd86d3a4d5c7853364059c11008",
+        "46f9f7b8f88f72e12cbdb21e3311f995eb6e65c5",
+        "ee9017b716c49006f423595624593b87df0a491b",
+        "e11c2ff46459bde3c3a1cbb963749bd7437fddef",
+        "9037c23cd2b25eea8f146e73ba6ad7985549d1a6",
+        "7ee862c9de83ded9358deec49e3d5b951d59ca4c",
+        "3aee33831e0bdea1a1eaae21c7586e4f7c0396d6",
+        "8fafd95a6ffbecf9c1b5f4542ac4b78a00602551",
+        "93183f050e0ce0aff8ba0aa850c8353e24fb169d",
+        "1a735015a1f7ef4f2ba2273ce5fcaaacfa9d1ea2",
+        "d7890d1906d95c4ae4c430b350455156d6d8aed9",
+        "c68d3127888912ead55096d30165de783fe24216",
+        "f9570989919338079088270a9cf1a7afc8db8093",
+        "1ea2140567bbed461c19ff02d0dd193c6709f4da",
+        "ec1ac8df419a241c3cc6bfd209a38b494af792ee",
+        "a888dd6d8dd0087fc7d74da8a005922d0923ad2b",
+        "0221d3f45899e226ba7840ca9b19117de3a394bc",
+        "c57293882b2561e1ba03017902df9fc2f289dea2",
+        "a225d5d846ba5110232ed5bb32d54ea742b1c2d4",
+        "c10075b3746a9f3dd5811970e93c8ca3ad39b39d",
+        "ab8ee8d06ed581c876da3a2e7a5fdb1cbec21a45",
+        "002c256d30d6be4b23d365a8de8ae0e67e4c9641",
+        "a2a7033a5a859e3a6e6f0a83018326400b4c5faa",
+        "6f870f7f02a8c59c3e23f407f3ef00dd1dcf8fc4",
+        "394be105b87e9bfe72c20efe6338de10604e1a11",
+        "2d29b29c60af3884e3be3238afa015cffe55f54e",
+        "ea8c46e193d5121e440daf96edfd15a47151c293",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "832fff14d2ed50eb7969c4c4b976c35776548f56",
+        "231af7dc01a166cac3b5b01ca05778238f796e41",
+        "2cbb8de53759e75411bc528518947a3094fbce3a",
+        "488a57a382ea5cce0cf5fe52af8dc720156fd723",
+        "812d450d2c5e83b26bf1363c2f406b53cfc25bfb",
+        "a37153a5f42ee2951ad8a2c9ec86b52c4bf81c77"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2601.05264v1": {
+      "paper_id": "2601.05264v1",
+      "title": "Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems",
+      "authors": [
+        "Dean Wampler",
+        "Dave Nielson",
+        "Alireza Seddighi"
+      ],
+      "year": 2025,
+      "abstract": "This article provides a comprehensive systematic literature review of academic studies, industrial applications, and real-world deployments from 2018 to 2025, providing a practical guide and detailed overview of modern Retrieval-Augmented Generation (RAG) architectures. RAG offers a modular approach for integrating external knowledge without increasing the capacity of the model as LLM systems expand. Research and engineering practices have been fragmented as a result of the increasing diversity of RAG methodologies, which encompasses a variety of fusion mechanisms, retrieval strategies, and orchestration approaches. We provide quantitative assessment frameworks, analyze the implications for trust and alignment, and systematically consolidate existing RAG techniques into a unified taxonomy. This document is a practical framework for the deployment of resilient, secure, and domain-adaptable RAG systems, synthesizing insights from academic literature, industry reports, and technical implementation guides. It also functions as a technical reference.",
+      "url": "https://arxiv.org/abs/2601.05264v1",
+      "citation_count": 1,
+      "citation_source": "semantic_scholar",
+      "references": [],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2512.10787v2": {
+      "paper_id": "2512.10787v2",
+      "title": "Replace, Don't Expand: Mitigating Context Dilution in Multi-Hop RAG via Fixed-Budget Evidence Assembly",
+      "authors": [
+        "Moshe Lahmy",
+        "Roi Yozevitch"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) systems often fail on multi-hop queries when the initial retrieval misses a bridge fact. Prior corrective approaches, such as Self-RAG, CRAG, and Adaptive-$k$, typically address this by \\textit{adding} more context or pruning existing lists. However, simply expanding the context window often leads to \\textbf{context dilution}, where distractors crowd out relevant information. We propose \\textbf{SEAL-RAG}, a training-free controller that adopts a \\textbf{``replace, don't expand''} strategy to fight context dilution under a fixed retrieval depth $k$. SEAL executes a (\\textbf{S}earch $\\rightarrow$ \\textbf{E}xtract $\\rightarrow$ \\textbf{A}ssess $\\rightarrow$ \\textbf{L}oop) cycle: it performs on-the-fly, entity-anchored extraction to build a live \\textit{gap specification} (missing entities/relations), triggers targeted micro-queries, and uses \\textit{entity-first ranking} to actively swap out distractors for gap-closing evidence. We evaluate SEAL-RAG against faithful re-implementations of Basic RAG, CRAG, Self-RAG, and Adaptive-$k$ in a shared environment on \\textbf{HotpotQA} and \\textbf{2WikiMultiHopQA}. On HotpotQA ($k=3$), SEAL improves answer correctness by \\textbf{+3--13 pp} and evidence precision by \\textbf{+12--18 pp} over Self-RAG. On 2WikiMultiHopQA ($k=5$), it outperforms Adaptive-$k$ by \\textbf{+8.0 pp} in accuracy and maintains \\textbf{96\\%} evidence precision compared to 22\\% for CRAG. These gains are statistically significant ($p<0.001$). By enforcing fixed-$k$ replacement, SEAL yields a predictable cost profile while ensuring the top-$k$ slots are optimized for precision rather than mere breadth. We release our code and data at https://github.com/mosherino/SEAL-RAG.",
+      "url": "https://arxiv.org/abs/2512.10787v2",
+      "citation_count": 1,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "7c1ee6f39e3d43bbc727d799ac241b60b7acb5a9",
+        "9f0554bc6d1fef08cadcdbb234b51cf603ae69cb",
+        "e5e8c6ac537e0f5b5db14170bc232d6f9e641bbc",
+        "5bbc2b5aa6c63c6a2cfccf095d6020b063ad47ac",
+        "46f9f7b8f88f72e12cbdb21e3311f995eb6e65c5",
+        "ddbd8fe782ac98e9c64dd98710687a962195dd9b",
+        "3aee33831e0bdea1a1eaae21c7586e4f7c0396d6",
+        "4b0b56be0ae9479d2bd5c2f0943db1906343c10f",
+        "1733eb7792f7a43dd21f51f4d1017a1bffd217b5",
+        "a0a79dad89857a96f8f71b14238e5237cbfc4787",
+        "88884b8806262a4095036041e3567d450dba39f7",
+        "0671fd553dd670a4e820553a974bc48040ba0819",
+        "e070ff286709db28312e08b52b05539debe88146",
+        "3def68bd0f856886d34272840a7f81588f2bc082",
+        "9001eb3c3d5a96ad3d804410c2437e6f60feade9",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "2ab70f13c02436af3818d9747227643365b79e8b",
+        "60b8ad6177230ad5402af409a6edb5af441baeb4",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "0f7a40bf2ad9a1cee6dcb801a35b336588cabc59",
+        "fb2a171434ffa87ca939397302816df70fd4bb10",
+        "22655979df781d222eaf812b0d325fa9adf11594",
+        "d10df96b3fb0ab5c6b1d0cc22c7400d0acccc3cc",
+        "4d1c856275744c0284312a3a50efb6ca9dc4cd4c",
+        "3171ec184b5fec0bc7b47356ad74d8598e858ddc",
+        "cb826a3899752b796f14df1c50378c64954a6b0a",
+        "d04f2afabfb7499cc4c608fb4eec079fbcc028f0",
+        "3ff2e39dc79c34a17c4ed491e3daf3e03ee5c05d",
+        "0541579506575301ba7457d5a7f16b45e08a300c"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2603.15994v1": {
+      "paper_id": "2603.15994v1",
+      "title": "Selective Memory for Artificial Intelligence: Write-Time Gating with Hierarchical Archiving",
+      "authors": [
+        "Oliver Zahn",
+        "Simran Chana"
+      ],
+      "year": 2026,
+      "abstract": "Retrieval-augmented generation stores all content indiscriminately, degrading accuracy as noise accumulates. Parametric approaches compress knowledge into weights, precluding selective updates. Neither mirrors biological memory, which gates encoding based on salience and archives rather than deletes superseded information. We introduce write-time gating that filters incoming knowledge objects using composite salience scores (source reputation, novelty, reliability) while maintaining version chains that preserve prior states. Using real LLM evaluation without oracle access to quality labels, write gating achieves 100 percent accuracy versus 13 percent for ungated stores. The critical finding emerges under distractor scaling: at 8:1 distractor ratios, read-time filtering (Self-RAG) collapses to 0 percent while write gating maintains 100 percent, revealing a structural advantage of write-time over read-time curation. Validation on Wikipedia (20 entities), procedurally generated pharmacology data, and 2026 arXiv papers confirms these findings. The gating advantage scales inversely with parametric memory support: +25pp for Wikipedia, +48pp for post-cutoff arXiv, +65pp for procedural data with zero training knowledge. Signal ablation confirms the method does not depend on oracle-correlated metadata. Write gating matches Self-RAG accuracy at one-ninth the query-time cost.",
+      "url": "https://arxiv.org/abs/2603.15994v1",
+      "citation_count": 0,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "5e7a795d89910634f001cc3a631023f1dd4e2e23",
+        "ddbd8fe782ac98e9c64dd98710687a962195dd9b",
+        "908dad62c0e43d80e3e3cb3c0402f7c71c70499c",
+        "804a6d7c23335bbca6eec3b7d3c8366dcbe395a5",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "9904a337e190d773bcab5192c49b1deb2ac98299",
+        "7e77d37e7fbfe90f58e4e96e8198903f364d6402",
+        "37088dec26231bc5a4937054ebc862bb83a3db4d",
+        "784ee73d5363c711118f784428d1ab89f019daa5",
+        "84dccdefebec40941af9d0cd4d415d7f2e5f1959",
+        "c1126fbffd6b8547a44c58b192b36b08b18299de",
+        "a0650855634a156db81a01dcdceff931e9f1ac04",
+        "8af78f6f4fe2bdcd3c9d3bafc424b04a22d4e5ea",
+        "1dc4d854778ba2bd0daff36c08dc76a673d44b49",
+        "2ebf18e7892e660a833152ddc6cf8f1d21a7b881",
+        "4f761005a2801f9149ff8d78ed3155e822b03e4c"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2603.14541v1": {
+      "paper_id": "2603.14541v1",
+      "title": "Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector",
+      "authors": [
+        "Diego Ezequiel Cervera"
+      ],
+      "year": 2026,
+      "abstract": "The departure of subject-matter experts from industrial organizations results in the irreversible loss of tacit knowledge that is rarely captured through conventional documentation practices. This paper proposes Expert Mind, an experimental system that leverages Retrieval-Augmented Generation (RAG), large language models (LLMs), and multimodal capture techniques to preserve, structure, and make queryable the deep expertise of organizational knowledge holders. Drawing on the specific context of the energy sector, where decades of operational experience risk being lost to an aging workforce, we describe the system architecture, processing pipeline, ethical framework, and evaluation methodology. The proposed system addresses the knowledge elicitation problem through structured interviews, think-aloud sessions, and text corpus ingestion, which are subsequently embedded into a vector store and queried through a conversational interface. Preliminary design considerations suggest Expert Mind can significantly reduce knowledge transfer latency and improve onboarding efficiency. Ethical dimensions including informed consent, intellectual property, and the right to erasure are addressed as first-class design constraints.",
+      "url": "https://arxiv.org/abs/2603.14541v1",
+      "citation_count": 0,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "a02fbaf22237a1aedacb1320b6007cd70c1fe6ec",
+        "6fcdad7b8d6b60b23bc51859e736c29f913b249a",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "b26f2037f769d5ffc5f7bdcec2de8da28ec14bee",
+        "1bc7265835ebe2f7fe764a461074ddde03ab70c3",
+        "25cebcebd34bf844c2ba7e17fd3ea6ce051abcfe",
+        "a37153a5f42ee2951ad8a2c9ec86b52c4bf81c77",
+        "307c85c8aef1b54cef03a89696396cd59b6dc9cc",
+        "ade482c1e468641bfe075036182d7b196830d83f"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2512.07015v2": {
+      "paper_id": "2512.07015v2",
+      "title": "FVA-RAG: Falsification-Verification Alignment for Mitigating Sycophantic Hallucinations",
+      "authors": [
+        "Mayank Ravishankara"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) reduces hallucinations by grounding answers in retrieved evidence, yet standard retrievers often exhibit retrieval sycophancy: they preferentially surface evidence that supports a user's premise, even when the premise is false. We propose FVA-RAG (Falsification-Verification Alignment RAG), a pipeline that inverts the standard RAG workflow by treating the initial response as a draft hypothesis and explicitly retrieving anti-context to stress-test it. We evaluate on the full TruthfulQA-Generation benchmark (N=817) under a fully frozen protocol with 0 live web calls and identical retrieval budgets across methods. Using gpt-4o for generation and deterministic judging, FVA-RAG achieves 79.80-80.05% accuracy across two independently built frozen corpora , significantly outperforming prompted variants of Self-RAG (71.11-72.22%) and CRAG (71.36-73.93%) with p < 10^-6 according to McNemar's test. FVA-RAG triggers falsification on 24.5-29.3% of queries, demonstrating that targeted counter-evidence retrieval is decisive for mitigating premise-confirming hallucinations.",
+      "url": "https://arxiv.org/abs/2512.07015v2",
+      "citation_count": 1,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "edf273d452e3d25d270587998c1e59626ecd2f30",
+        "62270917d2f594acd84bf295a1caee3ee6b9249c",
+        "ddbd8fe782ac98e9c64dd98710687a962195dd9b",
+        "77d956cdab4508d569ae5741549b78e715fd0749",
+        "659bf9ce7175e1ec266ff54359e2bd76e0b7ff31",
+        "21ac70b681c534cd6e7cd2a5155a0789828451f7"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    }
+  },
+  "node_scores": {
+    "2005.11401v4": {
+      "pagerank": 0.0712,
+      "betweenness": 0.0895,
+      "community": 0,
+      "foundation_score": 0.1227,
+      "bridge_score": 0.6109,
+      "frontier_score": 0.4019
+    },
+    "2310.11511v1": {
+      "pagerank": 0.0775,
+      "betweenness": 0.0632,
+      "community": 0,
+      "foundation_score": 0.0865,
+      "bridge_score": 0.5991,
+      "frontier_score": 0.5401
+    },
+    "2212.08153v2": {
+      "pagerank": 0.0371,
+      "betweenness": 0.0053,
+      "community": 1,
+      "foundation_score": 0.0756,
+      "bridge_score": 0.2264,
+      "frontier_score": 0.4929
+    },
+    "2403.14197v1": {
+      "pagerank": 0.0752,
+      "betweenness": 0.0947,
+      "community": 1,
+      "foundation_score": 0.0718,
+      "bridge_score": 0.6408,
+      "frontier_score": 0.5953
+    },
+    "2407.04528v4": {
+      "pagerank": 0.0394,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.0503,
+      "bridge_score": 0.2971,
+      "frontier_score": 0.5845
+    },
+    "2110.01599v1": {
+      "pagerank": 0.0157,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.0761,
+      "bridge_score": 0.1544,
+      "frontier_score": 0.4307
+    },
+    "W4389984066": {
+      "pagerank": 0.083,
+      "betweenness": 0.1158,
+      "community": 3,
+      "foundation_score": 0.0898,
+      "bridge_score": 0.6865,
+      "frontier_score": 0.5544
+    },
+    "W4388585881": {
+      "pagerank": 0.0381,
+      "betweenness": 0.0053,
+      "community": 3,
+      "foundation_score": 0.0629,
+      "bridge_score": 0.2246,
+      "frontier_score": 0.541
+    },
+    "W4391376033": {
+      "pagerank": 0.0698,
+      "betweenness": 0.0474,
+      "community": 3,
+      "foundation_score": 0.0685,
+      "bridge_score": 0.4493,
+      "frontier_score": 0.5959
+    },
+    "W4401042753": {
+      "pagerank": 0.0074,
+      "betweenness": 0.0,
+      "community": 2,
+      "foundation_score": 0.0311,
+      "bridge_score": 0.0,
+      "frontier_score": 0.575
+    },
+    "W4400128031": {
+      "pagerank": 0.072,
+      "betweenness": 0.0684,
+      "community": 0,
+      "foundation_score": 0.0699,
+      "bridge_score": 0.5626,
+      "frontier_score": 0.5839
+    },
+    "2402.12317v2": {
+      "pagerank": 0.0378,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.0494,
+      "bridge_score": 0.2712,
+      "frontier_score": 0.5737
+    },
+    "2502.00306v2": {
+      "pagerank": 0.0605,
+      "betweenness": 0.0053,
+      "community": 1,
+      "foundation_score": 0.0497,
+      "bridge_score": 0.4171,
+      "frontier_score": 0.6363
+    },
+    "2411.18583v1": {
+      "pagerank": 0.0551,
+      "betweenness": 0.0211,
+      "community": 3,
+      "foundation_score": 0.0597,
+      "bridge_score": 0.3749,
+      "frontier_score": 0.5915
+    },
+    "2408.05933v1": {
+      "pagerank": 0.0528,
+      "betweenness": 0.0053,
+      "community": 3,
+      "foundation_score": 0.0583,
+      "bridge_score": 0.3389,
+      "frontier_score": 0.5908
+    },
+    "2506.06962v3": {
+      "pagerank": 0.0461,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.041,
+      "bridge_score": 0.364,
+      "frontier_score": 0.632
+    },
+    "2601.05264v1": {
+      "pagerank": 0.0467,
+      "betweenness": 0.0105,
+      "community": 3,
+      "foundation_score": 0.0414,
+      "bridge_score": 0.242,
+      "frontier_score": 0.6345
+    },
+    "2512.10787v2": {
+      "pagerank": 0.0323,
+      "betweenness": 0.0,
+      "community": 3,
+      "foundation_score": 0.0327,
+      "bridge_score": 0.2712,
+      "frontier_score": 0.6301
+    },
+    "2603.15994v1": {
+      "pagerank": 0.0188,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.0113,
+      "bridge_score": 0.1213,
+      "frontier_score": 0.6589
+    },
+    "2603.14541v1": {
+      "pagerank": 0.0257,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.0154,
+      "bridge_score": 0.2132,
+      "frontier_score": 0.661
+    },
+    "2512.07015v2": {
+      "pagerank": 0.0379,
+      "betweenness": 0.0053,
+      "community": 3,
+      "foundation_score": 0.0361,
+      "bridge_score": 0.2288,
+      "frontier_score": 0.6318
+    }
+  },
+  "graph_data": {
+    "nodes": [
+      "2005.11401v4",
+      "2310.11511v1",
+      "2212.08153v2",
+      "2403.14197v1",
+      "2407.04528v4",
+      "2110.01599v1",
+      "W4389984066",
+      "W4388585881",
+      "W4391376033",
+      "W4401042753",
+      "W4400128031",
+      "2402.12317v2",
+      "2502.00306v2",
+      "2411.18583v1",
+      "2408.05933v1",
+      "2506.06962v3",
+      "2601.05264v1",
+      "2512.10787v2",
+      "2603.15994v1",
+      "2603.14541v1",
+      "2512.07015v2"
+    ],
+    "edges": [
+      {
+        "source": "2005.11401v4",
+        "target": "2310.11511v1",
+        "type": "similarity",
+        "weight": 0.19192495491014439,
+        "distance": 5.2103698576778665
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2212.08153v2",
+        "type": "similarity",
+        "weight": 0.11270574798413714,
+        "distance": 8.872661935048297
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2403.14197v1",
+        "type": "similarity",
+        "weight": 0.14832367753036152,
+        "distance": 6.742011907001849
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2407.04528v4",
+        "type": "similarity",
+        "weight": 0.12329864639420844,
+        "distance": 8.110389118164495
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "W4389984066",
+        "type": "similarity",
+        "weight": 0.15930143233748523,
+        "distance": 6.277407461606922
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "W4388585881",
+        "type": "similarity",
+        "weight": 0.07978245557195891,
+        "distance": 12.534084001689582
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "W4391376033",
+        "type": "similarity",
+        "weight": 0.14230503439883996,
+        "distance": 7.027158274648868
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "W4400128031",
+        "type": "similarity",
+        "weight": 0.08375769657759476,
+        "distance": 11.939201301621047
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2402.12317v2",
+        "type": "similarity",
+        "weight": 0.07782967227426434,
+        "distance": 12.848570099024643
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.0659114242953729,
+        "distance": 15.171876661603287
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.07122808061331017,
+        "distance": 14.039406809638686
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.07803037760020717,
+        "distance": 12.815521733388932
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2601.05264v1",
+        "type": "similarity",
+        "weight": 0.061554226211324885,
+        "distance": 16.245838207223173
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2603.15994v1",
+        "type": "similarity",
+        "weight": 0.10455768165171776,
+        "distance": 9.564098822801043
+      },
+      {
+        "source": "2005.11401v4",
+        "target": "2603.14541v1",
+        "type": "similarity",
+        "weight": 0.06850959436208354,
+        "distance": 14.596495707080809
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2212.08153v2",
+        "type": "similarity",
+        "weight": 0.05631886741821207,
+        "distance": 17.75603888789542
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2403.14197v1",
+        "type": "similarity",
+        "weight": 0.11206222143410756,
+        "distance": 8.92361392807119
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2407.04528v4",
+        "type": "similarity",
+        "weight": 0.05934805694888905,
+        "distance": 16.849751304599693
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "W4389984066",
+        "type": "similarity",
+        "weight": 0.13961746997999214,
+        "distance": 7.162427453694046
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "W4388585881",
+        "type": "similarity",
+        "weight": 0.0589619930184489,
+        "distance": 16.960077989343155
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "W4391376033",
+        "type": "similarity",
+        "weight": 0.16017314881555922,
+        "distance": 6.243243685940824
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "W4400128031",
+        "type": "similarity",
+        "weight": 0.2301519580390872,
+        "distance": 4.344955430838298
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2402.12317v2",
+        "type": "similarity",
+        "weight": 0.09382260379962569,
+        "distance": 10.658412360156536
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.09739194961112713,
+        "distance": 10.267789113914082
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.06120560986028596,
+        "distance": 16.338371634278293
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2408.05933v1",
+        "type": "similarity",
+        "weight": 0.07531933933242535,
+        "distance": 13.276802596295411
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.09382136269642954,
+        "distance": 10.658553353521649
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2601.05264v1",
+        "type": "similarity",
+        "weight": 0.06363284988741354,
+        "distance": 15.715153443061462
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2512.10787v2",
+        "type": "similarity",
+        "weight": 0.07613089806114695,
+        "distance": 13.135271295457702
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2603.15994v1",
+        "type": "similarity",
+        "weight": 0.06825833321113986,
+        "distance": 14.650225883874915
+      },
+      {
+        "source": "2310.11511v1",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.10300530775550898,
+        "distance": 9.708237582995013
+      },
+      {
+        "source": "2212.08153v2",
+        "target": "2403.14197v1",
+        "type": "similarity",
+        "weight": 0.3060968696840485,
+        "distance": 3.2669396489816918
+      },
+      {
+        "source": "2212.08153v2",
+        "target": "2407.04528v4",
+        "type": "similarity",
+        "weight": 0.058743636213816515,
+        "distance": 17.02312053615775
+      },
+      {
+        "source": "2212.08153v2",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.14147418662629876,
+        "distance": 7.0684272788327105
+      },
+      {
+        "source": "2212.08153v2",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.08578097716419873,
+        "distance": 11.65759627668775
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2407.04528v4",
+        "type": "similarity",
+        "weight": 0.10250364554619051,
+        "distance": 9.755750584981651
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2110.01599v1",
+        "type": "similarity",
+        "weight": 0.09238845598829082,
+        "distance": 10.82386310392219
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "W4389984066",
+        "type": "similarity",
+        "weight": 0.07742697876530051,
+        "distance": 12.915394813883111
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "W4391376033",
+        "type": "similarity",
+        "weight": 0.09387492403241615,
+        "distance": 10.652472002583862
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "W4400128031",
+        "type": "similarity",
+        "weight": 0.10181630109714256,
+        "distance": 9.821609989994665
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2402.12317v2",
+        "type": "similarity",
+        "weight": 0.05828884989097968,
+        "distance": 17.155939804445378
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.08585537607434646,
+        "distance": 11.647494259812571
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.09761775258172466,
+        "distance": 10.244038338854498
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2408.05933v1",
+        "type": "similarity",
+        "weight": 0.09666583462274468,
+        "distance": 10.344916628534527
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.11883142186463021,
+        "distance": 8.415282627343927
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2512.10787v2",
+        "type": "similarity",
+        "weight": 0.061793729068379995,
+        "distance": 16.182871871891972
+      },
+      {
+        "source": "2403.14197v1",
+        "target": "2603.14541v1",
+        "type": "similarity",
+        "weight": 0.07839138267675459,
+        "distance": 12.756504169896855
+      },
+      {
+        "source": "2407.04528v4",
+        "target": "W4389984066",
+        "type": "similarity",
+        "weight": 0.05655052364755152,
+        "distance": 17.68330221365328
+      },
+      {
+        "source": "2407.04528v4",
+        "target": "W4400128031",
+        "type": "similarity",
+        "weight": 0.07849685781631371,
+        "distance": 12.739363432101275
+      },
+      {
+        "source": "2407.04528v4",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.084033832078393,
+        "distance": 11.899969039459318
+      },
+      {
+        "source": "2407.04528v4",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.10782822202224394,
+        "distance": 9.274009913598588
+      },
+      {
+        "source": "2407.04528v4",
+        "target": "2408.05933v1",
+        "type": "similarity",
+        "weight": 0.05688715785108721,
+        "distance": 17.57865989047453
+      },
+      {
+        "source": "2407.04528v4",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.08946605963457689,
+        "distance": 11.17742308183113
+      },
+      {
+        "source": "2110.01599v1",
+        "target": "W4400128031",
+        "type": "similarity",
+        "weight": 0.11569299077734353,
+        "distance": 8.643565986850023
+      },
+      {
+        "source": "W4389984066",
+        "target": "W4388585881",
+        "type": "similarity",
+        "weight": 0.13146841251100125,
+        "distance": 7.606389861262835
+      },
+      {
+        "source": "W4389984066",
+        "target": "W4391376033",
+        "type": "similarity",
+        "weight": 0.15230477913778534,
+        "distance": 6.565782148538697
+      },
+      {
+        "source": "W4389984066",
+        "target": "W4400128031",
+        "type": "similarity",
+        "weight": 0.1251308313042342,
+        "distance": 7.991635551182995
+      },
+      {
+        "source": "W4389984066",
+        "target": "2402.12317v2",
+        "type": "similarity",
+        "weight": 0.10949100454505549,
+        "distance": 9.133170383768837
+      },
+      {
+        "source": "W4389984066",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.11001080736309782,
+        "distance": 9.090016008149409
+      },
+      {
+        "source": "W4389984066",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.08715717450900673,
+        "distance": 11.473524762974746
+      },
+      {
+        "source": "W4389984066",
+        "target": "2408.05933v1",
+        "type": "similarity",
+        "weight": 0.09405694139516958,
+        "distance": 10.63185752339759
+      },
+      {
+        "source": "W4389984066",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.11042775630709657,
+        "distance": 9.055694269645644
+      },
+      {
+        "source": "W4389984066",
+        "target": "2601.05264v1",
+        "type": "similarity",
+        "weight": 0.1842439697934952,
+        "distance": 5.427586048655066
+      },
+      {
+        "source": "W4389984066",
+        "target": "2512.10787v2",
+        "type": "similarity",
+        "weight": 0.05701585690939687,
+        "distance": 17.5389804557193
+      },
+      {
+        "source": "W4389984066",
+        "target": "2603.15994v1",
+        "type": "similarity",
+        "weight": 0.06357357303390682,
+        "distance": 15.72980646323988
+      },
+      {
+        "source": "W4389984066",
+        "target": "2603.14541v1",
+        "type": "similarity",
+        "weight": 0.10834734052706417,
+        "distance": 9.229575872701824
+      },
+      {
+        "source": "W4389984066",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.09808489508651189,
+        "distance": 10.195249728492747
+      },
+      {
+        "source": "W4388585881",
+        "target": "W4391376033",
+        "type": "similarity",
+        "weight": 0.15555924059602602,
+        "distance": 6.4284191422412125
+      },
+      {
+        "source": "W4388585881",
+        "target": "W4400128031",
+        "type": "similarity",
+        "weight": 0.06205416077611417,
+        "distance": 16.11495486350883
+      },
+      {
+        "source": "W4388585881",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.1142583175703851,
+        "distance": 8.752098063967926
+      },
+      {
+        "source": "W4388585881",
+        "target": "2601.05264v1",
+        "type": "similarity",
+        "weight": 0.09144598662490797,
+        "distance": 10.93541703587045
+      },
+      {
+        "source": "W4388585881",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.09678992553152413,
+        "distance": 10.331653780168512
+      },
+      {
+        "source": "W4391376033",
+        "target": "W4400128031",
+        "type": "similarity",
+        "weight": 0.10315991904764961,
+        "distance": 9.69368732771203
+      },
+      {
+        "source": "W4391376033",
+        "target": "2402.12317v2",
+        "type": "similarity",
+        "weight": 0.08740039606510779,
+        "distance": 11.441595748090924
+      },
+      {
+        "source": "W4391376033",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.09345735467899033,
+        "distance": 10.700067463227748
+      },
+      {
+        "source": "W4391376033",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.13156931066961178,
+        "distance": 7.600556656492139
+      },
+      {
+        "source": "W4391376033",
+        "target": "2408.05933v1",
+        "type": "similarity",
+        "weight": 0.1084027111721664,
+        "distance": 9.224861529632674
+      },
+      {
+        "source": "W4391376033",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.07497660745330714,
+        "distance": 13.337493305798954
+      },
+      {
+        "source": "W4391376033",
+        "target": "2601.05264v1",
+        "type": "similarity",
+        "weight": 0.13050517294914504,
+        "distance": 7.662531510453442
+      },
+      {
+        "source": "W4391376033",
+        "target": "2512.10787v2",
+        "type": "similarity",
+        "weight": 0.06517801875234751,
+        "distance": 15.342595849677974
+      },
+      {
+        "source": "W4391376033",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.07799335435222557,
+        "distance": 12.821605229131482
+      },
+      {
+        "source": "W4400128031",
+        "target": "2402.12317v2",
+        "type": "similarity",
+        "weight": 0.1079143816362775,
+        "distance": 9.26660547776174
+      },
+      {
+        "source": "W4400128031",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.09953141323093974,
+        "distance": 10.047079284202768
+      },
+      {
+        "source": "W4400128031",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.0782030179522798,
+        "distance": 12.787230290910374
+      },
+      {
+        "source": "W4400128031",
+        "target": "2408.05933v1",
+        "type": "similarity",
+        "weight": 0.09706648118667385,
+        "distance": 10.302217488206308
+      },
+      {
+        "source": "W4400128031",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.05957667919497497,
+        "distance": 16.78509130606839
+      },
+      {
+        "source": "W4400128031",
+        "target": "2512.10787v2",
+        "type": "similarity",
+        "weight": 0.06360008385946167,
+        "distance": 15.723249708439367
+      },
+      {
+        "source": "W4400128031",
+        "target": "2603.15994v1",
+        "type": "similarity",
+        "weight": 0.05900617284657242,
+        "distance": 16.94737943096556
+      },
+      {
+        "source": "W4400128031",
+        "target": "2603.14541v1",
+        "type": "similarity",
+        "weight": 0.07033758617000539,
+        "distance": 14.217149812093464
+      },
+      {
+        "source": "2402.12317v2",
+        "target": "2502.00306v2",
+        "type": "similarity",
+        "weight": 0.10851876270717789,
+        "distance": 9.214996329237135
+      },
+      {
+        "source": "2402.12317v2",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.06752453401404242,
+        "distance": 14.809432076821734
+      },
+      {
+        "source": "2402.12317v2",
+        "target": "2603.14541v1",
+        "type": "similarity",
+        "weight": 0.06278403477911403,
+        "distance": 15.92761604949709
+      },
+      {
+        "source": "2502.00306v2",
+        "target": "2411.18583v1",
+        "type": "similarity",
+        "weight": 0.0866892190720716,
+        "distance": 11.53545978039808
+      },
+      {
+        "source": "2502.00306v2",
+        "target": "2408.05933v1",
+        "type": "similarity",
+        "weight": 0.071138362312226,
+        "distance": 14.057113032923134
+      },
+      {
+        "source": "2502.00306v2",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.08542928295635055,
+        "distance": 11.705588123816309
+      },
+      {
+        "source": "2502.00306v2",
+        "target": "2601.05264v1",
+        "type": "similarity",
+        "weight": 0.08471974407890648,
+        "distance": 11.803623947076819
+      },
+      {
+        "source": "2502.00306v2",
+        "target": "2512.10787v2",
+        "type": "similarity",
+        "weight": 0.056504243632433955,
+        "distance": 17.697785789419733
+      },
+      {
+        "source": "2502.00306v2",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.06379740187934956,
+        "distance": 15.674619507094503
+      },
+      {
+        "source": "2411.18583v1",
+        "target": "2408.05933v1",
+        "type": "similarity",
+        "weight": 0.11955878086623353,
+        "distance": 8.364086625463623
+      },
+      {
+        "source": "2411.18583v1",
+        "target": "2601.05264v1",
+        "type": "similarity",
+        "weight": 0.16992161549302381,
+        "distance": 5.88506645901713
+      },
+      {
+        "source": "2408.05933v1",
+        "target": "2506.06962v3",
+        "type": "similarity",
+        "weight": 0.05986698998170727,
+        "distance": 16.703695981801594
+      },
+      {
+        "source": "2408.05933v1",
+        "target": "2601.05264v1",
+        "type": "similarity",
+        "weight": 0.155918033931821,
+        "distance": 6.41362628031389
+      },
+      {
+        "source": "2408.05933v1",
+        "target": "2512.10787v2",
+        "type": "similarity",
+        "weight": 0.06677012855324682,
+        "distance": 14.97675714676115
+      },
+      {
+        "source": "2408.05933v1",
+        "target": "2603.14541v1",
+        "type": "similarity",
+        "weight": 0.07645029940389932,
+        "distance": 13.080393507902931
+      },
+      {
+        "source": "2408.05933v1",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.05859383247837749,
+        "distance": 17.06664264313183
+      },
+      {
+        "source": "2506.06962v3",
+        "target": "2512.10787v2",
+        "type": "similarity",
+        "weight": 0.06178756955803775,
+        "distance": 16.184485118170716
+      },
+      {
+        "source": "2506.06962v3",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.07746165194290258,
+        "distance": 12.909613659376973
+      },
+      {
+        "source": "2601.05264v1",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.06908209664963767,
+        "distance": 14.475530542619177
+      },
+      {
+        "source": "2512.10787v2",
+        "target": "2512.07015v2",
+        "type": "similarity",
+        "weight": 0.12228517659706366,
+        "distance": 8.177606050282405
+      }
+    ]
+  },
+  "reading_path": {
+    "reading_path": [
+      {
+        "stage": "Foundations",
+        "papers": [
+          {
+            "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+            "reason": "Read this early because it is structurally central in the graph and heavily cited (13412 citations), making it a foundation for later work.",
+            "read_order": 1
+          },
+          {
+            "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+            "reason": "Read this early because it is structurally central in the graph and heavily cited (631 citations), making it a foundation for later work.",
+            "read_order": 2
+          },
+          {
+            "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+            "reason": "Read this early because it is structurally central in the graph and heavily cited (1776 citations), making it a foundation for later work.",
+            "read_order": 3
+          }
+        ]
+      },
+      {
+        "stage": "Core Algorithms",
+        "papers": [
+          {
+            "title": "Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering",
+            "reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.075) and anchors later developments in the path.",
+            "read_order": 4
+          }
+        ]
+      },
+      {
+        "stage": "Key Developments",
+        "papers": [
+          {
+            "title": "Improving medical reasoning through retrieval and self-reflection with retrieval-augmented large language models",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (vision-language learning) with strong impact (99 citations) and bridge score 0.563.",
+            "read_order": 5
+          },
+          {
+            "title": "The Power of Noise: Redefining Retrieval for RAG Systems",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (vision-language learning) with strong impact (154 citations) and bridge score 0.449.",
+            "read_order": 6
+          }
+        ]
+      },
+      {
+        "stage": "Recent Frontier",
+        "papers": [
+          {
+            "title": "Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector",
+            "reason": "Read this near the end to see recent directions from 2026; its frontier score (0.661) indicates current research momentum.",
+            "read_order": 7
+          },
+          {
+            "title": "Selective Memory for Artificial Intelligence: Write-Time Gating with Hierarchical Archiving",
+            "reason": "Read this near the end to see recent directions from 2026; its frontier score (0.659) indicates current research momentum.",
+            "read_order": 8
+          },
+          {
+            "title": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+            "reason": "Read this near the end to see recent directions from 2025; its frontier score (0.636) indicates current research momentum.",
+            "read_order": 9
+          }
+        ]
+      }
+    ],
+    "report_markdown": "# ResearchTrail Reading Path\n\n**Topic:** Retrieval-Augmented Generation\n\n**Level:** intermediate\n\n**Generated:** 2026-05-06 20:42:28\n\n---\n\n## Foundations\n\n### 1. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020)\n*Read this early because it is structurally central in the graph and heavily cited (13412 citations), making it a foundation for later work.*\nCitations: 13412\n\n### 2. Retrieval-Augmented Generation for Large Language Models: A Survey (2023)\n*Read this early because it is structurally central in the graph and heavily cited (631 citations), making it a foundation for later work.*\nCitations: 631\n\n### 3. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection (2023)\n*Read this early because it is structurally central in the graph and heavily cited (1776 citations), making it a foundation for later work.*\nCitations: 1776\n\n## Core Algorithms\n\n### 4. Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering (2024)\n*Read this as a core method paper because it has high graph centrality (PageRank 0.075) and anchors later developments in the path.*\nCitations: 5\n\n## Key Developments\n\n### 5. Improving medical reasoning through retrieval and self-reflection with retrieval-augmented large language models (2024)\n*Read this after the foundation papers because it represents a major follow-up branch (vision-language learning) with strong impact (99 citations) and bridge score 0.563.*\nCitations: 99\n\n### 6. The Power of Noise: Redefining Retrieval for RAG Systems (2024)\n*Read this after the foundation papers because it represents a major follow-up branch (vision-language learning) with strong impact (154 citations) and bridge score 0.449.*\nCitations: 154\n\n## Recent Frontier\n\n### 7. Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector (2026)\n*Read this near the end to see recent directions from 2026; its frontier score (0.661) indicates current research momentum.*\n\n### 8. Selective Memory for Artificial Intelligence: Write-Time Gating with Hierarchical Archiving (2026)\n*Read this near the end to see recent directions from 2026; its frontier score (0.659) indicates current research momentum.*\n\n### 9. Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation (2025)\n*Read this near the end to see recent directions from 2025; its frontier score (0.636) indicates current research momentum.*\nCitations: 18\n\n---\n\n*Total: 9 papers in 4 stages.*\n",
+    "followup_suggestions": [
+      "Show bridge papers between key communities",
+      "Generate a 7-day reading plan",
+      "Show only papers after 2020",
+      "Which authors should I follow?",
+      "Replace theoretical papers with more applied papers",
+      "Explain why these papers are foundational",
+      "Show me the citation network visualization"
+    ]
+  },
+  "corpus_quality": {
+    "total_papers": 21,
+    "has_abstract_ratio": 1.0,
+    "has_citation_ratio": 0.8095238095238095,
+    "year_range": "2020-2026",
+    "median_year": 2024,
+    "citation_edges_total": 515,
+    "benchmark_relevance_filtered": 0
+  },
+  "metadata": {
+    "benchmark_prompt": "I want to enter retrieval-augmented generation. Explain the key milestones from dense retrieval to modern agentic RAG, and separate foundational papers from application-oriented papers.",
+    "planner_mode": "benchmark_fixed_topic_llm_assisted",
+    "query_plan": {
+      "main_queries": [
+        "Retrieval-Augmented Generation",
+        "\"Dense Passage Retrieval for Open-Domain Question Answering\"",
+        "\"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\"",
+        "\"Fusion-in-Decoder\"",
+        "\"RETRO\"",
+        "\"Self-RAG\"",
+        "retrieval-augmented",
+        "retrieval augmented"
+      ],
+      "prerequisite_queries": [
+        "self-rag",
+        "retro",
+        "atlas",
+        "agentic rag",
+        "rag"
+      ],
+      "exclude_terms": [],
+      "expected_communities": [
+        "retrieval",
+        "rag",
+        "dense passage",
+        "dpr",
+        "fusion-in-decoder",
+        "retro",
+        "atlas",
+        "self-rag"
+      ]
+    },
+    "verified_landmark_recovery": [
+      {
+        "target": "Dense Passage Retrieval for Open-Domain Question Answering",
+        "matched": "Encoder Adaptation of Dense Passage Retrieval for Open-Domain Question Answering",
+        "source": "arxiv"
+      }
+    ],
+    "graph_mode": "hybrid",
+    "graph_metrics": {
+      "node_count": 21,
+      "edge_count": 109,
+      "citation_edges": 0,
+      "similarity_edges": 109,
+      "connected_components": 2,
+      "largest_component_ratio": 0.9523809523809523,
+      "average_degree": 10.381,
+      "community_count": 4,
+      "modularity": 0.1213
+    },
+    "community_labels": {
+      "0": {
+        "label": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+        "description": "This community focuses on enhancing language models through retrieval-augmented generation and self-reflection to improve reasoning in knowledge-intensive domains like medicine and energy."
+      },
+      "1": {
+        "label": "Optimization and Security of Retrieval-Augmented Systems",
+        "description": "Research in this area investigates the optimization of retrieval-augmented generation architectures, focusing on context quality, inference performance, and security vulnerabilities like membership inference attacks."
+      },
+      "2": {
+        "label": "Adaptive Retrieval-Augmented Generation",
+        "description": "This community explores methods for adapting retrieval-augmented large language models based on the complexity of input questions to optimize performance."
+      },
+      "3": {
+        "label": "Surveys and System Engineering for Retrieval-Augmented Generation",
+        "description": "This community centers on comprehensive surveys, system architecture reviews, and practical applications of retrieval-augmented generation to address challenges like hallucinations and optimize real-world deployments."
+      }
+    },
+    "community_label_evidence": [
+      {
+        "community_id": 0,
+        "size": 7,
+        "avg_year": 2023.4,
+        "top_titles": [
+          "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+          "Improving medical reasoning through retrieval and self-reflection with retrieval-augmented large language models",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "EVOR: Evolving Retrieval for Code Generation",
+          "Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector"
+        ],
+        "keywords": [
+          "knowledge",
+          "generation",
+          "retrieval-augmented",
+          "tasks",
+          "encoder",
+          "question",
+          "language",
+          "passage"
+        ]
+      },
+      {
+        "community_id": 1,
+        "size": 5,
+        "avg_year": 2024.0,
+        "top_titles": [
+          "Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering",
+          "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+          "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+          "GPT vs RETRO: Exploring the Intersection of Retrieval and Parameter-Efficient Fine-Tuning",
+          "FiDO: Fusion-in-Decoder optimized for stronger performance and faster inference"
+        ],
+        "keywords": [
+          "generation",
+          "inference",
+          "context",
+          "performance",
+          "quality",
+          "retrieval-augmented",
+          "retro",
+          "peft"
+        ]
+      },
+      {
+        "community_id": 2,
+        "size": 1,
+        "avg_year": 2024.0,
+        "top_titles": [
+          "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity"
+        ],
+        "keywords": [
+          "language",
+          "adaptive-rag",
+          "adapt",
+          "retrieval-augmented",
+          "large",
+          "through",
+          "question",
+          "complexity"
+        ]
+      },
+      {
+        "community_id": 3,
+        "size": 8,
+        "avg_year": 2024.1,
+        "top_titles": [
+          "Retrieval-Augmented Generation for Large Language Models: A Survey",
+          "The Power of Noise: Redefining Retrieval for RAG Systems",
+          "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+          "Optimizing RAG Techniques for Automotive Industry PDF Chatbots: A Case Study with Locally Deployed Ollama Models",
+          "Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems"
+        ],
+        "keywords": [
+          "generation",
+          "retrieval",
+          "systems",
+          "language",
+          "textbf",
+          "retrieval-augmented",
+          "large",
+          "hallucinations"
+        ]
+      }
+    ],
+    "evidence_packets": [
+      {
+        "paper_id": "2005.11401v4",
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "abstract": "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the param...",
+        "url": "https://arxiv.org/abs/2005.11401v4",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2020,
+        "citation_count": 13412,
+        "source": "arxiv",
+        "pagerank": 0.0712,
+        "betweenness": 0.0895,
+        "foundation_score": 0.1227,
+        "bridge_score": 0.6109,
+        "frontier_score": 0.4019,
+        "community_id": 0,
+        "community_label": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (13412 citations), making it a foundation for later work."
+      },
+      {
+        "paper_id": "W4389984066",
+        "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+        "abstract": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generati...",
+        "url": "http://arxiv.org/abs/2312.10997",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2023,
+        "citation_count": 631,
+        "source": "openalex",
+        "pagerank": 0.083,
+        "betweenness": 0.1158,
+        "foundation_score": 0.0898,
+        "bridge_score": 0.6865,
+        "frontier_score": 0.5544,
+        "community_id": 3,
+        "community_label": "Surveys and System Engineering for Retrieval-Augmented Generation",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (631 citations), making it a foundation for later work."
+      },
+      {
+        "paper_id": "2310.11511v1",
+        "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+        "abstract": "Despite their remarkable capabilities, large language models (LLMs) often produce responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. Retrieval-Augmented Generation (RAG), an ad hoc approach that augments LMs with retrieval of relevant knowledge, decreases such issues. However, indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is necessary, or passages are relevant, diminishes LM versatility or can lead to unhelpful response generation. We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (Self-RAG) that enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand, and generates and reflects on retrieved passages and its own...",
+        "url": "https://arxiv.org/abs/2310.11511v1",
+        "stage": "Foundations",
+        "role": "foundation",
+        "year": 2023,
+        "citation_count": 1776,
+        "source": "arxiv",
+        "pagerank": 0.0775,
+        "betweenness": 0.0632,
+        "foundation_score": 0.0865,
+        "bridge_score": 0.5991,
+        "frontier_score": 0.5401,
+        "community_id": 0,
+        "community_label": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (1776 citations), making it a foundation for later work."
+      },
+      {
+        "paper_id": "2403.14197v1",
+        "title": "Context Quality Matters in Training Fusion-in-Decoder for Extractive Open-Domain Question Answering",
+        "abstract": "Retrieval-augmented generation models augment knowledge encoded in a language model by providing additional relevant external knowledge (context) during generation. Although it has been shown that the quantity and quality of context impact the performance of retrieval-augmented generation models during inference, limited research explores how these characteristics affect model training. This paper explores how context quantity and quality during model training affect the performance of Fusion-in-Decoder (FiD), the state-of-the-art retrieval-augmented generation model, in extractive open-domain question answering tasks. Experimental results suggest that FiD models overfit to context quality during training and show suboptimal performance when evaluated on different context quality. Through the experimental results, we also reveal FiD models trained with different context quality have d...",
+        "url": "https://arxiv.org/abs/2403.14197v1",
+        "stage": "Core Algorithms",
+        "role": "core",
+        "year": 2024,
+        "citation_count": 5,
+        "source": "arxiv",
+        "pagerank": 0.0752,
+        "betweenness": 0.0947,
+        "foundation_score": 0.0718,
+        "bridge_score": 0.6408,
+        "frontier_score": 0.5953,
+        "community_id": 1,
+        "community_label": "Optimization and Security of Retrieval-Augmented Systems",
+        "template_reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.075) and anchors later developments in the path."
+      },
+      {
+        "paper_id": "W4400128031",
+        "title": "Improving medical reasoning through retrieval and self-reflection with retrieval-augmented large language models",
+        "abstract": "SUMMARY: Recent proprietary large language models (LLMs), such as GPT-4, have achieved a milestone in tackling diverse challenges in the biomedical domain, ranging from multiple-choice questions to long-form generations. To address challenges that still cannot be handled with the encoded knowledge of LLMs, various retrieval-augmented generation (RAG) methods have been developed by searching documents from the knowledge corpus and appending them unconditionally or selectively to the input of LLMs for generation. However, when applying existing methods to different domain-specific problems, poor generalization becomes apparent, leading to fetching incorrect documents or making inaccurate judgments. In this paper, we introduce Self-BioRAG, a framework reliable for biomedical text that specializes in generating explanations, retrieving domain-specific documents, and self-reflecting genera...",
+        "url": "https://doi.org/10.1093/bioinformatics/btae238",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2024,
+        "citation_count": 99,
+        "source": "openalex",
+        "pagerank": 0.072,
+        "betweenness": 0.0684,
+        "foundation_score": 0.0699,
+        "bridge_score": 0.5626,
+        "frontier_score": 0.5839,
+        "community_id": 0,
+        "community_label": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (vision-language learning) with strong impact (99 citations) and bridge score 0.563."
+      },
+      {
+        "paper_id": "W4391376033",
+        "title": "The Power of Noise: Redefining Retrieval for RAG Systems",
+        "abstract": "Retrieval-Augmented Generation (RAG) has recently emerged as a method to extend beyond the pre-trained knowledge of Large Language Models by augmenting the original prompt with relevant passages or documents retrieved by an Information Retrieval (IR) system. RAG has become increasingly important for Generative AI solutions, especially in enterprise settings or in any domain in which knowledge is constantly refreshed and cannot be memorized in the LLM. We argue here that the retrieval component of RAG systems, be it dense or sparse, deserves increased attention from the research community, and accordingly, we conduct the first comprehensive and systematic examination of the retrieval strategy of RAG systems. We focus, in particular, on the type of passages IR systems within a RAG solution should retrieve. Our analysis considers multiple factors, such as the relevance of the passages in...",
+        "url": "https://doi.org/10.1145/3626772.3657834",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2024,
+        "citation_count": 154,
+        "source": "openalex",
+        "pagerank": 0.0698,
+        "betweenness": 0.0474,
+        "foundation_score": 0.0685,
+        "bridge_score": 0.4493,
+        "frontier_score": 0.5959,
+        "community_id": 3,
+        "community_label": "Surveys and System Engineering for Retrieval-Augmented Generation",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (vision-language learning) with strong impact (154 citations) and bridge score 0.449."
+      },
+      {
+        "paper_id": "2603.14541v1",
+        "title": "Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector",
+        "abstract": "The departure of subject-matter experts from industrial organizations results in the irreversible loss of tacit knowledge that is rarely captured through conventional documentation practices. This paper proposes Expert Mind, an experimental system that leverages Retrieval-Augmented Generation (RAG), large language models (LLMs), and multimodal capture techniques to preserve, structure, and make queryable the deep expertise of organizational knowledge holders. Drawing on the specific context of the energy sector, where decades of operational experience risk being lost to an aging workforce, we describe the system architecture, processing pipeline, ethical framework, and evaluation methodology. The proposed system addresses the knowledge elicitation problem through structured interviews, think-aloud sessions, and text corpus ingestion, which are subsequently embedded into a vector store...",
+        "url": "https://arxiv.org/abs/2603.14541v1",
+        "stage": "Recent Frontier",
+        "role": "frontier",
+        "year": 2026,
+        "citation_count": 0,
+        "source": "arxiv",
+        "pagerank": 0.0257,
+        "betweenness": 0.0,
+        "foundation_score": 0.0154,
+        "bridge_score": 0.2132,
+        "frontier_score": 0.661,
+        "community_id": 0,
+        "community_label": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+        "template_reason": "Read this near the end to see recent directions from 2026; its frontier score (0.661) indicates current research momentum."
+      },
+      {
+        "paper_id": "2603.15994v1",
+        "title": "Selective Memory for Artificial Intelligence: Write-Time Gating with Hierarchical Archiving",
+        "abstract": "Retrieval-augmented generation stores all content indiscriminately, degrading accuracy as noise accumulates. Parametric approaches compress knowledge into weights, precluding selective updates. Neither mirrors biological memory, which gates encoding based on salience and archives rather than deletes superseded information. We introduce write-time gating that filters incoming knowledge objects using composite salience scores (source reputation, novelty, reliability) while maintaining version chains that preserve prior states. Using real LLM evaluation without oracle access to quality labels, write gating achieves 100 percent accuracy versus 13 percent for ungated stores. The critical finding emerges under distractor scaling: at 8:1 distractor ratios, read-time filtering (Self-RAG) collapses to 0 percent while write gating maintains 100 percent, revealing a structural advantage of write...",
+        "url": "https://arxiv.org/abs/2603.15994v1",
+        "stage": "Recent Frontier",
+        "role": "frontier",
+        "year": 2026,
+        "citation_count": 0,
+        "source": "arxiv",
+        "pagerank": 0.0188,
+        "betweenness": 0.0,
+        "foundation_score": 0.0113,
+        "bridge_score": 0.1213,
+        "frontier_score": 0.6589,
+        "community_id": 0,
+        "community_label": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+        "template_reason": "Read this near the end to see recent directions from 2026; its frontier score (0.659) indicates current research momentum."
+      },
+      {
+        "paper_id": "2502.00306v2",
+        "title": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+        "abstract": "Retrieval-Augmented Generation (RAG) enables Large Language Models (LLMs) to generate grounded responses by leveraging external knowledge databases without altering model parameters. Although the absence of weight tuning prevents leakage via model parameters, it introduces the risk of inference adversaries exploiting retrieved documents in the model's context. Existing methods for membership inference and data extraction often rely on jailbreaking or carefully crafted unnatural queries, which can be easily detected or thwarted with query rewriting techniques common in RAG systems. In this work, we present Interrogation Attack (IA), a membership inference technique targeting documents in the RAG datastore. By crafting natural-text queries that are answerable only with the target document's presence, our approach demonstrates successful inference with just 30 queries while remaining ste...",
+        "url": "https://arxiv.org/abs/2502.00306v2",
+        "stage": "Recent Frontier",
+        "role": "frontier",
+        "year": 2025,
+        "citation_count": 18,
+        "source": "arxiv",
+        "pagerank": 0.0605,
+        "betweenness": 0.0053,
+        "foundation_score": 0.0497,
+        "bridge_score": 0.4171,
+        "frontier_score": 0.6363,
+        "community_id": 1,
+        "community_label": "Optimization and Security of Retrieval-Augmented Systems",
+        "template_reason": "Read this near the end to see recent directions from 2025; its frontier score (0.636) indicates current research momentum."
+      }
+    ],
+    "reading_path_metrics": {
+      "stage_count": 4,
+      "unique_paper_count": 9,
+      "role_counts": {
+        "foundation": 3,
+        "core": 1,
+        "development": 2,
+        "frontier": 3
+      },
+      "explanation_availability_ratio": 1.0
+    }
+  }
+}
