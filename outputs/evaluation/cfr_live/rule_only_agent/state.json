@@ -135,6 +135,166 @@
       "keywords": [],
       "venue": ""
     },
+    "1811.00164v3": {
+      "paper_id": "1811.00164v3",
+      "title": "Deep Counterfactual Regret Minimization",
+      "authors": [
+        "Noam Brown",
+        "Adam Lerer",
+        "Sam Gross",
+        "Tuomas Sandholm"
+      ],
+      "year": 2018,
+      "abstract": "Counterfactual Regret Minimization (CFR) is the leading framework for solving large imperfect-information games. It converges to an equilibrium by iteratively traversing the game tree. In order to deal with extremely large games, abstraction is typically applied before running CFR. The abstracted game is solved with tabular CFR, and its solution is mapped back to the full game. This process can be problematic because aspects of abstraction are often manual and domain specific, abstraction algorithms may miss important strategic nuances of the game, and there is a chicken-and-egg problem because determining a good abstraction requires knowledge of the equilibrium of the game. This paper introduces Deep Counterfactual Regret Minimization, a form of CFR that obviates the need for abstraction by instead using deep neural networks to approximate the behavior of CFR in the full game. We show that Deep CFR is principled and achieves strong performance in large poker games. This is the first non-tabular variant of CFR to be successful in large games.",
+      "url": "https://arxiv.org/abs/1811.00164v3",
+      "citation_count": 239,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "fd4ca6d2aa21e3b486e1ec38fbf4640853091dc3",
+        "b7a30e04aeb0ee7bb1a739d94c5dd785d00f3b25",
+        "f9717d29840f4d8f1cc19d1b1e80c5d12ec40608",
+        "8f0c9db7e3a310568e96f050f4dea3c9caabf075",
+        "90fac6e666cfbb2c7071610139ae65ef49066505",
+        "c9b595b7f8bf253b446fe08dad3d4b437416a047",
+        "80ed19d1ffa0586be91a56c424a470de7d548d25",
+        "0d84ed33bee6a1898d0104f824e78716947ab2b5",
+        "d548b9d86cad34eeaccb68c5305f29558628e3fa",
+        "7008b76b5f20b0dafc7be234eac4c78ca4cf8c0d",
+        "27d1e242fe81e9c29e6eca6a24133740b999bd0e",
+        "5260c7a859df39be7c95591a9eec349fbe64aad0",
+        "eaabb78d0bc44ed132e4d077e9486c86a9e4cda9",
+        "38fb1902c6a2ab4f767d4532b28a92473ea737aa",
+        "714864bd10680c25275514ff7b6a589f398057aa",
+        "b36a5bb1707bb9c70025294b3a310138aae8327a",
+        "c27db32efa8137cbf654902f8f728f338e55cd1c",
+        "e0b65d3839e3bf703d156b524d7db7a5e10a2623",
+        "22319512495194ce3c502f8b3968044d1a3011e4",
+        "a1d2a7ef81960846b9cec00bce8eefa06ccc8796",
+        "69e76e16740ed69f4dc55361a3d319ac2f1293dd",
+        "ce8f79167a5b4fb452218759e807ddd7911ebba2",
+        "84499cc768618dc4a2fec17524eb8e0062ca3a8e",
+        "340f48901f72278f6bf78a04ee5b01df208cc508",
+        "0f45d9c0e2f3f96f97deda4fbb438b5a6e49d0dc",
+        "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
+        "28386ad2b37548a480ff43b94fef33ac132f20b4",
+        "6e24f43ca186be95bc651d09121367b3905b5824",
+        "7751ffa2a1904578595ca18cd09d5bae5ca377e0",
+        "1c57625f543683aafd32c7c45375710a28cacf00",
+        "ed528594465e96f51fd9a3cf00401bfba20597fa",
+        "335805b062a465c88d42530203f636b24f6a5264",
+        "7b506eebe271b76bbf830508ab4daca4fbed6ef0",
+        "ef6bc21099d018195456c6149b77acc26fa6479b",
+        "5aad993b1419957c25119a79495f1cdec3a4d235",
+        "db20a76a702be3ad4e7cebf7eeb7f1898827cebd",
+        "0538e399046c74d95124c715760aa51ab4716dce",
+        "f312852b31a76bc09b59aca6e4017a9382f9cb39",
+        "2cd2df06d488565063e0600ff840d293be2eaf31",
+        "22cd8ee12f34e75781dd34be2f9cd9f5a1ffe2fc",
+        "da01f7fcc5c7eeba75bc09a41fdd946e65210090",
+        "86bab889657c43cd33ad78904058b6c23353e456",
+        "1d07271eb690152cd91fd62b17a6ce4f807e5d7e",
+        "529c96d709ae6f2dcc71e0482c98fad5ecd64b48",
+        "ac20b3b4df169b3769c534067c7524726491df19",
+        "72e2a7c90a3e39fe7e7a61d63334c72e47800d8c",
+        "9b0b91edea5a628679f1d0509dc8108a959db406",
+        "87e8816e5520a37849e368a0770219452715da18"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": "International Conference on Machine Learning (ICML), 2019"
+    },
+    "2408.14778v5": {
+      "paper_id": "2408.14778v5",
+      "title": "GPU-Accelerated Counterfactual Regret Minimization",
+      "authors": [
+        "Juho Kim"
+      ],
+      "year": 2024,
+      "abstract": "Counterfactual regret minimization is a family of algorithms of no-regret learning dynamics capable of solving large-scale imperfect information games. We propose implementing this algorithm as a series of dense and sparse matrix and vector operations, thereby making it highly parallelizable for a graphical processing unit, at a cost of higher memory usage. Our experiments show that our implementation performs up to about 401.2 times faster than OpenSpiel's Python implementation and, on an expanded set of games, up to about 203.6 times faster than OpenSpiel's C++ implementation and the speedup becomes more pronounced as the size of the game being solved grows.",
+      "url": "https://arxiv.org/abs/2408.14778v5",
+      "citation_count": 0,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "b3dc6b7339f35f7f89a6ca7eb64fd6ee9021b928",
+        "df2b23787a58b10962951d4f663809eb20a828ea",
+        "024a2c03be8e468e7c4fdf9bda36cdc0eaae85fb",
+        "232bd009964a9bbf4757227aae94d1a139350e04",
+        "854eca61a57d2c1ea1019663caf022bc8fd0b909",
+        "2ee463bba9d4db6aec0eab17e54431a6dc80bf17",
+        "bdf95066acd29a30af89082b73b1f5769b57b934",
+        "8f0c9db7e3a310568e96f050f4dea3c9caabf075",
+        "0d84ed33bee6a1898d0104f824e78716947ab2b5",
+        "eaabb78d0bc44ed132e4d077e9486c86a9e4cda9",
+        "a2155552ca5afb784a3c1d67a5bcbd4e688b6e05",
+        "09b11dd581fd9d00c3a55d4a49f83660bd7c3d9a",
+        "5134de86a246e6cd7af70600de764e2f6576bbf8",
+        "ce8f79167a5b4fb452218759e807ddd7911ebba2",
+        "e4eca4a263dac492ea4f5be8d31e5bbd0cf7dab8",
+        "1344f319df7264a0dd22b264cebe22d6e05862a1",
+        "82160cbdcbeb13d53db85da928d8c42a789fdd69",
+        "db20a76a702be3ad4e7cebf7eeb7f1898827cebd",
+        "2cd2df06d488565063e0600ff840d293be2eaf31",
+        "ef336fe9c04559654936413f4910a54b7ae5028c",
+        "874d7ab34cd2ae6acc1e0910bd85c8bf549bc57c",
+        "a59da4639436f582e483347a4833e7659fd3e598"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
+    "2008.02679v2": {
+      "paper_id": "2008.02679v2",
+      "title": "Solving imperfect-information games via exponential counterfactual regret minimization",
+      "authors": [
+        "Huale Li",
+        "Xuan Wang",
+        "Shuhan Qi",
+        "Jiajia Zhang",
+        "Yang Liu",
+        "Yulin Wu",
+        "Fengwei Jia"
+      ],
+      "year": 2020,
+      "abstract": "In general, two-agent decision-making problems can be modeled as a two-player game, and a typical solution is to find a Nash equilibrium in such game. Counterfactual regret minimization (CFR) is a well-known method to find a Nash equilibrium strategy in a two-player zero-sum game with imperfect information. The CFR method adopts a regret matching algorithm iteratively to reduce regret values progressively, enabling the average strategy to approach a Nash equilibrium. Although CFR-based methods have achieved significant success in the field of imperfect information games, there is still scope for improvement in the efficiency of convergence. To address this challenge, we propose a novel CFR-based method named exponential counterfactual regret minimization (ECFR). With ECFR, an exponential weighting technique is used to reweight the instantaneous regret value during the process of iteration. A theoretical proof is provided to guarantees convergence of the ECFR algorithm. The result of an extensive set of experimental tests demostrate that the ECFR algorithm converges faster than the current state-of-the-art CFR-based methods.",
+      "url": "https://arxiv.org/abs/2008.02679v2",
+      "citation_count": 8,
+      "citation_source": "semantic_scholar",
+      "references": [
+        "2ee463bba9d4db6aec0eab17e54431a6dc80bf17",
+        "040a54b2b2dd2fb1da1c36ca30538c4f0b242aab",
+        "fd4ca6d2aa21e3b486e1ec38fbf4640853091dc3",
+        "b7a30e04aeb0ee7bb1a739d94c5dd785d00f3b25",
+        "42c01c027db1e1d9846f13b73e0846bcd3852e65",
+        "0d84ed33bee6a1898d0104f824e78716947ab2b5",
+        "7008b76b5f20b0dafc7be234eac4c78ca4cf8c0d",
+        "eaabb78d0bc44ed132e4d077e9486c86a9e4cda9",
+        "9b7a9f38184e4ea0f0cb54b3ed258a053b7cf7af",
+        "abbb6c7e3b135ec49a8575ac8b4847fc4d9087a2",
+        "a2155552ca5afb784a3c1d67a5bcbd4e688b6e05",
+        "846aedd869a00c09b40f1f1f35673cb22bc87490",
+        "ce8f79167a5b4fb452218759e807ddd7911ebba2",
+        "340f48901f72278f6bf78a04ee5b01df208cc508",
+        "0f45d9c0e2f3f96f97deda4fbb438b5a6e49d0dc",
+        "f8142d2f5244f99c4107e9d928ba56b115d41794",
+        "ed528594465e96f51fd9a3cf00401bfba20597fa",
+        "7b506eebe271b76bbf830508ab4daca4fbed6ef0",
+        "ef6bc21099d018195456c6149b77acc26fa6479b",
+        "db20a76a702be3ad4e7cebf7eeb7f1898827cebd",
+        "2cd2df06d488565063e0600ff840d293be2eaf31",
+        "ef336fe9c04559654936413f4910a54b7ae5028c",
+        "11f6d271aaa94ad718ec68164f1c5a7ae1255eae",
+        "97efafdb4a3942ab3efba53ded7413199f79c054",
+        "498c005c7e0e74ebceb05436b28825ffee006fe4",
+        "f1cfcc211eef2119dc02377019f1f03e6afa9439",
+        "abefbc10a46043bd64339efb576231ffc9f8c8d5"
+      ],
+      "citations": [],
+      "source": "arxiv",
+      "keywords": [],
+      "venue": ""
+    },
     "W2103315867": {
       "paper_id": "W2103315867",
       "title": "Regret Minimization in Games with Incomplete Information",
@@ -238,126 +398,6 @@
       "source": "openalex",
       "keywords": [],
       "venue": "International Conference on Artificial Intelligence"
-    },
-    "1811.00164v3": {
-      "paper_id": "1811.00164v3",
-      "title": "Deep Counterfactual Regret Minimization",
-      "authors": [
-        "Noam Brown",
-        "Adam Lerer",
-        "Sam Gross",
-        "Tuomas Sandholm"
-      ],
-      "year": 2018,
-      "abstract": "Counterfactual Regret Minimization (CFR) is the leading framework for solving large imperfect-information games. It converges to an equilibrium by iteratively traversing the game tree. In order to deal with extremely large games, abstraction is typically applied before running CFR. The abstracted game is solved with tabular CFR, and its solution is mapped back to the full game. This process can be problematic because aspects of abstraction are often manual and domain specific, abstraction algorithms may miss important strategic nuances of the game, and there is a chicken-and-egg problem because determining a good abstraction requires knowledge of the equilibrium of the game. This paper introduces Deep Counterfactual Regret Minimization, a form of CFR that obviates the need for abstraction by instead using deep neural networks to approximate the behavior of CFR in the full game. We show that Deep CFR is principled and achieves strong performance in large poker games. This is the first non-tabular variant of CFR to be successful in large games.",
-      "url": "https://arxiv.org/abs/1811.00164v3",
-      "citation_count": 239,
-      "citation_source": "semantic_scholar",
-      "references": [
-        "fd4ca6d2aa21e3b486e1ec38fbf4640853091dc3",
-        "b7a30e04aeb0ee7bb1a739d94c5dd785d00f3b25",
-        "f9717d29840f4d8f1cc19d1b1e80c5d12ec40608",
-        "8f0c9db7e3a310568e96f050f4dea3c9caabf075",
-        "90fac6e666cfbb2c7071610139ae65ef49066505",
-        "c9b595b7f8bf253b446fe08dad3d4b437416a047",
-        "80ed19d1ffa0586be91a56c424a470de7d548d25",
-        "0d84ed33bee6a1898d0104f824e78716947ab2b5",
-        "d548b9d86cad34eeaccb68c5305f29558628e3fa",
-        "7008b76b5f20b0dafc7be234eac4c78ca4cf8c0d",
-        "27d1e242fe81e9c29e6eca6a24133740b999bd0e",
-        "5260c7a859df39be7c95591a9eec349fbe64aad0",
-        "eaabb78d0bc44ed132e4d077e9486c86a9e4cda9",
-        "38fb1902c6a2ab4f767d4532b28a92473ea737aa",
-        "714864bd10680c25275514ff7b6a589f398057aa",
-        "b36a5bb1707bb9c70025294b3a310138aae8327a",
-        "c27db32efa8137cbf654902f8f728f338e55cd1c",
-        "e0b65d3839e3bf703d156b524d7db7a5e10a2623",
-        "22319512495194ce3c502f8b3968044d1a3011e4",
-        "a1d2a7ef81960846b9cec00bce8eefa06ccc8796",
-        "69e76e16740ed69f4dc55361a3d319ac2f1293dd",
-        "ce8f79167a5b4fb452218759e807ddd7911ebba2",
-        "84499cc768618dc4a2fec17524eb8e0062ca3a8e",
-        "340f48901f72278f6bf78a04ee5b01df208cc508",
-        "0f45d9c0e2f3f96f97deda4fbb438b5a6e49d0dc",
-        "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
-        "28386ad2b37548a480ff43b94fef33ac132f20b4",
-        "6e24f43ca186be95bc651d09121367b3905b5824",
-        "7751ffa2a1904578595ca18cd09d5bae5ca377e0",
-        "1c57625f543683aafd32c7c45375710a28cacf00",
-        "ed528594465e96f51fd9a3cf00401bfba20597fa",
-        "335805b062a465c88d42530203f636b24f6a5264",
-        "7b506eebe271b76bbf830508ab4daca4fbed6ef0",
-        "ef6bc21099d018195456c6149b77acc26fa6479b",
-        "5aad993b1419957c25119a79495f1cdec3a4d235",
-        "db20a76a702be3ad4e7cebf7eeb7f1898827cebd",
-        "0538e399046c74d95124c715760aa51ab4716dce",
-        "f312852b31a76bc09b59aca6e4017a9382f9cb39",
-        "2cd2df06d488565063e0600ff840d293be2eaf31",
-        "22cd8ee12f34e75781dd34be2f9cd9f5a1ffe2fc",
-        "da01f7fcc5c7eeba75bc09a41fdd946e65210090",
-        "86bab889657c43cd33ad78904058b6c23353e456",
-        "1d07271eb690152cd91fd62b17a6ce4f807e5d7e",
-        "529c96d709ae6f2dcc71e0482c98fad5ecd64b48",
-        "ac20b3b4df169b3769c534067c7524726491df19",
-        "72e2a7c90a3e39fe7e7a61d63334c72e47800d8c",
-        "9b0b91edea5a628679f1d0509dc8108a959db406",
-        "87e8816e5520a37849e368a0770219452715da18"
-      ],
-      "citations": [],
-      "source": "arxiv",
-      "keywords": [],
-      "venue": "International Conference on Machine Learning (ICML), 2019"
-    },
-    "2008.02679v2": {
-      "paper_id": "2008.02679v2",
-      "title": "Solving imperfect-information games via exponential counterfactual regret minimization",
-      "authors": [
-        "Huale Li",
-        "Xuan Wang",
-        "Shuhan Qi",
-        "Jiajia Zhang",
-        "Yang Liu",
-        "Yulin Wu",
-        "Fengwei Jia"
-      ],
-      "year": 2020,
-      "abstract": "In general, two-agent decision-making problems can be modeled as a two-player game, and a typical solution is to find a Nash equilibrium in such game. Counterfactual regret minimization (CFR) is a well-known method to find a Nash equilibrium strategy in a two-player zero-sum game with imperfect information. The CFR method adopts a regret matching algorithm iteratively to reduce regret values progressively, enabling the average strategy to approach a Nash equilibrium. Although CFR-based methods have achieved significant success in the field of imperfect information games, there is still scope for improvement in the efficiency of convergence. To address this challenge, we propose a novel CFR-based method named exponential counterfactual regret minimization (ECFR). With ECFR, an exponential weighting technique is used to reweight the instantaneous regret value during the process of iteration. A theoretical proof is provided to guarantees convergence of the ECFR algorithm. The result of an extensive set of experimental tests demostrate that the ECFR algorithm converges faster than the current state-of-the-art CFR-based methods.",
-      "url": "https://arxiv.org/abs/2008.02679v2",
-      "citation_count": 8,
-      "citation_source": "semantic_scholar",
-      "references": [
-        "2ee463bba9d4db6aec0eab17e54431a6dc80bf17",
-        "040a54b2b2dd2fb1da1c36ca30538c4f0b242aab",
-        "fd4ca6d2aa21e3b486e1ec38fbf4640853091dc3",
-        "b7a30e04aeb0ee7bb1a739d94c5dd785d00f3b25",
-        "42c01c027db1e1d9846f13b73e0846bcd3852e65",
-        "0d84ed33bee6a1898d0104f824e78716947ab2b5",
-        "7008b76b5f20b0dafc7be234eac4c78ca4cf8c0d",
-        "eaabb78d0bc44ed132e4d077e9486c86a9e4cda9",
-        "9b7a9f38184e4ea0f0cb54b3ed258a053b7cf7af",
-        "abbb6c7e3b135ec49a8575ac8b4847fc4d9087a2",
-        "a2155552ca5afb784a3c1d67a5bcbd4e688b6e05",
-        "846aedd869a00c09b40f1f1f35673cb22bc87490",
-        "ce8f79167a5b4fb452218759e807ddd7911ebba2",
-        "340f48901f72278f6bf78a04ee5b01df208cc508",
-        "0f45d9c0e2f3f96f97deda4fbb438b5a6e49d0dc",
-        "f8142d2f5244f99c4107e9d928ba56b115d41794",
-        "ed528594465e96f51fd9a3cf00401bfba20597fa",
-        "7b506eebe271b76bbf830508ab4daca4fbed6ef0",
-        "ef6bc21099d018195456c6149b77acc26fa6479b",
-        "db20a76a702be3ad4e7cebf7eeb7f1898827cebd",
-        "2cd2df06d488565063e0600ff840d293be2eaf31",
-        "ef336fe9c04559654936413f4910a54b7ae5028c",
-        "11f6d271aaa94ad718ec68164f1c5a7ae1255eae",
-        "97efafdb4a3942ab3efba53ded7413199f79c054",
-        "498c005c7e0e74ebceb05436b28825ffee006fe4",
-        "f1cfcc211eef2119dc02377019f1f03e6afa9439",
-        "abefbc10a46043bd64339efb576231ffc9f8c8d5"
-      ],
-      "citations": [],
-      "source": "arxiv",
-      "keywords": [],
-      "venue": ""
     },
     "1809.04040v3": {
       "paper_id": "1809.04040v3",
@@ -710,46 +750,6 @@
         "4f0df7ed89d9a5bb5bafa5727ccdc0b6e2fb463d",
         "2cd2df06d488565063e0600ff840d293be2eaf31",
         "1913f5c8d38ef367f17c4b7180cb216a0aaf3828"
-      ],
-      "citations": [],
-      "source": "arxiv",
-      "keywords": [],
-      "venue": ""
-    },
-    "2408.14778v5": {
-      "paper_id": "2408.14778v5",
-      "title": "GPU-Accelerated Counterfactual Regret Minimization",
-      "authors": [
-        "Juho Kim"
-      ],
-      "year": 2024,
-      "abstract": "Counterfactual regret minimization is a family of algorithms of no-regret learning dynamics capable of solving large-scale imperfect information games. We propose implementing this algorithm as a series of dense and sparse matrix and vector operations, thereby making it highly parallelizable for a graphical processing unit, at a cost of higher memory usage. Our experiments show that our implementation performs up to about 401.2 times faster than OpenSpiel's Python implementation and, on an expanded set of games, up to about 203.6 times faster than OpenSpiel's C++ implementation and the speedup becomes more pronounced as the size of the game being solved grows.",
-      "url": "https://arxiv.org/abs/2408.14778v5",
-      "citation_count": 0,
-      "citation_source": "semantic_scholar",
-      "references": [
-        "b3dc6b7339f35f7f89a6ca7eb64fd6ee9021b928",
-        "df2b23787a58b10962951d4f663809eb20a828ea",
-        "024a2c03be8e468e7c4fdf9bda36cdc0eaae85fb",
-        "232bd009964a9bbf4757227aae94d1a139350e04",
-        "854eca61a57d2c1ea1019663caf022bc8fd0b909",
-        "2ee463bba9d4db6aec0eab17e54431a6dc80bf17",
-        "bdf95066acd29a30af89082b73b1f5769b57b934",
-        "8f0c9db7e3a310568e96f050f4dea3c9caabf075",
-        "0d84ed33bee6a1898d0104f824e78716947ab2b5",
-        "eaabb78d0bc44ed132e4d077e9486c86a9e4cda9",
-        "a2155552ca5afb784a3c1d67a5bcbd4e688b6e05",
-        "09b11dd581fd9d00c3a55d4a49f83660bd7c3d9a",
-        "5134de86a246e6cd7af70600de764e2f6576bbf8",
-        "ce8f79167a5b4fb452218759e807ddd7911ebba2",
-        "e4eca4a263dac492ea4f5be8d31e5bbd0cf7dab8",
-        "1344f319df7264a0dd22b264cebe22d6e05862a1",
-        "82160cbdcbeb13d53db85da928d8c42a789fdd69",
-        "db20a76a702be3ad4e7cebf7eeb7f1898827cebd",
-        "2cd2df06d488565063e0600ff840d293be2eaf31",
-        "ef336fe9c04559654936413f4910a54b7ae5028c",
-        "874d7ab34cd2ae6acc1e0910bd85c8bf549bc57c",
-        "a59da4639436f582e483347a4833e7659fd3e598"
       ],
       "citations": [],
       "source": "arxiv",
@@ -1761,348 +1761,348 @@
   },
   "node_scores": {
     "2304.05962v2": {
-      "pagerank": 0.0069,
-      "betweenness": 0.0012,
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
       "community": 0,
-      "foundation_score": 0.0441,
-      "bridge_score": 0.1557,
-      "frontier_score": 0.3872
+      "foundation_score": 0.0516,
+      "bridge_score": 0.1528,
+      "frontier_score": 0.3909
     },
     "1812.10607v1": {
-      "pagerank": 0.0222,
-      "betweenness": 0.0035,
-      "community": 1,
-      "foundation_score": 0.12,
-      "bridge_score": 0.2587,
-      "frontier_score": 0.2311
-    },
-    "2203.05920v4": {
-      "pagerank": 0.0184,
-      "betweenness": 0.0128,
-      "community": 2,
-      "foundation_score": 0.0644,
-      "bridge_score": 0.2676,
-      "frontier_score": 0.4289
-    },
-    "W2103315867": {
-      "pagerank": 0.0552,
-      "betweenness": 0.0964,
-      "community": 3,
-      "foundation_score": 0.2864,
-      "bridge_score": 0.674,
-      "frontier_score": 0.0311
-    },
-    "W2106975967": {
-      "pagerank": 0.0293,
-      "betweenness": 0.079,
-      "community": 1,
-      "foundation_score": 0.2442,
-      "bridge_score": 0.5211,
-      "frontier_score": 0.0969
-    },
-    "W2248846161": {
-      "pagerank": 0.0237,
-      "betweenness": 0.0314,
-      "community": 0,
-      "foundation_score": 0.1609,
-      "bridge_score": 0.4244,
-      "frontier_score": 0.0286
-    },
-    "1811.00164v3": {
-      "pagerank": 0.0382,
-      "betweenness": 0.0093,
-      "community": 1,
-      "foundation_score": 0.1296,
-      "bridge_score": 0.3784,
-      "frontier_score": 0.2359
-    },
-    "2008.02679v2": {
-      "pagerank": 0.0434,
-      "betweenness": 0.029,
-      "community": 1,
-      "foundation_score": 0.1061,
-      "bridge_score": 0.4962,
-      "frontier_score": 0.3284
-    },
-    "1809.04040v3": {
-      "pagerank": 0.033,
-      "betweenness": 0.0093,
-      "community": 2,
-      "foundation_score": 0.1264,
-      "bridge_score": 0.3784,
-      "frontier_score": 0.2514
-    },
-    "2311.07155v1": {
-      "pagerank": 0.0217,
-      "betweenness": 0.0186,
-      "community": 2,
-      "foundation_score": 0.053,
-      "bridge_score": 0.3232,
-      "frontier_score": 0.4753
-    },
-    "2304.10498v2": {
-      "pagerank": 0.017,
-      "betweenness": 0.0,
-      "community": 2,
-      "foundation_score": 0.0502,
-      "bridge_score": 0.1444,
-      "frontier_score": 0.4739
-    },
-    "1912.02967v5": {
-      "pagerank": 0.0071,
-      "betweenness": 0.0023,
-      "community": 1,
-      "foundation_score": 0.0976,
-      "bridge_score": 0.1405,
-      "frontier_score": 0.2721
-    },
-    "1305.0034v1": {
-      "pagerank": 0.042,
-      "betweenness": 0.0093,
-      "community": 0,
-      "foundation_score": 0.1985,
-      "bridge_score": 0.4266,
-      "frontier_score": 0.0341
-    },
-    "2307.12087v1": {
-      "pagerank": 0.0235,
-      "betweenness": 0.0058,
-      "community": 0,
-      "foundation_score": 0.0541,
-      "bridge_score": 0.3159,
-      "frontier_score": 0.3922
-    },
-    "1810.04433v3": {
-      "pagerank": 0.0277,
-      "betweenness": 0.0128,
-      "community": 2,
-      "foundation_score": 0.1233,
-      "bridge_score": 0.3549,
-      "frontier_score": 0.2499
-    },
-    "1205.0622v1": {
-      "pagerank": 0.0318,
-      "betweenness": 0.0325,
-      "community": 0,
-      "foundation_score": 0.2058,
-      "bridge_score": 0.4723,
-      "frontier_score": 0.031
-    },
-    "2404.13891v2": {
-      "pagerank": 0.019,
-      "betweenness": 0.0081,
-      "community": 2,
-      "foundation_score": 0.0381,
-      "bridge_score": 0.2564,
-      "frontier_score": 0.52
-    },
-    "2408.14778v5": {
-      "pagerank": 0.0042,
-      "betweenness": 0.0,
-      "community": 1,
-      "foundation_score": 0.0292,
-      "bridge_score": 0.0069,
-      "frontier_score": 0.4985
-    },
-    "2110.07892v2": {
-      "pagerank": 0.0224,
-      "betweenness": 0.0116,
-      "community": 3,
-      "foundation_score": 0.0801,
-      "bridge_score": 0.3499,
-      "frontier_score": 0.294
-    },
-    "1803.05392v2": {
-      "pagerank": 0.029,
-      "betweenness": 0.0302,
-      "community": 0,
-      "foundation_score": 0.1241,
-      "bridge_score": 0.4191,
-      "frontier_score": 0.1666
-    },
-    "1111.2888v5": {
-      "pagerank": 0.0106,
-      "betweenness": 0.0023,
-      "community": 0,
-      "foundation_score": 0.2063,
-      "bridge_score": 0.1864,
-      "frontier_score": 0.0247
-    },
-    "2202.10049v1": {
-      "pagerank": 0.0065,
-      "betweenness": 0.0,
-      "community": 1,
-      "foundation_score": 0.0572,
-      "bridge_score": 0.0278,
-      "frontier_score": 0.4082
-    },
-    "1609.03234v1": {
-      "pagerank": 0.0156,
-      "betweenness": 0.0105,
-      "community": 2,
-      "foundation_score": 0.1427,
-      "bridge_score": 0.247,
-      "frontier_score": 0.1553
-    },
-    "2105.12328v2": {
-      "pagerank": 0.0343,
-      "betweenness": 0.0534,
-      "community": 1,
-      "foundation_score": 0.0873,
-      "bridge_score": 0.4798,
-      "frontier_score": 0.3711
-    },
-    "1901.07621v4": {
-      "pagerank": 0.0353,
-      "betweenness": 0.0244,
-      "community": 1,
-      "foundation_score": 0.1145,
-      "bridge_score": 0.3966,
-      "frontier_score": 0.2805
-    },
-    "W2151123669": {
-      "pagerank": 0.0231,
-      "betweenness": 0.0174,
-      "community": 0,
-      "foundation_score": 0.2272,
-      "bridge_score": 0.2936,
-      "frontier_score": 0.0284
-    },
-    "W2212088069": {
-      "pagerank": 0.0189,
-      "betweenness": 0.007,
-      "community": 0,
-      "foundation_score": 0.158,
-      "bridge_score": 0.2549,
-      "frontier_score": 0.0271
-    },
-    "1910.10906v2": {
-      "pagerank": 0.0347,
-      "betweenness": 0.0407,
-      "community": 2,
-      "foundation_score": 0.1141,
-      "bridge_score": 0.4621,
-      "frontier_score": 0.2974
-    },
-    "2002.08493v1": {
-      "pagerank": 0.0226,
+      "pagerank": 0.0193,
       "betweenness": 0.0209,
       "community": 2,
-      "foundation_score": 0.0935,
+      "foundation_score": 0.1183,
       "bridge_score": 0.3162,
-      "frontier_score": 0.3392
+      "frontier_score": 0.2313
     },
-    "2510.04407v3": {
-      "pagerank": 0.0168,
-      "betweenness": 0.0105,
-      "community": 2,
-      "foundation_score": 0.0234,
-      "bridge_score": 0.2136,
-      "frontier_score": 0.5648
-    },
-    "1910.12450v1": {
-      "pagerank": 0.0219,
-      "betweenness": 0.0151,
-      "community": 2,
-      "foundation_score": 0.1065,
-      "bridge_score": 0.3264,
-      "frontier_score": 0.2936
-    },
-    "2402.09670v3": {
-      "pagerank": 0.0042,
-      "betweenness": 0.0,
-      "community": 3,
-      "foundation_score": 0.0292,
-      "bridge_score": 0.0069,
-      "frontier_score": 0.4249
-    },
-    "2411.00954v1": {
-      "pagerank": 0.0143,
+    "2203.05920v4": {
+      "pagerank": 0.0193,
       "betweenness": 0.0,
       "community": 2,
-      "foundation_score": 0.0352,
-      "bridge_score": 0.1806,
-      "frontier_score": 0.5186
+      "foundation_score": 0.0649,
+      "bridge_score": 0.2651,
+      "frontier_score": 0.4131
     },
-    "2110.04961v2": {
-      "pagerank": 0.0242,
-      "betweenness": 0.0139,
-      "community": 2,
-      "foundation_score": 0.0812,
-      "bridge_score": 0.3353,
-      "frontier_score": 0.3852
-    },
-    "2511.08174v1": {
-      "pagerank": 0.0318,
-      "betweenness": 0.0046,
+    "1811.00164v3": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0453,
       "community": 1,
-      "foundation_score": 0.0324,
-      "bridge_score": 0.3658,
-      "frontier_score": 0.5522
+      "foundation_score": 0.1183,
+      "bridge_score": 0.4327,
+      "frontier_score": 0.2438
     },
-    "1902.04982v1": {
-      "pagerank": 0.0301,
-      "betweenness": 0.0221,
+    "2408.14778v5": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
       "community": 2,
-      "foundation_score": 0.1114,
-      "bridge_score": 0.3816,
-      "frontier_score": 0.296
+      "foundation_score": 0.0383,
+      "bridge_score": 0.0069,
+      "frontier_score": 0.504
     },
-    "1805.09282v1": {
-      "pagerank": 0.011,
+    "2008.02679v2": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0592,
+      "community": 2,
+      "foundation_score": 0.0916,
+      "bridge_score": 0.5925,
+      "frontier_score": 0.3222
+    },
+    "W2103315867": {
+      "pagerank": 0.1444,
+      "betweenness": 0.1452,
+      "community": 3,
+      "foundation_score": 0.34,
+      "bridge_score": 0.796,
+      "frontier_score": 0.0579
+    },
+    "W2106975967": {
+      "pagerank": 0.0514,
+      "betweenness": 0.0569,
+      "community": 2,
+      "foundation_score": 0.2575,
+      "bridge_score": 0.5059,
+      "frontier_score": 0.1045
+    },
+    "W2248846161": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.1583,
+      "bridge_score": 0.346,
+      "frontier_score": 0.0273
+    },
+    "1809.04040v3": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0163,
+      "community": 1,
+      "foundation_score": 0.1183,
+      "bridge_score": 0.3601,
+      "frontier_score": 0.2438
+    },
+    "2311.07155v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0081,
+      "community": 1,
+      "foundation_score": 0.0516,
+      "bridge_score": 0.2614,
+      "frontier_score": 0.471
+    },
+    "2304.10498v2": {
+      "pagerank": 0.0193,
+      "betweenness": 0.029,
+      "community": 2,
+      "foundation_score": 0.0516,
+      "bridge_score": 0.242,
+      "frontier_score": 0.4585
+    },
+    "1912.02967v5": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.1049,
+      "bridge_score": 0.1347,
+      "frontier_score": 0.2892
+    },
+    "1305.0034v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.1161,
+      "community": 0,
+      "foundation_score": 0.1849,
+      "bridge_score": 0.6938,
+      "frontier_score": 0.0273
+    },
+    "2307.12087v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.0516,
+      "bridge_score": 0.3014,
+      "frontier_score": 0.3909
+    },
+    "1810.04433v3": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.1183,
+      "bridge_score": 0.2812,
+      "frontier_score": 0.2438
+    },
+    "1205.0622v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0209,
+      "community": 0,
+      "foundation_score": 0.1983,
+      "bridge_score": 0.4433,
+      "frontier_score": 0.0273
+    },
+    "2404.13891v2": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0012,
+      "community": 1,
+      "foundation_score": 0.0383,
+      "bridge_score": 0.1921,
+      "frontier_score": 0.5165
+    },
+    "2110.07892v2": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0116,
+      "community": 3,
+      "foundation_score": 0.0783,
+      "bridge_score": 0.3499,
+      "frontier_score": 0.2931
+    },
+    "1803.05392v2": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0256,
+      "community": 0,
+      "foundation_score": 0.1183,
+      "bridge_score": 0.4075,
+      "frontier_score": 0.1637
+    },
+    "1111.2888v5": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.2116,
+      "bridge_score": 0.1806,
+      "frontier_score": 0.0273
+    },
+    "2202.10049v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.0649,
+      "bridge_score": 0.0903,
+      "frontier_score": 0.4256
+    },
+    "1609.03234v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.1449,
+      "bridge_score": 0.2208,
+      "frontier_score": 0.1529
+    },
+    "2105.12328v2": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0105,
+      "community": 1,
+      "foundation_score": 0.0783,
+      "bridge_score": 0.3545,
+      "frontier_score": 0.3801
+    },
+    "1901.07621v4": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0569,
+      "community": 1,
+      "foundation_score": 0.1049,
+      "bridge_score": 0.4501,
+      "frontier_score": 0.2892
+    },
+    "W2151123669": {
+      "pagerank": 0.0193,
       "betweenness": 0.0012,
       "community": 0,
-      "foundation_score": 0.1132,
-      "bridge_score": 0.1522,
-      "frontier_score": 0.1611
+      "foundation_score": 0.2249,
+      "bridge_score": 0.2529,
+      "frontier_score": 0.0273
     },
-    "2012.01870v4": {
-      "pagerank": 0.0199,
+    "W2212088069": {
+      "pagerank": 0.0248,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.1616,
+      "bridge_score": 0.2375,
+      "frontier_score": 0.0289
+    },
+    "1910.10906v2": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0395,
+      "community": 1,
+      "foundation_score": 0.1049,
+      "bridge_score": 0.4511,
+      "frontier_score": 0.2892
+    },
+    "2002.08493v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0174,
+      "community": 2,
+      "foundation_score": 0.0916,
+      "bridge_score": 0.3324,
+      "frontier_score": 0.3222
+    },
+    "2510.04407v3": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.0249,
+      "bridge_score": 0.2208,
+      "frontier_score": 0.562
+    },
+    "1910.12450v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 2,
+      "foundation_score": 0.1049,
+      "bridge_score": 0.3125,
+      "frontier_score": 0.2767
+    },
+    "2402.09670v3": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 3,
+      "foundation_score": 0.0383,
+      "bridge_score": 0.0069,
+      "frontier_score": 0.4294
+    },
+    "2411.00954v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0046,
+      "community": 2,
+      "foundation_score": 0.0383,
+      "bridge_score": 0.1609,
+      "frontier_score": 0.504
+    },
+    "2110.04961v2": {
+      "pagerank": 0.0193,
       "betweenness": 0.0012,
       "community": 1,
-      "foundation_score": 0.092,
-      "bridge_score": 0.239,
-      "frontier_score": 0.3214
+      "foundation_score": 0.0783,
+      "bridge_score": 0.2693,
+      "frontier_score": 0.3801
+    },
+    "2511.08174v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0174,
+      "community": 1,
+      "foundation_score": 0.0249,
+      "bridge_score": 0.3607,
+      "frontier_score": 0.562
+    },
+    "1902.04982v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0116,
+      "community": 1,
+      "foundation_score": 0.1049,
+      "bridge_score": 0.3369,
+      "frontier_score": 0.2892
+    },
+    "1805.09282v1": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.1183,
+      "bridge_score": 0.1493,
+      "frontier_score": 0.1637
+    },
+    "2012.01870v4": {
+      "pagerank": 0.0193,
+      "betweenness": 0.0023,
+      "community": 1,
+      "foundation_score": 0.0916,
+      "bridge_score": 0.195,
+      "frontier_score": 0.3347
     },
     "2009.06373v1": {
-      "pagerank": 0.0227,
-      "betweenness": 0.0267,
-      "community": 1,
-      "foundation_score": 0.0936,
-      "bridge_score": 0.3557,
+      "pagerank": 0.0193,
+      "betweenness": 0.007,
+      "community": 2,
+      "foundation_score": 0.0916,
+      "bridge_score": 0.3313,
       "frontier_score": 0.3222
     },
     "2001.11165v10": {
-      "pagerank": 0.0106,
-      "betweenness": 0.0081,
+      "pagerank": 0.0193,
+      "betweenness": 0.0,
       "community": 0,
-      "foundation_score": 0.0863,
-      "bridge_score": 0.2009,
-      "frontier_score": 0.2519
+      "foundation_score": 0.0916,
+      "bridge_score": 0.1806,
+      "frontier_score": 0.2546
     },
     "2305.17327v3": {
-      "pagerank": 0.0179,
+      "pagerank": 0.0193,
       "betweenness": 0.0,
       "community": 1,
-      "foundation_score": 0.0507,
-      "bridge_score": 0.2042,
-      "frontier_score": 0.4571
+      "foundation_score": 0.0516,
+      "bridge_score": 0.2208,
+      "frontier_score": 0.471
     },
     "W2102509082": {
-      "pagerank": 0.0372,
-      "betweenness": 0.0035,
+      "pagerank": 0.0248,
+      "betweenness": 0.0859,
       "community": 3,
-      "foundation_score": 0.209,
-      "bridge_score": 0.3688,
-      "frontier_score": 0.0257
+      "foundation_score": 0.2016,
+      "bridge_score": 0.575,
+      "frontier_score": 0.022
     },
     "W2187559597": {
-      "pagerank": 0.0205,
+      "pagerank": 0.0193,
       "betweenness": 0.0,
       "community": 3,
-      "foundation_score": 0.159,
+      "foundation_score": 0.1583,
       "bridge_score": 0.1847,
-      "frontier_score": 0.0207
+      "frontier_score": 0.0203
     }
   },
   "graph_data": {
@@ -2110,11 +2110,12 @@
       "2304.05962v2",
       "1812.10607v1",
       "2203.05920v4",
+      "1811.00164v3",
+      "2408.14778v5",
+      "2008.02679v2",
       "W2103315867",
       "W2106975967",
       "W2248846161",
-      "1811.00164v3",
-      "2008.02679v2",
       "1809.04040v3",
       "2311.07155v1",
       "2304.10498v2",
@@ -2124,7 +2125,6 @@
       "1810.04433v3",
       "1205.0622v1",
       "2404.13891v2",
-      "2408.14778v5",
       "2110.07892v2",
       "1803.05392v2",
       "1111.2888v5",
@@ -2156,2425 +2156,2829 @@
         "source": "W2106975967",
         "target": "W2103315867",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2248846161",
         "target": "W2103315867",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2248846161",
         "target": "W2106975967",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2248846161",
         "target": "W2212088069",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "1205.0622v1",
         "target": "W2103315867",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "2110.07892v2",
         "target": "W2103315867",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2151123669",
         "target": "W2103315867",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2212088069",
         "target": "W2103315867",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2212088069",
         "target": "W2106975967",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2102509082",
         "target": "W2103315867",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2102509082",
         "target": "W2106975967",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2187559597",
         "target": "W2102509082",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2187559597",
         "target": "W2103315867",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "W2187559597",
         "target": "W2106975967",
         "type": "citation",
-        "weight": 1.0
+        "weight": 1.0,
+        "distance": 1.0
       },
       {
         "source": "2304.05962v2",
         "target": "1305.0034v1",
         "type": "similarity",
-        "weight": 0.10753597584620805
+        "weight": 0.10753597584620805,
+        "distance": 9.299213515578677
       },
       {
         "source": "2304.05962v2",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.1065728750420885
+        "weight": 0.1065728750420885,
+        "distance": 9.383250659279607
       },
       {
         "source": "2304.05962v2",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.08259534111809078
+        "weight": 0.08259534111809078,
+        "distance": 12.107220412955847
       },
       {
         "source": "2304.05962v2",
         "target": "2001.11165v10",
         "type": "similarity",
-        "weight": 0.09459439333096115
+        "weight": 0.09459439333096115,
+        "distance": 10.57145106371432
       },
       {
         "source": "1812.10607v1",
         "target": "2203.05920v4",
         "type": "similarity",
-        "weight": 0.08092187578106894
+        "weight": 0.08092187578106894,
+        "distance": 12.357597872613113
+      },
+      {
+        "source": "1812.10607v1",
+        "target": "1811.00164v3",
+        "type": "similarity",
+        "weight": 0.1277379114988939,
+        "distance": 7.8285294339469385
+      },
+      {
+        "source": "1812.10607v1",
+        "target": "2008.02679v2",
+        "type": "similarity",
+        "weight": 0.12543609395899946,
+        "distance": 7.972187019207278
       },
       {
         "source": "1812.10607v1",
         "target": "W2103315867",
         "type": "similarity",
-        "weight": 0.08806704085703426
+        "weight": 0.08806704085703426,
+        "distance": 11.35498581839912
       },
       {
         "source": "1812.10607v1",
         "target": "W2106975967",
         "type": "similarity",
-        "weight": 0.14416068413793953
-      },
-      {
-        "source": "1812.10607v1",
-        "target": "1811.00164v3",
-        "type": "similarity",
-        "weight": 0.1277379114988938
-      },
-      {
-        "source": "1812.10607v1",
-        "target": "2008.02679v2",
-        "type": "similarity",
-        "weight": 0.12543609395899946
+        "weight": 0.14416068413793953,
+        "distance": 6.9367040395226915
       },
       {
         "source": "1812.10607v1",
         "target": "2304.10498v2",
         "type": "similarity",
-        "weight": 0.17032321439059736
+        "weight": 0.17032321439059736,
+        "distance": 5.87119027537097
       },
       {
         "source": "1812.10607v1",
         "target": "1305.0034v1",
         "type": "similarity",
-        "weight": 0.08743476475664849
+        "weight": 0.08743476475664849,
+        "distance": 11.4370983073293
       },
       {
         "source": "1812.10607v1",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.08401026114904843
+        "weight": 0.08401026114904843,
+        "distance": 11.903307837906024
       },
       {
         "source": "1812.10607v1",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.08090771678835329
+        "weight": 0.08090771678835329,
+        "distance": 12.359760473971878
       },
       {
         "source": "1812.10607v1",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.1506817142844698
+        "weight": 0.1506817142844698,
+        "distance": 6.636505330116663
       },
       {
         "source": "1812.10607v1",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.10916400789609715
+        "weight": 0.10916400789609718,
+        "distance": 9.160528449558253
       },
       {
         "source": "1812.10607v1",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.16918078183481053
+        "weight": 0.16918078183481053,
+        "distance": 5.9108368524765895
       },
       {
         "source": "1812.10607v1",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.085415622317616
+        "weight": 0.085415622317616,
+        "distance": 11.70746021473125
       },
       {
         "source": "1812.10607v1",
         "target": "2411.00954v1",
         "type": "similarity",
-        "weight": 0.12748603367000538
+        "weight": 0.12748603367000538,
+        "distance": 7.843996485046171
       },
       {
         "source": "1812.10607v1",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.1522985369196659
+        "weight": 0.1522985369196659,
+        "distance": 6.566051258440373
       },
       {
         "source": "1812.10607v1",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.2452328583771542
+        "weight": 0.2452328583771542,
+        "distance": 4.077756980110948
       },
       {
         "source": "1812.10607v1",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.11150314874774964
+        "weight": 0.11150314874774964,
+        "distance": 8.968356600065809
       },
       {
         "source": "1812.10607v1",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.1771193947393888
+        "weight": 0.1771193947393888,
+        "distance": 5.645909085627732
+      },
+      {
+        "source": "2203.05920v4",
+        "target": "2008.02679v2",
+        "type": "similarity",
+        "weight": 0.13374990808072176,
+        "distance": 7.476640652317102
       },
       {
         "source": "2203.05920v4",
         "target": "W2103315867",
         "type": "similarity",
-        "weight": 0.0986005885328438
-      },
-      {
-        "source": "2203.05920v4",
-        "target": "2008.02679v2",
-        "type": "similarity",
-        "weight": 0.13374990808072174
+        "weight": 0.0986005885328438,
+        "distance": 10.141927293536392
       },
       {
         "source": "2203.05920v4",
         "target": "2304.10498v2",
         "type": "similarity",
-        "weight": 0.10786529958750506
+        "weight": 0.10786529958750506,
+        "distance": 9.270822069972153
       },
       {
         "source": "2203.05920v4",
         "target": "1305.0034v1",
         "type": "similarity",
-        "weight": 0.10700450355725329
+        "weight": 0.10700450355725329,
+        "distance": 9.345401050946842
       },
       {
         "source": "2203.05920v4",
         "target": "1810.04433v3",
         "type": "similarity",
-        "weight": 0.1080332211871244
+        "weight": 0.1080332211871244,
+        "distance": 9.256411953762811
       },
       {
         "source": "2203.05920v4",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.08740699517010546
+        "weight": 0.08740699517010546,
+        "distance": 11.440731923730693
       },
       {
         "source": "2203.05920v4",
         "target": "2110.07892v2",
         "type": "similarity",
-        "weight": 0.10399180878258107
+        "weight": 0.10399180878258107,
+        "distance": 9.616141999133136
       },
       {
         "source": "2203.05920v4",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.09262939682762439
+        "weight": 0.09262939682762439,
+        "distance": 10.795708859692965
       },
       {
         "source": "2203.05920v4",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.1786001542933119
+        "weight": 0.1786001542933119,
+        "distance": 5.5990993062509755
       },
       {
         "source": "2203.05920v4",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.0875790544701392
+        "weight": 0.0875790544701392,
+        "distance": 11.418255267199285
       },
       {
         "source": "2203.05920v4",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.09985168343003908
+        "weight": 0.09985168343003908,
+        "distance": 10.014853687475869
       },
       {
         "source": "2203.05920v4",
         "target": "2411.00954v1",
         "type": "similarity",
-        "weight": 0.08142663854554937
+        "weight": 0.08142663854554937,
+        "distance": 12.2809932702872
       },
       {
         "source": "2203.05920v4",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.10161277176447972
+        "weight": 0.10161277176447972,
+        "distance": 9.841282573393643
       },
       {
         "source": "2203.05920v4",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.10207879114300407
+        "weight": 0.10207879114300407,
+        "distance": 9.796354255401413
       },
       {
         "source": "2203.05920v4",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.14766267042671172
+        "weight": 0.14766267042671172,
+        "distance": 6.772192302294319
       },
       {
         "source": "2203.05920v4",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.15273666049772947
+        "weight": 0.15273666049772947,
+        "distance": 6.54721660628992
       },
       {
-        "source": "W2103315867",
+        "source": "1811.00164v3",
+        "target": "2008.02679v2",
+        "type": "similarity",
+        "weight": 0.1541594600075849,
+        "distance": 6.486789717288827
+      },
+      {
+        "source": "1811.00164v3",
+        "target": "W2103315867",
+        "type": "similarity",
+        "weight": 0.1298344260580223,
+        "distance": 7.702117461150907
+      },
+      {
+        "source": "1811.00164v3",
         "target": "W2106975967",
         "type": "similarity",
-        "weight": 0.1406799041084752
+        "weight": 0.14222625352863805,
+        "distance": 7.031050704001315
       },
       {
-        "source": "W2103315867",
+        "source": "1811.00164v3",
         "target": "W2248846161",
         "type": "similarity",
-        "weight": 0.14307268863662045
-      },
-      {
-        "source": "W2103315867",
-        "target": "1811.00164v3",
-        "type": "similarity",
-        "weight": 0.12983442605802223
-      },
-      {
-        "source": "W2103315867",
-        "target": "2008.02679v2",
-        "type": "similarity",
-        "weight": 0.15761200333972933
-      },
-      {
-        "source": "W2103315867",
-        "target": "1809.04040v3",
-        "type": "similarity",
-        "weight": 0.08045647996049647
-      },
-      {
-        "source": "W2103315867",
-        "target": "2311.07155v1",
-        "type": "similarity",
-        "weight": 0.14726439189054416
-      },
-      {
-        "source": "W2103315867",
-        "target": "2304.10498v2",
-        "type": "similarity",
-        "weight": 0.09507427557712443
-      },
-      {
-        "source": "W2103315867",
-        "target": "1305.0034v1",
-        "type": "similarity",
-        "weight": 0.14631485747773912
-      },
-      {
-        "source": "W2103315867",
-        "target": "2307.12087v1",
-        "type": "similarity",
-        "weight": 0.16871194278840976
-      },
-      {
-        "source": "W2103315867",
-        "target": "1205.0622v1",
-        "type": "similarity",
-        "weight": 0.08793421829524282
-      },
-      {
-        "source": "W2103315867",
-        "target": "1803.05392v2",
-        "type": "similarity",
-        "weight": 0.14178404804476544
-      },
-      {
-        "source": "W2103315867",
-        "target": "1111.2888v5",
-        "type": "similarity",
-        "weight": 0.0873899227935401
-      },
-      {
-        "source": "W2103315867",
-        "target": "2105.12328v2",
-        "type": "similarity",
-        "weight": 0.09668152169680272
-      },
-      {
-        "source": "W2103315867",
-        "target": "W2151123669",
-        "type": "similarity",
-        "weight": 0.18177227646967187
-      },
-      {
-        "source": "W2103315867",
-        "target": "W2212088069",
-        "type": "similarity",
-        "weight": 0.156243169385407
-      },
-      {
-        "source": "W2103315867",
-        "target": "1910.10906v2",
-        "type": "similarity",
-        "weight": 0.08973701248979801
-      },
-      {
-        "source": "W2103315867",
-        "target": "2002.08493v1",
-        "type": "similarity",
-        "weight": 0.09805598276473208
-      },
-      {
-        "source": "W2103315867",
-        "target": "2510.04407v3",
-        "type": "similarity",
-        "weight": 0.08679498300146048
-      },
-      {
-        "source": "W2103315867",
-        "target": "1910.12450v1",
-        "type": "similarity",
-        "weight": 0.13714264861453093
-      },
-      {
-        "source": "W2103315867",
-        "target": "2402.09670v3",
-        "type": "similarity",
-        "weight": 0.08989240558782105
-      },
-      {
-        "source": "W2103315867",
-        "target": "2110.04961v2",
-        "type": "similarity",
-        "weight": 0.08401338341788414
-      },
-      {
-        "source": "W2103315867",
-        "target": "2511.08174v1",
-        "type": "similarity",
-        "weight": 0.08997354170637416
-      },
-      {
-        "source": "W2103315867",
-        "target": "1902.04982v1",
-        "type": "similarity",
-        "weight": 0.11732269178972171
-      },
-      {
-        "source": "W2103315867",
-        "target": "1805.09282v1",
-        "type": "similarity",
-        "weight": 0.11924978053463937
-      },
-      {
-        "source": "W2103315867",
-        "target": "2009.06373v1",
-        "type": "similarity",
-        "weight": 0.08555440028883128
-      },
-      {
-        "source": "W2103315867",
-        "target": "2001.11165v10",
-        "type": "similarity",
-        "weight": 0.09282342589361771
-      },
-      {
-        "source": "W2106975967",
-        "target": "W2248846161",
-        "type": "similarity",
-        "weight": 0.08174874097282611
-      },
-      {
-        "source": "W2106975967",
-        "target": "1811.00164v3",
-        "type": "similarity",
-        "weight": 0.14222625352863794
-      },
-      {
-        "source": "W2106975967",
-        "target": "2008.02679v2",
-        "type": "similarity",
-        "weight": 0.11723183441387501
-      },
-      {
-        "source": "W2106975967",
-        "target": "1809.04040v3",
-        "type": "similarity",
-        "weight": 0.10850849972281304
-      },
-      {
-        "source": "W2106975967",
-        "target": "1305.0034v1",
-        "type": "similarity",
-        "weight": 0.10509233217917968
-      },
-      {
-        "source": "W2106975967",
-        "target": "1205.0622v1",
-        "type": "similarity",
-        "weight": 0.08214115886524707
-      },
-      {
-        "source": "W2106975967",
-        "target": "2408.14778v5",
-        "type": "similarity",
-        "weight": 0.08751826004982623
-      },
-      {
-        "source": "W2106975967",
-        "target": "1803.05392v2",
-        "type": "similarity",
-        "weight": 0.14570404011027144
-      },
-      {
-        "source": "W2106975967",
-        "target": "1609.03234v1",
-        "type": "similarity",
-        "weight": 0.11428990376394847
-      },
-      {
-        "source": "W2106975967",
-        "target": "2105.12328v2",
-        "type": "similarity",
-        "weight": 0.10896944227378867
-      },
-      {
-        "source": "W2106975967",
-        "target": "1901.07621v4",
-        "type": "similarity",
-        "weight": 0.1520062238218641
-      },
-      {
-        "source": "W2106975967",
-        "target": "W2212088069",
-        "type": "similarity",
-        "weight": 0.08175877568814449
-      },
-      {
-        "source": "W2106975967",
-        "target": "1910.10906v2",
-        "type": "similarity",
-        "weight": 0.10415634823397342
-      },
-      {
-        "source": "W2106975967",
-        "target": "2002.08493v1",
-        "type": "similarity",
-        "weight": 0.17961885234959088
-      },
-      {
-        "source": "W2106975967",
-        "target": "1910.12450v1",
-        "type": "similarity",
-        "weight": 0.11577366124167666
-      },
-      {
-        "source": "W2106975967",
-        "target": "2110.04961v2",
-        "type": "similarity",
-        "weight": 0.09530753759929916
-      },
-      {
-        "source": "W2106975967",
-        "target": "2511.08174v1",
-        "type": "similarity",
-        "weight": 0.0997305730758317
-      },
-      {
-        "source": "W2106975967",
-        "target": "1902.04982v1",
-        "type": "similarity",
-        "weight": 0.11243794037620383
-      },
-      {
-        "source": "W2106975967",
-        "target": "2012.01870v4",
-        "type": "similarity",
-        "weight": 0.08357318421243976
-      },
-      {
-        "source": "W2106975967",
-        "target": "2009.06373v1",
-        "type": "similarity",
-        "weight": 0.08223339316172304
-      },
-      {
-        "source": "W2106975967",
-        "target": "2305.17327v3",
-        "type": "similarity",
-        "weight": 0.10797362156217027
-      },
-      {
-        "source": "W2106975967",
-        "target": "W2102509082",
-        "type": "similarity",
-        "weight": 0.25540639652820485
-      },
-      {
-        "source": "W2106975967",
-        "target": "W2187559597",
-        "type": "similarity",
-        "weight": 0.09814444246620999
-      },
-      {
-        "source": "W2248846161",
-        "target": "1811.00164v3",
-        "type": "similarity",
-        "weight": 0.14959125075866497
-      },
-      {
-        "source": "W2248846161",
-        "target": "2008.02679v2",
-        "type": "similarity",
-        "weight": 0.15052427512312705
-      },
-      {
-        "source": "W2248846161",
-        "target": "1809.04040v3",
-        "type": "similarity",
-        "weight": 0.12732053579510802
-      },
-      {
-        "source": "W2248846161",
-        "target": "2311.07155v1",
-        "type": "similarity",
-        "weight": 0.09247183488490754
-      },
-      {
-        "source": "W2248846161",
-        "target": "1305.0034v1",
-        "type": "similarity",
-        "weight": 0.17556381061208823
-      },
-      {
-        "source": "W2248846161",
-        "target": "2307.12087v1",
-        "type": "similarity",
-        "weight": 0.17116255299349184
-      },
-      {
-        "source": "W2248846161",
-        "target": "1810.04433v3",
-        "type": "similarity",
-        "weight": 0.16051690481249004
-      },
-      {
-        "source": "W2248846161",
-        "target": "1205.0622v1",
-        "type": "similarity",
-        "weight": 0.13671197388249473
-      },
-      {
-        "source": "W2248846161",
-        "target": "2404.13891v2",
-        "type": "similarity",
-        "weight": 0.0807414254155478
-      },
-      {
-        "source": "W2248846161",
-        "target": "2105.12328v2",
-        "type": "similarity",
-        "weight": 0.09438666844476644
-      },
-      {
-        "source": "W2248846161",
-        "target": "1901.07621v4",
-        "type": "similarity",
-        "weight": 0.1283431051712524
-      },
-      {
-        "source": "W2248846161",
-        "target": "W2151123669",
-        "type": "similarity",
-        "weight": 0.11927456660596218
-      },
-      {
-        "source": "W2248846161",
-        "target": "W2212088069",
-        "type": "similarity",
-        "weight": 0.1303971667604571
-      },
-      {
-        "source": "W2248846161",
-        "target": "1910.10906v2",
-        "type": "similarity",
-        "weight": 0.08317724309929642
-      },
-      {
-        "source": "W2248846161",
-        "target": "2110.04961v2",
-        "type": "similarity",
-        "weight": 0.14235200893943561
-      },
-      {
-        "source": "W2248846161",
-        "target": "2511.08174v1",
-        "type": "similarity",
-        "weight": 0.09371647554007448
-      },
-      {
-        "source": "W2248846161",
-        "target": "1902.04982v1",
-        "type": "similarity",
-        "weight": 0.08760021977213335
-      },
-      {
-        "source": "W2248846161",
-        "target": "2012.01870v4",
-        "type": "similarity",
-        "weight": 0.08780567856486027
-      },
-      {
-        "source": "W2248846161",
-        "target": "W2102509082",
-        "type": "similarity",
-        "weight": 0.1089402966359878
-      },
-      {
-        "source": "W2248846161",
-        "target": "W2187559597",
-        "type": "similarity",
-        "weight": 0.08532540238492242
-      },
-      {
-        "source": "1811.00164v3",
-        "target": "2008.02679v2",
-        "type": "similarity",
-        "weight": 0.1541594600075848
+        "weight": 0.14959125075866508,
+        "distance": 6.68488293886449
       },
       {
         "source": "1811.00164v3",
         "target": "1809.04040v3",
         "type": "similarity",
-        "weight": 0.17531765864389978
+        "weight": 0.1753176586438999,
+        "distance": 5.703931981154111
       },
       {
         "source": "1811.00164v3",
         "target": "2311.07155v1",
         "type": "similarity",
-        "weight": 0.08698744400208534
+        "weight": 0.08698744400208541,
+        "distance": 11.495911984447162
       },
       {
         "source": "1811.00164v3",
         "target": "1305.0034v1",
         "type": "similarity",
-        "weight": 0.1481543777065991
+        "weight": 0.14815437770659926,
+        "distance": 6.749716177677664
       },
       {
         "source": "1811.00164v3",
         "target": "2307.12087v1",
         "type": "similarity",
-        "weight": 0.18389448457532337
+        "weight": 0.1838944845753235,
+        "distance": 5.437900991480787
       },
       {
         "source": "1811.00164v3",
         "target": "1810.04433v3",
         "type": "similarity",
-        "weight": 0.18388071301421727
+        "weight": 0.1838807130142175,
+        "distance": 5.438308257607642
       },
       {
         "source": "1811.00164v3",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.18648403015270357
+        "weight": 0.1864840301527037,
+        "distance": 5.36238947206977
       },
       {
         "source": "1811.00164v3",
         "target": "2404.13891v2",
         "type": "similarity",
-        "weight": 0.10468906204902251
+        "weight": 0.10468906204902259,
+        "distance": 9.552096278517917
       },
       {
         "source": "1811.00164v3",
         "target": "2110.07892v2",
         "type": "similarity",
-        "weight": 0.08408486801214998
+        "weight": 0.08408486801215007,
+        "distance": 11.892746265065224
       },
       {
         "source": "1811.00164v3",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.27686486164292007
+        "weight": 0.27686486164292035,
+        "distance": 3.6118704051716226
       },
       {
         "source": "1811.00164v3",
         "target": "2202.10049v1",
         "type": "similarity",
-        "weight": 0.10020766604457458
+        "weight": 0.10020766604457465,
+        "distance": 9.979276431357828
       },
       {
         "source": "1811.00164v3",
         "target": "1609.03234v1",
         "type": "similarity",
-        "weight": 0.0836969492173469
+        "weight": 0.08369694921734697,
+        "distance": 11.947866790259791
       },
       {
         "source": "1811.00164v3",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.35655164506042414
+        "weight": 0.35655164506042436,
+        "distance": 2.8046427883694975
       },
       {
         "source": "1811.00164v3",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.3194178871281157
+        "weight": 0.3194178871281161,
+        "distance": 3.1306950559062074
       },
       {
         "source": "1811.00164v3",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.09981355996408658
+        "weight": 0.09981355996408668,
+        "distance": 10.01867882840572
       },
       {
         "source": "1811.00164v3",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.1898874291381099
+        "weight": 0.18988742913811005,
+        "distance": 5.2662780497842965
       },
       {
         "source": "1811.00164v3",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.16298873411793463
+        "weight": 0.1629887341179348,
+        "distance": 6.135393378025892
       },
       {
         "source": "1811.00164v3",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.08697714679181567
+        "weight": 0.08697714679181576,
+        "distance": 11.49727298359822
       },
       {
         "source": "1811.00164v3",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.19605194359026476
+        "weight": 0.1960519435902649,
+        "distance": 5.100689040298072
       },
       {
         "source": "1811.00164v3",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.13630434822154514
+        "weight": 0.13630434822154522,
+        "distance": 7.336523104711438
       },
       {
         "source": "1811.00164v3",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.14500799020273614
+        "weight": 0.14500799020273625,
+        "distance": 6.89617171165462
       },
       {
         "source": "1811.00164v3",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.11526035445045549
+        "weight": 0.11526035445045556,
+        "distance": 8.676010105711137
       },
       {
         "source": "1811.00164v3",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.15482514412624176
+        "weight": 0.1548251441262419,
+        "distance": 6.4588992029913195
       },
       {
         "source": "1811.00164v3",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.10506633440686632
+        "weight": 0.1050663344068664,
+        "distance": 9.51779659626773
+      },
+      {
+        "source": "2408.14778v5",
+        "target": "W2106975967",
+        "type": "similarity",
+        "weight": 0.08751826004982623,
+        "distance": 11.426186940081719
+      },
+      {
+        "source": "2008.02679v2",
+        "target": "W2103315867",
+        "type": "similarity",
+        "weight": 0.15761200333972933,
+        "distance": 6.344694431962274
+      },
+      {
+        "source": "2008.02679v2",
+        "target": "W2106975967",
+        "type": "similarity",
+        "weight": 0.11723183441387502,
+        "distance": 8.530106220718189
+      },
+      {
+        "source": "2008.02679v2",
+        "target": "W2248846161",
+        "type": "similarity",
+        "weight": 0.15052427512312708,
+        "distance": 6.643446707728782
       },
       {
         "source": "2008.02679v2",
         "target": "1809.04040v3",
         "type": "similarity",
-        "weight": 0.14284891669103278
+        "weight": 0.14284891669103278,
+        "distance": 7.000403105351475
       },
       {
         "source": "2008.02679v2",
         "target": "2311.07155v1",
         "type": "similarity",
-        "weight": 0.12113780169485688
+        "weight": 0.12113780169485693,
+        "distance": 8.255061475516742
       },
       {
         "source": "2008.02679v2",
         "target": "2304.10498v2",
         "type": "similarity",
-        "weight": 0.11446385232135506
+        "weight": 0.11446385232135507,
+        "distance": 8.736382532299535
       },
       {
         "source": "2008.02679v2",
         "target": "1912.02967v5",
         "type": "similarity",
-        "weight": 0.08282821035000325
+        "weight": 0.08282821035000325,
+        "distance": 12.073181296255797
       },
       {
         "source": "2008.02679v2",
         "target": "1305.0034v1",
         "type": "similarity",
-        "weight": 0.22462784567787974
+        "weight": 0.22462784567787974,
+        "distance": 4.451807820095544
       },
       {
         "source": "2008.02679v2",
         "target": "2307.12087v1",
         "type": "similarity",
-        "weight": 0.15010382590395405
+        "weight": 0.15010382590395405,
+        "distance": 6.662055373857449
       },
       {
         "source": "2008.02679v2",
         "target": "1810.04433v3",
         "type": "similarity",
-        "weight": 0.17001931929449743
+        "weight": 0.17001931929449746,
+        "distance": 5.881684529437851
       },
       {
         "source": "2008.02679v2",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.1682092810573175
+        "weight": 0.16820928105731753,
+        "distance": 5.9449751744628685
       },
       {
         "source": "2008.02679v2",
         "target": "2404.13891v2",
         "type": "similarity",
-        "weight": 0.1192760037533108
+        "weight": 0.1192760037533108,
+        "distance": 8.383916031159307
       },
       {
         "source": "2008.02679v2",
         "target": "2110.07892v2",
         "type": "similarity",
-        "weight": 0.1468955599413352
+        "weight": 0.14689555994133524,
+        "distance": 6.807557698812434
       },
       {
         "source": "2008.02679v2",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.10250386239294514
+        "weight": 0.10250386239294515,
+        "distance": 9.755729946707113
       },
       {
         "source": "2008.02679v2",
         "target": "2202.10049v1",
         "type": "similarity",
-        "weight": 0.09222922804958568
+        "weight": 0.09222922804958571,
+        "distance": 10.842549820132556
       },
       {
         "source": "2008.02679v2",
         "target": "1609.03234v1",
         "type": "similarity",
-        "weight": 0.11687355521708294
+        "weight": 0.11687355521708294,
+        "distance": 8.556255503159658
       },
       {
         "source": "2008.02679v2",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.16899132451512164
+        "weight": 0.16899132451512164,
+        "distance": 5.917463531747858
       },
       {
         "source": "2008.02679v2",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.17254861892972842
+        "weight": 0.17254861892972845,
+        "distance": 5.795468003179188
       },
       {
         "source": "2008.02679v2",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.16163514576530102
+        "weight": 0.16163514576530102,
+        "distance": 6.1867732742483454
       },
       {
         "source": "2008.02679v2",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.11960034352807399
+        "weight": 0.11960034352807404,
+        "distance": 8.361179997491126
       },
       {
         "source": "2008.02679v2",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.13942945998084083
+        "weight": 0.13942945998084086,
+        "distance": 7.172085441178722
       },
       {
         "source": "2008.02679v2",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.1083059479634261
+        "weight": 0.10830594796342613,
+        "distance": 9.233103248749462
       },
       {
         "source": "2008.02679v2",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.1018126271155536
+        "weight": 0.10181262711555361,
+        "distance": 9.821964409827443
       },
       {
         "source": "2008.02679v2",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.13348461157046956
+        "weight": 0.1334846115704696,
+        "distance": 7.491500242873142
       },
       {
         "source": "2008.02679v2",
         "target": "2411.00954v1",
         "type": "similarity",
-        "weight": 0.08873511904326972
+        "weight": 0.08873511904326974,
+        "distance": 11.26949522107895
       },
       {
         "source": "2008.02679v2",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.11502716291034382
+        "weight": 0.11502716291034383,
+        "distance": 8.693598752665357
       },
       {
         "source": "2008.02679v2",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.17279980251287208
+        "weight": 0.17279980251287208,
+        "distance": 5.787043650848552
       },
       {
         "source": "2008.02679v2",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.1521304354386438
+        "weight": 0.15213043543864382,
+        "distance": 6.573306630699239
       },
       {
         "source": "2008.02679v2",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.11561407856307718
+        "weight": 0.11561407856307718,
+        "distance": 8.649465639726706
       },
       {
         "source": "2008.02679v2",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.23483072195106344
+        "weight": 0.23483072195106344,
+        "distance": 4.258386601598026
       },
       {
         "source": "2008.02679v2",
         "target": "2001.11165v10",
         "type": "similarity",
-        "weight": 0.0985272411641968
+        "weight": 0.09852724116419682,
+        "distance": 10.149477324078202
       },
       {
         "source": "2008.02679v2",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.10119390742398258
+        "weight": 0.1011939074239826,
+        "distance": 9.882017855187629
       },
       {
         "source": "2008.02679v2",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.12154996205974224
+        "weight": 0.12154996205974225,
+        "distance": 8.227069618569658
+      },
+      {
+        "source": "W2103315867",
+        "target": "W2106975967",
+        "type": "similarity",
+        "weight": 0.14067990410847522,
+        "distance": 7.108335809135338
+      },
+      {
+        "source": "W2103315867",
+        "target": "W2248846161",
+        "type": "similarity",
+        "weight": 0.14307268863662045,
+        "distance": 6.989454168571786
+      },
+      {
+        "source": "W2103315867",
+        "target": "1809.04040v3",
+        "type": "similarity",
+        "weight": 0.08045647996049647,
+        "distance": 12.429079677497604
+      },
+      {
+        "source": "W2103315867",
+        "target": "2311.07155v1",
+        "type": "similarity",
+        "weight": 0.1472643918905442,
+        "distance": 6.790507787811059
+      },
+      {
+        "source": "W2103315867",
+        "target": "2304.10498v2",
+        "type": "similarity",
+        "weight": 0.09507427557712443,
+        "distance": 10.518092238197472
+      },
+      {
+        "source": "W2103315867",
+        "target": "1305.0034v1",
+        "type": "similarity",
+        "weight": 0.14631485747773912,
+        "distance": 6.83457590868476
+      },
+      {
+        "source": "W2103315867",
+        "target": "2307.12087v1",
+        "type": "similarity",
+        "weight": 0.16871194278840976,
+        "distance": 5.9272626671968975
+      },
+      {
+        "source": "W2103315867",
+        "target": "1205.0622v1",
+        "type": "similarity",
+        "weight": 0.08793421829524282,
+        "distance": 11.372137256539407
+      },
+      {
+        "source": "W2103315867",
+        "target": "1803.05392v2",
+        "type": "similarity",
+        "weight": 0.14178404804476544,
+        "distance": 7.052979610825262
+      },
+      {
+        "source": "W2103315867",
+        "target": "1111.2888v5",
+        "type": "similarity",
+        "weight": 0.08738992279354012,
+        "distance": 11.442966969572838
+      },
+      {
+        "source": "W2103315867",
+        "target": "2105.12328v2",
+        "type": "similarity",
+        "weight": 0.09668152169680272,
+        "distance": 10.343238112615166
+      },
+      {
+        "source": "W2103315867",
+        "target": "W2151123669",
+        "type": "similarity",
+        "weight": 0.18177227646967187,
+        "distance": 5.501388987483176
+      },
+      {
+        "source": "W2103315867",
+        "target": "W2212088069",
+        "type": "similarity",
+        "weight": 0.156243169385407,
+        "distance": 6.400279794205194
+      },
+      {
+        "source": "W2103315867",
+        "target": "1910.10906v2",
+        "type": "similarity",
+        "weight": 0.08973701248979801,
+        "distance": 11.143673856021088
+      },
+      {
+        "source": "W2103315867",
+        "target": "2002.08493v1",
+        "type": "similarity",
+        "weight": 0.09805598276473208,
+        "distance": 10.198255851448884
+      },
+      {
+        "source": "W2103315867",
+        "target": "2510.04407v3",
+        "type": "similarity",
+        "weight": 0.08679498300146048,
+        "distance": 11.52140325879404
+      },
+      {
+        "source": "W2103315867",
+        "target": "1910.12450v1",
+        "type": "similarity",
+        "weight": 0.13714264861453093,
+        "distance": 7.291677753801563
+      },
+      {
+        "source": "W2103315867",
+        "target": "2402.09670v3",
+        "type": "similarity",
+        "weight": 0.08989240558782105,
+        "distance": 11.12441027093265
+      },
+      {
+        "source": "W2103315867",
+        "target": "2110.04961v2",
+        "type": "similarity",
+        "weight": 0.08401338341788414,
+        "distance": 11.902865464017575
+      },
+      {
+        "source": "W2103315867",
+        "target": "2511.08174v1",
+        "type": "similarity",
+        "weight": 0.08997354170637416,
+        "distance": 11.114378527672821
+      },
+      {
+        "source": "W2103315867",
+        "target": "1902.04982v1",
+        "type": "similarity",
+        "weight": 0.11732269178972171,
+        "distance": 8.523500311366083
+      },
+      {
+        "source": "W2103315867",
+        "target": "1805.09282v1",
+        "type": "similarity",
+        "weight": 0.11924978053463937,
+        "distance": 8.385759667788424
+      },
+      {
+        "source": "W2103315867",
+        "target": "2009.06373v1",
+        "type": "similarity",
+        "weight": 0.08555440028883127,
+        "distance": 11.688469519089661
+      },
+      {
+        "source": "W2103315867",
+        "target": "2001.11165v10",
+        "type": "similarity",
+        "weight": 0.09282342589361771,
+        "distance": 10.773142559358579
+      },
+      {
+        "source": "W2106975967",
+        "target": "W2248846161",
+        "type": "similarity",
+        "weight": 0.08174874097282608,
+        "distance": 12.232604295794694
+      },
+      {
+        "source": "W2106975967",
+        "target": "1809.04040v3",
+        "type": "similarity",
+        "weight": 0.10850849972281303,
+        "distance": 9.21586790486016
+      },
+      {
+        "source": "W2106975967",
+        "target": "1305.0034v1",
+        "type": "similarity",
+        "weight": 0.10509233217917968,
+        "distance": 9.515442080922003
+      },
+      {
+        "source": "W2106975967",
+        "target": "1205.0622v1",
+        "type": "similarity",
+        "weight": 0.08214115886524707,
+        "distance": 12.17416474048661
+      },
+      {
+        "source": "W2106975967",
+        "target": "1803.05392v2",
+        "type": "similarity",
+        "weight": 0.1457040401102714,
+        "distance": 6.86322767195187
+      },
+      {
+        "source": "W2106975967",
+        "target": "1609.03234v1",
+        "type": "similarity",
+        "weight": 0.11428990376394846,
+        "distance": 8.749679254830552
+      },
+      {
+        "source": "W2106975967",
+        "target": "2105.12328v2",
+        "type": "similarity",
+        "weight": 0.10896944227378867,
+        "distance": 9.176884630532227
+      },
+      {
+        "source": "W2106975967",
+        "target": "1901.07621v4",
+        "type": "similarity",
+        "weight": 0.15200622382186413,
+        "distance": 6.578677996579262
+      },
+      {
+        "source": "W2106975967",
+        "target": "W2212088069",
+        "type": "similarity",
+        "weight": 0.08175877568814449,
+        "distance": 12.231102919328645
+      },
+      {
+        "source": "W2106975967",
+        "target": "1910.10906v2",
+        "type": "similarity",
+        "weight": 0.1041563482339734,
+        "distance": 9.600951040964231
+      },
+      {
+        "source": "W2106975967",
+        "target": "2002.08493v1",
+        "type": "similarity",
+        "weight": 0.17961885234959088,
+        "distance": 5.567344334511765
+      },
+      {
+        "source": "W2106975967",
+        "target": "1910.12450v1",
+        "type": "similarity",
+        "weight": 0.11577366124167666,
+        "distance": 8.637543196569618
+      },
+      {
+        "source": "W2106975967",
+        "target": "2110.04961v2",
+        "type": "similarity",
+        "weight": 0.09530753759929915,
+        "distance": 10.492349557957246
+      },
+      {
+        "source": "W2106975967",
+        "target": "2511.08174v1",
+        "type": "similarity",
+        "weight": 0.0997305730758317,
+        "distance": 10.027015479392004
+      },
+      {
+        "source": "W2106975967",
+        "target": "1902.04982v1",
+        "type": "similarity",
+        "weight": 0.11243794037620383,
+        "distance": 8.893795071789116
+      },
+      {
+        "source": "W2106975967",
+        "target": "2012.01870v4",
+        "type": "similarity",
+        "weight": 0.08357318421243976,
+        "distance": 11.96556059726095
+      },
+      {
+        "source": "W2106975967",
+        "target": "2009.06373v1",
+        "type": "similarity",
+        "weight": 0.08223339316172304,
+        "distance": 12.160510001494957
+      },
+      {
+        "source": "W2106975967",
+        "target": "2305.17327v3",
+        "type": "similarity",
+        "weight": 0.10797362156217027,
+        "distance": 9.261521337637163
+      },
+      {
+        "source": "W2106975967",
+        "target": "W2102509082",
+        "type": "similarity",
+        "weight": 0.25540639652820485,
+        "distance": 3.9153287215716572
+      },
+      {
+        "source": "W2106975967",
+        "target": "W2187559597",
+        "type": "similarity",
+        "weight": 0.09814444246620999,
+        "distance": 10.189063943628684
+      },
+      {
+        "source": "W2248846161",
+        "target": "1809.04040v3",
+        "type": "similarity",
+        "weight": 0.127320535795108,
+        "distance": 7.854192520908499
+      },
+      {
+        "source": "W2248846161",
+        "target": "2311.07155v1",
+        "type": "similarity",
+        "weight": 0.09247183488490753,
+        "distance": 10.814103572667525
+      },
+      {
+        "source": "W2248846161",
+        "target": "1305.0034v1",
+        "type": "similarity",
+        "weight": 0.17556381061208823,
+        "distance": 5.6959346947049365
+      },
+      {
+        "source": "W2248846161",
+        "target": "2307.12087v1",
+        "type": "similarity",
+        "weight": 0.1711625529934918,
+        "distance": 5.842399418043405
+      },
+      {
+        "source": "W2248846161",
+        "target": "1810.04433v3",
+        "type": "similarity",
+        "weight": 0.16051690481249004,
+        "distance": 6.229873427774871
+      },
+      {
+        "source": "W2248846161",
+        "target": "1205.0622v1",
+        "type": "similarity",
+        "weight": 0.1367119738824947,
+        "distance": 7.314648246242936
+      },
+      {
+        "source": "W2248846161",
+        "target": "2404.13891v2",
+        "type": "similarity",
+        "weight": 0.08074142541554778,
+        "distance": 12.385216075308938
+      },
+      {
+        "source": "W2248846161",
+        "target": "2105.12328v2",
+        "type": "similarity",
+        "weight": 0.09438666844476643,
+        "distance": 10.594716568316892
+      },
+      {
+        "source": "W2248846161",
+        "target": "1901.07621v4",
+        "type": "similarity",
+        "weight": 0.1283431051712524,
+        "distance": 7.791614506020151
+      },
+      {
+        "source": "W2248846161",
+        "target": "W2151123669",
+        "type": "similarity",
+        "weight": 0.11927456660596217,
+        "distance": 8.384017049532613
+      },
+      {
+        "source": "W2248846161",
+        "target": "W2212088069",
+        "type": "similarity",
+        "weight": 0.1303971667604571,
+        "distance": 7.668878280438603
+      },
+      {
+        "source": "W2248846161",
+        "target": "1910.10906v2",
+        "type": "similarity",
+        "weight": 0.0831772430992964,
+        "distance": 12.022519173978958
+      },
+      {
+        "source": "W2248846161",
+        "target": "2110.04961v2",
+        "type": "similarity",
+        "weight": 0.14235200893943561,
+        "distance": 7.024839392505203
+      },
+      {
+        "source": "W2248846161",
+        "target": "2511.08174v1",
+        "type": "similarity",
+        "weight": 0.09371647554007446,
+        "distance": 10.670482369691614
+      },
+      {
+        "source": "W2248846161",
+        "target": "1902.04982v1",
+        "type": "similarity",
+        "weight": 0.08760021977213334,
+        "distance": 11.415496474794368
+      },
+      {
+        "source": "W2248846161",
+        "target": "2012.01870v4",
+        "type": "similarity",
+        "weight": 0.08780567856486024,
+        "distance": 11.388785057464371
+      },
+      {
+        "source": "W2248846161",
+        "target": "W2102509082",
+        "type": "similarity",
+        "weight": 0.10894029663598778,
+        "distance": 9.17933979325751
+      },
+      {
+        "source": "W2248846161",
+        "target": "W2187559597",
+        "type": "similarity",
+        "weight": 0.08532540238492241,
+        "distance": 11.719839251255696
       },
       {
         "source": "1809.04040v3",
         "target": "2311.07155v1",
         "type": "similarity",
-        "weight": 0.09256644674025832
+        "weight": 0.09256644674025832,
+        "distance": 10.803050513605674
       },
       {
         "source": "1809.04040v3",
         "target": "1305.0034v1",
         "type": "similarity",
-        "weight": 0.1401902425061906
+        "weight": 0.1401902425061906,
+        "distance": 7.133164064223951
       },
       {
         "source": "1809.04040v3",
         "target": "2307.12087v1",
         "type": "similarity",
-        "weight": 0.1164494025461835
+        "weight": 0.1164494025461835,
+        "distance": 8.587420614746417
       },
       {
         "source": "1809.04040v3",
         "target": "1810.04433v3",
         "type": "similarity",
-        "weight": 0.16663981001893557
+        "weight": 0.16663981001893555,
+        "distance": 6.000966995139807
       },
       {
         "source": "1809.04040v3",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.10282052803680358
+        "weight": 0.10282052803680358,
+        "distance": 9.725684346243193
       },
       {
         "source": "1809.04040v3",
         "target": "2404.13891v2",
         "type": "similarity",
-        "weight": 0.1757945814318926
+        "weight": 0.17579458143189255,
+        "distance": 5.6884574703881094
       },
       {
         "source": "1809.04040v3",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.11551047509650132
+        "weight": 0.1155104750965013,
+        "distance": 8.657223504314796
       },
       {
         "source": "1809.04040v3",
         "target": "1609.03234v1",
         "type": "similarity",
-        "weight": 0.09803539713472963
+        "weight": 0.09803539713472961,
+        "distance": 10.200397297577164
       },
       {
         "source": "1809.04040v3",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.12494778727864138
+        "weight": 0.12494778727864135,
+        "distance": 8.00334301054838
       },
       {
         "source": "1809.04040v3",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.14843627957707317
+        "weight": 0.1484362795770732,
+        "distance": 6.736897494663801
       },
       {
         "source": "1809.04040v3",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.17743878611242755
+        "weight": 0.17743878611242755,
+        "distance": 5.63574639969858
       },
       {
         "source": "1809.04040v3",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.170433250164464
+        "weight": 0.17043325016446398,
+        "distance": 5.867399694807346
       },
       {
         "source": "1809.04040v3",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.10020993330349846
+        "weight": 0.10020993330349846,
+        "distance": 9.979050649314111
       },
       {
         "source": "1809.04040v3",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.14192834262438098
+        "weight": 0.14192834262438098,
+        "distance": 7.045809043557564
       },
       {
         "source": "1809.04040v3",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.10672006480006496
+        "weight": 0.10672006480006495,
+        "distance": 9.370309152955006
       },
       {
         "source": "1809.04040v3",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.14209918157523632
+        "weight": 0.14209918157523632,
+        "distance": 7.037338209231955
       },
       {
         "source": "1809.04040v3",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.16510497987136374
+        "weight": 0.16510497987136372,
+        "distance": 6.056752502432804
       },
       {
         "source": "1809.04040v3",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.22268177191893887
+        "weight": 0.22268177191893876,
+        "distance": 4.49071332324418
       },
       {
         "source": "1809.04040v3",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.12688425772034392
+        "weight": 0.12688425772034392,
+        "distance": 7.881198329614892
       },
       {
         "source": "1809.04040v3",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.12084250344143033
+        "weight": 0.12084250344143031,
+        "distance": 8.275234056903479
       },
       {
         "source": "1809.04040v3",
         "target": "2001.11165v10",
         "type": "similarity",
-        "weight": 0.1046386689397755
+        "weight": 0.1046386689397755,
+        "distance": 9.556696488327344
       },
       {
         "source": "1809.04040v3",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.08920097330705185
+        "weight": 0.08920097330705186,
+        "distance": 11.210640006782798
       },
       {
         "source": "1809.04040v3",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.14742657036755372
+        "weight": 0.1474265703675537,
+        "distance": 6.783037803205144
       },
       {
         "source": "2311.07155v1",
         "target": "2304.10498v2",
         "type": "similarity",
-        "weight": 0.10891267972525326
+        "weight": 0.10891267972525329,
+        "distance": 9.181667391920142
       },
       {
         "source": "2311.07155v1",
         "target": "1305.0034v1",
         "type": "similarity",
-        "weight": 0.11652127005587215
+        "weight": 0.11652127005587219,
+        "distance": 8.582124100780037
       },
       {
         "source": "2311.07155v1",
         "target": "2307.12087v1",
         "type": "similarity",
-        "weight": 0.08962844371870153
+        "weight": 0.08962844371870154,
+        "distance": 11.157172416587924
       },
       {
         "source": "2311.07155v1",
         "target": "1810.04433v3",
         "type": "similarity",
-        "weight": 0.08183899265026065
+        "weight": 0.08183899265026065,
+        "distance": 12.21911423413415
       },
       {
         "source": "2311.07155v1",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.08225984148226863
+        "weight": 0.08225984148226863,
+        "distance": 12.15660013416818
       },
       {
         "source": "2311.07155v1",
         "target": "2404.13891v2",
         "type": "similarity",
-        "weight": 0.22226328273805898
+        "weight": 0.22226328273805898,
+        "distance": 4.499168678159572
       },
       {
         "source": "2311.07155v1",
         "target": "1609.03234v1",
         "type": "similarity",
-        "weight": 0.09187050634841323
+        "weight": 0.09187050634841323,
+        "distance": 10.884886126648324
       },
       {
         "source": "2311.07155v1",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.10713060252341981
+        "weight": 0.10713060252341983,
+        "distance": 9.334400968961132
       },
       {
         "source": "2311.07155v1",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.10475831090343043
+        "weight": 0.10475831090343048,
+        "distance": 9.545782013627841
       },
       {
         "source": "2311.07155v1",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.14304949890728447
+        "weight": 0.1430494989072845,
+        "distance": 6.990587227768871
       },
       {
         "source": "2311.07155v1",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.10987924639095571
+        "weight": 0.10987924639095574,
+        "distance": 9.100899695306891
       },
       {
         "source": "2311.07155v1",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.09767977948774628
+        "weight": 0.0976797794877463,
+        "distance": 10.237533348705478
       },
       {
         "source": "2311.07155v1",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.12435533494047558
+        "weight": 0.12435533494047558,
+        "distance": 8.041472450527868
       },
       {
         "source": "2311.07155v1",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.09567762094935434
+        "weight": 0.09567762094935435,
+        "distance": 10.451764896300425
       },
       {
         "source": "2311.07155v1",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.12634404766244983
+        "weight": 0.12634404766244983,
+        "distance": 7.914896020045791
       },
       {
         "source": "2311.07155v1",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.08263553174661413
+        "weight": 0.08263553174661416,
+        "distance": 12.101331943579744
       },
       {
         "source": "2304.10498v2",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.11173978632123543
+        "weight": 0.11173978632123543,
+        "distance": 8.949363811428341
       },
       {
         "source": "2304.10498v2",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.11658414632136956
+        "weight": 0.11658414632136956,
+        "distance": 8.577495581976079
       },
       {
         "source": "2304.10498v2",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.09627237093639854
+        "weight": 0.09627237093639854,
+        "distance": 10.38719614229342
       },
       {
         "source": "2304.10498v2",
         "target": "2411.00954v1",
         "type": "similarity",
-        "weight": 0.576325134447746
+        "weight": 0.576325134447746,
+        "distance": 1.7351316821506204
       },
       {
         "source": "2304.10498v2",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.08436668206736743
+        "weight": 0.08436668206736743,
+        "distance": 11.85302035703493
       },
       {
         "source": "1912.02967v5",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.12857256457068172
+        "weight": 0.12857256457068172,
+        "distance": 7.777709057442485
       },
       {
         "source": "1912.02967v5",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.08093875643487744
+        "weight": 0.08093875643487743,
+        "distance": 12.35502056180701
       },
       {
         "source": "1912.02967v5",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.09187911359564976
+        "weight": 0.09187911359564976,
+        "distance": 10.883866429109165
       },
       {
         "source": "1912.02967v5",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.09017852328386565
+        "weight": 0.09017852328386564,
+        "distance": 11.08911483116863
       },
       {
         "source": "1305.0034v1",
         "target": "2307.12087v1",
         "type": "similarity",
-        "weight": 0.19335704822915628
+        "weight": 0.19335704822915628,
+        "distance": 5.171779405811234
       },
       {
         "source": "1305.0034v1",
         "target": "1810.04433v3",
         "type": "similarity",
-        "weight": 0.15215795476680186
+        "weight": 0.15215795476680183,
+        "distance": 6.572117780714166
       },
       {
         "source": "1305.0034v1",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.16386606904318804
+        "weight": 0.16386606904318807,
+        "distance": 6.1025446319606464
       },
       {
         "source": "1305.0034v1",
         "target": "2404.13891v2",
         "type": "similarity",
-        "weight": 0.14967967947332786
+        "weight": 0.14967967947332783,
+        "distance": 6.6809336011318425
       },
       {
         "source": "1305.0034v1",
         "target": "2110.07892v2",
         "type": "similarity",
-        "weight": 0.09459403322031712
+        "weight": 0.09459403322031713,
+        "distance": 10.571491308240546
       },
       {
         "source": "1305.0034v1",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.1491048196917099
+        "weight": 0.1491048196917099,
+        "distance": 6.706691320023098
       },
       {
         "source": "1305.0034v1",
         "target": "1111.2888v5",
         "type": "similarity",
-        "weight": 0.13654578036200496
+        "weight": 0.13654578036200496,
+        "distance": 7.3235511002159
       },
       {
         "source": "1305.0034v1",
         "target": "1609.03234v1",
         "type": "similarity",
-        "weight": 0.14277686333963077
+        "weight": 0.14277686333963077,
+        "distance": 7.003935908167753
       },
       {
         "source": "1305.0034v1",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.14248882185173548
+        "weight": 0.14248882185173548,
+        "distance": 7.018094381049304
       },
       {
         "source": "1305.0034v1",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.14749245277600134
+        "weight": 0.14749245277600137,
+        "distance": 6.780007933820943
       },
       {
         "source": "1305.0034v1",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.32404274053677373
+        "weight": 0.3240427405367738,
+        "distance": 3.086012660994995
       },
       {
         "source": "1305.0034v1",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.1542626367863214
+        "weight": 0.15426263678632143,
+        "distance": 6.48245110308312
       },
       {
         "source": "1305.0034v1",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.13887140473937346
+        "weight": 0.13887140473937346,
+        "distance": 7.2009064924254735
       },
       {
         "source": "1305.0034v1",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.09683852217330557
+        "weight": 0.09683852217330557,
+        "distance": 10.326469028620298
       },
       {
         "source": "1305.0034v1",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.10919517611595315
+        "weight": 0.10919517611595315,
+        "distance": 9.1579137061706
       },
       {
         "source": "1305.0034v1",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.14593783995025855
+        "weight": 0.14593783995025855,
+        "distance": 6.852232432252252
       },
       {
         "source": "1305.0034v1",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.13040178479509207
+        "weight": 0.13040178479509207,
+        "distance": 7.6686066956166155
       },
       {
         "source": "1305.0034v1",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.09526269857807063
+        "weight": 0.09526269857807063,
+        "distance": 10.497288182325322
       },
       {
         "source": "1305.0034v1",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.11771609616792796
+        "weight": 0.11771609616792796,
+        "distance": 8.49501497716548
       },
       {
         "source": "1305.0034v1",
         "target": "1805.09282v1",
         "type": "similarity",
-        "weight": 0.1596102899562036
+        "weight": 0.15961028995620358,
+        "distance": 6.265260217711502
       },
       {
         "source": "1305.0034v1",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.11723756712779264
+        "weight": 0.11723756712779264,
+        "distance": 8.529689113302467
       },
       {
         "source": "1305.0034v1",
         "target": "2001.11165v10",
         "type": "similarity",
-        "weight": 0.12431580519443067
+        "weight": 0.12431580519443067,
+        "distance": 8.044029465408634
       },
       {
         "source": "1305.0034v1",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.15304543929216505
+        "weight": 0.15304543929216505,
+        "distance": 6.534007185218969
       },
       {
         "source": "2307.12087v1",
         "target": "1810.04433v3",
         "type": "similarity",
-        "weight": 0.1258709500866541
+        "weight": 0.1258709500866541,
+        "distance": 7.944644886779387
       },
       {
         "source": "2307.12087v1",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.12268523607570811
+        "weight": 0.1226852360757081,
+        "distance": 8.150940015169452
       },
       {
         "source": "2307.12087v1",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.11698870466586421
+        "weight": 0.11698870466586421,
+        "distance": 8.547833766141245
       },
       {
         "source": "2307.12087v1",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.09227076497687939
+        "weight": 0.09227076497687939,
+        "distance": 10.837668900334505
       },
       {
         "source": "2307.12087v1",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.12031658442351308
+        "weight": 0.12031658442351309,
+        "distance": 8.31140615228912
       },
       {
         "source": "2307.12087v1",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.13860771997209953
+        "weight": 0.1386077199720995,
+        "distance": 7.214605363981827
       },
       {
         "source": "2307.12087v1",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.10285374311465345
+        "weight": 0.10285374311465349,
+        "distance": 9.722543581960615
       },
       {
         "source": "2307.12087v1",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.11991843482971311
+        "weight": 0.1199184348297131,
+        "distance": 8.339001433933179
       },
       {
         "source": "2307.12087v1",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.08745625941176657
+        "weight": 0.08745625941176657,
+        "distance": 11.434287342335814
       },
       {
         "source": "2307.12087v1",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.13330023082945763
+        "weight": 0.13330023082945763,
+        "distance": 7.501862478238206
       },
       {
         "source": "2307.12087v1",
         "target": "1805.09282v1",
         "type": "similarity",
-        "weight": 0.11613599253267846
+        "weight": 0.11613599253267846,
+        "distance": 8.61059502908729
       },
       {
         "source": "2307.12087v1",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.1104558723225944
+        "weight": 0.11045587232259439,
+        "distance": 9.053389185859013
       },
       {
         "source": "2307.12087v1",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.09966209243294884
+        "weight": 0.09966209243294884,
+        "distance": 10.033905325365158
       },
       {
         "source": "1810.04433v3",
         "target": "1205.0622v1",
         "type": "similarity",
-        "weight": 0.1907921671478783
+        "weight": 0.1907921671478783,
+        "distance": 5.241305316401824
       },
       {
         "source": "1810.04433v3",
         "target": "2404.13891v2",
         "type": "similarity",
-        "weight": 0.09498589201595424
+        "weight": 0.0949858920159542,
+        "distance": 10.527879233181661
       },
       {
         "source": "1810.04433v3",
         "target": "2110.07892v2",
         "type": "similarity",
-        "weight": 0.09154248612798926
+        "weight": 0.09154248612798926,
+        "distance": 10.923889467037846
       },
       {
         "source": "1810.04433v3",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.08126067989884832
+        "weight": 0.0812606798988483,
+        "distance": 12.306074736819582
       },
       {
         "source": "1810.04433v3",
         "target": "1609.03234v1",
         "type": "similarity",
-        "weight": 0.08772122255988965
+        "weight": 0.08772122255988965,
+        "distance": 11.399749921602757
       },
       {
         "source": "1810.04433v3",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.13115470186628087
+        "weight": 0.13115470186628092,
+        "distance": 7.624583684537305
       },
       {
         "source": "1810.04433v3",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.18354638257452663
+        "weight": 0.18354638257452666,
+        "distance": 5.448214156952741
       },
       {
         "source": "1810.04433v3",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.09867181253908773
+        "weight": 0.09867181253908773,
+        "distance": 10.134606573725007
       },
       {
         "source": "1810.04433v3",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.10145970604222371
+        "weight": 0.10145970604222371,
+        "distance": 9.856129482415785
       },
       {
         "source": "1810.04433v3",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.08472173527139035
+        "weight": 0.08472173527139035,
+        "distance": 11.803346529632398
       },
       {
         "source": "1810.04433v3",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.1678609409600092
+        "weight": 0.1678609409600092,
+        "distance": 5.9573120124367565
       },
       {
         "source": "1810.04433v3",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.1988569233618316
+        "weight": 0.1988569233618316,
+        "distance": 5.028741182827426
       },
       {
         "source": "1810.04433v3",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.12046551196020097
+        "weight": 0.12046551196020097,
+        "distance": 8.301131035166122
       },
       {
         "source": "1810.04433v3",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.11366332538105339
+        "weight": 0.11366332538105339,
+        "distance": 8.797912577760025
       },
       {
         "source": "1810.04433v3",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.10246861346339267
+        "weight": 0.10246861346339267,
+        "distance": 9.75908589177167
       },
       {
         "source": "1810.04433v3",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.13361853343222113
+        "weight": 0.13361853343222113,
+        "distance": 7.483991736125861
       },
       {
         "source": "1205.0622v1",
         "target": "2110.07892v2",
         "type": "similarity",
-        "weight": 0.08335346457862636
+        "weight": 0.08335346457862636,
+        "distance": 11.99710180081011
       },
       {
         "source": "1205.0622v1",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.19892500890866846
+        "weight": 0.1989250089086685,
+        "distance": 5.027020008626091
       },
       {
         "source": "1205.0622v1",
         "target": "1111.2888v5",
         "type": "similarity",
-        "weight": 0.13406431177569367
+        "weight": 0.1340643117756937,
+        "distance": 7.459106653776171
       },
       {
         "source": "1205.0622v1",
         "target": "1609.03234v1",
         "type": "similarity",
-        "weight": 0.0968321541620563
+        "weight": 0.0968321541620563,
+        "distance": 10.327148132286933
       },
       {
         "source": "1205.0622v1",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.12395559864448054
+        "weight": 0.12395559864448054,
+        "distance": 8.067404868642678
       },
       {
         "source": "1205.0622v1",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.13704694475850604
+        "weight": 0.13704694475850604,
+        "distance": 7.296769743843074
       },
       {
         "source": "1205.0622v1",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.17889012323955128
+        "weight": 0.17889012323955128,
+        "distance": 5.590023540097307
       },
       {
         "source": "1205.0622v1",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.13660254426691487
+        "weight": 0.13660254426691487,
+        "distance": 7.320507867306246
       },
       {
         "source": "1205.0622v1",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.11766074984702043
+        "weight": 0.11766074984702043,
+        "distance": 8.499010938653502
       },
       {
         "source": "1205.0622v1",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.09519424603801478
+        "weight": 0.09519424603801478,
+        "distance": 10.504836601160337
       },
       {
         "source": "1205.0622v1",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.09159480784354385
+        "weight": 0.09159480784354385,
+        "distance": 10.9176494120511
       },
       {
         "source": "1205.0622v1",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.1090843761557846
+        "weight": 0.10908437615578462,
+        "distance": 9.167215647563394
       },
       {
         "source": "1205.0622v1",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.10398634320867277
+        "weight": 0.10398634320867277,
+        "distance": 9.616647428338426
       },
       {
         "source": "1205.0622v1",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.08468387431630982
+        "weight": 0.08468387431630983,
+        "distance": 11.808623637893753
       },
       {
         "source": "1205.0622v1",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.10564942232343731
+        "weight": 0.10564942232343731,
+        "distance": 9.465267088149139
       },
       {
         "source": "1205.0622v1",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.11036092835504957
+        "weight": 0.11036092835504957,
+        "distance": 9.061177854383688
       },
       {
         "source": "2404.13891v2",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.0816017661940434
+        "weight": 0.0816017661940434,
+        "distance": 12.25463671487292
       },
       {
         "source": "2404.13891v2",
         "target": "1111.2888v5",
         "type": "similarity",
-        "weight": 0.08654130328299842
+        "weight": 0.08654130328299842,
+        "distance": 11.555176107412011
       },
       {
         "source": "2404.13891v2",
         "target": "1609.03234v1",
         "type": "similarity",
-        "weight": 0.09878854575813638
+        "weight": 0.09878854575813635,
+        "distance": 10.122631043160576
       },
       {
         "source": "2404.13891v2",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.14341901092050463
+        "weight": 0.1434190109205046,
+        "distance": 6.972576324308133
       },
       {
         "source": "2404.13891v2",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.15260172237791453
+        "weight": 0.1526017223779145,
+        "distance": 6.553005984582035
       },
       {
         "source": "2404.13891v2",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.17503742864914185
+        "weight": 0.17503742864914182,
+        "distance": 5.713063815650966
       },
       {
         "source": "2404.13891v2",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.10465333792161802
+        "weight": 0.10465333792161796,
+        "distance": 9.55535695143301
       },
       {
         "source": "2404.13891v2",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.08810218243880556
+        "weight": 0.08810218243880555,
+        "distance": 11.350456621146531
       },
       {
         "source": "2404.13891v2",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.09559003779057093
+        "weight": 0.09559003779057093,
+        "distance": 10.461341193220457
       },
       {
         "source": "2110.07892v2",
         "target": "1803.05392v2",
         "type": "similarity",
-        "weight": 0.08009415761984504
+        "weight": 0.08009415761984504,
+        "distance": 12.485305167280124
       },
       {
         "source": "2110.07892v2",
         "target": "1111.2888v5",
         "type": "similarity",
-        "weight": 0.1018518923187106
+        "weight": 0.1018518923187106,
+        "distance": 9.81817791731196
       },
       {
         "source": "2110.07892v2",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.09501705571304037
+        "weight": 0.09501705571304037,
+        "distance": 10.524426299001366
       },
       {
         "source": "2110.07892v2",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.11396996939958626
+        "weight": 0.11396996939958627,
+        "distance": 8.774241190623941
       },
       {
         "source": "2110.07892v2",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.0921805752983845
+        "weight": 0.0921805752983845,
+        "distance": 10.848272499526539
       },
       {
         "source": "2110.07892v2",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.10767094357802727
+        "weight": 0.10767094357802726,
+        "distance": 9.287556761080277
       },
       {
         "source": "2110.07892v2",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.1525271457854149
+        "weight": 0.1525271457854149,
+        "distance": 6.556210010032345
       },
       {
         "source": "2110.07892v2",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.09862111960152233
+        "weight": 0.09862111960152234,
+        "distance": 10.139815934360612
       },
       {
         "source": "1803.05392v2",
         "target": "1111.2888v5",
         "type": "similarity",
-        "weight": 0.13619065984842688
+        "weight": 0.13619065984842688,
+        "distance": 7.3426474408226525
       },
       {
         "source": "1803.05392v2",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.13314703853704957
+        "weight": 0.13314703853704957,
+        "distance": 7.510493744265588
       },
       {
         "source": "1803.05392v2",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.13492606136484753
+        "weight": 0.13492606136484753,
+        "distance": 7.411466620195373
       },
       {
         "source": "1803.05392v2",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.18147116926495646
+        "weight": 0.1814711692649565,
+        "distance": 5.510517202542254
       },
       {
         "source": "1803.05392v2",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.16316096783522643
+        "weight": 0.16316096783522646,
+        "distance": 6.128916819186089
       },
       {
         "source": "1803.05392v2",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.1158956967727993
+        "weight": 0.11589569677279932,
+        "distance": 8.62844806015869
       },
       {
         "source": "1803.05392v2",
         "target": "2411.00954v1",
         "type": "similarity",
-        "weight": 0.10017478430647965
+        "weight": 0.10017478430647965,
+        "distance": 9.982552065603166
       },
       {
         "source": "1803.05392v2",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.112462648081744
+        "weight": 0.112462648081744,
+        "distance": 8.891841131760879
       },
       {
         "source": "1803.05392v2",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.10744007262568622
+        "weight": 0.10744007262568622,
+        "distance": 9.307514184990648
       },
       {
         "source": "1803.05392v2",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.09914853894353719
+        "weight": 0.09914853894353719,
+        "distance": 10.085877317561653
       },
       {
         "source": "1803.05392v2",
         "target": "1805.09282v1",
         "type": "similarity",
-        "weight": 0.13523654527714415
+        "weight": 0.13523654527714415,
+        "distance": 7.394450944829085
       },
       {
         "source": "1803.05392v2",
         "target": "2001.11165v10",
         "type": "similarity",
-        "weight": 0.09345896909464894
+        "weight": 0.09345896909464894,
+        "distance": 10.699882629641115
       },
       {
         "source": "1803.05392v2",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.08476525093951223
+        "weight": 0.08476525093951223,
+        "distance": 11.797287083047646
       },
       {
         "source": "1111.2888v5",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.1213750479325679
+        "weight": 0.12137504793256791,
+        "distance": 8.238925685578868
       },
       {
         "source": "1111.2888v5",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.09811149787345408
+        "weight": 0.09811149787345409,
+        "distance": 10.192485301669915
       },
       {
         "source": "2202.10049v1",
         "target": "2105.12328v2",
         "type": "similarity",
-        "weight": 0.08037296264437174
+        "weight": 0.08037296264437174,
+        "distance": 12.441995008006922
       },
       {
         "source": "2202.10049v1",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.12535985342863395
+        "weight": 0.12535985342863398,
+        "distance": 7.977035491424607
       },
       {
         "source": "1609.03234v1",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.15003235868343584
+        "weight": 0.15003235868343587,
+        "distance": 6.66522881313872
       },
       {
         "source": "1609.03234v1",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.09841609572780237
+        "weight": 0.09841609572780237,
+        "distance": 10.160939555718443
       },
       {
         "source": "1609.03234v1",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.08419416839028128
+        "weight": 0.08419416839028128,
+        "distance": 11.877307171258101
       },
       {
         "source": "1609.03234v1",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.1187904950740405
+        "weight": 0.1187904950740405,
+        "distance": 8.41818193767703
       },
       {
         "source": "1609.03234v1",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.08385260222740654
+        "weight": 0.08385260222740654,
+        "distance": 11.925688332104716
       },
       {
         "source": "1609.03234v1",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.08862124305253567
+        "weight": 0.08862124305253567,
+        "distance": 11.283976229121372
       },
       {
         "source": "2105.12328v2",
         "target": "1901.07621v4",
         "type": "similarity",
-        "weight": 0.3879178095773914
+        "weight": 0.38791780957739147,
+        "distance": 2.5778656594535527
       },
       {
         "source": "2105.12328v2",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.10234713388620352
+        "weight": 0.10234713388620352,
+        "distance": 9.770669309722614
       },
       {
         "source": "2105.12328v2",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.10331657451085045
+        "weight": 0.10331657451085047,
+        "distance": 9.678989114132683
       },
       {
         "source": "2105.12328v2",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.10307716448791229
+        "weight": 0.10307716448791229,
+        "distance": 9.701469816016024
       },
       {
         "source": "2105.12328v2",
         "target": "2411.00954v1",
         "type": "similarity",
-        "weight": 0.10147970888479499
+        "weight": 0.10147970888479499,
+        "distance": 9.854186723527674
       },
       {
         "source": "2105.12328v2",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.08039187884145968
+        "weight": 0.08039187884145967,
+        "distance": 12.439067408439277
       },
       {
         "source": "2105.12328v2",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.18079360766642244
+        "weight": 0.18079360766642244,
+        "distance": 5.531169010383785
       },
       {
         "source": "2105.12328v2",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.13823933425012289
+        "weight": 0.1382393342501229,
+        "distance": 7.233831133696384
       },
       {
         "source": "2105.12328v2",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.17222203978670242
+        "weight": 0.1722220397867024,
+        "distance": 5.806457763701461
       },
       {
         "source": "2105.12328v2",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.16534855191904155
+        "weight": 0.16534855191904155,
+        "distance": 6.047830406701252
       },
       {
         "source": "2105.12328v2",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.1365789006561829
+        "weight": 0.1365789006561829,
+        "distance": 7.321775143858798
       },
       {
         "source": "2105.12328v2",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.08761662144631145
+        "weight": 0.08761662144631145,
+        "distance": 11.41335951435615
       },
       {
         "source": "1901.07621v4",
         "target": "W2151123669",
         "type": "similarity",
-        "weight": 0.08063740473723378
+        "weight": 0.08063740473723381,
+        "distance": 12.40119276232431
       },
       {
         "source": "1901.07621v4",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.12187462727887355
+        "weight": 0.12187462727887356,
+        "distance": 8.205153298330092
       },
       {
         "source": "1901.07621v4",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.09406841249756237
+        "weight": 0.09406841249756238,
+        "distance": 10.630561029462607
       },
       {
         "source": "1901.07621v4",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.10344695787086577
+        "weight": 0.10344695787086579,
+        "distance": 9.666789827191566
       },
       {
         "source": "1901.07621v4",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.1506831494141616
+        "weight": 0.15068314941416164,
+        "distance": 6.636442123010319
       },
       {
         "source": "1901.07621v4",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.11664199630770604
+        "weight": 0.11664199630770604,
+        "distance": 8.573241470953239
       },
       {
         "source": "1901.07621v4",
         "target": "1805.09282v1",
         "type": "similarity",
-        "weight": 0.08922792286005221
+        "weight": 0.08922792286005223,
+        "distance": 11.207254051721346
       },
       {
         "source": "1901.07621v4",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.14954776106546652
+        "weight": 0.14954776106546652,
+        "distance": 6.68682695665525
       },
       {
         "source": "1901.07621v4",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.11204977531683943
+        "weight": 0.11204977531683946,
+        "distance": 8.92460513349833
       },
       {
         "source": "1901.07621v4",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.1784301681326394
+        "weight": 0.17843016813263943,
+        "distance": 5.604433434466257
       },
       {
         "source": "1901.07621v4",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.13250999901914837
+        "weight": 0.1325099990191484,
+        "distance": 7.546600312445061
       },
       {
         "source": "W2151123669",
         "target": "W2212088069",
         "type": "similarity",
-        "weight": 0.12111668789508907
+        "weight": 0.12111668789508909,
+        "distance": 8.256500548183723
       },
       {
         "source": "W2151123669",
         "target": "1805.09282v1",
         "type": "similarity",
-        "weight": 0.1325111507338139
+        "weight": 0.1325111507338139,
+        "distance": 7.546534721510213
       },
       {
         "source": "W2151123669",
         "target": "2001.11165v10",
         "type": "similarity",
-        "weight": 0.12446984197544589
+        "weight": 0.12446984197544589,
+        "distance": 8.034074633092807
       },
       {
         "source": "W2151123669",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.13429741372873155
+        "weight": 0.13429741372873155,
+        "distance": 7.446159775049043
       },
       {
         "source": "W2151123669",
         "target": "W2187559597",
         "type": "similarity",
-        "weight": 0.10288549492240083
+        "weight": 0.10288549492240083,
+        "distance": 9.719543078003644
       },
       {
         "source": "W2212088069",
         "target": "1910.10906v2",
         "type": "similarity",
-        "weight": 0.11680958307624932
+        "weight": 0.11680958307624933,
+        "distance": 8.5609414370329
       },
       {
         "source": "W2212088069",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.10512853444423263
+        "weight": 0.10512853444423265,
+        "distance": 9.512165324919167
       },
       {
         "source": "W2212088069",
         "target": "1805.09282v1",
         "type": "similarity",
-        "weight": 0.09639416464726232
+        "weight": 0.09639416464726233,
+        "distance": 10.374071954037113
       },
       {
         "source": "1910.10906v2",
         "target": "2002.08493v1",
         "type": "similarity",
-        "weight": 0.09917872063540577
+        "weight": 0.09917872063540577,
+        "distance": 10.082808021653491
       },
       {
         "source": "1910.10906v2",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.17117679010441172
+        "weight": 0.17117679010441172,
+        "distance": 5.841913494171936
       },
       {
         "source": "1910.10906v2",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.15380955388609918
+        "weight": 0.15380955388609918,
+        "distance": 6.50154671627571
       },
       {
         "source": "1910.10906v2",
         "target": "2411.00954v1",
         "type": "similarity",
-        "weight": 0.096613714955026
+        "weight": 0.096613714955026,
+        "distance": 10.350497343627696
       },
       {
         "source": "1910.10906v2",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.16232089777084902
+        "weight": 0.16232089777084902,
+        "distance": 6.160636207247423
       },
       {
         "source": "1910.10906v2",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.10607037182415822
+        "weight": 0.10607037182415822,
+        "distance": 9.427703352051825
       },
       {
         "source": "1910.10906v2",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.20970904003178842
+        "weight": 0.20970904003178842,
+        "distance": 4.768511647606687
       },
       {
         "source": "1910.10906v2",
         "target": "1805.09282v1",
         "type": "similarity",
-        "weight": 0.11429264781298724
+        "weight": 0.11429264781298724,
+        "distance": 8.749469184021901
       },
       {
         "source": "1910.10906v2",
         "target": "2001.11165v10",
         "type": "similarity",
-        "weight": 0.1009937272811908
+        "weight": 0.1009937272811908,
+        "distance": 9.901605049348856
       },
       {
         "source": "1910.10906v2",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.10054264754571868
+        "weight": 0.10054264754571868,
+        "distance": 9.946028122496783
       },
       {
         "source": "1910.10906v2",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.09249101884083241
+        "weight": 0.09249101884083241,
+        "distance": 10.811860573413055
       },
       {
         "source": "2002.08493v1",
         "target": "2510.04407v3",
         "type": "similarity",
-        "weight": 0.10332606174697109
+        "weight": 0.10332606174697109,
+        "distance": 9.67810040460885
       },
       {
         "source": "2002.08493v1",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.13749133308758146
+        "weight": 0.13749133308758146,
+        "distance": 7.273185716826266
       },
       {
         "source": "2002.08493v1",
         "target": "2411.00954v1",
         "type": "similarity",
-        "weight": 0.10229297237654784
+        "weight": 0.10229297237654784,
+        "distance": 9.775842628943536
       },
       {
         "source": "2002.08493v1",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.08983904848511357
+        "weight": 0.08983904848511357,
+        "distance": 11.131017267682896
       },
       {
         "source": "2002.08493v1",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.10632045663132986
+        "weight": 0.10632045663132986,
+        "distance": 9.405527700727784
       },
       {
         "source": "2002.08493v1",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.12153363813436334
+        "weight": 0.12153363813436334,
+        "distance": 8.22817464654876
       },
       {
         "source": "2002.08493v1",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.09534237906416407
+        "weight": 0.09534237906416407,
+        "distance": 10.488515283712546
       },
       {
         "source": "2002.08493v1",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.084040744080717
+        "weight": 0.084040744080717,
+        "distance": 11.898990316405923
       },
       {
         "source": "2510.04407v3",
         "target": "1910.12450v1",
         "type": "similarity",
-        "weight": 0.08322051849870704
+        "weight": 0.08322051849870704,
+        "distance": 12.0162673585786
       },
       {
         "source": "2510.04407v3",
         "target": "2110.04961v2",
         "type": "similarity",
-        "weight": 0.12399199432700413
+        "weight": 0.12399199432700411,
+        "distance": 8.065036822963746
       },
       {
         "source": "2510.04407v3",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.08952012160643041
+        "weight": 0.08952012160643041,
+        "distance": 11.170672939838454
       },
       {
         "source": "2510.04407v3",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.13850686644128593
+        "weight": 0.13850686644128593,
+        "distance": 7.21985866616878
       },
       {
         "source": "1910.12450v1",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.10770102069019094
+        "weight": 0.10770102069019094,
+        "distance": 9.284963072695158
       },
       {
         "source": "1910.12450v1",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.08131455486345071
+        "weight": 0.08131455486345071,
+        "distance": 12.297921346052652
       },
       {
         "source": "1910.12450v1",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.09697225041765499
+        "weight": 0.09697225041765499,
+        "distance": 10.312228453944776
       },
       {
         "source": "1910.12450v1",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.10923577299617512
+        "weight": 0.10923577299617512,
+        "distance": 9.154510217408493
       },
       {
         "source": "2110.04961v2",
         "target": "2511.08174v1",
         "type": "similarity",
-        "weight": 0.17967887712368563
+        "weight": 0.17967887712368563,
+        "distance": 5.565484468781656
       },
       {
         "source": "2110.04961v2",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.14611472533571812
+        "weight": 0.14611472533571812,
+        "distance": 6.84393717130403
       },
       {
         "source": "2110.04961v2",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.11406886986824903
+        "weight": 0.11406886986824903,
+        "distance": 8.76663371132731
       },
       {
         "source": "2110.04961v2",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.08946664547222533
+        "weight": 0.08946664547222531,
+        "distance": 11.177349890808719
       },
       {
         "source": "2511.08174v1",
         "target": "1902.04982v1",
         "type": "similarity",
-        "weight": 0.13249125958199984
+        "weight": 0.13249125958199984,
+        "distance": 7.547667696381832
       },
       {
         "source": "2511.08174v1",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.27345540357932335
+        "weight": 0.27345540357932335,
+        "distance": 3.6569034179276043
       },
       {
         "source": "2511.08174v1",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.12053779697719419
+        "weight": 0.12053779697719419,
+        "distance": 8.296152950175458
       },
       {
         "source": "2511.08174v1",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.12423240242003693
+        "weight": 0.12423240242003693,
+        "distance": 8.049429782569463
       },
       {
         "source": "2511.08174v1",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.13749814916979444
+        "weight": 0.13749814916979444,
+        "distance": 7.272825169196385
       },
       {
         "source": "1902.04982v1",
         "target": "2012.01870v4",
         "type": "similarity",
-        "weight": 0.09652384514431846
+        "weight": 0.09652384514431846,
+        "distance": 10.36013431193962
       },
       {
         "source": "1902.04982v1",
         "target": "2009.06373v1",
         "type": "similarity",
-        "weight": 0.08472188155051802
+        "weight": 0.08472188155051802,
+        "distance": 11.803326150207361
       },
       {
         "source": "1902.04982v1",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.09978393698265878
+        "weight": 0.09978393698265878,
+        "distance": 10.021653086045179
       },
       {
         "source": "1902.04982v1",
         "target": "W2102509082",
         "type": "similarity",
-        "weight": 0.1963909773017609
+        "weight": 0.19639097730176086,
+        "distance": 5.091883617766558
       },
       {
         "source": "2012.01870v4",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.13653504238097164
+        "weight": 0.13653504238097164,
+        "distance": 7.324127070687943
       },
       {
         "source": "2009.06373v1",
         "target": "2305.17327v3",
         "type": "similarity",
-        "weight": 0.15309968523926348
+        "weight": 0.15309968523926348,
+        "distance": 6.531692070020945
       }
     ]
   },
@@ -4590,7 +4994,7 @@
           },
           {
             "title": "Monte Carlo Sampling for Regret Minimization in Extensive Games",
-            "reason": "Read this early to establish the core vocabulary and assumptions before moving to later specialized papers.",
+            "reason": "Read this early because it is structurally central in the graph and heavily cited (191 citations), making it a foundation for later work.",
             "read_order": 2
           },
           {
@@ -4604,8 +5008,8 @@
         "stage": "Core Algorithms",
         "papers": [
           {
-            "title": "Solving imperfect-information games via exponential counterfactual regret minimization",
-            "reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.043) and anchors later developments in the path.",
+            "title": "Hierarchical Abstraction, Distributed Equilibrium Computation, and Post-Processing, with Application to a Champion No-Limit Texas Hold'em Agent",
+            "reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.025) and anchors later developments in the path.",
             "read_order": 4
           }
         ]
@@ -4615,28 +5019,43 @@
         "papers": [
           {
             "title": "Deep Counterfactual Regret Minimization",
-            "reason": "Read this after the foundation papers because it represents a major follow-up branch (deep counterfactual regret minimization research) with strong impact (239 citations) and bridge score 0.378.",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (deep counterfactual regret minimization research) with strong impact (239 citations) and bridge score 0.433.",
             "read_order": 5
           },
           {
-            "title": "D2CFR: Minimize Counterfactual Regret with Deep Dueling Neural Network",
-            "reason": "Read this after the foundation papers because it represents a major follow-up branch (d2cfr research) with strong impact (0 citations) and bridge score 0.480.",
+            "title": "Solving imperfect-information games via exponential counterfactual regret minimization",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (solving imperfect-information games via exponential counterfactual regret minimization research) with strong impact (8 citations) and bridge score 0.593.",
             "read_order": 6
           },
           {
             "title": "Deep (Predictive) Discounted Counterfactual Regret Minimization",
-            "reason": "Read this after the foundation papers because it represents a major follow-up branch (deep (predictive) discounted counterfactual regret minimization research) with strong impact (0 citations) and bridge score 0.366.",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (deep (predictive) discounted counterfactual regret minimization research) with strong impact (0 citations) and bridge score 0.361.",
             "read_order": 7
           },
           {
             "title": "Stochastic Regret Minimization in Extensive-Form Games",
-            "reason": "Read this after the foundation papers because it represents a major follow-up branch (stochastic regret minimization in extensive-form games research) with strong impact (32 citations) and bridge score 0.316.",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (stochastic regret minimization in extensive-form games research) with strong impact (32 citations) and bridge score 0.332.",
             "read_order": 8
           },
           {
-            "title": "Sync Pure Counterfactual Regret Minimization in Incomplete Information Extensive Form Games",
-            "reason": "Read this after the foundation papers because it represents a major follow-up branch (sync pure counterfactual regret minimization in incomplete information extensive form games research) with strong impact (0 citations) and bridge score 0.323.",
+            "title": "D2CFR: Minimize Counterfactual Regret with Deep Dueling Neural Network",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (d2cfr research) with strong impact (0 citations) and bridge score 0.354.",
             "read_order": 9
+          },
+          {
+            "title": "Scale-Invariant Regret Matching and Online Learning with Optimal Convergence: Bridging Theory and Practice in Zero-Sum Games",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (scale-invariant regret matching and online learning with optimal convergence research) with strong impact (2 citations) and bridge score 0.221.",
+            "read_order": 10
+          }
+        ]
+      },
+      {
+        "stage": "Bridge Papers",
+        "papers": [
+          {
+            "title": "Regret Minimization in Non-Zero-Sum Games with Applications to Building Champion Multiplayer Computer Poker Agents",
+            "reason": "Read this to understand how separate research communities connect; its high betweenness (0.116) marks it as a bridge paper.",
+            "read_order": 11
           }
         ]
       },
@@ -4644,19 +5063,14 @@
         "stage": "Recent Frontier",
         "papers": [
           {
-            "title": "Scale-Invariant Regret Matching and Online Learning with Optimal Convergence: Bridging Theory and Practice in Zero-Sum Games",
-            "reason": "Read this near the end to see recent directions from 2025; its frontier score (0.565) indicates current research momentum.",
-            "read_order": 10
-          },
-          {
             "title": "Minimizing Weighted Counterfactual Regret with Optimistic Online Mirror Descent",
-            "reason": "Read this near the end to see recent directions from 2024; its frontier score (0.520) indicates current research momentum.",
-            "read_order": 11
+            "reason": "Read this near the end to see recent directions from 2024; its frontier score (0.516) indicates current research momentum.",
+            "read_order": 12
           }
         ]
       }
     ],
-    "report_markdown": "# ResearchTrail Reading Path\n\n**Topic:** Counterfactual regret minimization\n\n**Level:** intermediate\n\n**Generated:** 2026-05-06 14:50:58\n\n---\n\n## Foundations\n\n### 1. Regret Minimization in Games with Incomplete Information (2007)\n*Read this early because it is structurally central in the graph and heavily cited (502 citations), making it a foundation for later work.*\nCitations: 502\n\n### 2. Monte Carlo Sampling for Regret Minimization in Extensive Games (2009)\n*Read this early to establish the core vocabulary and assumptions before moving to later specialized papers.*\nCitations: 191\n\n### 3. Using counterfactual regret minimization to create competitive multiplayer poker agents (2010)\n*Read this early to establish the core vocabulary and assumptions before moving to later specialized papers.*\nCitations: 53\n\n## Core Algorithms\n\n### 4. Solving imperfect-information games via exponential counterfactual regret minimization (2020)\n*Read this as a core method paper because it has high graph centrality (PageRank 0.043) and anchors later developments in the path.*\nCitations: 8\n\n## Key Developments\n\n### 5. Deep Counterfactual Regret Minimization (2018)\n*Read this after the foundation papers because it represents a major follow-up branch (deep counterfactual regret minimization research) with strong impact (239 citations) and bridge score 0.378.*\nCitations: 239\n\n### 6. D2CFR: Minimize Counterfactual Regret with Deep Dueling Neural Network (2021)\n*Read this after the foundation papers because it represents a major follow-up branch (d2cfr research) with strong impact (0 citations) and bridge score 0.480.*\n\n### 7. Deep (Predictive) Discounted Counterfactual Regret Minimization (2025)\n*Read this after the foundation papers because it represents a major follow-up branch (deep (predictive) discounted counterfactual regret minimization research) with strong impact (0 citations) and bridge score 0.366.*\n\n### 8. Stochastic Regret Minimization in Extensive-Form Games (2020)\n*Read this after the foundation papers because it represents a major follow-up branch (stochastic regret minimization in extensive-form games research) with strong impact (32 citations) and bridge score 0.316.*\nCitations: 32\n\n### 9. Sync Pure Counterfactual Regret Minimization in Incomplete Information Extensive Form Games (2023)\n*Read this after the foundation papers because it represents a major follow-up branch (sync pure counterfactual regret minimization in incomplete information extensive form games research) with strong impact (0 citations) and bridge score 0.323.*\n\n## Recent Frontier\n\n### 10. Scale-Invariant Regret Matching and Online Learning with Optimal Convergence: Bridging Theory and Practice in Zero-Sum Games (2025)\n*Read this near the end to see recent directions from 2025; its frontier score (0.565) indicates current research momentum.*\nCitations: 2\n\n### 11. Minimizing Weighted Counterfactual Regret with Optimistic Online Mirror Descent (2024)\n*Read this near the end to see recent directions from 2024; its frontier score (0.520) indicates current research momentum.*\nCitations: 10\n\n---\n\n*Total: 11 papers in 4 stages.*\n",
+    "report_markdown": "# ResearchTrail Reading Path\n\n**Topic:** Counterfactual regret minimization\n\n**Level:** intermediate\n\n**Generated:** 2026-05-06 19:24:44\n\n---\n\n## Foundations\n\n### 1. Regret Minimization in Games with Incomplete Information (2007)\n*Read this early because it is structurally central in the graph and heavily cited (502 citations), making it a foundation for later work.*\nCitations: 502\n\n### 2. Monte Carlo Sampling for Regret Minimization in Extensive Games (2009)\n*Read this early because it is structurally central in the graph and heavily cited (191 citations), making it a foundation for later work.*\nCitations: 191\n\n### 3. Using counterfactual regret minimization to create competitive multiplayer poker agents (2010)\n*Read this early to establish the core vocabulary and assumptions before moving to later specialized papers.*\nCitations: 53\n\n## Core Algorithms\n\n### 4. Hierarchical Abstraction, Distributed Equilibrium Computation, and Post-Processing, with Application to a Champion No-Limit Texas Hold'em Agent (2015)\n*Read this as a core method paper because it has high graph centrality (PageRank 0.025) and anchors later developments in the path.*\nCitations: 50\n\n## Key Developments\n\n### 5. Deep Counterfactual Regret Minimization (2018)\n*Read this after the foundation papers because it represents a major follow-up branch (deep counterfactual regret minimization research) with strong impact (239 citations) and bridge score 0.433.*\nCitations: 239\n\n### 6. Solving imperfect-information games via exponential counterfactual regret minimization (2020)\n*Read this after the foundation papers because it represents a major follow-up branch (solving imperfect-information games via exponential counterfactual regret minimization research) with strong impact (8 citations) and bridge score 0.593.*\nCitations: 8\n\n### 7. Deep (Predictive) Discounted Counterfactual Regret Minimization (2025)\n*Read this after the foundation papers because it represents a major follow-up branch (deep (predictive) discounted counterfactual regret minimization research) with strong impact (0 citations) and bridge score 0.361.*\n\n### 8. Stochastic Regret Minimization in Extensive-Form Games (2020)\n*Read this after the foundation papers because it represents a major follow-up branch (stochastic regret minimization in extensive-form games research) with strong impact (32 citations) and bridge score 0.332.*\nCitations: 32\n\n### 9. D2CFR: Minimize Counterfactual Regret with Deep Dueling Neural Network (2021)\n*Read this after the foundation papers because it represents a major follow-up branch (d2cfr research) with strong impact (0 citations) and bridge score 0.354.*\n\n### 10. Scale-Invariant Regret Matching and Online Learning with Optimal Convergence: Bridging Theory and Practice in Zero-Sum Games (2025)\n*Read this after the foundation papers because it represents a major follow-up branch (scale-invariant regret matching and online learning with optimal convergence research) with strong impact (2 citations) and bridge score 0.221.*\nCitations: 2\n\n## Bridge Papers\n\n### 11. Regret Minimization in Non-Zero-Sum Games with Applications to Building Champion Multiplayer Computer Poker Agents (2013)\n*Read this to understand how separate research communities connect; its high betweenness (0.116) marks it as a bridge paper.*\nCitations: 15\n\n## Recent Frontier\n\n### 12. Minimizing Weighted Counterfactual Regret with Optimistic Online Mirror Descent (2024)\n*Read this near the end to see recent directions from 2024; its frontier score (0.516) indicates current research momentum.*\nCitations: 10\n\n---\n\n*Total: 12 papers in 5 stages.*\n",
     "followup_suggestions": [
       "Show bridge papers between key communities",
       "Generate a 7-day reading plan",
@@ -4704,7 +5118,7 @@
       "largest_component_ratio": 1.0,
       "average_degree": 18.3256,
       "community_count": 4,
-      "modularity": 0.2029
+      "modularity": 0.1978
     },
     "community_labels": {
       "0": {
@@ -4716,8 +5130,8 @@
         "description": "Community 1 groups papers around regret, games, counterfactual, minimization."
       },
       "2": {
-        "label": "Regret / Games / Minimization / Convergence",
-        "description": "Community 2 groups papers around regret, games, minimization, convergence."
+        "label": "Regret / Games / Minimization / Double",
+        "description": "Community 2 groups papers around regret, games, minimization, double."
       },
       "3": {
         "label": "Regret / Games / Information / Minimization",
@@ -4730,10 +5144,10 @@
         "size": 11,
         "avg_year": 2016.2,
         "top_titles": [
-          "Regret Minimization in Non-Zero-Sum Games with Applications to Building Champion Multiplayer Computer Poker Agents",
-          "No-Regret Learning in Extensive-Form Games with Imperfect Recall",
-          "Automated Construction of Bounded-Loss Imperfect-Recall Abstractions in Extensive-Form Games",
+          "Hierarchical Abstraction, Distributed Equilibrium Computation, and Post-Processing, with Application to a Champion No-Limit Texas Hold'em Agent",
+          "Optimizing Sensor Allocation against Attackers with Uncertain Intentions: A Worst-Case Regret Minimization Approach",
           "Solving heads-up limit Texas Hold'em",
+          "Regret Minimization in Non-Zero-Sum Games with Applications to Building Champion Multiplayer Computer Poker Agents",
           "CFR-p: Counterfactual Regret Minimization with Hierarchical Policy Abstraction, and its Application to Two-player Mahjong"
         ],
         "keywords": [
@@ -4749,14 +5163,14 @@
       },
       {
         "community_id": 1,
-        "size": 13,
-        "avg_year": 2019.8,
+        "size": 17,
+        "avg_year": 2020.6,
         "top_titles": [
-          "Solving imperfect-information games via exponential counterfactual regret minimization",
           "Deep Counterfactual Regret Minimization",
-          "Single Deep Counterfactual Regret Minimization",
-          "D2CFR: Minimize Counterfactual Regret with Deep Dueling Neural Network",
-          "Deep (Predictive) Discounted Counterfactual Regret Minimization"
+          "Solving Imperfect-Information Games via Discounted Regret Minimization",
+          "Sync Pure Counterfactual Regret Minimization in Incomplete Information Extensive Form Games",
+          "Alternative Function Approximation Parameterizations for Solving Games: An Analysis of $f$-Regression Counterfactual Regret Minimization",
+          "Lazy-CFR: fast and near optimal regret minimization for extensive games with imperfect information"
         ],
         "keywords": [
           "regret",
@@ -4764,31 +5178,31 @@
           "counterfactual",
           "minimization",
           "game",
-          "neural",
+          "algorithms",
           "information",
-          "strategy"
+          "convergence"
         ]
       },
       {
         "community_id": 2,
-        "size": 14,
-        "avg_year": 2020.8,
+        "size": 10,
+        "avg_year": 2019.9,
         "top_titles": [
-          "Optimistic Regret Minimization for Extensive-Form Games via Dilated Distance-Generating Functions",
-          "Solving Imperfect-Information Games via Discounted Regret Minimization",
-          "Stable-Predictive Optimistic Counterfactual Regret Minimization",
-          "Lazy-CFR: fast and near optimal regret minimization for extensive games with imperfect information",
-          "Equivalence Analysis between Counterfactual Regret Minimization and Online Mirror Descent"
+          "Monte Carlo Sampling for Regret Minimization in Extensive Games",
+          "Double Neural Counterfactual Regret Minimization",
+          "Generalized Bandit Regret Minimizer Framework in Imperfect Information Extensive-Form Game",
+          "GPU-Accelerated Counterfactual Regret Minimization",
+          "Solving imperfect-information games via exponential counterfactual regret minimization"
         ],
         "keywords": [
           "regret",
           "games",
           "minimization",
-          "convergence",
-          "extensive-form",
+          "double",
           "algorithm",
-          "game",
-          "counterfactual"
+          "counterfactual",
+          "framework",
+          "extensive-form"
         ]
       },
       {
@@ -4799,8 +5213,8 @@
           "Regret Minimization in Games with Incomplete Information",
           "Efficient Nash equilibrium approximation through Monte Carlo counterfactual regret minimization",
           "Combining Counterfactual Regret Minimization with Information Gain to Solve Extensive Games with Unknown Environments",
-          "Online Monte Carlo Counterfactual Regret Minimization for Search in Imperfect Information Games",
-          "Efficient $\u03a6$-Regret Minimization with Low-Degree Swap Deviations in Extensive-Form Games"
+          "Efficient $\u03a6$-Regret Minimization with Low-Degree Swap Deviations in Extensive-Form Games",
+          "Online Monte Carlo Counterfactual Regret Minimization for Search in Imperfect Information Games"
         ],
         "keywords": [
           "regret",
@@ -4825,11 +5239,11 @@
         "year": 2007,
         "citation_count": 502,
         "source": "openalex",
-        "pagerank": 0.0552,
-        "betweenness": 0.0964,
-        "foundation_score": 0.2864,
-        "bridge_score": 0.674,
-        "frontier_score": 0.0311,
+        "pagerank": 0.1444,
+        "betweenness": 0.1452,
+        "foundation_score": 0.34,
+        "bridge_score": 0.796,
+        "frontier_score": 0.0579,
         "community_id": 3,
         "community_label": "Regret / Games / Information / Minimization",
         "template_reason": "Read this early because it is structurally central in the graph and heavily cited (502 citations), making it a foundation for later work."
@@ -4844,14 +5258,14 @@
         "year": 2009,
         "citation_count": 191,
         "source": "openalex",
-        "pagerank": 0.0293,
-        "betweenness": 0.079,
-        "foundation_score": 0.2442,
-        "bridge_score": 0.5211,
-        "frontier_score": 0.0969,
-        "community_id": 1,
-        "community_label": "Regret / Games / Counterfactual / Minimization",
-        "template_reason": "Read this early to establish the core vocabulary and assumptions before moving to later specialized papers."
+        "pagerank": 0.0514,
+        "betweenness": 0.0569,
+        "foundation_score": 0.2575,
+        "bridge_score": 0.5059,
+        "frontier_score": 0.1045,
+        "community_id": 2,
+        "community_label": "Regret / Games / Minimization / Double",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (191 citations), making it a foundation for later work."
       },
       {
         "paper_id": "W2151123669",
@@ -4863,33 +5277,33 @@
         "year": 2010,
         "citation_count": 53,
         "source": "openalex",
-        "pagerank": 0.0231,
-        "betweenness": 0.0174,
-        "foundation_score": 0.2272,
-        "bridge_score": 0.2936,
-        "frontier_score": 0.0284,
+        "pagerank": 0.0193,
+        "betweenness": 0.0012,
+        "foundation_score": 0.2249,
+        "bridge_score": 0.2529,
+        "frontier_score": 0.0273,
         "community_id": 0,
         "community_label": "Games / Regret / Game / Minimization",
         "template_reason": "Read this early to establish the core vocabulary and assumptions before moving to later specialized papers."
       },
       {
-        "paper_id": "2008.02679v2",
-        "title": "Solving imperfect-information games via exponential counterfactual regret minimization",
-        "abstract": "In general, two-agent decision-making problems can be modeled as a two-player game, and a typical solution is to find a Nash equilibrium in such game. Counterfactual regret minimization (CFR) is a well-known method to find a Nash equilibrium strategy in a two-player zero-sum game with imperfect information. The CFR method adopts a regret matching algorithm iteratively to reduce regret values progressively, enabling the average strategy to approach a Nash equilibrium. Although CFR-based methods have achieved significant success in the field of imperfect information games, there is still scope for improvement in the efficiency of convergence. To address this challenge, we propose a novel CFR-based method named exponential counterfactual regret minimization (ECFR). With ECFR, an exponential weighting technique is used to reweight the instantaneous regret value during the process of itera...",
-        "url": "https://arxiv.org/abs/2008.02679v2",
+        "paper_id": "W2212088069",
+        "title": "Hierarchical Abstraction, Distributed Equilibrium Computation, and Post-Processing, with Application to a Champion No-Limit Texas Hold'em Agent",
+        "abstract": "The leading approach for solving large imperfect-information games is automated abstraction followed by running an equilibrium-finding algorithm. We introduce a distributed version of the most commonly used equilibrium-finding algorithm, counterfactual regret minimization (CFR), which enables CFR to scale to dramatically larger abstractions and numbers of cores. The new algorithm begets constraints on the abstraction so as to make the pieces running on different computers disjoint. We introduce an algorithm for generating such abstractions while capitalizing on state-of-the-art abstraction ideas such as imperfect recall and earth-mover's distance. Our techniques enabled an equilibrium computation of unprecedented size on a supercomputer with a high inter-blade memory latency. Prior approaches run slowly on this architecture. Our approach also leads to a significant improvement over us...",
+        "url": "http://www.aamas2015.com/en/AAMAS_2015_USB/aamas/p7.pdf",
         "stage": "Core Algorithms",
         "role": "core",
-        "year": 2020,
-        "citation_count": 8,
-        "source": "arxiv",
-        "pagerank": 0.0434,
-        "betweenness": 0.029,
-        "foundation_score": 0.1061,
-        "bridge_score": 0.4962,
-        "frontier_score": 0.3284,
-        "community_id": 1,
-        "community_label": "Regret / Games / Counterfactual / Minimization",
-        "template_reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.043) and anchors later developments in the path."
+        "year": 2015,
+        "citation_count": 50,
+        "source": "openalex",
+        "pagerank": 0.0248,
+        "betweenness": 0.0,
+        "foundation_score": 0.1616,
+        "bridge_score": 0.2375,
+        "frontier_score": 0.0289,
+        "community_id": 0,
+        "community_label": "Games / Regret / Game / Minimization",
+        "template_reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.025) and anchors later developments in the path."
       },
       {
         "paper_id": "1811.00164v3",
@@ -4901,33 +5315,33 @@
         "year": 2018,
         "citation_count": 239,
         "source": "arxiv",
-        "pagerank": 0.0382,
-        "betweenness": 0.0093,
-        "foundation_score": 0.1296,
-        "bridge_score": 0.3784,
-        "frontier_score": 0.2359,
+        "pagerank": 0.0193,
+        "betweenness": 0.0453,
+        "foundation_score": 0.1183,
+        "bridge_score": 0.4327,
+        "frontier_score": 0.2438,
         "community_id": 1,
         "community_label": "Regret / Games / Counterfactual / Minimization",
-        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (deep counterfactual regret minimization research) with strong impact (239 citations) and bridge score 0.378."
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (deep counterfactual regret minimization research) with strong impact (239 citations) and bridge score 0.433."
       },
       {
-        "paper_id": "2105.12328v2",
-        "title": "D2CFR: Minimize Counterfactual Regret with Deep Dueling Neural Network",
-        "abstract": "Counterfactual Regret Minimization (CFR)} is the popular method for finding approximate Nash equilibrium in two-player zero-sum games with imperfect information. CFR solves games by travsersing the full game tree iteratively, which limits its scalability in larger games. When applying CFR to solve large-scale games in previously, large-scale games are abstracted into small-scale games firstly. Secondly, CFR is used to solve the abstract game. And finally, the solution strategy is mapped back to the original large-scale game. However, this process requires considerable expert knowledge, and the accuracy of abstraction is closely related to expert knowledge. In addition, the abstraction also loses certain information, which will eventually affect the accuracy of the solution strategy. Towards this problem, a recent method, \\textit{Deep CFR} alleviates the need for abstraction and expert...",
-        "url": "https://arxiv.org/abs/2105.12328v2",
+        "paper_id": "2008.02679v2",
+        "title": "Solving imperfect-information games via exponential counterfactual regret minimization",
+        "abstract": "In general, two-agent decision-making problems can be modeled as a two-player game, and a typical solution is to find a Nash equilibrium in such game. Counterfactual regret minimization (CFR) is a well-known method to find a Nash equilibrium strategy in a two-player zero-sum game with imperfect information. The CFR method adopts a regret matching algorithm iteratively to reduce regret values progressively, enabling the average strategy to approach a Nash equilibrium. Although CFR-based methods have achieved significant success in the field of imperfect information games, there is still scope for improvement in the efficiency of convergence. To address this challenge, we propose a novel CFR-based method named exponential counterfactual regret minimization (ECFR). With ECFR, an exponential weighting technique is used to reweight the instantaneous regret value during the process of itera...",
+        "url": "https://arxiv.org/abs/2008.02679v2",
         "stage": "Key Developments",
         "role": "development",
-        "year": 2021,
-        "citation_count": 0,
+        "year": 2020,
+        "citation_count": 8,
         "source": "arxiv",
-        "pagerank": 0.0343,
-        "betweenness": 0.0534,
-        "foundation_score": 0.0873,
-        "bridge_score": 0.4798,
-        "frontier_score": 0.3711,
-        "community_id": 1,
-        "community_label": "Regret / Games / Counterfactual / Minimization",
-        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (d2cfr research) with strong impact (0 citations) and bridge score 0.480."
+        "pagerank": 0.0193,
+        "betweenness": 0.0592,
+        "foundation_score": 0.0916,
+        "bridge_score": 0.5925,
+        "frontier_score": 0.3222,
+        "community_id": 2,
+        "community_label": "Regret / Games / Minimization / Double",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (solving imperfect-information games via exponential counterfactual regret minimization research) with strong impact (8 citations) and bridge score 0.593."
       },
       {
         "paper_id": "2511.08174v1",
@@ -4939,14 +5353,14 @@
         "year": 2025,
         "citation_count": 0,
         "source": "arxiv",
-        "pagerank": 0.0318,
-        "betweenness": 0.0046,
-        "foundation_score": 0.0324,
-        "bridge_score": 0.3658,
-        "frontier_score": 0.5522,
+        "pagerank": 0.0193,
+        "betweenness": 0.0174,
+        "foundation_score": 0.0249,
+        "bridge_score": 0.3607,
+        "frontier_score": 0.562,
         "community_id": 1,
         "community_label": "Regret / Games / Counterfactual / Minimization",
-        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (deep (predictive) discounted counterfactual regret minimization research) with strong impact (0 citations) and bridge score 0.366."
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (deep (predictive) discounted counterfactual regret minimization research) with strong impact (0 citations) and bridge score 0.361."
       },
       {
         "paper_id": "2002.08493v1",
@@ -4958,52 +5372,71 @@
         "year": 2020,
         "citation_count": 32,
         "source": "arxiv",
-        "pagerank": 0.0226,
-        "betweenness": 0.0209,
-        "foundation_score": 0.0935,
-        "bridge_score": 0.3162,
-        "frontier_score": 0.3392,
+        "pagerank": 0.0193,
+        "betweenness": 0.0174,
+        "foundation_score": 0.0916,
+        "bridge_score": 0.3324,
+        "frontier_score": 0.3222,
         "community_id": 2,
-        "community_label": "Regret / Games / Minimization / Convergence",
-        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (stochastic regret minimization in extensive-form games research) with strong impact (32 citations) and bridge score 0.316."
+        "community_label": "Regret / Games / Minimization / Double",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (stochastic regret minimization in extensive-form games research) with strong impact (32 citations) and bridge score 0.332."
       },
       {
-        "paper_id": "2311.07155v1",
-        "title": "Sync Pure Counterfactual Regret Minimization in Incomplete Information Extensive Form Games",
-        "abstract": "Counterfactual Regret Minimization (CFR) and its variants developed based upon Regret Matching (RM) have been considered to be the best method to solve incomplete information extensive form games. In addition to RM and CFR, Fictitious Play (FP) is another equilibrium computation algorithm in normal form games. Previous experience has shown that the convergence rate of FP is slower than RM and FP is difficult to use in extensive form games. However, recent research has made improvements in both issues. Firstly, Abernethy proposed a new FP variant sync FP, which has faster convergence rate than RM+. Secondly, Qi introduced FP into extensive form games and proposed Pure CFR (PCFR). This paper combines these two improvements, resulting in a new algorithm sync PCFR. In our experiment, the convergence rate of sync PCFR is approximately an order of magnitude faster than CFR+ (state-of-the-ar...",
-        "url": "https://arxiv.org/abs/2311.07155v1",
+        "paper_id": "2105.12328v2",
+        "title": "D2CFR: Minimize Counterfactual Regret with Deep Dueling Neural Network",
+        "abstract": "Counterfactual Regret Minimization (CFR)} is the popular method for finding approximate Nash equilibrium in two-player zero-sum games with imperfect information. CFR solves games by travsersing the full game tree iteratively, which limits its scalability in larger games. When applying CFR to solve large-scale games in previously, large-scale games are abstracted into small-scale games firstly. Secondly, CFR is used to solve the abstract game. And finally, the solution strategy is mapped back to the original large-scale game. However, this process requires considerable expert knowledge, and the accuracy of abstraction is closely related to expert knowledge. In addition, the abstraction also loses certain information, which will eventually affect the accuracy of the solution strategy. Towards this problem, a recent method, \\textit{Deep CFR} alleviates the need for abstraction and expert...",
+        "url": "https://arxiv.org/abs/2105.12328v2",
         "stage": "Key Developments",
         "role": "development",
-        "year": 2023,
+        "year": 2021,
         "citation_count": 0,
         "source": "arxiv",
-        "pagerank": 0.0217,
-        "betweenness": 0.0186,
-        "foundation_score": 0.053,
-        "bridge_score": 0.3232,
-        "frontier_score": 0.4753,
-        "community_id": 2,
-        "community_label": "Regret / Games / Minimization / Convergence",
-        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (sync pure counterfactual regret minimization in incomplete information extensive form games research) with strong impact (0 citations) and bridge score 0.323."
+        "pagerank": 0.0193,
+        "betweenness": 0.0105,
+        "foundation_score": 0.0783,
+        "bridge_score": 0.3545,
+        "frontier_score": 0.3801,
+        "community_id": 1,
+        "community_label": "Regret / Games / Counterfactual / Minimization",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (d2cfr research) with strong impact (0 citations) and bridge score 0.354."
       },
       {
         "paper_id": "2510.04407v3",
         "title": "Scale-Invariant Regret Matching and Online Learning with Optimal Convergence: Bridging Theory and Practice in Zero-Sum Games",
         "abstract": "A considerable chasm has been looming for decades between theory and practice in zero-sum game solving through first-order methods. Although a convergence rate of $T^{-1}$ has long been established, the most effective paradigm in practice is counterfactual regret minimization (CFR), which is based on regret matching and its modern variants. In particular, the state of the art across most benchmarks is predictive regret matching$^+$ (PRM$^+$). Yet, such algorithms can exhibit slower $T^{-1/2}$ convergence even in self-play. In this paper, we close the gap between theory and practice. We propose a new scale-invariant and parameter-free variant of PRM$^+$, which we call IREG-PRM$^+$. We show that it achieves $T^{-1/2}$ best-iterate and $T^{-1}$ (i.e., optimal) average-iterate convergence guarantees, while also being on par or even better relative to PRM$^+$ on benchmark games. From a tec...",
         "url": "https://arxiv.org/abs/2510.04407v3",
-        "stage": "Recent Frontier",
-        "role": "frontier",
+        "stage": "Key Developments",
+        "role": "development",
         "year": 2025,
         "citation_count": 2,
         "source": "arxiv",
-        "pagerank": 0.0168,
-        "betweenness": 0.0105,
-        "foundation_score": 0.0234,
-        "bridge_score": 0.2136,
-        "frontier_score": 0.5648,
-        "community_id": 2,
-        "community_label": "Regret / Games / Minimization / Convergence",
-        "template_reason": "Read this near the end to see recent directions from 2025; its frontier score (0.565) indicates current research momentum."
+        "pagerank": 0.0193,
+        "betweenness": 0.0,
+        "foundation_score": 0.0249,
+        "bridge_score": 0.2208,
+        "frontier_score": 0.562,
+        "community_id": 1,
+        "community_label": "Regret / Games / Counterfactual / Minimization",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (scale-invariant regret matching and online learning with optimal convergence research) with strong impact (2 citations) and bridge score 0.221."
+      },
+      {
+        "paper_id": "1305.0034v1",
+        "title": "Regret Minimization in Non-Zero-Sum Games with Applications to Building Champion Multiplayer Computer Poker Agents",
+        "abstract": "In two-player zero-sum games, if both players minimize their average external regret, then the average of the strategy profiles converges to a Nash equilibrium. For n-player general-sum games, however, theoretical guarantees for regret minimization are less understood. Nonetheless, Counterfactual Regret Minimization (CFR), a popular regret minimization algorithm for extensive-form games, has generated winning three-player Texas Hold'em agents in the Annual Computer Poker Competition (ACPC). In this paper, we provide the first set of theoretical properties for regret minimization algorithms in non-zero-sum games by proving that solutions eliminate iterative strict domination. We formally define \\emph{dominated actions} in extensive-form games, show that CFR avoids iteratively strictly dominated actions and strategies, and demonstrate that removing iteratively dominated actions is enoug...",
+        "url": "https://arxiv.org/abs/1305.0034v1",
+        "stage": "Bridge Papers",
+        "role": "bridge",
+        "year": 2013,
+        "citation_count": 15,
+        "source": "arxiv",
+        "pagerank": 0.0193,
+        "betweenness": 0.1161,
+        "foundation_score": 0.1849,
+        "bridge_score": 0.6938,
+        "frontier_score": 0.0273,
+        "community_id": 0,
+        "community_label": "Games / Regret / Game / Minimization",
+        "template_reason": "Read this to understand how separate research communities connect; its high betweenness (0.116) marks it as a bridge paper."
       },
       {
         "paper_id": "2404.13891v2",
@@ -5015,24 +5448,25 @@
         "year": 2024,
         "citation_count": 10,
         "source": "arxiv",
-        "pagerank": 0.019,
-        "betweenness": 0.0081,
-        "foundation_score": 0.0381,
-        "bridge_score": 0.2564,
-        "frontier_score": 0.52,
-        "community_id": 2,
-        "community_label": "Regret / Games / Minimization / Convergence",
-        "template_reason": "Read this near the end to see recent directions from 2024; its frontier score (0.520) indicates current research momentum."
+        "pagerank": 0.0193,
+        "betweenness": 0.0012,
+        "foundation_score": 0.0383,
+        "bridge_score": 0.1921,
+        "frontier_score": 0.5165,
+        "community_id": 1,
+        "community_label": "Regret / Games / Counterfactual / Minimization",
+        "template_reason": "Read this near the end to see recent directions from 2024; its frontier score (0.516) indicates current research momentum."
       }
     ],
     "reading_path_metrics": {
-      "stage_count": 4,
-      "unique_paper_count": 11,
+      "stage_count": 5,
+      "unique_paper_count": 12,
       "role_counts": {
         "foundation": 3,
         "core": 1,
-        "development": 5,
-        "frontier": 2
+        "development": 6,
+        "bridge": 1,
+        "frontier": 1
       },
       "explanation_availability_ratio": 1.0
     }

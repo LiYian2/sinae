@@ -16,7 +16,8 @@ from shared.types import Paper, ResearchProfile, UserLevel
 
 OPENALEX_BASE = "https://api.openalex.org"
 SEMANTIC_SCHOLAR_BASE = "https://api.semanticscholar.org/graph/v1"
-USER_AGENT = "ResearchTrail/1.0 (mailto:student@example.com)"
+CONTACT_EMAIL = os.environ.get("RESEARCHTRAIL_CONTACT_EMAIL", "student@example.com")
+USER_AGENT = os.environ.get("RESEARCHTRAIL_USER_AGENT", f"ResearchTrail/1.0 (mailto:{CONTACT_EMAIL})")
 
 
 class LiteratureRetrievalSkill:
@@ -257,7 +258,7 @@ class LiteratureRetrievalSkill:
         max_results = min(max_results, 50)
         query_encoded = urllib.parse.quote(query)
         url = (
-            f"http://export.arxiv.org/api/query?"
+            f"https://export.arxiv.org/api/query?"
             f"search_query=all:{query_encoded}&start=0&max_results={max_results}"
             f"&sortBy=relevance&sortOrder=descending"
         )
@@ -322,7 +323,7 @@ class LiteratureRetrievalSkill:
             "search": query,
             "per_page": max_results,
             "sort": "cited_by_count:desc",
-            "mailto": "student@example.com",
+            "mailto": CONTACT_EMAIL,
         }
         try:
             resp = requests.get(
@@ -557,7 +558,7 @@ class LiteratureRetrievalSkill:
                 params = {
                     "filter": f"openalex_id:{'|'.join(openalex_ids[:50])}",
                     "per_page": 50,
-                    "mailto": "student@example.com",
+                    "mailto": CONTACT_EMAIL,
                     "select": "id,referenced_works,cited_by_count",
                 }
                 resp = requests.get(
@@ -767,7 +768,7 @@ class LiteratureRetrievalSkill:
                 params = {
                     "search": paper.title,
                     "per_page": 3,
-                    "mailto": "student@example.com",
+                    "mailto": CONTACT_EMAIL,
                     "select": "id,title,referenced_works,cited_by_count",
                 }
                 resp = requests.get(

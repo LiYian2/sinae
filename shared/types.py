@@ -76,6 +76,7 @@ class GraphEdge:
     target: str
     type: str
     weight: float = 1.0
+    distance: float = 1.0
 
 
 @dataclass
@@ -87,7 +88,13 @@ class GraphData:
         return {
             "nodes": self.nodes,
             "edges": [
-                {"source": e.source, "target": e.target, "type": e.type, "weight": e.weight}
+                {
+                    "source": e.source,
+                    "target": e.target,
+                    "type": e.type,
+                    "weight": e.weight,
+                    "distance": e.distance,
+                }
                 for e in self.edges
             ],
         }
@@ -102,6 +109,7 @@ class GraphData:
                     target=e["target"],
                     type=e.get("type", "citation"),
                     weight=e.get("weight", 1.0),
+                    distance=e.get("distance", 1.0),
                 )
                 for e in data.get("edges", [])
             ],

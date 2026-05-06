@@ -17,19 +17,40 @@
       "largest_component_ratio": 1.0,
       "average_degree": 19.7381,
       "community_count": 5,
-      "modularity": 0.2554
+      "modularity": 0.2563
     },
     "reading_path": {
       "stage_count": 5,
-      "unique_paper_count": 14,
+      "unique_paper_count": 13,
       "role_counts": {
         "prerequisite": 3,
         "foundation": 1,
         "core": 2,
-        "development": 5,
+        "development": 4,
         "frontier": 3
       },
       "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 1.0,
+      "landmark_hits": [
+        "An Image is Worth 16x16 Words",
+        "Training data-efficient image transformers",
+        "Swin Transformer",
+        "Emerging Properties in Self-Supervised Vision Transformers",
+        "Masked Autoencoders Are Scalable Vision Learners"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 0.9761904761904762,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.8,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 39,
+        "openalex": 38,
+        "curated_prerequisite": 3,
+        "curated_landmark": 4
+      }
     },
     "planner_mode": "rule",
     "query_plan": {
@@ -61,91 +82,118 @@
         "description": "Community 1 groups papers around code, vision, transformer, image."
       },
       "2": {
-        "label": "Vision / Transformer / Transformers / Image",
-        "description": "Community 2 groups papers around vision, transformer, transformers, image."
+        "label": "Vision / Transformer / Image / Attention",
+        "description": "Community 2 groups papers around vision, transformer, image, attention."
       },
       "3": {
         "label": "Vision / Transformers / Image / Transformer",
         "description": "Community 3 groups papers around vision, transformers, image, transformer."
       },
       "4": {
-        "label": "Segmentation / Transformer / Vision / Self-Supervised",
-        "description": "Community 4 groups papers around segmentation, transformer, vision, self-supervised."
+        "label": "Segmentation / Transformer / Vision / Transformers",
+        "description": "Community 4 groups papers around segmentation, transformer, vision, transformers."
       }
     }
   },
   "llm_assisted_agent": {
     "retrieval": {
-      "total_papers": 84,
-      "has_abstract_ratio": 0.9880952380952381,
-      "has_citation_ratio": 0.7738095238095238,
+      "total_papers": 80,
+      "has_abstract_ratio": 0.9875,
+      "has_citation_ratio": 0.775,
       "year_range": "2012-2026",
       "median_year": 2022,
-      "citation_edges_total": 4894
+      "citation_edges_total": 4604
     },
     "graph": {
-      "node_count": 84,
-      "edge_count": 829,
-      "citation_edges": 119,
-      "similarity_edges": 785,
+      "node_count": 80,
+      "edge_count": 744,
+      "citation_edges": 113,
+      "similarity_edges": 701,
       "connected_components": 1,
       "largest_component_ratio": 1.0,
-      "average_degree": 19.7381,
-      "community_count": 5,
-      "modularity": 0.2554
+      "average_degree": 18.6,
+      "community_count": 6,
+      "modularity": 0.2723
     },
     "reading_path": {
       "stage_count": 5,
-      "unique_paper_count": 14,
+      "unique_paper_count": 13,
       "role_counts": {
         "prerequisite": 3,
         "foundation": 1,
-        "core": 2,
+        "core": 1,
         "development": 5,
         "frontier": 3
       },
       "explanation_availability_ratio": 1.0
     },
+    "quality": {
+      "landmark_hit_rate": 1.0,
+      "landmark_hits": [
+        "An Image is Worth 16x16 Words",
+        "Training data-efficient image transformers",
+        "Swin Transformer",
+        "Emerging Properties in Self-Supervised Vision Transformers",
+        "Masked Autoencoders Are Scalable Vision Learners"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 0.9625,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.8333333333333334,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 37,
+        "openalex": 35,
+        "curated_prerequisite": 3,
+        "curated_landmark": 5
+      }
+    },
     "planner_mode": "llm",
     "query_plan": {
       "main_queries": [
         "Vision Transformer",
-        "\"Vision Transformer\"",
-        "\"An Image is Worth 16x16 Words\"",
-        "DeiT data-efficient image transformers",
-        "Swin Transformer hierarchical vision transformer",
-        "DINO self-supervised vision transformers",
-        "Masked Autoencoders scalable vision learners",
-        "BEiT masked image modeling transformer",
-        "Vision Transformer survey",
-        "Vision Transformer tutorial",
-        "Vision Transformer overview",
-        "Vision Transformer foundations"
+        "An Image is Worth 16x16 Words",
+        "Vision Transformer architecture",
+        "Vision Transformer applications"
       ],
-      "prerequisite_queries": [],
-      "exclude_terms": [],
-      "expected_communities": []
+      "prerequisite_queries": [
+        "Transformer neural network",
+        "Self-attention mechanism",
+        "CNN vs Vision Transformer"
+      ],
+      "exclude_terms": [
+        "Electrical transformer"
+      ],
+      "expected_communities": [
+        "Computer Vision",
+        "Deep Learning",
+        "Geometric Deep Learning"
+      ]
     },
     "community_labels": {
       "0": {
-        "label": "Transformer / Vision / Tasks / Image",
-        "description": "Community 0 groups papers around transformer, vision, tasks, image."
+        "label": "Foundational Transformers and Attention Mechanisms",
+        "description": "This community explores the foundational attention mechanisms and their adaptation from machine translation to vision tasks, focusing on efficient training and pyramid architectures."
       },
       "1": {
-        "label": "Code / Vision / Transformer / Image",
-        "description": "Community 1 groups papers around code, vision, transformer, image."
+        "label": "General Vision Transformers and Self-Supervised Learning",
+        "description": "This large community focuses on the application of transformers to general image recognition and segmentation, including self-supervised pre-training methods like BEiT and architectures like ViT."
       },
       "2": {
-        "label": "Vision / Transformer / Transformers / Image",
-        "description": "Community 2 groups papers around vision, transformer, transformers, image."
+        "label": "Hybrid Convolutional-Transformer Architectures",
+        "description": "This community investigates hybrid architectures that combine convolutional designs with vision transformers to improve performance and accuracy across various image tasks."
       },
       "3": {
-        "label": "Vision / Transformers / Image / Transformer",
-        "description": "Community 3 groups papers around vision, transformers, image, transformer."
+        "label": "Specialized Vision Transformer Backbones",
+        "description": "Research in this area focuses on specialized transformer backbones such as Swin and CSWin, applying them to tasks like image restoration and video processing while exploring inductive biases."
       },
       "4": {
-        "label": "Segmentation / Transformer / Vision / Self-Supervised",
-        "description": "Community 4 groups papers around segmentation, transformer, vision, self-supervised."
+        "label": "Robustness and Position Encoding in Vision Transformers",
+        "description": "This community examines the robustness of vision transformers against adversarial attacks, improves relative position encoding, and explores scaling up model capacity and resolution."
+      },
+      "5": {
+        "label": "Efficient Object Detection and Vision-Language Models",
+        "description": "This community focuses on efficient object detection models like YOLOv7 and adaptive token mechanisms, alongside masked vision-language transformers for scene text recognition."
       }
     }
   },
@@ -181,6 +229,27 @@
         "frontier": 3
       },
       "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 1.0,
+      "landmark_hits": [
+        "An Image is Worth 16x16 Words",
+        "Training data-efficient image transformers",
+        "Swin Transformer",
+        "Emerging Properties in Self-Supervised Vision Transformers",
+        "Masked Autoencoders Are Scalable Vision Learners"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 0.9310344827586207,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.5333333333333333,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 7,
+        "openalex": 15,
+        "curated_prerequisite": 3,
+        "curated_landmark": 4
+      }
     },
     "planner_mode": null,
     "query_plan": {
@@ -298,6 +367,27 @@
       },
       "explanation_availability_ratio": 1.0
     },
+    "quality": {
+      "landmark_hit_rate": 1.0,
+      "landmark_hits": [
+        "An Image is Worth 16x16 Words",
+        "Training data-efficient image transformers",
+        "Swin Transformer",
+        "Emerging Properties in Self-Supervised Vision Transformers",
+        "Masked Autoencoders Are Scalable Vision Learners"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 0.9310344827586207,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.8,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 7,
+        "openalex": 15,
+        "curated_prerequisite": 3,
+        "curated_landmark": 4
+      }
+    },
     "planner_mode": null,
     "query_plan": {
       "main_queries": [
@@ -364,15 +454,36 @@
     },
     "reading_path": {
       "stage_count": 5,
-      "unique_paper_count": 14,
+      "unique_paper_count": 13,
       "role_counts": {
         "prerequisite": 3,
         "foundation": 1,
         "core": 2,
-        "development": 5,
+        "development": 4,
         "frontier": 3
       },
       "explanation_availability_ratio": 1.0
+    },
+    "quality": {
+      "landmark_hit_rate": 1.0,
+      "landmark_hits": [
+        "An Image is Worth 16x16 Words",
+        "Training data-efficient image transformers",
+        "Swin Transformer",
+        "Emerging Properties in Self-Supervised Vision Transformers",
+        "Masked Autoencoders Are Scalable Vision Learners"
+      ],
+      "landmark_total": 5,
+      "topic_precision": 0.9310344827586207,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "path_stage_coverage": 1.0,
+      "source_mix": {
+        "arxiv": 7,
+        "openalex": 15,
+        "curated_prerequisite": 3,
+        "curated_landmark": 4
+      }
     },
     "planner_mode": null,
     "query_plan": {

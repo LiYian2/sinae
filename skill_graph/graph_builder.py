@@ -55,6 +55,7 @@ class GraphBuilder:
                         target=ref_id,
                         type="citation",
                         weight=1.0,
+                        distance=1.0,
                     ))
         return edges
 
@@ -94,6 +95,7 @@ class GraphBuilder:
                         target=valid_papers[j].paper_id,
                         type="similarity",
                         weight=float(sim),
+                        distance=float(1.0 / max(sim, 1e-6)),
                     ))
 
         return edges
@@ -103,7 +105,13 @@ class GraphBuilder:
         for node in graph_data.nodes:
             G.add_node(node)
         for edge in graph_data.edges:
-            G.add_edge(edge.source, edge.target, type=edge.type, weight=edge.weight)
+            G.add_edge(
+                edge.source,
+                edge.target,
+                type=edge.type,
+                weight=edge.weight,
+                distance=edge.distance,
+            )
         return G
 
     def compute_metrics(self, graph_data: GraphData) -> dict:

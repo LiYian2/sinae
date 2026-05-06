@@ -14,15 +14,17 @@ This Skill builds paper networks and computes deterministic SNA metrics. Citatio
 
 ## LLM-Labeled Communities
 
-- **Community 0: Deep Counterfactual Regret Minimization** — This community focuses on integrating deep neural networks with counterfactual regret minimization to solve imperfect-information games.
-- **Community 1: Poker Agents and Imperfect Recall** — Research in this area applies regret minimization techniques to build champion-level poker agents and addresses challenges like imperfect recall in extensive-form games.
-- **Community 2: Theoretical Regret Minimization Algorithms** — This community investigates theoretical improvements and algorithmic variants such as optimistic and discounted regret minimization for extensive-form games.
-- **Community 3: Monte Carlo Sampling and Game Solving** — These papers explore Monte Carlo sampling methods and hardware acceleration for solving specific extensive games like heads-up limit Texas Hold'em.
-- **Community 4: Incomplete Information and Search** — This community focuses on regret minimization strategies for games with incomplete information and unknown environments, often utilizing search methods.
+- **Community 0: Imperfect Recall and Abstraction in Games** — This community focuses on regret minimization algorithms in extensive-form games, specifically addressing challenges like imperfect recall, bounded memory, and the construction of abstractions.
+- **Community 1: Deep Counterfactual Regret Minimization** — Research in this area applies deep learning and function approximation techniques to counterfactual regret minimization for solving games.
+- **Community 2: Optimistic Regret Minimization and Convergence** — This community investigates theoretical improvements to regret minimization algorithms, focusing on optimistic methods, convergence rates, and techniques like mirror descent.
+- **Community 3: Sampling and Accelerated Regret Minimization** — This community develops methods to accelerate counterfactual regret minimization through Monte Carlo sampling, GPU acceleration, and neural network integration.
+- **Community 4: Regret Minimization for Incomplete Information and Search** — This community explores regret minimization strategies for games with incomplete information, emphasizing search algorithms, information gain, and efficient Nash equilibrium approximation.
 
 ## Analysis
 
 - Citation-only graphs are precise but sparse when references are missing from APIs.
 - Similarity-only graphs improve connectivity but can over-cluster papers by language rather than citation structure.
 - Hybrid graphs are the default because they preserve citation evidence while adding enough semantic edges for stable community detection.
+- Citation PageRank is computed on a directed citation graph where citing papers point to cited papers. Community detection uses the undirected semantic/hybrid projection.
+- Betweenness centrality uses `distance = 1 / weight` so stronger similarity means shorter graph distance.
 - PageRank, betweenness, Louvain communities, and role scores are deterministic and are not computed by the LLM.

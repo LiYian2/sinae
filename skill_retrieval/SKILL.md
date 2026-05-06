@@ -42,6 +42,7 @@ Use this Skill when the user wants to learn, enter, survey, or explore a researc
 - Run live retrieval on at least two topics: `Vision Transformer` and `Counterfactual regret minimization`.
 - Compare `rule_only_agent` and `llm_assisted_agent`.
 - Record paper count, abstract coverage, citation/reference coverage, year range, deduplication count, and number of main queries.
+- Record topic precision and source mix so retrieved API papers, curated landmarks, and synthetic demo records are distinguishable.
 - Inspect top retrieved papers for topical relevance, especially for ambiguous terms such as `regret` and `counterfactual`.
 - Treat demo mode as a pipeline reliability check only; report-quality experiments must use live arXiv/OpenAlex/Semantic Scholar mode.
 
@@ -53,6 +54,7 @@ Use this Skill when the user wants to learn, enter, survey, or explore a researc
 - Citation counts prefer Semantic Scholar when `S2_API_KEY` is available, then OpenAlex or curated metadata. Counts may still differ from Google Scholar or Google Search snippets.
 - arXiv can rate-limit live experiments; OpenAlex usually remains available but reference coverage may vary by topic.
 - LLM query expansion improves flexibility but needs deterministic relevance filters to avoid off-topic retrieval.
+- Curated landmarks improve recall for known foundational papers. Evaluation reports expose them in source mix; use a no-curated rerun for strict generalization ablation if required.
 
 ## Failure Handling
 - If LLM query planning is unavailable, use rule-based query expansion.

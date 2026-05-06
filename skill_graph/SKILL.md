@@ -38,6 +38,7 @@ Use this Skill after the Literature Retrieval Skill has produced a paper corpus 
 ## Evaluation Protocol
 - Compare `citation`, `similarity`, and `hybrid` graph modes.
 - Record node count, edge count, citation edge count, similarity edge count, connected components, largest component ratio, number of communities, and modularity.
+- Record reading-path community coverage for each graph mode to evaluate whether graph construction improves field coverage, not just connectivity.
 - Inspect LLM-labeled communities against top papers and keywords for interpretability.
 - Use hybrid graph as the default if citation-only is sparse and similarity-only over-connects the corpus.
 
@@ -49,7 +50,9 @@ Use this Skill after the Literature Retrieval Skill has produced a paper corpus 
   - `outputs/evaluation/cfr_live/llm_assisted_agent/research_graph.png`
 
 ## Known Limitations
-- Citation edges depend on OpenAlex/reference availability and can be sparse for arXiv-heavy corpora.
+- Citation PageRank uses a directed citation graph where citing papers point to cited papers.
+- Betweenness uses `distance = 1 / weight`; similarity weight itself remains a strength score for PageRank/degree-style uses.
+- Citation edges depend on OpenAlex/Semantic Scholar/reference availability and can be sparse for arXiv-heavy corpora.
 - Similarity edges can connect papers with similar language but weak citation relationships.
 - Community labels are semantic summaries; community assignments and graph scores remain deterministic.
 

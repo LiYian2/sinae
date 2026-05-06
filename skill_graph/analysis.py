@@ -1,6 +1,7 @@
 import numpy as np
 import networkx as nx
 from networkx.algorithms import community as nx_community
+from datetime import datetime
 
 from shared.data_layer import SharedDataLayer
 from shared.types import Paper, NodeScores, GraphData
@@ -10,7 +11,7 @@ class GraphAnalysisSkill:
     def __init__(self, data_layer: SharedDataLayer):
         self.data = data_layer
         self._graph: nx.Graph | None = None
-        self._current_year: int = 2026
+        self._current_year: int = datetime.now().year
 
     def run(self) -> dict[str, NodeScores]:
         graph_data = self.data.get_graph_data()
@@ -18,14 +19,24 @@ class GraphAnalysisSkill:
             raise ValueError("No graph data available. Run GraphBuilder.build() first.")
 
         G = self._build_networkx_graph(graph_data)
+        citation_digraph = self._build_citation_digraph(graph_data)
         self._graph = G
 
         scores: dict[str, NodeScores] = {}
         papers = self.data.get_all_papers()
         year_map = {p.paper_id: p.year for p in papers}
 
-        pagerank = nx.pagerank(G, weight="weight") if G.number_of_edges() > 0 else {n: 1.0 / max(len(G.nodes()), 1) for n in G.nodes()}
-        betweenness = nx.betweenness_centrality(G, weight="weight", normalized=True) if G.number_of_edges() > 0 else {n: 0.0 for n in G.nodes()}
+        pagerank_graph = citation_digraph if citation_digraph.number_of_edges() > 0 else G
+        pagerank = (
+            nx.pagerank(pagerank_graph, weight="weight")
+            if pagerank_graph.number_of_edges() > 0
+            else {n: 1.0 / max(len(G.nodes()), 1) for n in G.nodes()}
+        )
+        betweenness = (
+            nx.betweenness_centrality(G, weight="distance", normalized=True)
+            if G.number_of_edges() > 0
+            else {n: 0.0 for n in G.nodes()}
+        )
 
         communities = self._detect_communities(G)
         degree_values = dict(G.degree())
@@ -59,7 +70,24 @@ class GraphAnalysisSkill:
         for node in graph_data.nodes:
             G.add_node(node)
         for edge in graph_data.edges:
-            G.add_edge(edge.source, edge.target, type=edge.type, weight=edge.weight)
+            G.add_edge(
+                edge.source,
+                edge.target,
+                type=edge.type,
+                weight=edge.weight,
+                distance=edge.distance,
+            )
+        return G
+
+    def _build_citation_digraph(self, graph_data: GraphData) -> nx.DiGraph:
+        G = nx.DiGraph()
+        for node in graph_data.nodes:
+            G.add_node(node)
+        for edge in graph_data.edges:
+            if edge.type != "citation":
+                continue
+            # Direction is citing paper -> cited paper, so PageRank flows toward foundational cited work.
+            G.add_edge(edge.source, edge.target, type=edge.type, weight=edge.weight, distance=edge.distance)
         return G
 
     def _detect_communities(self, G: nx.Graph) -> dict[str, int]:

@@ -35,6 +35,10 @@ def _group_summary(topic: str, results: dict[str, dict], state: dict[str, Any]) 
         "",
         markdown_table(results),
         "",
+        "## Reading-Path Quality Metrics",
+        "",
+        _quality_table(results),
+        "",
         "## Agent Behavior",
         "",
         f"- Planner mode: `{metadata.get('planner_mode', 'unknown')}`",
@@ -48,6 +52,7 @@ def _group_summary(topic: str, results: dict[str, dict], state: dict[str, Any]) 
         "- The deterministic graph metrics provide the structural basis for selecting foundation, bridge, and frontier papers.",
         "- LLM calls are used for task parsing, query planning, community naming, and evidence-grounded why-read text; centrality and community computation remain deterministic.",
         "- Demo-mode outputs are only for pipeline reliability checks. Report-quality claims should use live-mode arXiv/OpenAlex/Semantic Scholar results.",
+        "- Curated or landmark records are transparent source categories. They improve recall for known foundational papers but are reported separately from retrieved API records.",
     ]
     return "\n".join(lines)
 
@@ -91,6 +96,17 @@ def _retrieval_report(topic: str, results: dict[str, dict], state: dict[str, Any
     query_plan = metadata.get("query_plan", {})
     lines += [
         "",
+        "## Source Mix",
+        "",
+        "| Run | Source Mix |",
+        "|---|---|",
+    ]
+    for name in ["rule_only_agent", "llm_assisted_agent"]:
+        source_mix = results.get(name, {}).get("quality", {}).get("source_mix", {})
+        lines.append(f"| {name} | {json.dumps(source_mix, ensure_ascii=False)} |")
+
+    lines += [
+        "",
         "## LLM Query Plan",
         "",
         f"- Main queries: {', '.join(query_plan.get('main_queries', [])) or 'N/A'}",
@@ -103,6 +119,7 @@ def _retrieval_report(topic: str, results: dict[str, dict], state: dict[str, Any
         "- The key measurable outputs are corpus size, abstract coverage, citation/reference coverage, and year range.",
         "- Topic-specific filtering is important for ambiguous terms and short acronyms. CFR retrieval filters out unrelated uses of `regret` and `counterfactual`; Vision Transformer retrieval uses word-boundary matching for acronyms such as `ViT`, `DeiT`, `DINO`, `MAE`, and `BEiT` to avoid unrelated high-citation OpenAlex records.",
         "- Citation counts prefer Semantic Scholar `citationCount` when `S2_API_KEY` is available, then fall back to OpenAlex `cited_by_count` or curated landmark metadata. They may still differ from Google Scholar snapshots.",
+        "- Source mix is reported to distinguish API-retrieved papers from curated landmarks and synthetic demo records.",
     ]
     return "\n".join(lines)
 
@@ -154,6 +171,8 @@ def _graph_report(topic: str, results: dict[str, dict], state: dict[str, Any]) -
         "- Citation-only graphs are precise but sparse when references are missing from APIs.",
         "- Similarity-only graphs improve connectivity but can over-cluster papers by language rather than citation structure.",
         "- Hybrid graphs are the default because they preserve citation evidence while adding enough semantic edges for stable community detection.",
+        "- Citation PageRank is computed on a directed citation graph where citing papers point to cited papers. Community detection uses the undirected semantic/hybrid projection.",
+        "- Betweenness centrality uses `distance = 1 / weight` so stronger similarity means shorter graph distance.",
         "- PageRank, betweenness, Louvain communities, and role scores are deterministic and are not computed by the LLM.",
     ]
     return "\n".join(lines)
@@ -192,6 +211,26 @@ def _reading_path_report(topic: str, results: dict[str, dict], state: dict[str, 
 
     lines += [
         "",
+        "## Path Quality Metrics",
+        "",
+        "| Run | Landmark Hit Rate | Topic Precision | Ordering Quality | Community Coverage | Stage Coverage |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    for name in ["rule_only_agent", "llm_assisted_agent"]:
+        quality = results.get(name, {}).get("quality", {})
+        lines.append(
+            "| {name} | {landmark:.1%} | {precision:.1%} | {ordering:.1%} | {community:.1%} | {stage:.1%} |".format(
+                name=name,
+                landmark=quality.get("landmark_hit_rate", 0),
+                precision=quality.get("topic_precision", 0),
+                ordering=quality.get("ordering_quality", 0),
+                community=quality.get("community_coverage", 0),
+                stage=quality.get("path_stage_coverage", 0),
+            )
+        )
+
+    lines += [
+        "",
         "## Network-Aware Reading Path",
         "",
     ]
@@ -218,7 +257,28 @@ def _reading_path_report(topic: str, results: dict[str, dict], state: dict[str, 
         "- The network-aware path separates prerequisites/foundations, core methods, key developments, bridge papers, and frontier papers.",
         "- The citation-count baseline often over-emphasizes old or broadly cited papers and does not guarantee a coherent learning order.",
         "- Evidence-grounded why-read text is generated from structured packets, limiting LLM freedom to invent unsupported claims.",
+        "- Landmark hit rate, ordering quality, and community coverage directly evaluate whether the Agent creates a useful reading path rather than only a connected graph.",
     ]
+    return "\n".join(lines)
+
+
+def _quality_table(results: dict[str, dict]) -> str:
+    lines = [
+        "| Run | Landmark Hit Rate | Topic Precision | Ordering Quality | Community Coverage | Stage Coverage |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    for name, metrics in results.items():
+        quality = metrics.get("quality", {})
+        lines.append(
+            "| {name} | {landmark:.1%} | {precision:.1%} | {ordering:.1%} | {community:.1%} | {stage:.1%} |".format(
+                name=name,
+                landmark=quality.get("landmark_hit_rate", 0),
+                precision=quality.get("topic_precision", 0),
+                ordering=quality.get("ordering_quality", 0),
+                community=quality.get("community_coverage", 0),
+                stage=quality.get("path_stage_coverage", 0),
+            )
+        )
     return "\n".join(lines)
 
 

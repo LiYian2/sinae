@@ -38,7 +38,7 @@ Use this Skill after graph analysis has produced paper scores and communities, w
 
 ## Evaluation Protocol
 - Compare network-aware reading paths against a citation-count baseline.
-- Record stage count, unique paper count, role counts, explanation coverage, and must-read landmark inclusion.
+- Record stage count, unique paper count, role counts, explanation coverage, landmark hit rate, topic precision, ordering quality, community coverage, and stage coverage.
 - For human evaluation, rate coherence, coverage, level appropriateness, and explanation usefulness from 1 to 5.
 - Verify that each recommended paper includes authors, year, source URL when available, abstract, and an evidence-grounded why-read explanation.
 
@@ -50,8 +50,8 @@ Use this Skill after graph analysis has produced paper scores and communities, w
 
 ## Known Limitations
 - Why-read explanations are only as reliable as the retrieved metadata and abstract.
-- Citation-count baselines use OpenAlex citations and may differ from Google Scholar.
-- Topic-specific must-read overrides are currently implemented for Vision Transformer and Counterfactual Regret Minimization to protect known landmark papers from being displaced by graph-score noise.
+- Citation-count baselines use labeled citation sources: Semantic Scholar, OpenAlex, or curated metadata. Counts may differ from Google Scholar.
+- Topic-specific landmark support is transparent in source mix and quality metrics. It should be evaluated with ablations when strict generalization is the main claim.
 
 ## Failure Handling
 - If LLM explanation fails, use deterministic template explanations.
