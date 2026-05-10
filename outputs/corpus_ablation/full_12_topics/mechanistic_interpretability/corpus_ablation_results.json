@@ -1,0 +1,72 @@
+{
+  "A_arxiv_only": {
+    "total_papers": 20,
+    "raw_records": 26,
+    "duplicate_removal": 6,
+    "abstract_coverage": 1.0,
+    "citation_metadata_coverage": 0.5,
+    "reference_coverage": 0.5,
+    "landmark_hit_rate": 0.4,
+    "topic_precision": 0.7,
+    "graph_edges": 81,
+    "citation_edges": 0,
+    "similarity_edges": 81,
+    "graph_edge_yield": 4.05
+  },
+  "B_openalex_only": {
+    "total_papers": 35,
+    "raw_records": 40,
+    "duplicate_removal": 5,
+    "abstract_coverage": 0.8857142857142857,
+    "citation_metadata_coverage": 1.0,
+    "reference_coverage": 0.8857142857142857,
+    "landmark_hit_rate": 0.0,
+    "topic_precision": 0.02857142857142857,
+    "graph_edges": 86,
+    "citation_edges": 2,
+    "similarity_edges": 84,
+    "graph_edge_yield": 2.4571428571428573
+  },
+  "C_arxiv_openalex": {
+    "total_papers": 45,
+    "raw_records": 66,
+    "duplicate_removal": 11,
+    "abstract_coverage": 0.9333333333333333,
+    "citation_metadata_coverage": 0.9333333333333333,
+    "reference_coverage": 0.8666666666666667,
+    "landmark_hit_rate": 0.4,
+    "topic_precision": 0.3333333333333333,
+    "graph_edges": 149,
+    "citation_edges": 1,
+    "similarity_edges": 148,
+    "graph_edge_yield": 3.311111111111111
+  },
+  "D_plus_topic_filtering": {
+    "total_papers": 24,
+    "raw_records": 66,
+    "duplicate_removal": 11,
+    "abstract_coverage": 1.0,
+    "citation_metadata_coverage": 0.875,
+    "reference_coverage": 0.8333333333333334,
+    "landmark_hit_rate": 0.4,
+    "topic_precision": 0.5833333333333334,
+    "graph_edges": 94,
+    "citation_edges": 0,
+    "similarity_edges": 94,
+    "graph_edge_yield": 3.9166666666666665
+  },
+  "E_plus_verified_landmarks": {
+    "total_papers": 24,
+    "raw_records": 66,
+    "duplicate_removal": 11,
+    "abstract_coverage": 1.0,
+    "citation_metadata_coverage": 0.875,
+    "reference_coverage": 0.8333333333333334,
+    "landmark_hit_rate": 0.4,
+    "topic_precision": 0.5833333333333334,
+    "graph_edges": 94,
+    "citation_edges": 0,
+    "similarity_edges": 94,
+    "graph_edge_yield": 3.9166666666666665
+  }
+}

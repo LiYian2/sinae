@@ -1,59 +1,45 @@
 # ResearchTrail Overall Evaluation Report
 
-## Evaluation Setup
+## Artifact Map
 
-We evaluated ResearchTrail on two live topics:
+- Overall 12-topic agent benchmark: `outputs/benchmark_full_llm_normalized/benchmark_summary.md` and `benchmark_results.json`.
+- Skill 1 corpus ablation: `outputs/corpus_ablation/full_12_topics/corpus_ablation_batch_summary.md` and `corpus_ablation_batch_results.json`.
+- Skill 2 graph ablation: `outputs/graph_ablation/full_12_topics/graph_ablation_summary.md` and `graph_ablation_results.json`.
+- Skill 3 reading-path ablation: `outputs/reading_path_ablation/full_11_topics/reading_path_ablation_summary.md`, `reading_path_ablation_results.json`, and `paths_for_human_eval/`.
+- Manual qualitative rubric: `evaluation/manual_quality_rubric.md`.
 
-- `Counterfactual regret minimization` with an intermediate user profile.
-- `Vision Transformer` with a beginner user profile.
+## Overall Agent Result
 
-Each topic was evaluated with five runs: a rule-only Agent, an LLM-assisted Agent, and three graph ablations (`citation`, `similarity`, and `hybrid`). Citation enrichment used Semantic Scholar when `S2_API_KEY` was available, then OpenAlex or curated landmark metadata as fallback.
+| Scope | Topics | Papers | Edges | Communities | Landmark Hit | Topic Precision | Ordering | Community Coverage | Stage Coverage |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| All benchmark topics | 12 | 21.5 | 121.8 | 3.9 | 61.9% | 91.7% | 68.4% | 91.4% | 95.8% |
+| Excluding protein low-corpus case | 11 | 22.7 | 131.7 | 4.0 | 67.6% | 93.3% | 74.6% | 90.6% | 97.7% |
 
-The evaluation now includes both structural graph metrics and reading-path quality metrics:
+Interpretation: the full agent is strongest on topic precision, stage coverage, and community coverage. The main weakness is landmark recall/order on topics where scholarly metadata is incomplete or where the topic contains important non-arXiv/non-OpenAlex artifacts, especially mechanistic interpretability and the saved protein benchmark corpus.
 
-- `landmark_hit_rate`: whether the path contains known essential papers.
-- `topic_precision`: deterministic topical relevance over retrieved papers.
-- `ordering_quality`: whether foundation papers appear before follow-up/frontier papers.
-- `community_coverage`: how many detected communities are represented in the reading path.
-- `path_stage_coverage`: whether the path contains foundation/core/development/frontier stages.
+## End-to-End Architecture
 
-## Main Results
+The agent is a markdown-described, code-backed, LLM-assisted workflow:
 
-| Topic | Run | Papers | Edges | Components | Largest Component | Communities | Modularity | Stages | Path Papers | Landmark Hit | Topic Precision | Ordering | Community Coverage |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| CFR | rule_only_agent | 43 | 394 | 1 | 100.0% | 4 | 0.1978 | 5 | 12 | 100.0% | 100.0% | 100.0% | 100.0% |
-| CFR | llm_assisted_agent | 43 | 394 | 1 | 100.0% | 5 | 0.1941 | 5 | 13 | 100.0% | 100.0% | 100.0% | 100.0% |
-| CFR | citation_graph | 15 | 3 | 13 | 20.0% | 13 | 0.0000 | 3 | 9 | 100.0% | 100.0% | 100.0% | 61.5% |
-| CFR | similarity_graph | 15 | 53 | 1 | 100.0% | 3 | 0.0877 | 4 | 10 | 100.0% | 100.0% | 100.0% | 100.0% |
-| CFR | hybrid_graph | 15 | 53 | 1 | 100.0% | 3 | 0.0877 | 4 | 11 | 100.0% | 100.0% | 100.0% | 100.0% |
-| ViT | rule_only_agent | 84 | 829 | 1 | 100.0% | 5 | 0.2563 | 5 | 13 | 100.0% | 97.6% | 100.0% | 80.0% |
-| ViT | llm_assisted_agent | 80 | 744 | 1 | 100.0% | 6 | 0.2723 | 5 | 13 | 100.0% | 96.2% | 100.0% | 83.3% |
-| ViT | citation_graph | 29 | 36 | 12 | 62.1% | 15 | 0.2465 | 5 | 13 | 100.0% | 93.1% | 100.0% | 53.3% |
-| ViT | similarity_graph | 29 | 152 | 2 | 96.6% | 5 | 0.1692 | 5 | 15 | 100.0% | 93.1% | 100.0% | 80.0% |
-| ViT | hybrid_graph | 29 | 164 | 1 | 100.0% | 5 | 0.2623 | 5 | 13 | 100.0% | 93.1% | 100.0% | 100.0% |
+1. Agent planner parses the user request, topic, level, and desired output. LLM mode uses SiliconFlow/OpenAI-compatible chat completions with `SILICON_FLOW_API`; fallback mode uses deterministic rules.
+2. Literature Retrieval Skill constructs a corpus through query expansion, retrieval, filtering, deduplication, landmark verification, and metadata enrichment.
+3. Graph Skill builds citation/similarity/hybrid graphs and computes deterministic SNA metrics and paper role scores.
+4. Community labeler optionally uses LLM to name graph communities from evidence packets.
+5. Reading Path Skill creates staged reading paths and evidence-grounded explanations.
+6. Report/visualization layer writes Markdown reports, graph visualizations, score distributions, state files, and GUI-ready outputs.
 
-## Findings
+## Report Claims Supported by Evaluation
 
-The new metrics better support the claim that ResearchTrail helps users read papers, not just build a graph. Both topics achieve 100% landmark hit rate and 100% ordering quality in the LLM-assisted path, meaning the generated path includes key papers and places foundation work before follow-up work.
+- Skill 1 is robust as a corpus builder because multi-source retrieval plus topic filtering improves precision and graph edge yield without sacrificing landmark recall.
+- Skill 2 is necessary because citation-only metadata is too sparse for many modern topics; the hybrid graph materially improves connectivity and bridge-paper analysis.
+- Skill 3 is necessary because ranking baselines do not provide stage structure; staged reading paths preserve high topicality while adding pedagogical organization.
+- The full system is not just a summarizer: it retrieves papers, builds a research network, assigns structural paper roles, and generates a personalized reading path with visual evidence.
 
-Hybrid graph construction is the most reliable default. In ViT, citation-only graph coverage is weak because the reading path covers only 53.3% of detected communities, while the hybrid graph reaches 100.0% community coverage. This shows that similarity edges improve path diversity rather than only increasing edge count.
+## Limitations to State Explicitly
 
-Directed citation semantics are now more defensible. Citation PageRank is computed on a directed graph where citing papers point to cited papers, so foundational papers receive rank from later work. Betweenness uses `distance = 1 / weight`, so stronger similarity corresponds to shorter graph distance.
+- The benchmark landmark lists are curated for evaluation. In the system, verified landmarks are recovered through API metadata and should be described as a recall aid, not as manual insertion of final results.
+- OpenAlex has broad coverage but lower topic precision on some engineering-heavy topics; arXiv is narrower and often cleaner but weaker on citation/reference metadata.
+- Citation metadata remains incomplete for some domains, which is why the hybrid graph is more reliable than citation-only graph construction.
+- The saved 12-topic overall benchmark has a weak protein structure run with only 8 papers; the Skill 1 rerun shows this topic can retrieve a much healthier corpus, so report the original end-to-end protein result as low-confidence or rerun the full agent if time permits.
+- Role scores are still heuristic combinations of network metrics, recency, citation count, and community position. LLM helps explain evidence but does not replace the deterministic scores.
 
-Semantic Scholar enrichment materially improves citation quality for AI/CS papers. `Deep Counterfactual Regret Minimization` is now reported as `239` citations from Semantic Scholar instead of the earlier OpenAlex value of `21`. Counts still differ from Google Search or Google Scholar snippets, so reports explicitly label citation sources.
-
-Curated landmark sources are transparent. ViT includes curated prerequisite and landmark records to stabilize known foundational coverage; reports expose source mix separately. This makes it possible to run a no-curated ablation with the same metrics if needed, while avoiding hidden manual intervention.
-
-## Report Artifacts
-
-- `outputs/evaluation/cfr_live/group_eval_summary.md`
-- `outputs/evaluation/cfr_live/retrieval_eval.md`
-- `outputs/evaluation/cfr_live/graph_eval.md`
-- `outputs/evaluation/cfr_live/reading_path_eval.md`
-- `outputs/evaluation/vit_live/group_eval_summary.md`
-- `outputs/evaluation/vit_live/retrieval_eval.md`
-- `outputs/evaluation/vit_live/graph_eval.md`
-- `outputs/evaluation/vit_live/reading_path_eval.md`
-- `outputs/evaluation/skill_retrieval_report.md`
-- `outputs/evaluation/skill_graph_report.md`
-- `outputs/evaluation/skill_reading_path_report.md`

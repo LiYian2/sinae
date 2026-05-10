@@ -1,0 +1,72 @@
+{
+  "A_arxiv_only": {
+    "total_papers": 26,
+    "raw_records": 29,
+    "duplicate_removal": 3,
+    "abstract_coverage": 1.0,
+    "citation_metadata_coverage": 0.5384615384615384,
+    "reference_coverage": 0.5384615384615384,
+    "landmark_hit_rate": 0.8333333333333334,
+    "topic_precision": 0.9615384615384616,
+    "graph_edges": 200,
+    "citation_edges": 0,
+    "similarity_edges": 200,
+    "graph_edge_yield": 7.6923076923076925
+  },
+  "B_openalex_only": {
+    "total_papers": 27,
+    "raw_records": 40,
+    "duplicate_removal": 13,
+    "abstract_coverage": 0.9629629629629629,
+    "citation_metadata_coverage": 1.0,
+    "reference_coverage": 1.0,
+    "landmark_hit_rate": 0.8333333333333334,
+    "topic_precision": 0.37037037037037035,
+    "graph_edges": 94,
+    "citation_edges": 37,
+    "similarity_edges": 57,
+    "graph_edge_yield": 3.4814814814814814
+  },
+  "C_arxiv_openalex": {
+    "total_papers": 45,
+    "raw_records": 69,
+    "duplicate_removal": 20,
+    "abstract_coverage": 1.0,
+    "citation_metadata_coverage": 0.9333333333333333,
+    "reference_coverage": 0.8888888888888888,
+    "landmark_hit_rate": 1.0,
+    "topic_precision": 0.6888888888888889,
+    "graph_edges": 225,
+    "citation_edges": 9,
+    "similarity_edges": 216,
+    "graph_edge_yield": 5.0
+  },
+  "D_plus_topic_filtering": {
+    "total_papers": 39,
+    "raw_records": 69,
+    "duplicate_removal": 20,
+    "abstract_coverage": 1.0,
+    "citation_metadata_coverage": 0.9743589743589743,
+    "reference_coverage": 0.9487179487179487,
+    "landmark_hit_rate": 1.0,
+    "topic_precision": 0.7435897435897436,
+    "graph_edges": 191,
+    "citation_edges": 10,
+    "similarity_edges": 181,
+    "graph_edge_yield": 4.897435897435898
+  },
+  "E_plus_verified_landmarks": {
+    "total_papers": 39,
+    "raw_records": 69,
+    "duplicate_removal": 20,
+    "abstract_coverage": 1.0,
+    "citation_metadata_coverage": 0.9743589743589743,
+    "reference_coverage": 0.9487179487179487,
+    "landmark_hit_rate": 1.0,
+    "topic_precision": 0.7435897435897436,
+    "graph_edges": 191,
+    "citation_edges": 10,
+    "similarity_edges": 181,
+    "graph_edge_yield": 4.897435897435898
+  }
+}

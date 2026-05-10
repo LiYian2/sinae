@@ -3,8 +3,9 @@ from shared.types import Paper, NodeScores, ReadingPath
 
 
 class ReportGenerator:
-    def __init__(self, data_layer: SharedDataLayer):
+    def __init__(self, data_layer: SharedDataLayer, abstract_max_chars: int = 1600):
         self.data = data_layer
+        self.abstract_max_chars = abstract_max_chars
 
     def generate(self) -> str:
         path = self.data.get_reading_path()
@@ -39,7 +40,7 @@ class ReportGenerator:
                     elif p.url:
                         lines.append(f"**URL:** {p.url}")
                     if p.abstract:
-                        lines.append(f"**Abstract:** {self._shorten_text(p.abstract, 700)}")
+                        lines.append(f"**Abstract:** {self._shorten_text(p.abstract, self.abstract_max_chars)}")
                 lines.append(f"**Why read:** {paper['reason']}")
                 lines.append("")
 
@@ -166,7 +167,7 @@ class ReportGenerator:
         text = re.sub(r"\s+", " ", text or "").strip()
         if len(text) <= max_chars:
             return text
-        return text[: max_chars - 3].rstrip() + "..."
+        return text[: max_chars].rstrip() + "... [truncated in report]"
 
     @staticmethod
     def _citation_label(paper: Paper) -> str:

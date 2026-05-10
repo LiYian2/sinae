@@ -1,0 +1,102 @@
+{
+  "diffusion_models": {
+    "citation": {
+      "node_count": 21,
+      "edge_count": 5,
+      "citation_edges": 5,
+      "similarity_edges": 0,
+      "connected_components": 18,
+      "largest_component_ratio": 0.19047619047619047,
+      "modularity": 0.0,
+      "community_count": 18,
+      "community_coverage_in_reading_path": 0.4444444444444444,
+      "top_bridge_paper": "Image Super-Resolution Via Iterative Refinement",
+      "top_bridge_plausibility": 0.0809,
+      "top_foundation_paper": "Denoising Diffusion Probabilistic Models",
+      "top_foundation_landmark_hit": 1.0,
+      "graph_edge_yield": 0.23809523809523808
+    },
+    "similarity": {
+      "node_count": 21,
+      "edge_count": 74,
+      "citation_edges": 0,
+      "similarity_edges": 74,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "modularity": 0.2277,
+      "community_count": 3,
+      "community_coverage_in_reading_path": 1.0,
+      "top_bridge_paper": "Diffusion Models in Vision: A Survey",
+      "top_bridge_plausibility": 0.8765,
+      "top_foundation_paper": "Score-Based Generative Modeling through Stochastic Differential Equations",
+      "top_foundation_landmark_hit": 1.0,
+      "graph_edge_yield": 3.5238095238095237
+    },
+    "hybrid": {
+      "node_count": 21,
+      "edge_count": 79,
+      "citation_edges": 5,
+      "similarity_edges": 74,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "modularity": 0.2953,
+      "community_count": 3,
+      "community_coverage_in_reading_path": 1.0,
+      "top_bridge_paper": "Diffusion Models in Vision: A Survey",
+      "top_bridge_plausibility": 0.9447,
+      "top_foundation_paper": "Denoising Diffusion Probabilistic Models",
+      "top_foundation_landmark_hit": 1.0,
+      "graph_edge_yield": 3.761904761904762
+    }
+  },
+  "rag": {
+    "citation": {
+      "node_count": 20,
+      "edge_count": 0,
+      "citation_edges": 0,
+      "similarity_edges": 0,
+      "connected_components": 20,
+      "largest_component_ratio": 0.05,
+      "modularity": 0.0,
+      "community_count": 1,
+      "community_coverage_in_reading_path": 1.0,
+      "top_bridge_paper": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "top_bridge_plausibility": 0.0,
+      "top_foundation_paper": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "top_foundation_landmark_hit": 1.0,
+      "graph_edge_yield": 0.0
+    },
+    "similarity": {
+      "node_count": 20,
+      "edge_count": 100,
+      "citation_edges": 0,
+      "similarity_edges": 100,
+      "connected_components": 2,
+      "largest_component_ratio": 0.95,
+      "modularity": 0.1258,
+      "community_count": 4,
+      "community_coverage_in_reading_path": 0.75,
+      "top_bridge_paper": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "top_bridge_plausibility": 0.6554,
+      "top_foundation_paper": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "top_foundation_landmark_hit": 1.0,
+      "graph_edge_yield": 5.0
+    },
+    "hybrid": {
+      "node_count": 20,
+      "edge_count": 100,
+      "citation_edges": 0,
+      "similarity_edges": 100,
+      "connected_components": 2,
+      "largest_component_ratio": 0.95,
+      "modularity": 0.1258,
+      "community_count": 4,
+      "community_coverage_in_reading_path": 0.75,
+      "top_bridge_paper": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "top_bridge_plausibility": 0.6554,
+      "top_foundation_paper": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "top_foundation_landmark_hit": 1.0,
+      "graph_edge_yield": 5.0
+    }
+  }
+}

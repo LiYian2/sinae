@@ -43,10 +43,11 @@ Use this Skill after graph analysis has produced paper scores and communities, w
 - Verify that each recommended paper includes authors, year, source URL when available, abstract, and an evidence-grounded why-read explanation.
 
 ## Current Evaluation Artifacts
-- `outputs/evaluation/vit_live/reading_path_eval.md`
-- `outputs/evaluation/cfr_live/reading_path_eval.md`
-- `outputs/evaluation/vit_live/manual_rating_template.md`
-- `outputs/evaluation/cfr_live/manual_rating_template.md`
+- `outputs/evaluation/skill_reading_path_report.md`
+- `outputs/reading_path_ablation/full_11_topics/reading_path_ablation_summary.md`
+- `outputs/reading_path_ablation/full_11_topics/reading_path_ablation_results.json`
+- `outputs/reading_path_ablation/full_11_topics/paths_for_human_eval/`
+- `outputs/report_materials/final_evaluation_and_implementation_summary.md`
 
 ## Known Limitations
 - Why-read explanations are only as reliable as the retrieved metadata and abstract.

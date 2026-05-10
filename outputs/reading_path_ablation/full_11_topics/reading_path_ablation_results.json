@@ -1,0 +1,464 @@
+{
+  "causal_ml": {
+    "random_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.4,
+      "ordering_quality": 0.0,
+      "community_coverage": 0.7142857142857143,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.6,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.8571428571428571,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.8571428571428571,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.4,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.7142857142857143,
+      "stage_coverage": 0.75,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 3
+    }
+  },
+  "diffusion_models": {
+    "random_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.6,
+      "ordering_quality": 0.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.8,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.6,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 1.0,
+      "topic_precision": 0.9,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 4
+    }
+  },
+  "efficient_transformers": {
+    "random_order": {
+      "path_papers": 11,
+      "landmark_hit_rate": 0.6666666666666666,
+      "ordering_quality": 0.8,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.8181818181818182,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 11,
+      "landmark_hit_rate": 0.8333333333333334,
+      "ordering_quality": 0.42857142857142855,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9090909090909091,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 11,
+      "landmark_hit_rate": 1.0,
+      "ordering_quality": 0.5454545454545454,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.8181818181818182,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 11,
+      "landmark_hit_rate": 1.0,
+      "ordering_quality": 0.45454545454545453,
+      "community_coverage": 1.0,
+      "stage_coverage": 1.0,
+      "topic_precision": 0.8181818181818182,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 5
+    }
+  },
+  "federated_learning": {
+    "random_order": {
+      "path_papers": 13,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.6,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 13,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.8,
+      "community_coverage": 0.75,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 13,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.2,
+      "community_coverage": 0.75,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 13,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.6666666666666666,
+      "community_coverage": 0.75,
+      "stage_coverage": 1.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 4
+    }
+  },
+  "gnn": {
+    "random_order": {
+      "path_papers": 13,
+      "landmark_hit_rate": 0.8333333333333334,
+      "ordering_quality": 0.375,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9230769230769231,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 13,
+      "landmark_hit_rate": 0.8333333333333334,
+      "ordering_quality": 0.8333333333333334,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.8461538461538461,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 13,
+      "landmark_hit_rate": 0.16666666666666666,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.7692307692307693,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 13,
+      "landmark_hit_rate": 0.3333333333333333,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 1.0,
+      "topic_precision": 0.8461538461538461,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 6
+    }
+  },
+  "marl": {
+    "random_order": {
+      "path_papers": 12,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.6,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 12,
+      "landmark_hit_rate": 1.0,
+      "ordering_quality": 0.75,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9166666666666666,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 12,
+      "landmark_hit_rate": 1.0,
+      "ordering_quality": 0.5,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9166666666666666,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 12,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.6,
+      "community_coverage": 1.0,
+      "stage_coverage": 1.0,
+      "topic_precision": 0.9166666666666666,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 4
+    }
+  },
+  "mechanistic_interpretability": {
+    "random_order": {
+      "path_papers": 8,
+      "landmark_hit_rate": 0.2,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 8,
+      "landmark_hit_rate": 0.4,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 8,
+      "landmark_hit_rate": 0.4,
+      "ordering_quality": 0.0,
+      "community_coverage": 0.75,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 8,
+      "landmark_hit_rate": 0.4,
+      "ordering_quality": 0.0,
+      "community_coverage": 0.75,
+      "stage_coverage": 1.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 4
+    }
+  },
+  "nerf_3dgs": {
+    "random_order": {
+      "path_papers": 9,
+      "landmark_hit_rate": 1.0,
+      "ordering_quality": 0.7142857142857143,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 9,
+      "landmark_hit_rate": 1.0,
+      "ordering_quality": 0.7142857142857143,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 9,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.8,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 9,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 0.8,
+      "community_coverage": 1.0,
+      "stage_coverage": 1.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 4
+    }
+  },
+  "rag": {
+    "random_order": {
+      "path_papers": 9,
+      "landmark_hit_rate": 0.8,
+      "ordering_quality": 1.0,
+      "community_coverage": 0.75,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 9,
+      "landmark_hit_rate": 0.6,
+      "ordering_quality": 0.6666666666666666,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.8888888888888888,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 9,
+      "landmark_hit_rate": 0.6,
+      "ordering_quality": 0.0,
+      "community_coverage": 0.75,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 9,
+      "landmark_hit_rate": 0.6,
+      "ordering_quality": 0.6666666666666666,
+      "community_coverage": 0.75,
+      "stage_coverage": 1.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 4
+    }
+  },
+  "rlhf": {
+    "random_order": {
+      "path_papers": 11,
+      "landmark_hit_rate": 0.5,
+      "ordering_quality": 0.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 11,
+      "landmark_hit_rate": 0.6666666666666666,
+      "ordering_quality": 0.6,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9090909090909091,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 11,
+      "landmark_hit_rate": 0.16666666666666666,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 11,
+      "landmark_hit_rate": 0.5,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 1.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 4
+    }
+  },
+  "ssl_vision": {
+    "random_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.3333333333333333,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "citation_count_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 0.8333333333333334,
+      "ordering_quality": 1.0,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "pagerank_order": {
+      "path_papers": 10,
+      "landmark_hit_rate": 1.0,
+      "ordering_quality": 0.5454545454545454,
+      "community_coverage": 1.0,
+      "stage_coverage": 0.0,
+      "topic_precision": 0.9,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 1
+    },
+    "researchtrail_staged": {
+      "path_papers": 10,
+      "landmark_hit_rate": 1.0,
+      "ordering_quality": 0.7272727272727273,
+      "community_coverage": 1.0,
+      "stage_coverage": 1.0,
+      "topic_precision": 1.0,
+      "explanation_coverage": 1.0,
+      "unique_stage_count": 4
+    }
+  }
+}

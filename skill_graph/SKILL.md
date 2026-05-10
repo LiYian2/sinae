@@ -43,11 +43,10 @@ Use this Skill after the Literature Retrieval Skill has produced a paper corpus 
 - Use hybrid graph as the default if citation-only is sparse and similarity-only over-connects the corpus.
 
 ## Current Evaluation Artifacts
-- `outputs/evaluation/vit_live/graph_eval.md`
-- `outputs/evaluation/cfr_live/graph_eval.md`
-- Visualizations:
-  - `outputs/evaluation/vit_live/llm_assisted_agent/research_graph.png`
-  - `outputs/evaluation/cfr_live/llm_assisted_agent/research_graph.png`
+- `outputs/evaluation/skill_graph_report.md`
+- `outputs/graph_ablation/full_12_topics/graph_ablation_summary.md`
+- `outputs/graph_ablation/full_12_topics/graph_ablation_results.json`
+- `outputs/report_materials/final_evaluation_and_implementation_summary.md`
 
 ## Known Limitations
 - Citation PageRank uses a directed citation graph where citing papers point to cited papers.

@@ -11,6 +11,8 @@ dependencies = [
     "scikit-learn>=1.5",
     "requests>=2.32",
     "tqdm>=4.66",
+    "gradio>=4.44",
+    "socksio>=1.0",
 ]
 
 [project.scripts]

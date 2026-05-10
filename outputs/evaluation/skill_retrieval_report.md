@@ -1,42 +1,21 @@
-# Literature Retrieval Skill Final Report
+# Literature Retrieval Skill Report
 
-## Functionality
+## Skill 1: Literature Retrieval Implementation
 
-The Literature Retrieval Skill converts a natural-language research goal into a structured paper corpus. It combines LLM or rule-based query planning with deterministic arXiv/OpenAlex retrieval, topic-specific filtering, title deduplication, Semantic Scholar/OpenAlex citation enrichment, and transparent curated landmark metadata.
+Skill 1 turns a research topic and user profile into a graph-ready paper corpus. It uses LLM-assisted query normalization when available, deterministic fallback queries otherwise, arXiv/OpenAlex retrieval, duplicate removal by normalized title, topic filtering, verified landmark recovery, Semantic Scholar citation/reference enrichment, and corpus quality metrics. The latest implementation also uses HTTPS arXiv API calls, global arXiv throttling with retry/backoff, and `S2_API_KEY` when available.
 
-## Inputs and Outputs
+| Variant | Topics | Papers | Raw Records | Duplicates Removed | Abstract Coverage | Citation Metadata | Reference Coverage | Landmark Hit | Topic Precision | Graph Edges | Graph Edge Yield |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| A_arxiv_only | 12 | 26.2 | 28.6 | 2.4 | 100.0% | 51.8% | 52.8% | 72.8% | 75.5% | 172.5 | 6.18 |
+| B_openalex_only | 12 | 32.2 | 40.0 | 7.8 | 88.4% | 100.0% | 93.5% | 70.0% | 31.1% | 98.0 | 3.16 |
+| C_arxiv_openalex | 12 | 45.0 | 68.6 | 12.6 | 96.7% | 92.8% | 89.1% | 90.3% | 60.6% | 224.8 | 5.00 |
+| D_plus_topic_filtering | 12 | 40.0 | 68.6 | 12.6 | 98.6% | 92.8% | 88.8% | 90.3% | 66.6% | 241.4 | 5.93 |
+| E_plus_verified_landmarks | 12 | 40.1 | 68.6 | 12.6 | 98.6% | 93.7% | 89.8% | 91.7% | 66.7% | 241.8 | 5.92 |
 
-- Inputs: topic, user level, time range, maximum paper count, and optional LLM query plan.
-- Outputs: paper records with titles, authors, years, abstracts, URLs, citation counts, citation sources, reference lists, source labels, and corpus quality metrics.
+Skill 1 conclusion: combining arXiv and OpenAlex improves landmark recall over either source alone. Topic filtering reduces corpus size from 45.0 to about 40.0 papers while raising topic precision from 60.6% to 66.6% and graph edge yield from 5.00 to 5.93. Verified landmarks give a small additional recall gain, from 90.3% to 91.7%, without degrading precision.
 
-## Evaluation Results
+Important nuance: E is not supposed to dominate every metric. It is optimized for milestone recall and downstream graph readiness, while arXiv-only can show higher topic precision because arXiv search returns narrower technical papers and OpenAlex has broader, noisier coverage.
 
-| Topic | Run | Papers | Abstract Coverage | Citation/Reference Coverage | Year Range | Topic Precision |
-|---|---|---:|---:|---:|---|---:|
-| CFR | rule_only_agent | 43 | 100.0% | 69.8% | 2007-2025 | 100.0% |
-| CFR | llm_assisted_agent | 43 | 100.0% | 69.8% | 2007-2025 | 100.0% |
-| ViT | rule_only_agent | 84 | 98.8% | 77.4% | 2012-2026 | 97.6% |
-| ViT | llm_assisted_agent | 80 | 98.8% | 76.2% | 2012-2026 | 96.2% |
+## How to Use These Results
 
-## Source Transparency
-
-Observed source mix:
-
-| Topic | Run | Source Mix |
-|---|---|---|
-| CFR | rule_only_agent | `{"arxiv": 36, "openalex": 7}` |
-| CFR | llm_assisted_agent | `{"arxiv": 36, "openalex": 7}` |
-| ViT | rule_only_agent | `{"arxiv": 39, "openalex": 38, "curated_prerequisite": 3, "curated_landmark": 4}` |
-| ViT | llm_assisted_agent | `{"arxiv": 37, "openalex": 35, "curated_prerequisite": 3, "curated_landmark": 5}` |
-
-## Citation Enrichment
-
-Citation counts prefer Semantic Scholar when `S2_API_KEY` is configured. The API is rate-limited to 1 request per second, so enrichment is focused on likely landmark and high-value papers. Remaining papers fall back to OpenAlex or curated metadata.
-
-`Deep Counterfactual Regret Minimization` is now reported as `239` citations from Semantic Scholar instead of the earlier OpenAlex value of `21`. This is still different from Google Search/Scholar snippets, so reports label citation sources explicitly.
-
-## Analysis
-
-The retrieval skill now handles both topic ambiguity and citation reliability better than the earlier pipeline. CFR filtering prevents unrelated `counterfactual` or `CFIR` records from entering the corpus. ViT filtering uses word-boundary acronym matching for `ViT`, `DeiT`, `DINO`, `MAE`, and `BEiT`, preventing unrelated high-citation records from entering through accidental substring matches.
-
-Curated landmarks are transparent source categories rather than hidden ranking decisions. They are used to stabilize known foundational recall, and the source mix table makes their effect visible for later no-curated ablation.
+For the individual report, emphasize that Skill 1 is evaluated as corpus construction rather than simple search. The key downstream metric is graph edge yield, because the corpus must support citation/similarity graph construction.

@@ -6,6 +6,7 @@ import hashlib
 import random
 import urllib.request
 import urllib.parse
+import urllib.error
 import xml.etree.ElementTree as ET
 from typing import Optional
 
@@ -18,12 +19,14 @@ OPENALEX_BASE = "https://api.openalex.org"
 SEMANTIC_SCHOLAR_BASE = "https://api.semanticscholar.org/graph/v1"
 CONTACT_EMAIL = os.environ.get("RESEARCHTRAIL_CONTACT_EMAIL", "student@example.com")
 USER_AGENT = os.environ.get("RESEARCHTRAIL_USER_AGENT", f"ResearchTrail/1.0 (mailto:{CONTACT_EMAIL})")
+_GLOBAL_LAST_ARXIV_REQUEST_TS = 0.0
 
 
 class LiteratureRetrievalSkill:
     def __init__(self, data_layer: SharedDataLayer):
         self.data = data_layer
         self._last_s2_request_ts = 0.0
+        self._last_arxiv_request_ts = 0.0
 
     def run(
         self,
@@ -54,6 +57,10 @@ class LiteratureRetrievalSkill:
             "prerequisite_queries": broad_queries_from_plan,
             "exclude_terms": exclude_terms,
             "expected_communities": (query_plan or {}).get("expected_communities", []),
+            "alias_queries": (query_plan or {}).get("alias_queries", []),
+            "positive_terms": (query_plan or {}).get("positive_terms", []),
+            "exact_title_queries": (query_plan or {}).get("exact_title_queries", []),
+            "verified_landmark_candidates": (query_plan or {}).get("verified_landmark_candidates", []),
         })
 
         is_beginner = profile.user_level == UserLevel.BEGINNER
@@ -104,8 +111,8 @@ class LiteratureRetrievalSkill:
         before_dedup = len(papers)
         papers = self._deduplicate(papers)
         dedup_removed = before_dedup - len(papers)
-        papers = self._filter_relevance(papers, profile.topic, broad_paper_keys)
-        papers = self._filter_topic_specific_relevance(papers, profile.topic)
+        papers = self._filter_relevance(papers, profile.topic, broad_paper_keys, query_plan=query_plan)
+        papers = self._filter_topic_specific_relevance(papers, profile.topic, query_plan=query_plan)
         papers = self._filter_exclude_terms(papers, exclude_terms)
         papers = self._ensure_curated_landmarks(papers, profile.topic)
         papers = self._enrich_citations(papers, profile.max_papers)
@@ -262,9 +269,25 @@ class LiteratureRetrievalSkill:
             f"search_query=all:{query_encoded}&start=0&max_results={max_results}"
             f"&sortBy=relevance&sortOrder=descending"
         )
+        for attempt in range(3):
+            try:
+                self._wait_for_arxiv_slot()
+                req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+                resp = urllib.request.urlopen(req, timeout=30)
+                break
+            except urllib.error.HTTPError as e:
+                if e.code == 429 and attempt < 2:
+                    time.sleep(20 * (attempt + 1))
+                    continue
+                print(f"[arXiv] Query '{query}' failed: {e}")
+                return papers
+            except Exception as e:
+                if attempt < 2 and ("timed out" in str(e).lower() or "timeout" in str(e).lower()):
+                    time.sleep(10 * (attempt + 1))
+                    continue
+                print(f"[arXiv] Query '{query}' failed: {e}")
+                return papers
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "ResearchTrail/1.0"})
-            resp = urllib.request.urlopen(req, timeout=30)
             data = resp.read().decode("utf-8")
             root = ET.fromstring(data)
             ns = {
@@ -315,6 +338,14 @@ class LiteratureRetrievalSkill:
         except Exception as e:
             print(f"[arXiv] Query '{query}' failed: {e}")
         return papers
+
+    def _wait_for_arxiv_slot(self) -> None:
+        global _GLOBAL_LAST_ARXIV_REQUEST_TS
+        elapsed = time.monotonic() - _GLOBAL_LAST_ARXIV_REQUEST_TS
+        if elapsed < 4.0:
+            time.sleep(4.0 - elapsed)
+        _GLOBAL_LAST_ARXIV_REQUEST_TS = time.monotonic()
+        self._last_arxiv_request_ts = _GLOBAL_LAST_ARXIV_REQUEST_TS
 
     def _search_openalex(self, query: str, max_results: int) -> list[Paper]:
         papers = []
@@ -405,9 +436,29 @@ class LiteratureRetrievalSkill:
         word_positions.sort()
         return " ".join(w for _, w in word_positions)
 
-    def _filter_relevance(self, papers: list[Paper], topic: str, broad_keys: set[str] | None = None) -> list[Paper]:
+    def _filter_relevance(
+        self,
+        papers: list[Paper],
+        topic: str,
+        broad_keys: set[str] | None = None,
+        query_plan: Optional[dict] = None,
+    ) -> list[Paper]:
         if broad_keys is None:
             broad_keys = set()
+        relevance_profile = self._build_relevance_profile(topic, query_plan)
+        if relevance_profile["phrases"] or relevance_profile["acronyms"] or relevance_profile["exact_titles"]:
+            filtered = []
+            for p in papers:
+                key = p.paper_id or hashlib.md5(p.title.encode()).hexdigest()[:12]
+                if key in broad_keys:
+                    filtered.append(p)
+                    continue
+                if self._matches_relevance_profile(p, relevance_profile):
+                    filtered.append(p)
+            minimum_keep = min(8, max(3, len(papers) // 5))
+            if len(filtered) >= minimum_keep:
+                return filtered
+
         STOP_WORDS = {
             "want", "learn", "study", "enter", "field", "would", "like", "understand",
             "explore", "research", "build", "create", "generate", "help", "know",
@@ -454,13 +505,22 @@ class LiteratureRetrievalSkill:
             filtered.append(p)
         return filtered if len(filtered) >= 10 else papers
 
-    def _filter_topic_specific_relevance(self, papers: list[Paper], topic: str) -> list[Paper]:
+    def _filter_topic_specific_relevance(
+        self,
+        papers: list[Paper],
+        topic: str,
+        query_plan: Optional[dict] = None,
+    ) -> list[Paper]:
         topic_lower = topic.lower()
         if ("vision" in topic_lower or "image" in topic_lower or "vit" in topic_lower) and "transformer" in topic_lower:
             return self._filter_vision_transformer_relevance(papers)
 
         if not ("counterfactual" in topic_lower and ("regret" in topic_lower or "cfr" in topic_lower)):
-            return papers
+            relevance_profile = self._build_relevance_profile(topic, query_plan)
+            if not (relevance_profile["phrases"] or relevance_profile["acronyms"]):
+                return papers
+            filtered = [p for p in papers if self._matches_relevance_profile(p, relevance_profile)]
+            return filtered if len(filtered) >= min(8, max(3, len(papers) // 5)) else papers
 
         required_context = [
             "counterfactual regret minimization",
@@ -483,6 +543,96 @@ class LiteratureRetrievalSkill:
             if any(term in text for term in required_context):
                 filtered.append(p)
         return filtered
+
+    def _build_relevance_profile(self, topic: str, query_plan: Optional[dict] = None) -> dict:
+        query_plan = query_plan or self.data.get_metadata("query_plan") or {}
+        raw_terms: list[str] = []
+        exact_titles: list[str] = []
+
+        for key in [
+            "positive_terms",
+            "alias_queries",
+            "expected_communities",
+            "main_queries",
+            "prerequisite_queries",
+        ]:
+            raw_terms.extend(self._clean_query_list(query_plan.get(key, [])))
+        exact_titles.extend(self._clean_query_list(query_plan.get("exact_title_queries", [])))
+
+        for item in query_plan.get("verified_landmark_candidates", []) or []:
+            if isinstance(item, dict) and item.get("title"):
+                exact_titles.append(str(item["title"]))
+        for item in query_plan.get("llm_query_normalization", {}).get("exact_title_queries", []) if isinstance(query_plan.get("llm_query_normalization"), dict) else []:
+            if isinstance(item, str):
+                exact_titles.append(item)
+
+        raw_terms.append(topic)
+        raw_terms.extend(self._get_landmark_queries(topic))
+
+        STOP = {
+            "research", "trail", "field", "learning", "model", "models", "method", "methods",
+            "paper", "papers", "survey", "overview", "recent", "advanced", "beginner",
+            "understand", "understanding", "approach", "approaches", "analysis", "system",
+            "systems", "deep", "neural", "machine", "artificial", "intelligence",
+        }
+        SAFE_ACRONYMS = {
+            "rag", "dpr", "retro", "gcn", "gat", "moco", "byol", "dino", "dinov2",
+            "mae", "beit", "pvt", "vit", "deit", "cfr", "mccfr", "ddpm", "sde",
+            "s4", "ssm", "mamba", "ppo", "dpo", "rlaif", "nerf", "ngp", "maddpg",
+            "qmix", "mappo", "fedavg", "fedprox", "sae",
+        }
+
+        phrases: list[str] = []
+        acronyms: list[str] = []
+        token_groups: list[set[str]] = []
+
+        for term in raw_terms:
+            term = re.sub(r"\s+", " ", term.replace('"', "")).strip().lower()
+            if not term:
+                continue
+            if len(term) <= 6 and term.replace("-", "").isalnum():
+                if term in SAFE_ACRONYMS:
+                    acronyms.append(term)
+                continue
+            tokens = [
+                tok for tok in re.findall(r"[a-z0-9][a-z0-9\-]{2,}", term)
+                if tok not in STOP and not tok.isdigit()
+            ]
+            if len(tokens) >= 2:
+                phrases.append(" ".join(tokens))
+                token_groups.append(set(tokens))
+            elif len(tokens) == 1 and tokens[0] in SAFE_ACRONYMS:
+                acronyms.append(tokens[0])
+
+        return {
+            "phrases": list(dict.fromkeys(phrases)),
+            "acronyms": list(dict.fromkeys(acronyms)),
+            "token_groups": token_groups,
+            "exact_titles": list(dict.fromkeys(self._normalize_title(t) for t in exact_titles if t)),
+        }
+
+    def _matches_relevance_profile(self, paper: Paper, relevance_profile: dict) -> bool:
+        title_key = self._normalize_title(paper.title)
+        text = f" {paper.title} {paper.abstract} ".lower()
+        normalized_text = self._normalize_title(text)
+
+        for exact in relevance_profile.get("exact_titles", []):
+            if exact and (exact in title_key or title_key in exact):
+                return True
+
+        for phrase in relevance_profile.get("phrases", []):
+            if phrase in normalized_text or phrase.replace(" ", "-") in text:
+                return True
+
+        for acronym in relevance_profile.get("acronyms", []):
+            if re.search(rf"(?<![a-z0-9]){re.escape(acronym)}(?![a-z0-9])", text):
+                return True
+
+        paper_tokens = set(re.findall(r"[a-z0-9][a-z0-9\-]{2,}", normalized_text))
+        for group in relevance_profile.get("token_groups", []):
+            if len(group) >= 3 and len(group & paper_tokens) >= 2:
+                return True
+        return False
 
     def _filter_vision_transformer_relevance(self, papers: list[Paper]) -> list[Paper]:
         allowed_prereq_titles = {
@@ -835,9 +985,9 @@ class LiteratureRetrievalSkill:
         new_query = f"{profile.topic} {query_suffix}"
         papers = self._search_arxiv(new_query, max_papers) + self._search_openalex(new_query, max_papers)
         papers = self._deduplicate(papers)
-        papers = self._filter_relevance(papers, profile.topic)
-        papers = self._filter_topic_specific_relevance(papers, profile.topic)
         query_plan = self.data.get_metadata("query_plan") or {}
+        papers = self._filter_relevance(papers, profile.topic, query_plan=query_plan)
+        papers = self._filter_topic_specific_relevance(papers, profile.topic, query_plan=query_plan)
         papers = self._filter_exclude_terms(papers, query_plan.get("exclude_terms", []))
         papers = self._enrich_citations(papers, max_papers)
         self.data.add_papers(papers)

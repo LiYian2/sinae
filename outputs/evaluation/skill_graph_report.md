@@ -1,33 +1,19 @@
-# Research Graph Analysis Skill Final Report
+# Research Graph Analysis Skill Report
 
-## Functionality
+## Skill 2: Research Graph Analysis Implementation
 
-The Research Graph Analysis Skill builds paper networks and computes deterministic social network analysis metrics. Citation edges encode explicit references; similarity edges use abstract/title similarity to reduce sparsity. The Skill computes PageRank, betweenness centrality, Louvain communities, and foundation/bridge/frontier role scores.
+Skill 2 builds citation and semantic-similarity graph structure. Citation edges preserve scholarly dependency, while TF-IDF similarity edges recover connectivity when citation/reference metadata is sparse. Analysis computes PageRank on a directed citation graph, undirected/hybrid community structure, betweenness with inverse-distance semantics for weighted similarity edges, Louvain/greedy communities, and foundation/bridge/frontier role scores. LLM is used only for community labels, not for centrality computation.
 
-## Graph Modeling Fixes
+| Mode | Topics | Edges | Components | Largest Component | Modularity | Communities | Path Community Coverage | Bridge Plausibility | Foundation Landmark Hit | Edge Yield |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| citation | 12 | 7.2 | 17.2 | 20.2% | 0.0996 | 10.8 | 70.1% | 17.5% | 75.0% | 0.25 |
+| similarity | 12 | 118.5 | 1.8 | 95.7% | 0.1712 | 4.0 | 89.2% | 77.6% | 75.0% | 4.81 |
+| hybrid | 12 | 125.8 | 1.4 | 96.9% | 0.1792 | 3.9 | 91.4% | 81.9% | 66.7% | 5.06 |
 
-The implementation now treats citation and similarity edges with different semantics:
+Graph ablation conclusion: citation-only is theoretically clean but too sparse in this dataset, averaging only 7.2 edges and 20.2% largest component ratio. Similarity-only gives strong connectivity, but lacks citation direction. Hybrid is the production choice because it keeps citation evidence while improving largest component ratio to 96.9%, path community coverage to 91.4%, and bridge plausibility to 81.9%.
 
-- Citation edges preserve direction: citing paper -> cited paper.
-- PageRank/foundation scoring uses the directed citation graph when citation edges exist.
-- Community detection uses the undirected similarity/hybrid projection.
-- Betweenness centrality uses `distance = 1 / max(weight, eps)`, because NetworkX treats weighted betweenness weights as path lengths.
+Secondary average excluding the low-corpus protein run shows the same trend: hybrid reaches 97.7% largest component ratio and 90.6% path community coverage.
 
-## Graph Ablation Results
+## How to Use These Results
 
-| Topic | Graph Mode | Nodes | Edges | Citation Edges | Similarity Edges | Components | Largest Component | Communities | Modularity | Community Coverage |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| CFR | citation | 15 | 3 | 3 | 0 | 13 | 20.0% | 13 | 0.0000 | 61.5% |
-| CFR | similarity | 15 | 53 | 0 | 53 | 1 | 100.0% | 3 | 0.0877 | 100.0% |
-| CFR | hybrid | 15 | 53 | 3 | 53 | 1 | 100.0% | 3 | 0.0877 | 100.0% |
-| ViT | citation | 29 | 36 | 36 | 0 | 12 | 62.1% | 15 | 0.2465 | 53.3% |
-| ViT | similarity | 29 | 152 | 0 | 152 | 2 | 96.6% | 5 | 0.1692 | 80.0% |
-| ViT | hybrid | 29 | 164 | 36 | 152 | 1 | 100.0% | 5 | 0.2623 | 100.0% |
-
-## Analysis
-
-Citation-only graphs are interpretable but sparse. This is clearest in CFR, where the citation graph has only 3 edges and 13 components among 15 nodes. Similarity edges solve this connectivity problem and make community-aware reading paths possible.
-
-Hybrid graphs are the best default. In ViT, the hybrid graph has full largest-component coverage and reaches 100.0% reading-path community coverage, while citation-only reaches only 53.3%. This supports the claim that the hybrid graph improves path diversity and field coverage, not just graph density.
-
-LLM community labeling is used only after deterministic graph computation. It names and describes communities using top papers and keywords; centrality, modularity, and role scores remain code-computed.
+For the individual report, emphasize why citation-only is theoretically appealing but empirically sparse, and why the hybrid graph is justified for modern AI topics with incomplete reference metadata.

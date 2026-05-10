@@ -1,0 +1,4296 @@
+{
+  "research_profile": {
+    "topic": "student. Vision Transformer. Build a reading path and identify bridge papers",
+    "seed_papers": [],
+    "time_range": "all",
+    "max_papers": 20,
+    "user_level": "beginner",
+    "preferred_length": 10,
+    "goal": "enter the field"
+  },
+  "paper_count": 33,
+  "papers": {
+    "demo_0": {
+      "paper_id": "demo_0",
+      "title": "Efficient Algorithms for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "E. Thomas",
+        "S. Thomas",
+        "K. Moore"
+      ],
+      "year": 2011,
+      "abstract": "We propose a novel algorithm for student. Vision Transformer. Build a reading path and identify bridge papers that achieves state-of-the-art performance while maintaining computational efficiency. Our method combines theoretical insights with practical optimizations, demonstrating significant improvements over existing approaches on standard benchmarks.",
+      "url": "",
+      "citation_count": 140,
+      "citation_source": "",
+      "references": [
+        "demo_18",
+        "demo_4"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_1": {
+      "paper_id": "demo_1",
+      "title": "Neural Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: End-to-End Learning",
+      "authors": [
+        "N. Johnson"
+      ],
+      "year": 2018,
+      "abstract": "This paper proposes an end-to-end neural framework for student. Vision Transformer. Build a reading path and identify bridge papers. By integrating representation learning with decision-making, our approach achieves superior performance compared to traditional pipeline methods. We provide theoretical analysis of the learned representations.",
+      "url": "",
+      "citation_count": 67,
+      "citation_source": "",
+      "references": [
+        "demo_6",
+        "demo_8",
+        "demo_15",
+        "prereq_demo_0",
+        "demo_0",
+        "demo_18",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_2": {
+      "paper_id": "demo_2",
+      "title": "Robust Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: A Practical Guide",
+      "authors": [
+        "W. Rodriguez",
+        "T. Moore",
+        "M. Thomas"
+      ],
+      "year": 2015,
+      "abstract": "We present robust methods for applying student. Vision Transformer. Build a reading path and identify bridge papers in practical settings. Our approach handles noisy data, missing information, and adversarial perturbations while maintaining theoretical guarantees. Extensive experiments validate the practical utility of our contributions.",
+      "url": "",
+      "citation_count": 43,
+      "citation_source": "",
+      "references": [
+        "demo_15",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_3": {
+      "paper_id": "demo_3",
+      "title": "Attention Mechanisms for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "J. Jones",
+        "M. Davis",
+        "N. Williams",
+        "L. Smith",
+        "L. Taylor"
+      ],
+      "year": 2022,
+      "abstract": "We propose attention-based architectures that selectively focus on relevant parts of the input for student. Vision Transformer. Build a reading path and identify bridge papers. This inductive bias leads to improved generalization and enables the model to scale to larger problem instances while maintaining interpretability.",
+      "url": "",
+      "citation_count": 6,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_8",
+        "landmark_vit_6",
+        "demo_10",
+        "prereq_demo_2",
+        "demo_1",
+        "demo_18",
+        "prereq_demo_1",
+        "landmark_vit_4",
+        "landmark_vit_5",
+        "landmark_vit_7",
+        "landmark_vit_10"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_4": {
+      "paper_id": "demo_4",
+      "title": "Early Work on Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: A Historical Perspective",
+      "authors": [
+        "K. Brown"
+      ],
+      "year": 2004,
+      "abstract": "We trace the historical development of student. Vision Transformer. Build a reading path and identify bridge papers from its origins to the establishment of the core paradigm. This retrospective highlights key conceptual breakthroughs, their motivating contexts, and how early limitations shaped subsequent research directions.",
+      "url": "",
+      "citation_count": 213,
+      "citation_source": "",
+      "references": [],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_5": {
+      "paper_id": "demo_5",
+      "title": "Deep Learning Approaches for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "G. Williams",
+        "P. Smith",
+        "A. Miller",
+        "A. Brown",
+        "M. Lee"
+      ],
+      "year": 2020,
+      "abstract": "We introduce deep neural network architectures designed for student. Vision Transformer. Build a reading path and identify bridge papers. Our model learns effective representations from raw data, eliminating the need for hand-crafted features. We demonstrate substantial improvements on all standard benchmarks through extensive empirical evaluation.",
+      "url": "",
+      "citation_count": 54,
+      "citation_source": "",
+      "references": [
+        "demo_4",
+        "prereq_demo_2",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_6": {
+      "paper_id": "demo_6",
+      "title": "Neural Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: End-to-End Learning: Theory",
+      "authors": [
+        "M. Jones"
+      ],
+      "year": 2016,
+      "abstract": "This paper proposes an end-to-end neural framework for student. Vision Transformer. Build a reading path and identify bridge papers. By integrating representation learning with decision-making, our approach achieves superior performance compared to traditional pipeline methods. We provide theoretical analysis of the learned representations.",
+      "url": "",
+      "citation_count": 80,
+      "citation_source": "",
+      "references": [
+        "prereq_demo_3",
+        "demo_18"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_7": {
+      "paper_id": "demo_7",
+      "title": "Robust Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: A Practical Guide: Theory",
+      "authors": [
+        "N. Perez",
+        "P. Miller",
+        "L. Moore",
+        "E. Jones",
+        "D. Miller"
+      ],
+      "year": 2012,
+      "abstract": "We present robust methods for applying student. Vision Transformer. Build a reading path and identify bridge papers in practical settings. Our approach handles noisy data, missing information, and adversarial perturbations while maintaining theoretical guarantees. Extensive experiments validate the practical utility of our contributions.",
+      "url": "",
+      "citation_count": 148,
+      "citation_source": "",
+      "references": [
+        "demo_18",
+        "demo_4",
+        "demo_15",
+        "demo_0"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_8": {
+      "paper_id": "demo_8",
+      "title": "Optimization Methods for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "V. Davis",
+        "D. Smith"
+      ],
+      "year": 2012,
+      "abstract": "We develop optimization-based approaches for student. Vision Transformer. Build a reading path and identify bridge papers that provide stronger theoretical guarantees. Our method achieves faster convergence rates through novel variance reduction techniques. Experiments on challenging benchmarks confirm the advantages.",
+      "url": "",
+      "citation_count": 13,
+      "citation_source": "",
+      "references": [
+        "demo_15",
+        "demo_18",
+        "demo_0",
+        "demo_11"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_9": {
+      "paper_id": "demo_9",
+      "title": "Graph Neural Networks for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "J. Anderson"
+      ],
+      "year": 2021,
+      "abstract": "We adapt graph neural network architectures to the student. Vision Transformer. Build a reading path and identify bridge papers setting. By exploiting the inherent relational structure of the problem, our approach achieves strong inductive bias and data efficiency, outperforming previous methods on structured benchmarks.",
+      "url": "",
+      "citation_count": 20,
+      "citation_source": "",
+      "references": [
+        "prereq_demo_1",
+        "demo_18",
+        "prereq_demo_3",
+        "landmark_vit_3"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_10": {
+      "paper_id": "demo_10",
+      "title": "Deep Learning Approaches for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Theory",
+      "authors": [
+        "G. Smith",
+        "N. Taylor",
+        "G. Rodriguez",
+        "V. Thomas"
+      ],
+      "year": 2019,
+      "abstract": "We introduce deep neural network architectures designed for student. Vision Transformer. Build a reading path and identify bridge papers. Our model learns effective representations from raw data, eliminating the need for hand-crafted features. We demonstrate substantial improvements on all standard benchmarks through extensive empirical evaluation.",
+      "url": "",
+      "citation_count": 40,
+      "citation_source": "",
+      "references": [
+        "prereq_demo_2",
+        "demo_2",
+        "demo_18",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_11": {
+      "paper_id": "demo_11",
+      "title": "Scalable Approaches to Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "R. Moore",
+        "P. Perez",
+        "T. Miller",
+        "X. Williams"
+      ],
+      "year": 2009,
+      "abstract": "This work addresses scalability challenges in student. Vision Transformer. Build a reading path and identify bridge papers. We develop a distributed framework that enables the application of student. Vision Transformer. Build a reading path and identify bridge papers methods to large-scale problems. Empirical evaluation demonstrates linear scaling properties and robust performance across diverse datasets.",
+      "url": "",
+      "citation_count": 12,
+      "citation_source": "",
+      "references": [
+        "demo_18"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_12": {
+      "paper_id": "demo_12",
+      "title": "Learning Representations for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "F. Anderson",
+        "K. Thomas"
+      ],
+      "year": 2017,
+      "abstract": "We investigate representation learning techniques for student. Vision Transformer. Build a reading path and identify bridge papers. Our method learns compact, interpretable representations that capture the essential structure of the problem. Quantitative and qualitative analyses demonstrate the effectiveness of the learned embeddings.",
+      "url": "",
+      "citation_count": 19,
+      "citation_source": "",
+      "references": [
+        "prereq_demo_3",
+        "demo_18",
+        "prereq_demo_2"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_13": {
+      "paper_id": "demo_13",
+      "title": "Survey of Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Methods and Applications",
+      "authors": [
+        "H. Rodriguez",
+        "E. Williams",
+        "G. Jones",
+        "E. Thomas"
+      ],
+      "year": 2024,
+      "abstract": "A comprehensive survey of student. Vision Transformer. Build a reading path and identify bridge papers covering both foundational methods and recent developments. We organize the literature into a coherent taxonomy, compare approaches on standardized benchmarks, and provide guidance for practitioners selecting methods for specific applications.",
+      "url": "",
+      "citation_count": 68,
+      "citation_source": "",
+      "references": [
+        "demo_5",
+        "demo_18",
+        "prereq_demo_0",
+        "prereq_demo_1",
+        "prereq_demo_3",
+        "landmark_vit_3",
+        "landmark_vit_4",
+        "landmark_vit_7",
+        "landmark_vit_9",
+        "landmark_vit_11"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_14": {
+      "paper_id": "demo_14",
+      "title": "Graph Neural Networks for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Theory",
+      "authors": [
+        "G. Lee",
+        "E. Garcia",
+        "E. Jackson",
+        "P. Garcia",
+        "T. Lee"
+      ],
+      "year": 2019,
+      "abstract": "We adapt graph neural network architectures to the student. Vision Transformer. Build a reading path and identify bridge papers setting. By exploiting the inherent relational structure of the problem, our approach achieves strong inductive bias and data efficiency, outperforming previous methods on structured benchmarks.",
+      "url": "",
+      "citation_count": 75,
+      "citation_source": "",
+      "references": [
+        "demo_6",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_15": {
+      "paper_id": "demo_15",
+      "title": "Efficient Algorithms for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Theory",
+      "authors": [
+        "T. Williams",
+        "R. Jackson",
+        "A. Davis"
+      ],
+      "year": 2011,
+      "abstract": "We propose a novel algorithm for student. Vision Transformer. Build a reading path and identify bridge papers that achieves state-of-the-art performance while maintaining computational efficiency. Our method combines theoretical insights with practical optimizations, demonstrating significant improvements over existing approaches on standard benchmarks.",
+      "url": "",
+      "citation_count": 76,
+      "citation_source": "",
+      "references": [
+        "demo_18",
+        "demo_11",
+        "demo_4"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_16": {
+      "paper_id": "demo_16",
+      "title": "Open Problems and Future Directions in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "H. Brown",
+        "J. Thomas",
+        "A. Jackson",
+        "L. Johnson",
+        "L. Thomas"
+      ],
+      "year": 2024,
+      "abstract": "We identify and discuss the major open problems in student. Vision Transformer. Build a reading path and identify bridge papers. For each problem, we review current approaches, their limitations, and propose concrete directions for future investigation. This paper serves as a research roadmap for the field.",
+      "url": "",
+      "citation_count": 44,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_6",
+        "demo_9",
+        "demo_12",
+        "prereq_demo_1",
+        "prereq_demo_3",
+        "landmark_vit_4",
+        "landmark_vit_5",
+        "landmark_vit_7",
+        "landmark_vit_8",
+        "landmark_vit_9"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_17": {
+      "paper_id": "demo_17",
+      "title": "Towards Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Challenges and Opportunities",
+      "authors": [
+        "J. Taylor",
+        "C. Jones",
+        "V. Anderson"
+      ],
+      "year": 2024,
+      "abstract": "An analysis of the current challenges and emerging opportunities in student. Vision Transformer. Build a reading path and identify bridge papers. We examine the gap between theoretical guarantees and practical performance, discuss the role of large-scale pretraining, and outline the path toward real-world deployment of these methods.",
+      "url": "",
+      "citation_count": 15,
+      "citation_source": "",
+      "references": [
+        "prereq_demo_2",
+        "demo_4",
+        "demo_10",
+        "prereq_demo_0",
+        "prereq_demo_1",
+        "prereq_demo_3",
+        "landmark_vit_5",
+        "landmark_vit_6",
+        "landmark_vit_7",
+        "landmark_vit_8",
+        "landmark_vit_9",
+        "landmark_vit_10",
+        "landmark_vit_11"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_18": {
+      "paper_id": "demo_18",
+      "title": "Fundamental Concepts in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+      "authors": [
+        "H. Thomas",
+        "X. Davis"
+      ],
+      "year": 2007,
+      "abstract": "This tutorial introduces the fundamental concepts and notation used in student. Vision Transformer. Build a reading path and identify bridge papers. We cover the essential background material including mathematical preliminaries, problem formulation, and early algorithmic approaches. Suitable as a self-contained starting point for graduate students.",
+      "url": "",
+      "citation_count": 432,
+      "citation_source": "",
+      "references": [
+        "demo_4"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "demo_19": {
+      "paper_id": "demo_19",
+      "title": "Graph Neural Networks for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Algorithms",
+      "authors": [
+        "M. Williams",
+        "L. Thomas",
+        "H. Taylor"
+      ],
+      "year": 2016,
+      "abstract": "We adapt graph neural network architectures to the student. Vision Transformer. Build a reading path and identify bridge papers setting. By exploiting the inherent relational structure of the problem, our approach achieves strong inductive bias and data efficiency, outperforming previous methods on structured benchmarks.",
+      "url": "",
+      "citation_count": 68,
+      "citation_source": "",
+      "references": [
+        "demo_15",
+        "demo_18",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "prereq_demo_0": {
+      "paper_id": "prereq_demo_0",
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "year": 2017,
+      "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable, and requires significantly less time to train.",
+      "url": "",
+      "citation_count": 145000,
+      "citation_source": "",
+      "references": [
+        "demo_2",
+        "prereq_demo_3",
+        "demo_18"
+      ],
+      "citations": [],
+      "source": "prereq_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "prereq_demo_1": {
+      "paper_id": "prereq_demo_1",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "authors": [
+        "Jacob Devlin",
+        "Ming-Wei Chang",
+        "Kenton Lee",
+        "Kristina Toutanova"
+      ],
+      "year": 2019,
+      "abstract": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers, obtaining state-of-the-art results on eleven NLP tasks.",
+      "url": "",
+      "citation_count": 110000,
+      "citation_source": "",
+      "references": [
+        "prereq_demo_0"
+      ],
+      "citations": [],
+      "source": "prereq_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "prereq_demo_2": {
+      "paper_id": "prereq_demo_2",
+      "title": "Deep Residual Learning for Image Recognition",
+      "authors": [
+        "Kaiming He",
+        "Xiangyu Zhang",
+        "Shaoqing Ren",
+        "Jian Sun"
+      ],
+      "year": 2016,
+      "abstract": "Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, achieving state-of-the-art results on ImageNet and COCO.",
+      "url": "",
+      "citation_count": 210000,
+      "citation_source": "",
+      "references": [
+        "demo_15",
+        "demo_11",
+        "demo_8",
+        "demo_4",
+        "demo_18"
+      ],
+      "citations": [],
+      "source": "prereq_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "prereq_demo_3": {
+      "paper_id": "prereq_demo_3",
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "authors": [
+        "Alex Krizhevsky",
+        "Ilya Sutskever",
+        "Geoffrey E. Hinton"
+      ],
+      "year": 2012,
+      "abstract": "We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation, achieving top-1 error rate of 37.5%, significantly better than the previous state-of-the-art.",
+      "url": "",
+      "citation_count": 180000,
+      "citation_source": "",
+      "references": [
+        "demo_0",
+        "demo_18"
+      ],
+      "citations": [],
+      "source": "prereq_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_3": {
+      "paper_id": "landmark_vit_3",
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "authors": [
+        "Alexey Dosovitskiy",
+        "Lucas Beyer",
+        "Alexander Kolesnikov",
+        "Dirk Weissenborn",
+        "Xiaohua Zhai",
+        "Thomas Unterthiner",
+        "Mostafa Dehghani",
+        "Matthias Minderer",
+        "Georg Heigold",
+        "Sylvain Gelly",
+        "Jakob Uszkoreit",
+        "Neil Houlsby"
+      ],
+      "year": 2020,
+      "abstract": "This paper introduces the Vision Transformer, showing that a standard Transformer applied directly to image patches can achieve strong image recognition performance at scale. It establishes the core patch-token formulation that many later vision transformer variants build upon.",
+      "url": "https://arxiv.org/abs/2010.11929",
+      "citation_count": 38000,
+      "citation_source": "",
+      "references": [
+        "prereq_demo_0",
+        "prereq_demo_2",
+        "prereq_demo_3",
+        "demo_14",
+        "demo_18",
+        "prereq_demo_1"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_4": {
+      "paper_id": "landmark_vit_4",
+      "title": "Training data-efficient image transformers and distillation through attention",
+      "authors": [
+        "Hugo Touvron",
+        "Matthieu Cord",
+        "Matthijs Douze",
+        "Francisco Massa",
+        "Alexandre Sablayrolles",
+        "Herve Jegou"
+      ],
+      "year": 2021,
+      "abstract": "DeiT studies how to train Vision Transformers efficiently on ImageNet without massive external datasets. It introduces a distillation strategy that made ViT-style architectures more practical for standard vision benchmarks.",
+      "url": "https://arxiv.org/abs/2012.12877",
+      "citation_count": 12000,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_3",
+        "prereq_demo_0",
+        "demo_15",
+        "demo_18",
+        "prereq_demo_1",
+        "demo_11",
+        "demo_12",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_5": {
+      "paper_id": "landmark_vit_5",
+      "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+      "authors": [
+        "Ze Liu",
+        "Yutong Lin",
+        "Yue Cao",
+        "Han Hu",
+        "Yixuan Wei",
+        "Zheng Zhang",
+        "Stephen Lin",
+        "Baining Guo"
+      ],
+      "year": 2021,
+      "abstract": "Swin Transformer introduces shifted-window attention and a hierarchical representation, adapting vision transformers into general-purpose visual backbones for image classification, detection, and segmentation.",
+      "url": "https://arxiv.org/abs/2103.14030",
+      "citation_count": 26000,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_3",
+        "prereq_demo_2",
+        "demo_10",
+        "prereq_demo_1",
+        "demo_11",
+        "prereq_demo_0"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_6": {
+      "paper_id": "landmark_vit_6",
+      "title": "Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions",
+      "authors": [
+        "Wenhai Wang",
+        "Enze Xie",
+        "Xiang Li",
+        "Deng-Ping Fan",
+        "Kaitao Song",
+        "Ding Liang",
+        "Tong Lu",
+        "Ping Luo",
+        "Ling Shao"
+      ],
+      "year": 2021,
+      "abstract": "Pyramid Vision Transformer builds a progressive pyramid structure for transformer-based vision backbones, connecting ViT-style models to dense prediction tasks that require multi-scale features.",
+      "url": "https://arxiv.org/abs/2102.12122",
+      "citation_count": 6500,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_3",
+        "prereq_demo_2",
+        "demo_11",
+        "demo_15",
+        "demo_0",
+        "demo_18",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_7": {
+      "paper_id": "landmark_vit_7",
+      "title": "Emerging Properties in Self-Supervised Vision Transformers",
+      "authors": [
+        "Mathilde Caron",
+        "Hugo Touvron",
+        "Ishan Misra",
+        "Herve Jegou",
+        "Julien Mairal",
+        "Piotr Bojanowski",
+        "Armand Joulin"
+      ],
+      "year": 2021,
+      "abstract": "DINO shows that self-supervised training with vision transformers can produce strong visual representations and attention maps with emergent semantic structure, making it a key self-supervised ViT milestone.",
+      "url": "https://arxiv.org/abs/2104.14294",
+      "citation_count": 11000,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_3",
+        "landmark_vit_4",
+        "prereq_demo_3",
+        "demo_2",
+        "prereq_demo_0",
+        "prereq_demo_1",
+        "prereq_demo_2"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_8": {
+      "paper_id": "landmark_vit_8",
+      "title": "BEiT: BERT Pre-Training of Image Transformers",
+      "authors": [
+        "Hangbo Bao",
+        "Li Dong",
+        "Songhao Piao",
+        "Furu Wei"
+      ],
+      "year": 2021,
+      "abstract": "BEiT adapts masked language modeling ideas to image transformers through masked image modeling, forming an important bridge between BERT-style pretraining and ViT representation learning.",
+      "url": "https://arxiv.org/abs/2106.08254",
+      "citation_count": 7000,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_3",
+        "prereq_demo_1",
+        "demo_8",
+        "demo_19",
+        "demo_18",
+        "prereq_demo_2",
+        "prereq_demo_3"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_9": {
+      "paper_id": "landmark_vit_9",
+      "title": "Masked Autoencoders Are Scalable Vision Learners",
+      "authors": [
+        "Kaiming He",
+        "Xinlei Chen",
+        "Saining Xie",
+        "Yanghao Li",
+        "Piotr Dollar",
+        "Ross Girshick"
+      ],
+      "year": 2022,
+      "abstract": "MAE introduces a simple masked autoencoding pretraining strategy for scalable vision transformer learning, becoming a major self-supervised pretraining direction for ViT backbones.",
+      "url": "https://arxiv.org/abs/2111.06377",
+      "citation_count": 16000,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_3",
+        "landmark_vit_8",
+        "landmark_vit_7",
+        "prereq_demo_3",
+        "demo_1",
+        "prereq_demo_0",
+        "prereq_demo_2",
+        "landmark_vit_4",
+        "landmark_vit_5"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_10": {
+      "paper_id": "landmark_vit_10",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "authors": [
+        "Alec Radford",
+        "Jong Wook Kim",
+        "Chris Hallacy",
+        "Aditya Ramesh",
+        "Gabriel Goh",
+        "Sandhini Agarwal",
+        "Girish Sastry",
+        "Amanda Askell",
+        "Pamela Mishkin",
+        "Jack Clark",
+        "Gretchen Krueger",
+        "Ilya Sutskever"
+      ],
+      "year": 2021,
+      "abstract": "CLIP connects visual representation learning with natural language supervision at scale. In a ViT reading path, it represents the vision-language branch that often uses ViT backbones.",
+      "url": "https://arxiv.org/abs/2103.00020",
+      "citation_count": 35000,
+      "citation_source": "",
+      "references": [
+        "landmark_vit_3",
+        "prereq_demo_2",
+        "prereq_demo_0",
+        "demo_18"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    },
+    "landmark_vit_11": {
+      "paper_id": "landmark_vit_11",
+      "title": "DINOv2: Learning Robust Visual Features without Supervision",
+      "authors": [
+        "Maxime Oquab",
+        "Timothee Darcet",
+        "Theo Moutakanni",
+        "Huy Vo",
+        "Marc Szafraniec",
+        "Vasil Khalidov",
+        "Pierre Fernandez",
+        "Daniel Haziza",
+        "Francisco Massa",
+        "Alaaeldin El-Nouby",
+        "Mahmoud Assran",
+        "Nicolas Ballas",
+        "Wojciech Galuba",
+        "Russell Howes",
+        "Po-Yao Huang",
+        "Shang-Wen Li",
+        "Ishan Misra",
+        "Michael Rabbat",
+        "Vasu Sharma",
+        "Gabriel Synnaeve",
+        "Hu Xu",
+        "Herve Jegou",
+        "Julien Mairal",
+        "Patrick Labatut",
+        "Armand Joulin",
+        "Piotr Bojanowski"
+      ],
+      "year": 2023,
+      "abstract": "DINOv2 studies large-scale self-supervised visual feature learning and shows that carefully trained ViT-based models can provide robust general-purpose visual representations without supervision.",
+      "url": "https://arxiv.org/abs/2304.07193",
+      "citation_count": 3500,
+      "citation_source": "",
+      "references": [
+        "demo_0",
+        "demo_19",
+        "demo_5",
+        "demo_10",
+        "demo_3",
+        "demo_18",
+        "prereq_demo_2",
+        "prereq_demo_3",
+        "landmark_vit_3",
+        "landmark_vit_5",
+        "landmark_vit_8",
+        "landmark_vit_9"
+      ],
+      "citations": [],
+      "source": "landmark_demo",
+      "keywords": [],
+      "venue": ""
+    }
+  },
+  "node_scores": {
+    "demo_0": {
+      "pagerank": 0.0523,
+      "betweenness": 0.0133,
+      "community": 1,
+      "foundation_score": 0.2314,
+      "bridge_score": 0.3933,
+      "frontier_score": 0.0269
+    },
+    "demo_1": {
+      "pagerank": 0.0116,
+      "betweenness": 0.0058,
+      "community": 0,
+      "foundation_score": 0.1136,
+      "bridge_score": 0.4267,
+      "frontier_score": 0.1726
+    },
+    "demo_2": {
+      "pagerank": 0.0273,
+      "betweenness": 0.0128,
+      "community": 2,
+      "foundation_score": 0.1631,
+      "bridge_score": 0.3989,
+      "frontier_score": 0.0385
+    },
+    "demo_3": {
+      "pagerank": 0.0104,
+      "betweenness": 0.0281,
+      "community": 0,
+      "foundation_score": 0.0596,
+      "bridge_score": 0.5235,
+      "frontier_score": 0.354
+    },
+    "demo_4": {
+      "pagerank": 0.1962,
+      "betweenness": 0.0173,
+      "community": 1,
+      "foundation_score": 0.4111,
+      "bridge_score": 0.1793,
+      "frontier_score": 0.07
+    },
+    "demo_5": {
+      "pagerank": 0.0112,
+      "betweenness": 0.0039,
+      "community": 1,
+      "foundation_score": 0.0867,
+      "bridge_score": 0.354,
+      "frontier_score": 0.2418
+    },
+    "demo_6": {
+      "pagerank": 0.0166,
+      "betweenness": 0.0,
+      "community": 0,
+      "foundation_score": 0.1433,
+      "bridge_score": 0.3933,
+      "frontier_score": 0.0832
+    },
+    "demo_7": {
+      "pagerank": 0.0096,
+      "betweenness": 0.0066,
+      "community": 1,
+      "foundation_score": 0.1924,
+      "bridge_score": 0.3161,
+      "frontier_score": 0.0141
+    },
+    "demo_8": {
+      "pagerank": 0.0187,
+      "betweenness": 0.0,
+      "community": 1,
+      "foundation_score": 0.1979,
+      "bridge_score": 0.3161,
+      "frontier_score": 0.0168
+    },
+    "demo_9": {
+      "pagerank": 0.0104,
+      "betweenness": 0.0027,
+      "community": 2,
+      "foundation_score": 0.0729,
+      "bridge_score": 0.3848,
+      "frontier_score": 0.3062
+    },
+    "demo_10": {
+      "pagerank": 0.0138,
+      "betweenness": 0.0036,
+      "community": 1,
+      "foundation_score": 0.1016,
+      "bridge_score": 0.3795,
+      "frontier_score": 0.1971
+    },
+    "demo_11": {
+      "pagerank": 0.0362,
+      "betweenness": 0.0025,
+      "community": 1,
+      "foundation_score": 0.2484,
+      "bridge_score": 0.3695,
+      "frontier_score": 0.022
+    },
+    "demo_12": {
+      "pagerank": 0.012,
+      "betweenness": 0.0012,
+      "community": 2,
+      "foundation_score": 0.1272,
+      "bridge_score": 0.3581,
+      "frontier_score": 0.1248
+    },
+    "demo_13": {
+      "pagerank": 0.0096,
+      "betweenness": 0.0082,
+      "community": 3,
+      "foundation_score": 0.0324,
+      "bridge_score": 0.412,
+      "frontier_score": 0.5211
+    },
+    "demo_14": {
+      "pagerank": 0.0132,
+      "betweenness": 0.0,
+      "community": 2,
+      "foundation_score": 0.1012,
+      "bridge_score": 0.3661,
+      "frontier_score": 0.2161
+    },
+    "demo_15": {
+      "pagerank": 0.0411,
+      "betweenness": 0.0034,
+      "community": 1,
+      "foundation_score": 0.2246,
+      "bridge_score": 0.3552,
+      "frontier_score": 0.0235
+    },
+    "demo_16": {
+      "pagerank": 0.0096,
+      "betweenness": 0.0115,
+      "community": 3,
+      "foundation_score": 0.0324,
+      "bridge_score": 0.4642,
+      "frontier_score": 0.5211
+    },
+    "demo_17": {
+      "pagerank": 0.0096,
+      "betweenness": 0.0385,
+      "community": 1,
+      "foundation_score": 0.0324,
+      "bridge_score": 0.498,
+      "frontier_score": 0.4232
+    },
+    "demo_18": {
+      "pagerank": 0.1658,
+      "betweenness": 0.0779,
+      "community": 0,
+      "foundation_score": 0.3528,
+      "bridge_score": 0.6279,
+      "frontier_score": 0.0825
+    },
+    "demo_19": {
+      "pagerank": 0.0121,
+      "betweenness": 0.0,
+      "community": 2,
+      "foundation_score": 0.1406,
+      "bridge_score": 0.378,
+      "frontier_score": 0.0794
+    },
+    "prereq_demo_0": {
+      "pagerank": 0.0463,
+      "betweenness": 0.0305,
+      "community": 3,
+      "foundation_score": 0.1478,
+      "bridge_score": 0.3435,
+      "frontier_score": 0.2139
+    },
+    "prereq_demo_1": {
+      "pagerank": 0.0254,
+      "betweenness": 0.017,
+      "community": 3,
+      "foundation_score": 0.1085,
+      "bridge_score": 0.3098,
+      "frontier_score": 0.2985
+    },
+    "prereq_demo_2": {
+      "pagerank": 0.0352,
+      "betweenness": 0.1597,
+      "community": 1,
+      "foundation_score": 0.1544,
+      "bridge_score": 0.7028,
+      "frontier_score": 0.0672
+    },
+    "prereq_demo_3": {
+      "pagerank": 0.0777,
+      "betweenness": 0.2406,
+      "community": 2,
+      "foundation_score": 0.2333,
+      "bridge_score": 0.901,
+      "frontier_score": 0.0536
+    },
+    "landmark_vit_3": {
+      "pagerank": 0.0253,
+      "betweenness": 0.0454,
+      "community": 3,
+      "foundation_score": 0.0952,
+      "bridge_score": 0.4677,
+      "frontier_score": 0.344
+    },
+    "landmark_vit_4": {
+      "pagerank": 0.0149,
+      "betweenness": 0.0275,
+      "community": 3,
+      "foundation_score": 0.0756,
+      "bridge_score": 0.3972,
+      "frontier_score": 0.3863
+    },
+    "landmark_vit_5": {
+      "pagerank": 0.0138,
+      "betweenness": 0.0135,
+      "community": 3,
+      "foundation_score": 0.075,
+      "bridge_score": 0.3009,
+      "frontier_score": 0.386
+    },
+    "landmark_vit_6": {
+      "pagerank": 0.0118,
+      "betweenness": 0.0355,
+      "community": 1,
+      "foundation_score": 0.0738,
+      "bridge_score": 0.3726,
+      "frontier_score": 0.2875
+    },
+    "landmark_vit_7": {
+      "pagerank": 0.0139,
+      "betweenness": 0.0245,
+      "community": 3,
+      "foundation_score": 0.075,
+      "bridge_score": 0.3119,
+      "frontier_score": 0.386
+    },
+    "landmark_vit_8": {
+      "pagerank": 0.0138,
+      "betweenness": 0.0325,
+      "community": 1,
+      "foundation_score": 0.075,
+      "bridge_score": 0.3985,
+      "frontier_score": 0.2881
+    },
+    "landmark_vit_9": {
+      "pagerank": 0.0126,
+      "betweenness": 0.0077,
+      "community": 3,
+      "foundation_score": 0.0609,
+      "bridge_score": 0.2866,
+      "frontier_score": 0.4311
+    },
+    "landmark_vit_10": {
+      "pagerank": 0.011,
+      "betweenness": 0.0027,
+      "community": 0,
+      "foundation_score": 0.0733,
+      "bridge_score": 0.3344,
+      "frontier_score": 0.3088
+    },
+    "landmark_vit_11": {
+      "pagerank": 0.011,
+      "betweenness": 0.0349,
+      "community": 1,
+      "foundation_score": 0.0466,
+      "bridge_score": 0.4017,
+      "frontier_score": 0.3781
+    }
+  },
+  "graph_data": {
+    "nodes": [
+      "demo_0",
+      "demo_1",
+      "demo_2",
+      "demo_3",
+      "demo_4",
+      "demo_5",
+      "demo_6",
+      "demo_7",
+      "demo_8",
+      "demo_9",
+      "demo_10",
+      "demo_11",
+      "demo_12",
+      "demo_13",
+      "demo_14",
+      "demo_15",
+      "demo_16",
+      "demo_17",
+      "demo_18",
+      "demo_19",
+      "prereq_demo_0",
+      "prereq_demo_1",
+      "prereq_demo_2",
+      "prereq_demo_3",
+      "landmark_vit_3",
+      "landmark_vit_4",
+      "landmark_vit_5",
+      "landmark_vit_6",
+      "landmark_vit_7",
+      "landmark_vit_8",
+      "landmark_vit_9",
+      "landmark_vit_10",
+      "landmark_vit_11"
+    ],
+    "edges": [
+      {
+        "source": "demo_0",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_6",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_8",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_15",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_1",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_1",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_15",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_2",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "landmark_vit_8",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "landmark_vit_6",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_10",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "landmark_vit_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "landmark_vit_5",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "landmark_vit_7",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_3",
+        "target": "landmark_vit_10",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_5",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_5",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_6",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_15",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_15",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_11",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_9",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_9",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_9",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_10",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_10",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_12",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_12",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_12",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "demo_5",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "landmark_vit_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "landmark_vit_7",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "landmark_vit_9",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_13",
+        "target": "landmark_vit_11",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_14",
+        "target": "demo_6",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_14",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_15",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_15",
+        "target": "demo_11",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_15",
+        "target": "demo_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "landmark_vit_6",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "demo_9",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "demo_12",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "landmark_vit_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "landmark_vit_5",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "landmark_vit_7",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "landmark_vit_8",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_16",
+        "target": "landmark_vit_9",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "demo_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "demo_10",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "landmark_vit_5",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "landmark_vit_6",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "landmark_vit_7",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "landmark_vit_8",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "landmark_vit_9",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "landmark_vit_10",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_17",
+        "target": "landmark_vit_11",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_18",
+        "target": "demo_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_19",
+        "target": "demo_15",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_19",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_19",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_0",
+        "target": "demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_0",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_0",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_1",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_2",
+        "target": "demo_15",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_2",
+        "target": "demo_11",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_2",
+        "target": "demo_8",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_2",
+        "target": "demo_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_2",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_3",
+        "target": "demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "prereq_demo_3",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "demo_14",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "demo_15",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "demo_11",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "demo_12",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "demo_10",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "demo_11",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "demo_11",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "demo_15",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "landmark_vit_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "prereq_demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "demo_8",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "demo_19",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "landmark_vit_8",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "landmark_vit_7",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "demo_1",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "landmark_vit_4",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "landmark_vit_5",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_10",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_10",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_10",
+        "target": "prereq_demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_10",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "demo_0",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "demo_19",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "demo_5",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "demo_10",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "demo_18",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "prereq_demo_2",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "prereq_demo_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "landmark_vit_3",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "landmark_vit_5",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "landmark_vit_8",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "landmark_vit_11",
+        "target": "landmark_vit_9",
+        "type": "citation",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_1",
+        "type": "similarity",
+        "weight": 0.1494131938623223,
+        "distance": 6.692849367248358
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_2",
+        "type": "similarity",
+        "weight": 0.1901889646024475,
+        "distance": 5.257928618993761
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_3",
+        "type": "similarity",
+        "weight": 0.13653696841054566,
+        "distance": 7.324023754454206
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_5",
+        "type": "similarity",
+        "weight": 0.1636360676186044,
+        "distance": 6.111122166115328
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_6",
+        "type": "similarity",
+        "weight": 0.1494131938623223,
+        "distance": 6.692849367248358
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_7",
+        "type": "similarity",
+        "weight": 0.1901889646024475,
+        "distance": 5.257928618993761
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_8",
+        "type": "similarity",
+        "weight": 0.24612765143283294,
+        "distance": 4.062932361230023
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_9",
+        "type": "similarity",
+        "weight": 0.17235791444986398,
+        "distance": 5.801880367326463
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.1636360676186044,
+        "distance": 6.111122166115328
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.15365376923813326,
+        "distance": 6.508138426791183
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.11514951470815857,
+        "distance": 8.684361393397587
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.11290698404358013,
+        "distance": 8.856848037088808
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.17235791444986398,
+        "distance": 5.801880367326463
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 1.0000000000000002,
+        "distance": 0.9999999999999998
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.14581815579180063,
+        "distance": 6.857856585621625
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.16075557558998493,
+        "distance": 6.220624051949213
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.08999477884152982,
+        "distance": 11.111755735973105
+      },
+      {
+        "source": "demo_0",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.17235791444986398,
+        "distance": 5.801880367326463
+      },
+      {
+        "source": "demo_0",
+        "target": "landmark_vit_3",
+        "type": "similarity",
+        "weight": 0.08930092188345179,
+        "distance": 11.198092683803619
+      },
+      {
+        "source": "demo_0",
+        "target": "landmark_vit_4",
+        "type": "similarity",
+        "weight": 0.10253017702760302,
+        "distance": 9.75322611342787
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_2",
+        "type": "similarity",
+        "weight": 0.1365710779455548,
+        "distance": 7.322194530811703
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_5",
+        "type": "similarity",
+        "weight": 0.11348420544031537,
+        "distance": 8.811798929375497
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_6",
+        "type": "similarity",
+        "weight": 1.0,
+        "distance": 1.0
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_7",
+        "type": "similarity",
+        "weight": 0.1365710779455548,
+        "distance": 7.322194530811703
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_8",
+        "type": "similarity",
+        "weight": 0.1431428064314836,
+        "distance": 6.986030419060266
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_9",
+        "type": "similarity",
+        "weight": 0.1752950894582776,
+        "distance": 5.704666360537226
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.11348420544031537,
+        "distance": 8.811798929375497
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.1888562393445259,
+        "distance": 5.2950328962959174
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.18219568670274203,
+        "distance": 5.488604138206254
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.12519451967886736,
+        "distance": 7.98757008345948
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.1752950894582776,
+        "distance": 5.704666360537226
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.1494131938623223,
+        "distance": 6.692849367248358
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.1140694144328023,
+        "distance": 8.766591859635563
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.18116386604360904,
+        "distance": 5.5198645394290935
+      },
+      {
+        "source": "demo_1",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.1752950894582776,
+        "distance": 5.704666360537226
+      },
+      {
+        "source": "demo_1",
+        "target": "landmark_vit_3",
+        "type": "similarity",
+        "weight": 0.09053127758362617,
+        "distance": 11.045906196079837
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_3",
+        "type": "similarity",
+        "weight": 0.09891422558642049,
+        "distance": 10.10976928820323
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_5",
+        "type": "similarity",
+        "weight": 0.1322670871841013,
+        "distance": 7.560459833882254
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_6",
+        "type": "similarity",
+        "weight": 0.1365710779455548,
+        "distance": 7.322194530811703
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_7",
+        "type": "similarity",
+        "weight": 1.0000000000000002,
+        "distance": 0.9999999999999998
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_8",
+        "type": "similarity",
+        "weight": 0.15972768165076534,
+        "distance": 6.260655571189206
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_9",
+        "type": "similarity",
+        "weight": 0.15746023704924825,
+        "distance": 6.350809694813515
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.1322670871841013,
+        "distance": 7.560459833882254
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.16853391820436855,
+        "distance": 5.933523712344801
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.09817259596310704,
+        "distance": 10.186141969555301
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.15746023704924825,
+        "distance": 6.350809694813515
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.1901889646024475,
+        "distance": 5.257928618993761
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.08025194036997513,
+        "distance": 12.460757900554547
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.205252774005431,
+        "distance": 4.87204133949264
+      },
+      {
+        "source": "demo_2",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.15746023704924825,
+        "distance": 6.350809694813515
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_5",
+        "type": "similarity",
+        "weight": 0.1275458676306185,
+        "distance": 7.840316731358698
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_7",
+        "type": "similarity",
+        "weight": 0.09891422558642049,
+        "distance": 10.10976928820323
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_8",
+        "type": "similarity",
+        "weight": 0.09684125733378612,
+        "distance": 10.326177370387347
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_9",
+        "type": "similarity",
+        "weight": 0.20700622553367337,
+        "distance": 4.830772588708119
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.1275458676306185,
+        "distance": 7.840316731358698
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.17817566033134025,
+        "distance": 5.6124388602818875
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.09422153946072437,
+        "distance": 10.61328445410132
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.20700622553367337,
+        "distance": 4.830772588708119
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.13653696841054566,
+        "distance": 7.324023754454206
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.12933842004764023,
+        "distance": 7.7316546748573405
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.09918602195274641,
+        "distance": 10.082065802340715
+      },
+      {
+        "source": "demo_3",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.20700622553367337,
+        "distance": 4.830772588708119
+      },
+      {
+        "source": "demo_3",
+        "target": "prereq_demo_0",
+        "type": "similarity",
+        "weight": 0.09627997368651202,
+        "distance": 10.386375917135208
+      },
+      {
+        "source": "demo_4",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.11316830094946688,
+        "distance": 8.836396690682232
+      },
+      {
+        "source": "demo_4",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.2028146850559349,
+        "distance": 4.930609436511991
+      },
+      {
+        "source": "demo_4",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.09345797693182352,
+        "distance": 10.69999622107686
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_6",
+        "type": "similarity",
+        "weight": 0.11348420544031537,
+        "distance": 8.811798929375497
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_7",
+        "type": "similarity",
+        "weight": 0.1322670871841013,
+        "distance": 7.560459833882254
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_8",
+        "type": "similarity",
+        "weight": 0.08961428615264808,
+        "distance": 11.158935064177268
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_9",
+        "type": "similarity",
+        "weight": 0.20766511955745454,
+        "distance": 4.8154451846851
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.9999999999999991,
+        "distance": 1.0000000000000009
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.19350389461259168,
+        "distance": 5.167854641903047
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.17792167111256474,
+        "distance": 5.6204508070708
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.08245378019080075,
+        "distance": 12.128006717047626
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.20766511955745454,
+        "distance": 4.8154451846851
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.1636360676186044,
+        "distance": 6.111122166115328
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.08103880846860695,
+        "distance": 12.339766821564053
+      },
+      {
+        "source": "demo_5",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.20766511955745454,
+        "distance": 4.8154451846851
+      },
+      {
+        "source": "demo_5",
+        "target": "prereq_demo_1",
+        "type": "similarity",
+        "weight": 0.14506321767085403,
+        "distance": 6.89354624870505
+      },
+      {
+        "source": "demo_5",
+        "target": "landmark_vit_4",
+        "type": "similarity",
+        "weight": 0.09399037161511398,
+        "distance": 10.639387660844152
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_7",
+        "type": "similarity",
+        "weight": 0.1365710779455548,
+        "distance": 7.322194530811703
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_8",
+        "type": "similarity",
+        "weight": 0.1431428064314836,
+        "distance": 6.986030419060266
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_9",
+        "type": "similarity",
+        "weight": 0.1752950894582776,
+        "distance": 5.704666360537226
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.11348420544031537,
+        "distance": 8.811798929375497
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.1888562393445259,
+        "distance": 5.2950328962959174
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.18219568670274203,
+        "distance": 5.488604138206254
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.12519451967886736,
+        "distance": 7.98757008345948
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.1752950894582776,
+        "distance": 5.704666360537226
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.1494131938623223,
+        "distance": 6.692849367248358
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.1140694144328023,
+        "distance": 8.766591859635563
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.18116386604360904,
+        "distance": 5.5198645394290935
+      },
+      {
+        "source": "demo_6",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.1752950894582776,
+        "distance": 5.704666360537226
+      },
+      {
+        "source": "demo_6",
+        "target": "landmark_vit_3",
+        "type": "similarity",
+        "weight": 0.09053127758362617,
+        "distance": 11.045906196079837
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_8",
+        "type": "similarity",
+        "weight": 0.15972768165076534,
+        "distance": 6.260655571189206
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_9",
+        "type": "similarity",
+        "weight": 0.15746023704924825,
+        "distance": 6.350809694813515
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.1322670871841013,
+        "distance": 7.560459833882254
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.16853391820436855,
+        "distance": 5.933523712344801
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.09817259596310704,
+        "distance": 10.186141969555301
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.15746023704924825,
+        "distance": 6.350809694813515
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.1901889646024475,
+        "distance": 5.257928618993761
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.08025194036997513,
+        "distance": 12.460757900554547
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.205252774005431,
+        "distance": 4.87204133949264
+      },
+      {
+        "source": "demo_7",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.15746023704924825,
+        "distance": 6.350809694813515
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_9",
+        "type": "similarity",
+        "weight": 0.124779807018236,
+        "distance": 8.014117218933144
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.08961428615264808,
+        "distance": 11.158935064177268
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.16063918082562018,
+        "distance": 6.225131346290525
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.15289992631617677,
+        "distance": 6.540225519351347
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.13040964825941329,
+        "distance": 7.668144292596983
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.124779807018236,
+        "distance": 8.014117218933144
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.24612765143283294,
+        "distance": 4.062932361230023
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.10465270602542714,
+        "distance": 9.555414646966062
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.13158425820848807,
+        "distance": 7.599693258258557
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.0826667927589098,
+        "distance": 12.096755742253231
+      },
+      {
+        "source": "demo_8",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.124779807018236,
+        "distance": 8.014117218933144
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_10",
+        "type": "similarity",
+        "weight": 0.20766511955745454,
+        "distance": 4.8154451846851
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.15747316823188717,
+        "distance": 6.350288187048156
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.1414698779840076,
+        "distance": 7.068642556637001
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.12981531047250175,
+        "distance": 7.703251614622344
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.9999999999999996,
+        "distance": 1.0000000000000004
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.17235791444986398,
+        "distance": 5.801880367326463
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.11794776921335719,
+        "distance": 8.478329066072352
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.10987341018706552,
+        "distance": 9.101383112596988
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.09295373163886946,
+        "distance": 10.75804039675413
+      },
+      {
+        "source": "demo_9",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.9999999999999996,
+        "distance": 1.0000000000000004
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_11",
+        "type": "similarity",
+        "weight": 0.19350389461259168,
+        "distance": 5.167854641903047
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.17792167111256474,
+        "distance": 5.6204508070708
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.08245378019080075,
+        "distance": 12.128006717047626
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.20766511955745454,
+        "distance": 4.8154451846851
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.1636360676186044,
+        "distance": 6.111122166115328
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.08103880846860695,
+        "distance": 12.339766821564053
+      },
+      {
+        "source": "demo_10",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.20766511955745454,
+        "distance": 4.8154451846851
+      },
+      {
+        "source": "demo_10",
+        "target": "prereq_demo_1",
+        "type": "similarity",
+        "weight": 0.14506321767085403,
+        "distance": 6.89354624870505
+      },
+      {
+        "source": "demo_10",
+        "target": "landmark_vit_4",
+        "type": "similarity",
+        "weight": 0.09399037161511398,
+        "distance": 10.639387660844152
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_12",
+        "type": "similarity",
+        "weight": 0.12496345728417546,
+        "distance": 8.002339417722187
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_13",
+        "type": "similarity",
+        "weight": 0.13943266452506073,
+        "distance": 7.171920607027247
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.15747316823188717,
+        "distance": 6.350288187048156
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.15365376923813326,
+        "distance": 6.508138426791183
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.17717624186033562,
+        "distance": 5.6440975917543135
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.25965983499495493,
+        "distance": 3.8511924650165072
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.10503197927281692,
+        "distance": 9.520909792650244
+      },
+      {
+        "source": "demo_11",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.15747316823188717,
+        "distance": 6.350288187048156
+      },
+      {
+        "source": "demo_11",
+        "target": "landmark_vit_3",
+        "type": "similarity",
+        "weight": 0.10051207040503904,
+        "distance": 9.949053839705469
+      },
+      {
+        "source": "demo_11",
+        "target": "landmark_vit_11",
+        "type": "similarity",
+        "weight": 0.08210688868938276,
+        "distance": 12.179246053069722
+      },
+      {
+        "source": "demo_12",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.1414698779840076,
+        "distance": 7.068642556637001
+      },
+      {
+        "source": "demo_12",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.11514951470815857,
+        "distance": 8.684361393397587
+      },
+      {
+        "source": "demo_12",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.10546721693318005,
+        "distance": 9.481619303878677
+      },
+      {
+        "source": "demo_12",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.08004521249739097,
+        "distance": 12.492939537546915
+      },
+      {
+        "source": "demo_12",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.12406508945643419,
+        "distance": 8.060285164676827
+      },
+      {
+        "source": "demo_12",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.1414698779840076,
+        "distance": 7.068642556637001
+      },
+      {
+        "source": "demo_13",
+        "target": "demo_14",
+        "type": "similarity",
+        "weight": 0.12981531047250175,
+        "distance": 7.703251614622344
+      },
+      {
+        "source": "demo_13",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.11290698404358013,
+        "distance": 8.856848037088808
+      },
+      {
+        "source": "demo_13",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.09629057586080073,
+        "distance": 10.385232314381595
+      },
+      {
+        "source": "demo_13",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.1036456962305366,
+        "distance": 9.64825396874873
+      },
+      {
+        "source": "demo_13",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.12981531047250175,
+        "distance": 7.703251614622344
+      },
+      {
+        "source": "demo_14",
+        "target": "demo_15",
+        "type": "similarity",
+        "weight": 0.17235791444986398,
+        "distance": 5.801880367326463
+      },
+      {
+        "source": "demo_14",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.11794776921335719,
+        "distance": 8.478329066072352
+      },
+      {
+        "source": "demo_14",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.10987341018706552,
+        "distance": 9.101383112596988
+      },
+      {
+        "source": "demo_14",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.09295373163886946,
+        "distance": 10.75804039675413
+      },
+      {
+        "source": "demo_14",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.9999999999999996,
+        "distance": 1.0000000000000004
+      },
+      {
+        "source": "demo_15",
+        "target": "demo_16",
+        "type": "similarity",
+        "weight": 0.14581815579180063,
+        "distance": 6.857856585621625
+      },
+      {
+        "source": "demo_15",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.16075557558998493,
+        "distance": 6.220624051949213
+      },
+      {
+        "source": "demo_15",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.08999477884152982,
+        "distance": 11.111755735973105
+      },
+      {
+        "source": "demo_15",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.17235791444986398,
+        "distance": 5.801880367326463
+      },
+      {
+        "source": "demo_15",
+        "target": "landmark_vit_3",
+        "type": "similarity",
+        "weight": 0.08930092188345179,
+        "distance": 11.198092683803619
+      },
+      {
+        "source": "demo_15",
+        "target": "landmark_vit_4",
+        "type": "similarity",
+        "weight": 0.10253017702760302,
+        "distance": 9.75322611342787
+      },
+      {
+        "source": "demo_16",
+        "target": "demo_17",
+        "type": "similarity",
+        "weight": 0.17899023278608264,
+        "distance": 5.586897030270553
+      },
+      {
+        "source": "demo_16",
+        "target": "demo_18",
+        "type": "similarity",
+        "weight": 0.11130790040606427,
+        "distance": 8.98408824847008
+      },
+      {
+        "source": "demo_16",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.11794776921335719,
+        "distance": 8.478329066072352
+      },
+      {
+        "source": "demo_17",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.10987341018706552,
+        "distance": 9.101383112596988
+      },
+      {
+        "source": "demo_17",
+        "target": "landmark_vit_9",
+        "type": "similarity",
+        "weight": 0.10193058087264167,
+        "distance": 9.810598462589567
+      },
+      {
+        "source": "demo_18",
+        "target": "demo_19",
+        "type": "similarity",
+        "weight": 0.09295373163886946,
+        "distance": 10.75804039675413
+      },
+      {
+        "source": "demo_18",
+        "target": "landmark_vit_3",
+        "type": "similarity",
+        "weight": 0.09222939166070186,
+        "distance": 10.842530585898803
+      },
+      {
+        "source": "prereq_demo_0",
+        "target": "prereq_demo_1",
+        "type": "similarity",
+        "weight": 0.09126257442316711,
+        "distance": 10.957394159879724
+      },
+      {
+        "source": "prereq_demo_0",
+        "target": "landmark_vit_6",
+        "type": "similarity",
+        "weight": 0.1199692765447932,
+        "distance": 8.335467453007668
+      },
+      {
+        "source": "prereq_demo_1",
+        "target": "prereq_demo_2",
+        "type": "similarity",
+        "weight": 0.10400244565350394,
+        "distance": 9.615158506287578
+      },
+      {
+        "source": "prereq_demo_1",
+        "target": "landmark_vit_8",
+        "type": "similarity",
+        "weight": 0.1311573109607792,
+        "distance": 7.624432009733993
+      },
+      {
+        "source": "prereq_demo_1",
+        "target": "landmark_vit_10",
+        "type": "similarity",
+        "weight": 0.08555606173267088,
+        "distance": 11.688242536509073
+      },
+      {
+        "source": "prereq_demo_2",
+        "target": "prereq_demo_3",
+        "type": "similarity",
+        "weight": 0.13412014033742328,
+        "distance": 7.456001742051353
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "landmark_vit_4",
+        "type": "similarity",
+        "weight": 0.08526371824702139,
+        "distance": 11.728317982835964
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "landmark_vit_5",
+        "type": "similarity",
+        "weight": 0.1449380977397177,
+        "distance": 6.899497203253054
+      },
+      {
+        "source": "landmark_vit_3",
+        "target": "landmark_vit_8",
+        "type": "similarity",
+        "weight": 0.1369803079404211,
+        "distance": 7.300319403829527
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "landmark_vit_5",
+        "type": "similarity",
+        "weight": 0.09188426652227995,
+        "distance": 10.883256055132373
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "landmark_vit_6",
+        "type": "similarity",
+        "weight": 0.09999682549874964,
+        "distance": 10.000317460202815
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "landmark_vit_8",
+        "type": "similarity",
+        "weight": 0.10058037302030755,
+        "distance": 9.942297587205173
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "landmark_vit_9",
+        "type": "similarity",
+        "weight": 0.14718459935072567,
+        "distance": 6.794189095946808
+      },
+      {
+        "source": "landmark_vit_4",
+        "target": "landmark_vit_11",
+        "type": "similarity",
+        "weight": 0.08512490175289784,
+        "distance": 11.747443807956675
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "landmark_vit_7",
+        "type": "similarity",
+        "weight": 0.11436570464343655,
+        "distance": 8.743880021705353
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "landmark_vit_8",
+        "type": "similarity",
+        "weight": 0.13838441199053855,
+        "distance": 7.226247419170092
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "landmark_vit_9",
+        "type": "similarity",
+        "weight": 0.09646206637546749,
+        "distance": 10.366769421127836
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "landmark_vit_10",
+        "type": "similarity",
+        "weight": 0.12104286822130986,
+        "distance": 8.261535889678694
+      },
+      {
+        "source": "landmark_vit_5",
+        "target": "landmark_vit_11",
+        "type": "similarity",
+        "weight": 0.1880442744751049,
+        "distance": 5.31789655809164
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "landmark_vit_9",
+        "type": "similarity",
+        "weight": 0.09378539791107672,
+        "distance": 10.66264069112504
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "landmark_vit_10",
+        "type": "similarity",
+        "weight": 0.13064725588060488,
+        "distance": 7.6541982704472105
+      },
+      {
+        "source": "landmark_vit_6",
+        "target": "landmark_vit_11",
+        "type": "similarity",
+        "weight": 0.12234333352221836,
+        "distance": 8.17371875696352
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "landmark_vit_9",
+        "type": "similarity",
+        "weight": 0.19798084385144643,
+        "distance": 5.050993725182539
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "landmark_vit_10",
+        "type": "similarity",
+        "weight": 0.09598514740454687,
+        "distance": 10.418278525794392
+      },
+      {
+        "source": "landmark_vit_7",
+        "target": "landmark_vit_11",
+        "type": "similarity",
+        "weight": 0.31565700967716176,
+        "distance": 3.1679955437161054
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "landmark_vit_9",
+        "type": "similarity",
+        "weight": 0.23153889114357631,
+        "distance": 4.318928863574388
+      },
+      {
+        "source": "landmark_vit_8",
+        "target": "landmark_vit_10",
+        "type": "similarity",
+        "weight": 0.17849211705410603,
+        "distance": 5.602488314354362
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "landmark_vit_10",
+        "type": "similarity",
+        "weight": 0.13764483867809357,
+        "distance": 7.265074445244359
+      },
+      {
+        "source": "landmark_vit_9",
+        "target": "landmark_vit_11",
+        "type": "similarity",
+        "weight": 0.14048023700341838,
+        "distance": 7.118439015558227
+      },
+      {
+        "source": "landmark_vit_10",
+        "target": "landmark_vit_11",
+        "type": "similarity",
+        "weight": 0.24035303477292894,
+        "distance": 4.1605465932424766
+      }
+    ]
+  },
+  "reading_path": {
+    "reading_path": [
+      {
+        "stage": "Prerequisites",
+        "papers": [
+          {
+            "title": "Attention Is All You Need",
+            "reason": "Background knowledge needed before diving into the specific topic.",
+            "read_order": 1
+          },
+          {
+            "title": "Deep Residual Learning for Image Recognition",
+            "reason": "Background knowledge needed before diving into the specific topic.",
+            "read_order": 2
+          },
+          {
+            "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+            "reason": "Background knowledge needed before diving into the specific topic.",
+            "read_order": 3
+          }
+        ]
+      },
+      {
+        "stage": "Conceptual Foundations",
+        "papers": [
+          {
+            "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+            "reason": "Read this early to establish the core vocabulary and assumptions before moving to later specialized papers.",
+            "read_order": 4
+          },
+          {
+            "title": "Early Work on Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: A Historical Perspective",
+            "reason": "Read this early because it is structurally central in the graph and heavily cited (213 citations), making it a foundation for later work.",
+            "read_order": 5
+          },
+          {
+            "title": "Fundamental Concepts in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+            "reason": "Read this early because it is structurally central in the graph and heavily cited (432 citations), making it a foundation for later work.",
+            "read_order": 6
+          }
+        ]
+      },
+      {
+        "stage": "Core Methods",
+        "papers": [
+          {
+            "title": "Training data-efficient image transformers and distillation through attention",
+            "reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.015) and anchors later developments in the path.",
+            "read_order": 7
+          }
+        ]
+      },
+      {
+        "stage": "Key Developments",
+        "papers": [
+          {
+            "title": "BEiT: BERT Pre-Training of Image Transformers",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (masked pretraining) with strong impact (7000 citations) and bridge score 0.399.",
+            "read_order": 8
+          },
+          {
+            "title": "Emerging Properties in Self-Supervised Vision Transformers",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (self-supervised learning) with strong impact (11000 citations) and bridge score 0.312.",
+            "read_order": 9
+          },
+          {
+            "title": "Masked Autoencoders Are Scalable Vision Learners",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (self-supervised learning) with strong impact (16000 citations) and bridge score 0.287.",
+            "read_order": 10
+          },
+          {
+            "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+            "reason": "Read this after the foundation papers because it represents a major follow-up branch (hierarchical backbones) with strong impact (26000 citations) and bridge score 0.301.",
+            "read_order": 11
+          }
+        ]
+      },
+      {
+        "stage": "Recent Advances",
+        "papers": [
+          {
+            "title": "Survey of Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Methods and Applications",
+            "reason": "Read this near the end to see recent directions from 2024; its frontier score (0.521) indicates current research momentum.",
+            "read_order": 12
+          },
+          {
+            "title": "Open Problems and Future Directions in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+            "reason": "Read this near the end to see recent directions from 2024; its frontier score (0.521) indicates current research momentum.",
+            "read_order": 13
+          }
+        ]
+      }
+    ],
+    "report_markdown": "# ResearchTrail Reading Path\n\n**Topic:** student. Vision Transformer. Build a reading path and identify bridge papers\n\n**Level:** beginner\n\n**Generated:** 2026-05-09 15:28:17\n\n---\n\n## Prerequisites\n\n### 1. Attention Is All You Need (2017)\n*Background knowledge needed before diving into the specific topic.*\nCitations: 145000\n\n### 2. Deep Residual Learning for Image Recognition (2016)\n*Background knowledge needed before diving into the specific topic.*\nCitations: 210000\n\n### 3. ImageNet Classification with Deep Convolutional Neural Networks (2012)\n*Background knowledge needed before diving into the specific topic.*\nCitations: 180000\n\n## Conceptual Foundations\n\n### 4. An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (2020)\n*Read this early to establish the core vocabulary and assumptions before moving to later specialized papers.*\nCitations: 38000\n\n### 5. Early Work on Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: A Historical Perspective (2004)\n*Read this early because it is structurally central in the graph and heavily cited (213 citations), making it a foundation for later work.*\nCitations: 213\n\n### 6. Fundamental Concepts in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers (2007)\n*Read this early because it is structurally central in the graph and heavily cited (432 citations), making it a foundation for later work.*\nCitations: 432\n\n## Core Methods\n\n### 7. Training data-efficient image transformers and distillation through attention (2021)\n*Read this as a core method paper because it has high graph centrality (PageRank 0.015) and anchors later developments in the path.*\nCitations: 12000\n\n## Key Developments\n\n### 8. BEiT: BERT Pre-Training of Image Transformers (2021)\n*Read this after the foundation papers because it represents a major follow-up branch (masked pretraining) with strong impact (7000 citations) and bridge score 0.399.*\nCitations: 7000\n\n### 9. Emerging Properties in Self-Supervised Vision Transformers (2021)\n*Read this after the foundation papers because it represents a major follow-up branch (self-supervised learning) with strong impact (11000 citations) and bridge score 0.312.*\nCitations: 11000\n\n### 10. Masked Autoencoders Are Scalable Vision Learners (2022)\n*Read this after the foundation papers because it represents a major follow-up branch (self-supervised learning) with strong impact (16000 citations) and bridge score 0.287.*\nCitations: 16000\n\n### 11. Swin Transformer: Hierarchical Vision Transformer using Shifted Windows (2021)\n*Read this after the foundation papers because it represents a major follow-up branch (hierarchical backbones) with strong impact (26000 citations) and bridge score 0.301.*\nCitations: 26000\n\n## Recent Advances\n\n### 12. Survey of Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Methods and Applications (2024)\n*Read this near the end to see recent directions from 2024; its frontier score (0.521) indicates current research momentum.*\nCitations: 68\n\n### 13. Open Problems and Future Directions in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers (2024)\n*Read this near the end to see recent directions from 2024; its frontier score (0.521) indicates current research momentum.*\nCitations: 44\n\n---\n\n*Total: 13 papers in 5 stages.*\n",
+    "followup_suggestions": [
+      "Add more survey and tutorial papers",
+      "Show bridge papers between key communities",
+      "Generate a 7-day reading plan",
+      "Show only papers after 2020",
+      "Which authors should I follow?",
+      "Replace theoretical papers with more applied papers",
+      "Explain why these papers are foundational",
+      "Show me the citation network visualization"
+    ]
+  },
+  "corpus_quality": {
+    "total_papers": 33,
+    "has_abstract_ratio": 1.0,
+    "has_citation_ratio": 0.9696969696969697,
+    "year_range": "2004-2024",
+    "median_year": 2019,
+    "citation_edges_total": 166,
+    "demo_mode": true
+  },
+  "metadata": {
+    "planner_mode": "rule",
+    "query_plan": {
+      "main_queries": [
+        "student. Vision Transformer. Build a reading path and identify bridge papers"
+      ]
+    },
+    "demo_mode": true,
+    "graph_mode": "hybrid",
+    "graph_metrics": {
+      "node_count": 33,
+      "edge_count": 328,
+      "citation_edges": 166,
+      "similarity_edges": 202,
+      "connected_components": 1,
+      "largest_component_ratio": 1.0,
+      "average_degree": 19.8788,
+      "community_count": 4,
+      "modularity": 0.1728
+    },
+    "community_labels": {
+      "0": {
+        "label": "Reading / Path / Student / Vision",
+        "description": "Community 0 groups papers around reading, path, student, vision."
+      },
+      "1": {
+        "label": "Vision / Transformer / Path / Bridge",
+        "description": "Community 1 groups papers around vision, transformer, path, bridge."
+      },
+      "2": {
+        "label": "Student / Vision / Transformer / Build",
+        "description": "Community 2 groups papers around student, vision, transformer, build."
+      },
+      "3": {
+        "label": "Vision / Transformer / Transformers / Image",
+        "description": "Community 3 groups papers around vision, transformer, transformers, image."
+      }
+    },
+    "community_label_evidence": [
+      {
+        "community_id": 0,
+        "size": 5,
+        "avg_year": 2016.8,
+        "top_titles": [
+          "Fundamental Concepts in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+          "Neural Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: End-to-End Learning: Theory",
+          "Neural Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: End-to-End Learning",
+          "Learning Transferable Visual Models From Natural Language Supervision",
+          "Attention Mechanisms for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers"
+        ],
+        "keywords": [
+          "reading",
+          "path",
+          "student",
+          "vision",
+          "transformer",
+          "build",
+          "identify",
+          "bridge"
+        ]
+      },
+      {
+        "community_id": 1,
+        "size": 13,
+        "avg_year": 2015.6,
+        "top_titles": [
+          "Early Work on Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: A Historical Perspective",
+          "Efficient Algorithms for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+          "Efficient Algorithms for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Theory",
+          "Scalable Approaches to Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+          "Deep Residual Learning for Image Recognition"
+        ],
+        "keywords": [
+          "vision",
+          "transformer",
+          "path",
+          "bridge",
+          "student",
+          "build",
+          "reading",
+          "identify"
+        ]
+      },
+      {
+        "community_id": 2,
+        "size": 6,
+        "avg_year": 2016.7,
+        "top_titles": [
+          "ImageNet Classification with Deep Convolutional Neural Networks",
+          "Robust Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: A Practical Guide",
+          "Graph Neural Networks for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Theory",
+          "Graph Neural Networks for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Algorithms",
+          "Learning Representations for Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers"
+        ],
+        "keywords": [
+          "student",
+          "vision",
+          "transformer",
+          "build",
+          "reading",
+          "path",
+          "identify",
+          "bridge"
+        ]
+      },
+      {
+        "community_id": 3,
+        "size": 9,
+        "avg_year": 2021.0,
+        "top_titles": [
+          "Attention Is All You Need",
+          "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+          "Training data-efficient image transformers and distillation through attention",
+          "Emerging Properties in Self-Supervised Vision Transformers"
+        ],
+        "keywords": [
+          "vision",
+          "transformer",
+          "transformers",
+          "image",
+          "build",
+          "identify",
+          "attention",
+          "student"
+        ]
+      }
+    ],
+    "evidence_packets": [
+      {
+        "paper_id": "prereq_demo_0",
+        "title": "Attention Is All You Need",
+        "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show that the Transformer is superior in quality, more parallelizable, and requires significantly less time to train.",
+        "url": "",
+        "stage": "Prerequisites",
+        "role": "prerequisite",
+        "year": 2017,
+        "citation_count": 145000,
+        "source": "prereq_demo",
+        "pagerank": 0.0463,
+        "betweenness": 0.0305,
+        "foundation_score": 0.1478,
+        "bridge_score": 0.3435,
+        "frontier_score": 0.2139,
+        "community_id": 3,
+        "community_label": "Vision / Transformer / Transformers / Image",
+        "template_reason": "Background knowledge needed before diving into the specific topic."
+      },
+      {
+        "paper_id": "prereq_demo_2",
+        "title": "Deep Residual Learning for Image Recognition",
+        "abstract": "Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, achieving state-of-the-art results on ImageNet and COCO.",
+        "url": "",
+        "stage": "Prerequisites",
+        "role": "prerequisite",
+        "year": 2016,
+        "citation_count": 210000,
+        "source": "prereq_demo",
+        "pagerank": 0.0352,
+        "betweenness": 0.1597,
+        "foundation_score": 0.1544,
+        "bridge_score": 0.7028,
+        "frontier_score": 0.0672,
+        "community_id": 1,
+        "community_label": "Vision / Transformer / Path / Bridge",
+        "template_reason": "Background knowledge needed before diving into the specific topic."
+      },
+      {
+        "paper_id": "prereq_demo_3",
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+        "abstract": "We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation, achieving top-1 error rate of 37.5%, significantly better than the previous state-of-the-art.",
+        "url": "",
+        "stage": "Prerequisites",
+        "role": "prerequisite",
+        "year": 2012,
+        "citation_count": 180000,
+        "source": "prereq_demo",
+        "pagerank": 0.0777,
+        "betweenness": 0.2406,
+        "foundation_score": 0.2333,
+        "bridge_score": 0.901,
+        "frontier_score": 0.0536,
+        "community_id": 2,
+        "community_label": "Student / Vision / Transformer / Build",
+        "template_reason": "Background knowledge needed before diving into the specific topic."
+      },
+      {
+        "paper_id": "landmark_vit_3",
+        "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+        "abstract": "This paper introduces the Vision Transformer, showing that a standard Transformer applied directly to image patches can achieve strong image recognition performance at scale. It establishes the core patch-token formulation that many later vision transformer variants build upon.",
+        "url": "https://arxiv.org/abs/2010.11929",
+        "stage": "Conceptual Foundations",
+        "role": "foundation",
+        "year": 2020,
+        "citation_count": 38000,
+        "source": "landmark_demo",
+        "pagerank": 0.0253,
+        "betweenness": 0.0454,
+        "foundation_score": 0.0952,
+        "bridge_score": 0.4677,
+        "frontier_score": 0.344,
+        "community_id": 3,
+        "community_label": "Vision / Transformer / Transformers / Image",
+        "template_reason": "Read this early to establish the core vocabulary and assumptions before moving to later specialized papers."
+      },
+      {
+        "paper_id": "demo_4",
+        "title": "Early Work on Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: A Historical Perspective",
+        "abstract": "We trace the historical development of student. Vision Transformer. Build a reading path and identify bridge papers from its origins to the establishment of the core paradigm. This retrospective highlights key conceptual breakthroughs, their motivating contexts, and how early limitations shaped subsequent research directions.",
+        "url": "",
+        "stage": "Conceptual Foundations",
+        "role": "foundation",
+        "year": 2004,
+        "citation_count": 213,
+        "source": "demo",
+        "pagerank": 0.1962,
+        "betweenness": 0.0173,
+        "foundation_score": 0.4111,
+        "bridge_score": 0.1793,
+        "frontier_score": 0.07,
+        "community_id": 1,
+        "community_label": "Vision / Transformer / Path / Bridge",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (213 citations), making it a foundation for later work."
+      },
+      {
+        "paper_id": "demo_18",
+        "title": "Fundamental Concepts in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+        "abstract": "This tutorial introduces the fundamental concepts and notation used in student. Vision Transformer. Build a reading path and identify bridge papers. We cover the essential background material including mathematical preliminaries, problem formulation, and early algorithmic approaches. Suitable as a self-contained starting point for graduate students.",
+        "url": "",
+        "stage": "Conceptual Foundations",
+        "role": "foundation",
+        "year": 2007,
+        "citation_count": 432,
+        "source": "demo",
+        "pagerank": 0.1658,
+        "betweenness": 0.0779,
+        "foundation_score": 0.3528,
+        "bridge_score": 0.6279,
+        "frontier_score": 0.0825,
+        "community_id": 0,
+        "community_label": "Reading / Path / Student / Vision",
+        "template_reason": "Read this early because it is structurally central in the graph and heavily cited (432 citations), making it a foundation for later work."
+      },
+      {
+        "paper_id": "landmark_vit_4",
+        "title": "Training data-efficient image transformers and distillation through attention",
+        "abstract": "DeiT studies how to train Vision Transformers efficiently on ImageNet without massive external datasets. It introduces a distillation strategy that made ViT-style architectures more practical for standard vision benchmarks.",
+        "url": "https://arxiv.org/abs/2012.12877",
+        "stage": "Core Methods",
+        "role": "core",
+        "year": 2021,
+        "citation_count": 12000,
+        "source": "landmark_demo",
+        "pagerank": 0.0149,
+        "betweenness": 0.0275,
+        "foundation_score": 0.0756,
+        "bridge_score": 0.3972,
+        "frontier_score": 0.3863,
+        "community_id": 3,
+        "community_label": "Vision / Transformer / Transformers / Image",
+        "template_reason": "Read this as a core method paper because it has high graph centrality (PageRank 0.015) and anchors later developments in the path."
+      },
+      {
+        "paper_id": "landmark_vit_8",
+        "title": "BEiT: BERT Pre-Training of Image Transformers",
+        "abstract": "BEiT adapts masked language modeling ideas to image transformers through masked image modeling, forming an important bridge between BERT-style pretraining and ViT representation learning.",
+        "url": "https://arxiv.org/abs/2106.08254",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2021,
+        "citation_count": 7000,
+        "source": "landmark_demo",
+        "pagerank": 0.0138,
+        "betweenness": 0.0325,
+        "foundation_score": 0.075,
+        "bridge_score": 0.3985,
+        "frontier_score": 0.2881,
+        "community_id": 1,
+        "community_label": "Vision / Transformer / Path / Bridge",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (masked pretraining) with strong impact (7000 citations) and bridge score 0.399."
+      },
+      {
+        "paper_id": "landmark_vit_7",
+        "title": "Emerging Properties in Self-Supervised Vision Transformers",
+        "abstract": "DINO shows that self-supervised training with vision transformers can produce strong visual representations and attention maps with emergent semantic structure, making it a key self-supervised ViT milestone.",
+        "url": "https://arxiv.org/abs/2104.14294",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2021,
+        "citation_count": 11000,
+        "source": "landmark_demo",
+        "pagerank": 0.0139,
+        "betweenness": 0.0245,
+        "foundation_score": 0.075,
+        "bridge_score": 0.3119,
+        "frontier_score": 0.386,
+        "community_id": 3,
+        "community_label": "Vision / Transformer / Transformers / Image",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (self-supervised learning) with strong impact (11000 citations) and bridge score 0.312."
+      },
+      {
+        "paper_id": "landmark_vit_9",
+        "title": "Masked Autoencoders Are Scalable Vision Learners",
+        "abstract": "MAE introduces a simple masked autoencoding pretraining strategy for scalable vision transformer learning, becoming a major self-supervised pretraining direction for ViT backbones.",
+        "url": "https://arxiv.org/abs/2111.06377",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2022,
+        "citation_count": 16000,
+        "source": "landmark_demo",
+        "pagerank": 0.0126,
+        "betweenness": 0.0077,
+        "foundation_score": 0.0609,
+        "bridge_score": 0.2866,
+        "frontier_score": 0.4311,
+        "community_id": 3,
+        "community_label": "Vision / Transformer / Transformers / Image",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (self-supervised learning) with strong impact (16000 citations) and bridge score 0.287."
+      },
+      {
+        "paper_id": "landmark_vit_5",
+        "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+        "abstract": "Swin Transformer introduces shifted-window attention and a hierarchical representation, adapting vision transformers into general-purpose visual backbones for image classification, detection, and segmentation.",
+        "url": "https://arxiv.org/abs/2103.14030",
+        "stage": "Key Developments",
+        "role": "development",
+        "year": 2021,
+        "citation_count": 26000,
+        "source": "landmark_demo",
+        "pagerank": 0.0138,
+        "betweenness": 0.0135,
+        "foundation_score": 0.075,
+        "bridge_score": 0.3009,
+        "frontier_score": 0.386,
+        "community_id": 3,
+        "community_label": "Vision / Transformer / Transformers / Image",
+        "template_reason": "Read this after the foundation papers because it represents a major follow-up branch (hierarchical backbones) with strong impact (26000 citations) and bridge score 0.301."
+      },
+      {
+        "paper_id": "demo_13",
+        "title": "Survey of Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers: Methods and Applications",
+        "abstract": "A comprehensive survey of student. Vision Transformer. Build a reading path and identify bridge papers covering both foundational methods and recent developments. We organize the literature into a coherent taxonomy, compare approaches on standardized benchmarks, and provide guidance for practitioners selecting methods for specific applications.",
+        "url": "",
+        "stage": "Recent Advances",
+        "role": "frontier",
+        "year": 2024,
+        "citation_count": 68,
+        "source": "demo",
+        "pagerank": 0.0096,
+        "betweenness": 0.0082,
+        "foundation_score": 0.0324,
+        "bridge_score": 0.412,
+        "frontier_score": 0.5211,
+        "community_id": 3,
+        "community_label": "Vision / Transformer / Transformers / Image",
+        "template_reason": "Read this near the end to see recent directions from 2024; its frontier score (0.521) indicates current research momentum."
+      },
+      {
+        "paper_id": "demo_16",
+        "title": "Open Problems and Future Directions in Student. Vision Transformer. Build A Reading Path And Identify Bridge Papers",
+        "abstract": "We identify and discuss the major open problems in student. Vision Transformer. Build a reading path and identify bridge papers. For each problem, we review current approaches, their limitations, and propose concrete directions for future investigation. This paper serves as a research roadmap for the field.",
+        "url": "",
+        "stage": "Recent Advances",
+        "role": "frontier",
+        "year": 2024,
+        "citation_count": 44,
+        "source": "demo",
+        "pagerank": 0.0096,
+        "betweenness": 0.0115,
+        "foundation_score": 0.0324,
+        "bridge_score": 0.4642,
+        "frontier_score": 0.5211,
+        "community_id": 3,
+        "community_label": "Vision / Transformer / Transformers / Image",
+        "template_reason": "Read this near the end to see recent directions from 2024; its frontier score (0.521) indicates current research momentum."
+      }
+    ],
+    "reading_path_metrics": {
+      "stage_count": 5,
+      "unique_paper_count": 13,
+      "role_counts": {
+        "prerequisite": 3,
+        "foundation": 3,
+        "core": 1,
+        "development": 4,
+        "frontier": 2
+      },
+      "explanation_availability_ratio": 1.0
+    }
+  }
+}

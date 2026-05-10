@@ -1,0 +1,50 @@
+{
+  "citation": {
+    "node_count": 25,
+    "edge_count": 78,
+    "citation_edges": 78,
+    "similarity_edges": 0,
+    "connected_components": 1,
+    "largest_component_ratio": 1.0,
+    "modularity": 0.2691,
+    "community_count": 3,
+    "community_coverage_in_reading_path": 1.0,
+    "top_bridge_paper": "Early Work on Diffusion Models / Score-Based Generative Models: A Historical Perspective",
+    "top_bridge_plausibility": 0.86,
+    "top_foundation_paper": "On the Foundations of Diffusion Models / Score-Based Generative Models",
+    "top_foundation_landmark_hit": 0.0,
+    "graph_edge_yield": 3.12
+  },
+  "similarity": {
+    "node_count": 25,
+    "edge_count": 125,
+    "citation_edges": 0,
+    "similarity_edges": 125,
+    "connected_components": 1,
+    "largest_component_ratio": 1.0,
+    "modularity": 0.4422,
+    "community_count": 5,
+    "community_coverage_in_reading_path": 0.8,
+    "top_bridge_paper": "Graph Neural Networks for Diffusion Models / Score-Based Generative Models",
+    "top_bridge_plausibility": 0.692,
+    "top_foundation_paper": "On the Foundations of Diffusion Models / Score-Based Generative Models",
+    "top_foundation_landmark_hit": 0.0,
+    "graph_edge_yield": 5.0
+  },
+  "hybrid": {
+    "node_count": 25,
+    "edge_count": 203,
+    "citation_edges": 78,
+    "similarity_edges": 125,
+    "connected_components": 1,
+    "largest_component_ratio": 1.0,
+    "modularity": 0.2325,
+    "community_count": 5,
+    "community_coverage_in_reading_path": 1.0,
+    "top_bridge_paper": "Early Work on Diffusion Models / Score-Based Generative Models: A Historical Perspective",
+    "top_bridge_plausibility": 0.9167,
+    "top_foundation_paper": "On the Foundations of Diffusion Models / Score-Based Generative Models",
+    "top_foundation_landmark_hit": 0.0,
+    "graph_edge_yield": 8.12
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "citation": {
+    "node_count": 11,
+    "edge_count": 9,
+    "citation_edges": 9,
+    "similarity_edges": 0,
+    "connected_components": 4,
+    "largest_component_ratio": 0.7272727272727273,
+    "modularity": 0.2222,
+    "community_count": 5,
+    "community_coverage_in_reading_path": 0.8,
+    "top_bridge_paper": "Denoising Diffusion Probabilistic Models",
+    "top_bridge_plausibility": 0.7583,
+    "top_foundation_paper": "An Unstructured Grid, Finite-Volume, Three-Dimensional, Primitive Equations Ocean Model: Application to Coastal Ocean and Estuaries",
+    "top_foundation_landmark_hit": 1.0,
+    "graph_edge_yield": 0.8181818181818182
+  },
+  "similarity": {
+    "node_count": 11,
+    "edge_count": 13,
+    "citation_edges": 0,
+    "similarity_edges": 13,
+    "connected_components": 3,
+    "largest_component_ratio": 0.8181818181818182,
+    "modularity": 0.2048,
+    "community_count": 5,
+    "community_coverage_in_reading_path": 0.8,
+    "top_bridge_paper": "High-Resolution Image Synthesis with Latent Diffusion Models",
+    "top_bridge_plausibility": 0.785,
+    "top_foundation_paper": "An Unstructured Grid, Finite-Volume, Three-Dimensional, Primitive Equations Ocean Model: Application to Coastal Ocean and Estuaries",
+    "top_foundation_landmark_hit": 0.0,
+    "graph_edge_yield": 1.1818181818181819
+  },
+  "hybrid": {
+    "node_count": 11,
+    "edge_count": 22,
+    "citation_edges": 9,
+    "similarity_edges": 13,
+    "connected_components": 3,
+    "largest_component_ratio": 0.8181818181818182,
+    "modularity": 0.1978,
+    "community_count": 5,
+    "community_coverage_in_reading_path": 0.8,
+    "top_bridge_paper": "Denoising Diffusion Probabilistic Models",
+    "top_bridge_plausibility": 0.855,
+    "top_foundation_paper": "An Unstructured Grid, Finite-Volume, Three-Dimensional, Primitive Equations Ocean Model: Application to Coastal Ocean and Estuaries",
+    "top_foundation_landmark_hit": 1.0,
+    "graph_edge_yield": 2.0
+  }
+}
